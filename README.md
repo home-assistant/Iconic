@@ -152,7 +152,8 @@ let button = UIButton(type: .System)
 button.setFontAwesomeIcon(.Code, size: 20, forState: .Normal)
 ```
 
-### Sample Project
+
+## Sample Project
 Check out the sample project, everything is demo'd there.
 Play around with the slider. Think about the power of rendering vector images, natively!
 
