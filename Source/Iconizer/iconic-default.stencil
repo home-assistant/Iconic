@@ -15,12 +15,12 @@ extension Iconic {
     }
 
     /**
-     Returns a {{familyName}} font object in the specified size.
+     Returns the {{familyName}} font object in the specified size.
      
      - parameter fontSize: The size (in points) to which the font is scaled.
      This value must be greater than 0.0, or a system Font object will be returned.
      */
-    public class func {{enumName}}FontOfSize(fontSize: CGFloat) -> UIFont? {
+    public class func {{enumName|lowerFirstWord}}FontOfSize(fontSize: CGFloat) -> UIFont? {
         return Iconic.iconFontOfSize(fontSize)
     }
 
