@@ -45,7 +45,8 @@ class SecondViewController: UIViewController {
     }
     
     func didTapRightItem() {
-        // Do something
+        navigationController?.navigationBar.hidden = true
+        tabBarController?.tabBar.hidden = true
     }
     
     @IBAction func didChangeScale(sender: UISlider) {

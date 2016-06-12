@@ -14,11 +14,11 @@ extension Iconic {
     }
 
     /**
-     Returns a FontAwesome font object in the specified size.
+     Returns the FontAwesome font object in the specified size.
      - parameter fontSize: The size (in points) to which the font is scaled.
      This value must be greater than 0.0, or a system Font object will be returned.
      */
-    public class func FontAwesomeIconFontOfSize(fontSize: CGFloat) -> UIFont? {
+    public class func fontAwesomeIconFontOfSize(fontSize: CGFloat) -> UIFont? {
         return Iconic.iconFontOfSize(fontSize)
     }
 

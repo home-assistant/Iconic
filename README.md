@@ -4,7 +4,9 @@
 [![Pod Version](http://img.shields.io/cocoapods/v/Iconic.svg)](http://cocoadocs.org/docsets/Iconic/)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
-**Iconic** will help you make icon fonts integration on iOS easy and effortless. Its main component is in charge of auto-generating strongly typed code in **Swift**, fully compatible with **Objective-C**, allowing you integrate vector icons as text or images in your app.
+**Iconic** will help you make icon fonts integration on iOS easy and effortless. Its main component is in charge of auto-generating strongly typed code in **Swift**, fully compatible with **Objective-C**, allowing you integrate vector icons as image or text in your app. Think about the power of rendering vectors, natively!
+
+![Sample Scale](Screenshots/screenshot_scale.gif)
 
 You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of **Iconic** class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
 
@@ -155,7 +157,6 @@ button.setFontAwesomeIcon(.Code, size: 20, forState: .Normal)
 
 ## Sample Project
 Check out the sample project, everything is demo'd there.
-Play around with the slider. Think about the power of rendering vector images, natively!
 
 ![Sample Project](Screenshots/screenshot_sample_proj.png)
 
