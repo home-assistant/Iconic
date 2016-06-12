@@ -1,0 +1,31 @@
+{
+  "name": "Iconic",
+  "version": "1.0.0-beta1",
+  "summary": "Lightweight interface for icon font integration with UIKit",
+  "description": "Description soon",
+  "homepage": "http://github.com/dzenbot/Iconic",
+  "screenshots": "",
+  "authors": {
+    "Ignacio Romero Zurbuchen": "iromero@dzen.cl"
+  },
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "source": {
+    "git": "http://github.com/dzenbot/Iconic.git",
+    "tag": "1.0.0-beta1",
+    "submodules": true
+  },
+  "source_files": "Source/*.{swift}",
+  "resources": "Source/*.{ttf,otf}",
+  "preserve_paths": "Source/Iconizer/catalog/**/*.*",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "frameworks": [
+    "UIKit",
+    "CoreText"
+  ],
+  "prepare_command": "cd Vendor/SwiftGen/ && rake install\ncd ../..\nsh Source/Iconizer/Iconizer.sh Example/Fonts/FontAwesome.ttf Source/ --verbose"
+}

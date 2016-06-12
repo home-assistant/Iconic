@@ -1,0 +1,6 @@
+framework module Iconic {
+  umbrella header "Iconic-umbrella.h"
+
+  export *
+  module * { export * }
+}

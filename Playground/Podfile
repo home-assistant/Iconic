@@ -1,0 +1,13 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'Example', :exclusive => true do
+    # Since this library depends on 'prepare_command' for compiling SwiftGen
+    # and other automations, we need to install it as a remote pod.
+    pod 'Iconic', :git => 'https://github.com/dzenbot/Iconic.git', :submodules => true
+end
+
+target 'UnitTests' do
+    # No need for installing the pod.
+    # This target tests 'Iconic' main class only.
+end

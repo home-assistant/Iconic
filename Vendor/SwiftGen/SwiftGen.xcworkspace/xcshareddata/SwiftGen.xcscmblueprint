@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F6B23AB03FE8E6614F80575DCBE446BDF71D704E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F6B23AB03FE8E6614F80575DCBE446BDF71D704E" : 0,
+    "764DC6F1C498A7F88364D96E7FE35A46F164DB01" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "473C17E3-7A10-4564-A257-4F14E3DCA694",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F6B23AB03FE8E6614F80575DCBE446BDF71D704E" : "SwiftGen\/",
+    "764DC6F1C498A7F88364D96E7FE35A46F164DB01" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftGen",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SwiftGen.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:dzenbot\/Iconic.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "764DC6F1C498A7F88364D96E7FE35A46F164DB01"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DZNLabs\/SwiftGen.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F6B23AB03FE8E6614F80575DCBE446BDF71D704E"
+    }
+  ]
+}

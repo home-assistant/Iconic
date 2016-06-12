@@ -1,0 +1,3 @@
+[submodule "Vendor/SwiftGen"]
+	path = Vendor/SwiftGen
+	url = https://github.com/DZNLabs/SwiftGen.git
