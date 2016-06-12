@@ -69,9 +69,9 @@ Will install Iconic with its default font, [FontAwesome](https://github.com/Fort
 When installing Iconic, several things are happening under the hood:
 - After the Iconic repo is cloned, a custom version of [SwiftGen](https://github.com/DZNLabs/SwiftGen) is downloaded along with its dependencies.
 - Before pods are installed, `SwiftGen` is compiled
-- [Iconizer](Source/Iconizer/Iconizer.sh) is ran, executing the built `SwiftGen` executable using a [custom icon stencil](Source/Iconizer/iconic-default.stencil).
-- `SwiftGen` does its magic, detecting all unicodes from the [PUA range](https://en.wikipedia.org/wiki/Private_Use_Areas) of the provided font file.
-- Once the auto-generated Swift class is outputed, an HTML icon font catalog is created too.  
+- [Iconizer](Source/Iconizer/Iconizer.sh) is ran, executing `SwiftGen` using a [custom stencil for Iconic](Source/Iconizer/iconic-default.stencil).
+- `SwiftGen` does its magic, detecting all unicodes from the [PUA range](https://en.wikipedia.org/wiki/Private_Use_Areas) of the provided font file, extracting their unicode values as well as their glyph names. All this data is then used for auto-generating a Switft class of name `{FontName}Icon.swift`; a json file is also exported afterwards.
+- Once everything is exported, an [HTML icon font catalog](#icon-font-catalog) is also created.  
 
 There is a known bug where sometimes, calling `pod install Iconic` would not run correctly SwiftGen an retrieve all the icon unicode from a font. If this happens to you, make sure to call `pod update Iconic` to retrigger SwiftGen.
 
