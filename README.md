@@ -131,6 +131,13 @@ Ultimately, you may need to retrieve the unicode string representation on an ico
 let unicode = Iconic.unicodeStringForFontAwesomeIcon(.Apple)
 ```
 
+### Use its font object
+For further customization, you may need to use the UIFont object instead:
+```swift
+let font = Iconic.fontAwesomeIconFontOfSize(20)
+```
+
+
 ### UIKit Extensions
 UIKit extensions are also included, just to make your code look simpler:
 ```swift
@@ -139,6 +146,10 @@ let tabItem = UITabBarItem(fontAwesomeIcon: .Book, size:20, title: "Book", tag: 
 
 // UIBarButtonItem
 let buttonItem = UIBarButtonItem(fontAwesomeIcon: .Book, size:20, target: self, action: #selector(didTapButton))
+
+// UIButton
+let button = UIButton(type: .System)
+button.setFontAwesomeIcon(.Code, size: 20, forState: .Normal)
 ```
 
 ### Sample Project
