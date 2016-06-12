@@ -166,7 +166,7 @@ Check out the sample project, everything is demo'd there.
 ## Icon Font Catalog
 Besides the auto-generated Swift code, you will notice a `catalog.html` file being added to your directory. This is your icon font catalog, to be used for visual reference about all the icons you have available.
 
-![Icon Font Catalog](Screenshots/icon_font_catalog.png)
+![Icon Font Catalog](Screenshots/screenshot_icon_catalog)
 
 Note: if you are using Chrome as your default browser, you will need to restart it using the `open -a 'Google Chrome' --args -allow-file-access-from-files` in the command line to be able to open view the catalog. This is because the html's javascript loads a local json file and Chrome has built-in security features to disable it.
 
