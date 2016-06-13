@@ -1,12 +1,9 @@
-# Iconic
+![Iconic Header](Screenshots/screenshot_iconic_header.png)
 
 [![Travis](https://travis-ci.org/dzenbot/Iconic.svg?branch=master)](https://travis-ci.org/dzenbot/Iconic/builds)
 [![Pod Version](http://img.shields.io/cocoapods/v/Iconic.svg)](http://cocoadocs.org/docsets/Iconic/)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/dzenbot/Iconic/master/Screenshots/screenshot_scale.gif?token=AAkC8wQ5PZiIbv2IXuEaT9ZvJIckh6pAks5XZgabwA%3D%3D" alt="Scale Example"/>
-</p>
 
 #### Think about the power of rendering vector icons, natively!
 
@@ -15,6 +12,10 @@ Iconic will help you make icon fonts integration on iOS easy and effortless. Its
 You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of the `Iconic.swift` class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
 
 Note: **This library hasn't yet been used in production. Consider it in beta!**
+
+<p align="center">
+<img src="https://github.com/dzenbot/Iconic/blob/master/Screenshots/screenshot_scale.gif?raw=true" alt="Scale Example"/>
+</p>
 
 
 ## Why Icon Fonts
