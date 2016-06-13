@@ -164,23 +164,16 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPB-z6-7V9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                                <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="LPB-z6-7V9" secondAttribute="trailing" id="AjT-gP-DFg"/>
-                            <constraint firstItem="LPB-z6-7V9" firstAttribute="leading" secondItem="6Dn-Mo-AKZ" secondAttribute="leading" id="HIs-5t-DAA"/>
-                            <constraint firstAttribute="bottom" secondItem="LPB-z6-7V9" secondAttribute="bottom" id="YPd-OW-p1w"/>
-                            <constraint firstItem="LPB-z6-7V9" firstAttribute="top" secondItem="6Dn-Mo-AKZ" secondAttribute="top" id="j1g-Ut-p5r"/>
+                            <constraint firstAttribute="trailing" secondItem="LPB-z6-7V9" secondAttribute="trailing" id="HmI-Sa-LSB"/>
+                            <constraint firstItem="LPB-z6-7V9" firstAttribute="leading" secondItem="6Dn-Mo-AKZ" secondAttribute="leading" id="ZWp-Ds-84o"/>
+                            <constraint firstAttribute="bottom" secondItem="LPB-z6-7V9" secondAttribute="bottom" id="g5H-sb-jWl"/>
+                            <constraint firstItem="LPB-z6-7V9" firstAttribute="top" secondItem="6Dn-Mo-AKZ" secondAttribute="top" id="xQg-4o-vnr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Llk-jT-jCE"/>

@@ -51,33 +51,29 @@
 {
     [super viewWillAppear:animated];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] init];
-        UIColor *color = self.tabBarController.tabBar.tintColor;
-        
-        for (int i = 0; i < FontAwesomeIconTotalCount; i++) {
-            
-            NSMutableAttributedString *fontString = [[Iconic attributedStringForFontAwesomeIcon:i size:24.0 color:color] mutableCopy];
-            [fontString addAttribute:NSKernAttributeName value:@(5) range:NSMakeRange(0, fontString.length)];
-            
-            [attributedText appendAttributedString:fontString];
-        }
-        
-        CGFloat space = 5.0;
-        
-        NSMutableParagraphStyle *paragrahStyle = [NSMutableParagraphStyle new];
-        paragrahStyle.firstLineHeadIndent = space;
-        paragrahStyle.headIndent = space;
-        paragrahStyle.tailIndent = -space;
-        paragrahStyle.lineSpacing = space;
-        
-        [attributedText addAttribute:NSParagraphStyleAttributeName value:paragrahStyle range:NSMakeRange(0, attributedText.length)];
+    UIColor *color = self.tabBarController.tabBar.tintColor;
 
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.textView.attributedText = attributedText;
-        });
-    });
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] init];
+    
+    for (int i = 0; i < FontAwesomeIconTotalCount; i++) {
+        
+        NSMutableAttributedString *fontString = [[Iconic attributedStringForFontAwesomeIcon:i size:24.0 color:color] mutableCopy];
+        [fontString addAttribute:NSKernAttributeName value:@(5) range:NSMakeRange(0, fontString.length)];
+        
+        [attributedText appendAttributedString:fontString];
+    }
+    
+    CGFloat space = 5.0;
+    
+    NSMutableParagraphStyle *paragrahStyle = [NSMutableParagraphStyle new];
+    paragrahStyle.firstLineHeadIndent = space;
+    paragrahStyle.headIndent = space;
+    paragrahStyle.tailIndent = -space;
+    paragrahStyle.lineSpacing = space;
+    
+    [attributedText addAttribute:NSParagraphStyleAttributeName value:paragrahStyle range:NSMakeRange(0, attributedText.length)];
+    
+    self.textView.attributedText = attributedText;
 }
 
 - (void)didTapRightButtonItem:(id)sender
