@@ -10,7 +10,7 @@
 
 Iconic will help you make icon fonts integration on iOS easy and effortless. Its main component is in charge of auto-generating strongly typed code in Swift, fully compatible with Objective-C, allowing the integration of vector icons as image or text in your apps. **Think about the power of rendering vectors, natively!**
 
-You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of Iconic class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
+You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of Iconic.swift class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
 
 Note: **This library hasn't yet been used in production. Consider it in beta!**
 
