@@ -82,6 +82,13 @@ When installing Iconic, several things are happening under the hood:
 There is a known bug where sometimes, calling `pod install Iconic` would not run correctly SwiftGen an retrieve all the icon unicode from a font. If this happens to you, make sure to call `pod update Iconic` to retrigger SwiftGen.
 
 
+### Result
+This is how the module ouput is going to look like (plus documentation, which has been removed for this example).
+Notice that API names are adopting the font's file name to make it easy to work with, and everything is strongly typed, making it safe and auto-completable.
+
+![Iconic Module](Screenshots/screenshot_iconic_module.png)
+
+
 ## How to use
 For complete documentation, visit [CocoaPods' auto-generated docs](http://cocoadocs.org/docsets/Iconic/).
 
