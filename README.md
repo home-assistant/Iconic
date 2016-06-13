@@ -8,7 +8,7 @@
   <img src="https://raw.githubusercontent.com/dzenbot/Iconic/master/Screenshots/screenshot_scale.gif?token=AAkC8wQ5PZiIbv2IXuEaT9ZvJIckh6pAks5XZgabwA%3D%3D" alt="Scale Example"/>
 </p>
 
-#### Think about the power of rendering vectors, natively!
+#### Think about the power of rendering vector icons, natively!
 
 Iconic will help you make icon fonts integration on iOS easy and effortless. Its main component is in charge of auto-generating strongly typed code in Swift, fully compatible with Objective-C, allowing the integration of vector icons as image or text in your apps.
 
