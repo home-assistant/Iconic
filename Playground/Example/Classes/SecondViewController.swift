@@ -37,7 +37,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateImage(5.0)
+        updateImage(1.0)
     }
     
     override func viewWillAppear(animated: Bool) {
