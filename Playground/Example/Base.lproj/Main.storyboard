@@ -70,7 +70,7 @@
                                 <color key="textColor" red="0.70488542259999998" green="0.70488542259999998" blue="0.70488542259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZNm-eS-cnB" customClass="StepSlider" customModule="Example" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZNm-eS-cnB" customClass="StepSlider" customModule="Example" customModuleProvider="target">
                                 <rect key="frame" x="130" y="505" width="341" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="337" id="s5i-s7-dEp"/>

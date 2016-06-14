@@ -506,6 +506,7 @@
 				PRODUCT_NAME = Example;
 				SWIFT_OBJC_BRIDGING_HEADER = "Example/Classes/Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -519,6 +520,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzn.Example;
 				PRODUCT_NAME = Example;
 				SWIFT_OBJC_BRIDGING_HEADER = "Example/Classes/Example-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
