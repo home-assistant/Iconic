@@ -25,8 +25,11 @@ Pod::Spec.new do |s|
   s.source_files    = 'Source/*.{swift}'
   s.resources       = 'Source/*.{ttf,otf}'
   s.preserve_paths  = 'Source/Iconizer/catalog/**/*.*'
-  s.platform        = :ios, '8.0'
   s.framework       = 'UIKit', 'CoreText'
+
+  s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
   
   # If not specified, FontAwesome is used as the default font
   font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Playground/Fonts/FontAwesome.ttf'
