@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.framework       = 'UIKit', 'CoreText'
   
   # If not specified, FontAwesome is used as the default font
-  font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Example/Fonts/FontAwesome.ttf'
+  font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Playground/Fonts/FontAwesome.ttf'
 
   s.prepare_command = <<-CMD
                       cd Vendor/SwiftGen/ && rake install
