@@ -20,12 +20,14 @@
   "source_files": "Source/*.{swift}",
   "resources": "Source/*.{ttf,otf}",
   "preserve_paths": "Source/Iconizer/catalog/**/*.*",
-  "platforms": {
-    "ios": "8.0"
-  },
   "frameworks": [
     "UIKit",
     "CoreText"
   ],
-  "prepare_command": "cd Vendor/SwiftGen/ && rake install\ncd ../..\nsh Source/Iconizer/Iconizer.sh Example/Fonts/FontAwesome.ttf Source/ --verbose"
+  "platforms": {
+    "ios": "8.0",
+    "tvos": "9.0",
+    "watchos": "2.0"
+  },
+  "prepare_command": "cd Vendor/SwiftGen/ && rake install\ncd ../..\nsh Source/Iconizer/Iconizer.sh Playground/Fonts/FontAwesome.ttf Source/ --verbose"
 }

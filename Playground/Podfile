@@ -1,10 +1,21 @@
-platform :ios, '8.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
-target 'Example', :exclusive => true do
+def common_pods
     # Since this library depends on 'prepare_command' for compiling SwiftGen
     # and other automations, we need to install it as a remote pod.
     pod 'Iconic', :git => 'https://github.com/dzenbot/Iconic.git', :submodules => true
+end
+
+target 'iOS' do
+    platform :ios, '8.0'
+    common_pods
+end
+
+target 'tvOS' do
+    platform :tvos, '9.0'
+    common_pods
 end
 
 target 'UnitTests' do

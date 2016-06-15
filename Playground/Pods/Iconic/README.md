@@ -1,28 +1,37 @@
-# Iconic
+![Iconic Header](Screenshots/screenshot_iconic_header.png)
 
 [![Travis](https://travis-ci.org/dzenbot/Iconic.svg?branch=master)](https://travis-ci.org/dzenbot/Iconic/builds)
 [![Pod Version](http://img.shields.io/cocoapods/v/Iconic.svg)](http://cocoadocs.org/docsets/Iconic/)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
-**Iconic** will help you make icon fonts integration on iOS easy and effortless. Its main component is in charge of auto-generating strongly typed code in **Swift**, fully compatible with **Objective-C**, allowing you integrate vector icons as text or images in your app.
 
-You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of **Iconic** class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
+Iconic will help you make icon fonts integration on iOS easy and effortless. Its main component is in charge of auto-generating strongly typed code in Swift, fully compatible with Objective-C, allowing the integration of vector icons as image or text in your apps.
+
+You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of the `Iconic.swift` class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
 
 Note: **This library hasn't yet been used in production. Consider it in beta!**
+
+<p align="center">
+<img src="https://github.com/dzenbot/Iconic/blob/master/Screenshots/screenshot_scale.gif?raw=true" alt="Scale Example"/>
+</p>
 
 
 ## Why Icon Fonts
 Web developers have been using icon fonts for quite some time now. It's really, really great!
 
 There are many advantages of using icon fonts on iOS:
-- Automatically scaled for retina displays. No device fragmentation.
+- Work with (way) less image files.
 - Scale and tint easily, without loosing any quality.
-- Simple to work with.
-- Less image assets to export, import, bundle and cache.
-- They can be used as text or be rendered as images.
-- Can help improving visual consistency and UI accessibility.
-- Fully backwards compatible, not tied to newer APIs.
+- Automatically scaled for different display densities.
+- Add better UI accessibility.
+- Improve visual consistency
+- Fully backwards compatible.
 - Reusable in other platforms.
+- Simple to work with.
+- Platform agnostic.
+
+#### Think about the power of rendering vector icons, natively!
+
 
 _Great. Now, how do I create an icon font,_ you say?
 - You can ask your nearest friendly designer! Making an icon font isn't that hard, specially if you already have the assets.
@@ -74,6 +83,13 @@ When installing Iconic, several things are happening under the hood:
 - Once everything is exported, an [HTML icon font catalog](#icon-font-catalog) is also created.  
 
 There is a known bug where sometimes, calling `pod install Iconic` would not run correctly SwiftGen an retrieve all the icon unicode from a font. If this happens to you, make sure to call `pod update Iconic` to retrigger SwiftGen.
+
+
+### Result
+This is how the module ouput is going to look like (plus documentation, which has been removed for this example).
+Notice that API names are adopting the font's file name to make it easy to work with, and everything is strongly typed, making it safe and auto-completable.
+
+![Iconic Module](Screenshots/screenshot_iconic_module.png)
 
 
 ## How to use
@@ -131,6 +147,13 @@ Ultimately, you may need to retrieve the unicode string representation on an ico
 let unicode = Iconic.unicodeStringForFontAwesomeIcon(.Apple)
 ```
 
+### Use its font object
+For further customization, you may need to use the UIFont object instead:
+```swift
+let font = Iconic.fontAwesomeIconFontOfSize(20)
+```
+
+
 ### UIKit Extensions
 UIKit extensions are also included, just to make your code look simpler:
 ```swift
@@ -139,11 +162,15 @@ let tabItem = UITabBarItem(fontAwesomeIcon: .Book, size:20, title: "Book", tag: 
 
 // UIBarButtonItem
 let buttonItem = UIBarButtonItem(fontAwesomeIcon: .Book, size:20, target: self, action: #selector(didTapButton))
+
+// UIButton
+let button = UIButton(type: .System)
+button.setFontAwesomeIcon(.Code, size: 20, forState: .Normal)
 ```
 
-### Sample Project
+
+## Sample Project
 Check out the sample project, everything is demo'd there.
-Play around with the slider. Think about the power of rendering vector images, natively!
 
 ![Sample Project](Screenshots/screenshot_sample_proj.png)
 
@@ -151,7 +178,7 @@ Play around with the slider. Think about the power of rendering vector images, n
 ## Icon Font Catalog
 Besides the auto-generated Swift code, you will notice a `catalog.html` file being added to your directory. This is your icon font catalog, to be used for visual reference about all the icons you have available.
 
-![Icon Font Catalog](Screenshots/icon_font_catalog.png)
+![Icon Font Catalog](Screenshots/screenshot_icon_catalog.png)
 
 Note: if you are using Chrome as your default browser, you will need to restart it using the `open -a 'Google Chrome' --args -allow-file-access-from-files` in the command line to be able to open view the catalog. This is because the html's javascript loads a local json file and Chrome has built-in security features to disable it.
 
