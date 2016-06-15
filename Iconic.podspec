@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
-  s.watchos.deployment_target = '2.0'
+  s.watchos.deployment_target = '2.2'
   
   # If not specified, FontAwesome is used as the default font
   font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Playground/Fonts/FontAwesome.ttf'
