@@ -49,7 +49,7 @@ _Great. Now, how do I create an icon font,_ you say?
 - Fonts are registered dynamically, effortless. No need to import the file to your project.
 - [UIKit extensions](#uikit-extensions) (`UIBarButtonItem` and `UITabBarItem`).
 - Auto-generated [icon font html catalog](#icon-font-catalog).
-- iOS 8 and or later.
+- iOS 8, and tvOS 9 or later.
 
 Note: Some open sourced icon fonts don't include the names of each of their glyphs. This could result in a non-descriptive enum, which can make things less intuitive for you when using Iconic. If you create your own icon font, make sure to properly name each glyph.
 

@@ -11,12 +11,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Iconic:
-    :commit: 9ee53e3f1aed443bf824d52b45cf4d5d22e98c3d
+    :commit: cbaa1dab803d569f2f3ce07197042bf562b2c8c0
     :git: https://github.com/dzenbot/Iconic.git
     :submodules: true
 
 SPEC CHECKSUMS:
-  Iconic: e1bd0aa139e021fed5a452d94f9b4440ac61289a
+  Iconic: 5556bebacb93ea776076f8983b15e1dc2112adc2
 
 PODFILE CHECKSUM: e9bef9e30e149e85f0ab75db01ec7e0030f1cfe8
 
