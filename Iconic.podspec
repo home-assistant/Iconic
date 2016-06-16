@@ -4,8 +4,8 @@ Pod::Spec.new do |s|
 
   s.name            = 'Iconic'
   s.version         = @version
-  s.summary         = 'Lightweight interface for icon font integration with UIKit'
-  s.description     = 'Description soon'
+  s.summary         = 'Auto-generated icon font library for iOS [beta]'
+  s.description     = 'Iconic will help you make icon fonts integration on iOS easy and effortless. Its main component is in charge of auto-generating strongly typed code in Swift, fully compatible with Objective-C, allowing the integration of vector icons as image or text in your apps.'
 
   s.homepage        = 'http://github.com/dzenbot/Iconic'
   s.screenshots     = ''
