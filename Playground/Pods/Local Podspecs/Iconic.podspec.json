@@ -1,8 +1,8 @@
 {
   "name": "Iconic",
   "version": "1.0.0-beta1",
-  "summary": "Lightweight interface for icon font integration with UIKit",
-  "description": "Description soon",
+  "summary": "Auto-generated icon font library for iOS [beta]",
+  "description": "Iconic will help you make icon fonts integration on iOS easy and effortless. Its main component is in charge of auto-generating strongly typed code in Swift, fully compatible with Objective-C, allowing the integration of vector icons as image or text in your apps.",
   "homepage": "http://github.com/dzenbot/Iconic",
   "screenshots": "",
   "authors": {
