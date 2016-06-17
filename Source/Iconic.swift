@@ -11,8 +11,8 @@ import CoreText
 
 public class Iconic: NSObject {
     
-    internal static var icons = [String: Array<String>]()
-    internal static var fontUrls = [String: NSURL]()
+    static var icons = [String: [String]]()
+    static var fontUrls = [String: NSURL]()
     
     // MARK: - Font Registration
     
@@ -22,7 +22,7 @@ public class Iconic: NSObject {
      - parameter familyName: The font's family name available in the application's bundle to be used for registering.
      - parameter map: An array of icon glyph unicodes.
      */
-    internal class func registerFont(familyName: String, map: Array<String>) {
+    class func registerFont(familyName: String, map: [String]) {
         
         if let url = urlForFontWithName(familyName) {
             return registerFontFromURL(url, map:map)
@@ -35,12 +35,108 @@ public class Iconic: NSObject {
      - parameter path: The path of the font file (generally from the application bundle)
      - parameter map: An array of icon glyph unicodes.
      */
-    internal class func registerFontWithPath(path: String, map: Array<String>) {
+    class func registerFontWithPath(path: String, map: [String]) {
         
         registerFontFromURL(NSURL.fileURLWithPath(path), map:map)
     }
     
-    private class func registerFontFromURL(url: NSURL, map: Array<String>) {
+    // MARK: - Constructors
+    
+    class func iconFontOfSize(fontSize: CGFloat) -> UIFont? {
+        
+        // Calling UIFont.init() with zero would return a system font object.
+        if fontSize == 0 {
+            return nil
+        }
+        
+        guard let name = Array(icons.keys).first, let font = UIFont(name: name, size: fontSize) else {
+            return nil
+        }        
+        
+        return font
+    }
+    
+    class func attributedStringForIndex(idx: Int, size: CGFloat, color: UIColor?) -> NSAttributedString? {
+        
+        guard let font = iconFontOfSize(size), let string = unicodeStringForIndex(idx) else {
+            return nil
+        }
+        
+        var attributes = [NSFontAttributeName: font] as [String : AnyObject]
+        
+        if let color = color {
+            attributes[NSForegroundColorAttributeName] = color
+        }
+        
+        return NSAttributedString(string: string, attributes: attributes)
+    }
+    
+    class func imageForIndex(idx: Int, size: CGFloat, color: UIColor?) -> UIImage? {
+        
+        guard let attributedString = Iconic.attributedStringForIndex(idx, size: size, color: color)?.mutableCopy() else {
+            return nil
+        }
+        
+        let rect = CGRectMake(0, 0, size, size)
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .Center
+        
+        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
+        
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        attributedString.drawInRect(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
+    
+    class func unicodeStringForIndex(idx: Int) -> String? {
+        
+        guard let map = Array(icons.values).first where idx < map.count else {
+            return nil
+        }
+        
+        let unicode = map[idx]
+        
+        guard let string = NSString(UTF8String: unicode) else {
+            return nil
+        }
+        
+        return string as String
+    }
+}
+
+public extension Iconic {
+    
+    /**
+     Unregisters all registered icon fonts.
+     */
+    class func unregisterAllFonts() {
+        
+        let fontNames = Array(icons.keys)
+        
+        var error: Unmanaged<CFErrorRef>? = nil
+        
+        for i in 0..<fontNames.count {
+            
+            let postScriptName = fontNames[i]
+            let fontUrl = fontUrls[postScriptName]
+            
+            if CTFontManagerUnregisterFontsForURL(fontUrl!, .None, &error) == true {
+                icons.removeAll()
+            }
+            else {
+                print("Failed unregistering font with the name '\(postScriptName)' at path \(fontUrl) with error: \(error).")
+            }
+        }
+    }
+}
+
+private extension Iconic {
+    
+    class func registerFontFromURL(url: NSURL, map: [String]) {
         
         if map.count == 0 {
             print("Failed registering font. The icon map cannot be empty.")
@@ -68,7 +164,7 @@ public class Iconic: NSObject {
         }
     }
     
-    private class func urlForFontWithName(familyName: String) -> NSURL? {
+    class func urlForFontWithName(familyName: String) -> NSURL? {
         
         let extensions = ["otf", "ttf"]
         let bundle = NSBundle(forClass: Iconic.self)
@@ -80,100 +176,6 @@ public class Iconic: NSObject {
         }
         
         print("Could not find any font with the name '\(familyName)' in the application's main bundle.")
-        
-        return nil
-    }
-    
-    /**
-     Unregisters all registered icon fonts.
-     */
-    public class func unregisterAllFonts() {
-        
-        let fontNames = Array(icons.keys)
-        
-        var error: Unmanaged<CFErrorRef>? = nil
-        
-        for i in 0..<fontNames.count {
-            
-            let postScriptName = fontNames[i]
-            let fontUrl = fontUrls[postScriptName]
-            
-            if CTFontManagerUnregisterFontsForURL(fontUrl!, .None, &error) == true {
-                icons.removeAll()
-            }
-            else {
-                print("Failed unregistering font with the name '\(postScriptName)' at path \(fontUrl) with error: \(error).")
-            }
-        }
-    }
-    
-    // MARK: - Constructors
-    
-    internal class func iconFontOfSize(fontSize: CGFloat) -> UIFont? {
-        
-        // Calling UIFont.init() with zero would return a system font object.
-        if fontSize == 0 {
-            return nil
-        }
-        
-        guard let name = Array(icons.keys).first, let font = UIFont(name: name, size: fontSize) else {
-            return nil
-        }        
-        
-        return font
-    }
-    
-    internal class func attributedStringForIndex(idx: Int, size: CGFloat, color: UIColor?) -> NSAttributedString? {
-        
-        guard let font = iconFontOfSize(size) else {
-            return nil
-        }
-        
-        var attributes = [NSFontAttributeName: font] as [String : AnyObject]
-        
-        if let color = color {
-            attributes[NSForegroundColorAttributeName] = color
-        }
-        
-        if let string = unicodeStringForIndex(idx) {
-            return NSAttributedString(string: string, attributes: attributes)
-        }
-        
-        return nil
-    }
-    
-    internal class func imageForIndex(idx: Int, size: CGFloat, color: UIColor?) -> UIImage? {
-        
-        guard let attributedString = Iconic.attributedStringForIndex(idx, size: size, color: color)?.mutableCopy() else {
-            return nil
-        }
-        
-        let rect = CGRectMake(0, 0, size, size)
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .Center
-        
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
-        
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
-        attributedString.drawInRect(rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return image
-    }
-    
-    internal class func unicodeStringForIndex(idx: Int) -> String? {
-        
-        guard let map = Array(icons.values).first where idx < map.count else {
-            return nil
-        }
-        
-        let unicode = map[idx]
-        
-        if let string = NSString(UTF8String: unicode) {
-            return string as String
-        }
         
         return nil
     }

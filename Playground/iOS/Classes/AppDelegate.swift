@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import CoreText
-import CoreGraphics
 import Iconic
 
 @UIApplicationMain
