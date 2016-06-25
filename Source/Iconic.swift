@@ -27,6 +27,9 @@ public class Iconic: NSObject {
         if let url = urlForFontWithName(familyName) {
             return registerFontFromURL(url, map:map)
         }
+        else {
+            print("Could not find any font with the name '\(familyName)' in the application's main bundle.")
+        }
     }
     
     /**
