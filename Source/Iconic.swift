@@ -26,6 +26,8 @@ public class Iconic: NSObject {
         
         if let url = urlForFontWithName(familyName) {
             return registerFontFromURL(url, map:map)
+        } else {
+            print("Could not find any font with the name '\(familyName)' in the application's main bundle.")
         }
     }
     
@@ -126,8 +128,7 @@ public extension Iconic {
             
             if CTFontManagerUnregisterFontsForURL(fontUrl!, .None, &error) == true {
                 icons.removeAll()
-            }
-            else {
+            } else {
                 print("Failed unregistering font with the name '\(postScriptName)' at path \(fontUrl) with error: \(error).")
             }
         }
@@ -138,7 +139,7 @@ private extension Iconic {
     
     class func registerFontFromURL(url: NSURL, map: [String]) {
         
-        if map.count == 0 {
+        guard map.count > 0 else {
             print("Failed registering font. The icon map cannot be empty.")
             return
         }
@@ -158,8 +159,7 @@ private extension Iconic {
         if CTFontManagerRegisterFontsForURL(url, .None, &error) == true {
             icons[postScriptName] = map
             fontUrls[postScriptName] = url
-        }
-        else {
+        } else {
             print("Failed registering font with the postscript name '\(postScriptName)' at path \(url) with error: \(error).")
         }
     }
@@ -169,15 +169,7 @@ private extension Iconic {
         let extensions = ["otf", "ttf"]
         let bundle = NSBundle(forClass: Iconic.self)
         
-        for i in 0..<extensions.count {
-            if let url = bundle.URLForResource(familyName, withExtension: extensions[i]) {
-                return url
-            }
-        }
-        
-        print("Could not find any font with the name '\(familyName)' in the application's main bundle.")
-        
-        return nil
+        return extensions.flatMap { bundle.URLForResource(familyName, withExtension: $0) }.first
     }
 }
 
