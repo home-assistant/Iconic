@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/iromero/Desktop/DZN/OSS/Iconic/Playground/IconicPlayground.playground">
+   </FileRef>
+   <FileRef
       location = "group:Playground.xcodeproj">
    </FileRef>
    <FileRef

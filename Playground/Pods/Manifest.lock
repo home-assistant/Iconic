@@ -11,13 +11,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Iconic:
-    :commit: 2f310ccaff6fb0eb71bce2163cc0985d2bbc3ce9
+    :commit: 5d56b49810ba9b3c4bd0870aa0ef3430845b3eca
     :git: https://github.com/dzenbot/Iconic.git
     :submodules: true
 
 SPEC CHECKSUMS:
-  Iconic: d02593b947e6e0669bca58ac6c9d0f99900dd138
+  Iconic: 0633e637143e9528e78ab3051e8220dd1cad16d4
 
-PODFILE CHECKSUM: e9bef9e30e149e85f0ab75db01ec7e0030f1cfe8
+PODFILE CHECKSUM: b0bb462d7a111293ad96d591cad1f64a294b7405
 
 COCOAPODS: 1.0.0
