@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
 
-abstract_target 'IconicPlayground'
+abstract_target 'Playground'
 
 def common_pods
     # Since this library depends on 'prepare_command' for compiling SwiftGen

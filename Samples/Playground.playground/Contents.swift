@@ -2,8 +2,8 @@
 import XCPlayground
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
-import UIKit
 import Iconic
+
 
 var str = "Hello, playground"
 
