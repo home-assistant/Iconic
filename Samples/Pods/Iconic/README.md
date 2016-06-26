@@ -20,15 +20,13 @@ Note: **This library hasn't yet been used in production. Consider it in beta!**
 Web developers have been using icon fonts for quite some time now. It's really, really great!
 
 There are many advantages of using icon fonts on iOS:
+- Resolution independent: scale and tint without quality loss.
+- Automatically scaled for different screen densities.
 - Work with (way) less image files.
-- Scale and tint easily, without loosing any quality.
-- Automatically scaled for different display densities.
+- Improve visual consistency.
+- Platform agnostic. 
 - Add better UI accessibility.
-- Improve visual consistency
-- Fully backwards compatible.
-- Reusable in other platforms.
 - Simple to work with.
-- Platform agnostic.
 
 #### Think about the power of rendering vector icons, natively!
 
@@ -37,7 +35,7 @@ _Great. Now, how do I create an icon font,_ you say?
 - You can ask your nearest friendly designer! Making an icon font isn't that hard, specially if you already have the assets.
 - There are many [open sourced icon fonts](http://fontello.com/) out there (most are available under the [SIL Open Font License](http://scripts.sil.org/OFL)). They are designed for the web but they are still very useful for iOS.
 - You can [read this article](http://rafaltomal.com/how-to-create-and-use-your-own-icon-fonts/) and give [fontastic.me](http://fontastic.me/) a shot.
-- Check out the [icon fonts available in this repo](./Playground/Fonts), if you want to tests things.
+- Check out the [icon fonts available in this repo](./Playground/Fonts).
 
 
 ## Key Features

@@ -34,8 +34,6 @@
 
 /* Begin PBXFileReference section */
 		09E442910874D00CA19FC07C /* Pods-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1AAA3874F80246D1B56A5435 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		3EAD483FB39935BAE92402C2 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8C083D5DA43545F71B642D37 /* Pods_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED5AEFF915624CED3A017B5 /* Pods-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-tvOS/Pods-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		9502932F76ECF79AED187E4D /* Pods-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +70,7 @@
 		F54BAFFA1D0AA3C2004757C9 /* open-iconic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "open-iconic.otf"; path = "Fonts/open-iconic.otf"; sourceTree = SOURCE_ROOT; };
 		F54BAFFB1D0AA3C2004757C9 /* open-iconic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "open-iconic.ttf"; path = "Fonts/open-iconic.ttf"; sourceTree = SOURCE_ROOT; };
 		F558DA071CF1AF1A0014717C /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F57B56541D1FE785000E6551 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		F58D6D201D0426D400D68109 /* iconic-default.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "iconic-default.stencil"; path = "../Source/Iconizer/iconic-default.stencil"; sourceTree = "<group>"; };
 		F58D6D211D0426D400D68109 /* Iconizer.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Iconizer.sh; path = ../Source/Iconizer/Iconizer.sh; sourceTree = "<group>"; };
 		F58D6D241D0429FE00D68109 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -120,8 +119,6 @@
 		CEDC9920EA1A6EAFB2AD98F9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3EAD483FB39935BAE92402C2 /* Pods-Example.debug.xcconfig */,
-				1AAA3874F80246D1B56A5435 /* Pods-Example.release.xcconfig */,
 				09E442910874D00CA19FC07C /* Pods-UnitTests.debug.xcconfig */,
 				9502932F76ECF79AED187E4D /* Pods-UnitTests.release.xcconfig */,
 				ADA02EF0367D451A1DAEAB71 /* Pods-tvOS.debug.xcconfig */,
@@ -218,6 +215,7 @@
 				F58D6D201D0426D400D68109 /* iconic-default.stencil */,
 				F54BAFF11D0A9509004757C9 /* LICENSE */,
 				F54BAFF21D0A9509004757C9 /* README.md */,
+				F57B56541D1FE785000E6551 /* .travis.yml */,
 				F54BAFBA1D0A609F004757C9 /* iOS */,
 				F50ADBFF1D112CDA004A5A4C /* tvOS */,
 				F54BAFD31D0A6123004757C9 /* UnitTests */,
@@ -322,7 +320,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F558DA021CF1AF1A0014717C /* Build configuration list for PBXProject "Playground" */;
+			buildConfigurationList = F558DA021CF1AF1A0014717C /* Build configuration list for PBXProject "Samples" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -781,7 +779,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F558DA021CF1AF1A0014717C /* Build configuration list for PBXProject "Playground" */ = {
+		F558DA021CF1AF1A0014717C /* Build configuration list for PBXProject "Samples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F558DA191CF1AF1A0014717C /* Debug */,
