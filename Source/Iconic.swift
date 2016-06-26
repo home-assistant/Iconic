@@ -59,18 +59,36 @@ public class Iconic: NSObject {
     }
     
     class func attributedStringForIndex(idx: Int, size: CGFloat, color: UIColor?) -> NSAttributedString? {
+
+        return attributedStringForIndex(idx, size: size, color: color, edgeInsets: UIEdgeInsetsZero)
+    }
+    
+    class func attributedStringForIndex(idx: Int, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
         
-        guard let font = iconFontOfSize(size), let string = unicodeStringForIndex(idx) else {
+        guard let font = iconFontOfSize(size), let unicode = unicodeStringForIndex(idx) else {
             return nil
         }
         
-        var attributes = [NSFontAttributeName: font] as [String : AnyObject]
+        let string = " " + unicode + " "
+        
+        var attributes = [NSFontAttributeName: font,
+                          NSBaselineOffsetAttributeName: edgeInsets.bottom-edgeInsets.top]
         
         if let color = color {
             attributes[NSForegroundColorAttributeName] = color
         }
         
-        return NSAttributedString(string: string, attributes: attributes)
+        let attrString = NSAttributedString(string: string, attributes: attributes).mutableCopy()
+        
+        if edgeInsets.left > 0 {
+            attrString.setAttributes([NSKernAttributeName: edgeInsets.left], range: NSMakeRange(0, 1))
+        }
+        
+        if edgeInsets.right > 0 {
+            attrString.setAttributes([NSKernAttributeName: edgeInsets.right], range: NSMakeRange(2, 1))
+        }
+        
+        return attrString as? NSAttributedString
     }
     
     class func imageForIndex(idx: Int, size: CGFloat, color: UIColor?) -> UIImage? {

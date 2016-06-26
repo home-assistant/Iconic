@@ -15,7 +15,7 @@ let font:UIFont = Iconic.fontAwesomeIconFontOfSize(23)!
 
 // Icon as unicode
 let unicode = Iconic.unicodeStringForFontAwesomeIcon(.Bolt)
-let edgeInsets = UIEdgeInsetsMake(0, 5, 0, 20)
+let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 20)
 
 let iconAttributes = [NSFontAttributeName: font,
                       NSForegroundColorAttributeName: UIColor.orangeColor(),
