@@ -35,7 +35,7 @@ _Great. Now, how do I create an icon font,_ you say?
 - You can ask your nearest friendly designer! Making an icon font isn't that hard, specially if you already have the assets.
 - There are many [open sourced icon fonts](http://fontello.com/) out there (most are available under the [SIL Open Font License](http://scripts.sil.org/OFL)). They are designed for the web but they are still very useful for iOS.
 - You can [read this article](http://rafaltomal.com/how-to-create-and-use-your-own-icon-fonts/) and give [fontastic.me](http://fontastic.me/) a shot.
-- Check out the [icon fonts available in this repo](./Playground/Fonts).
+- Check out the [icon fonts available in this repo](./Samples/Fonts).
 
 
 ## Key Features
@@ -116,22 +116,23 @@ Iconic.registerFont("FontAwesome", map: FontAwesomeIconMap)
 ### Use as images
 You can construct an `UIImage` instance out of a font's icon and tint it. This may be very convenient for integrating with existing UIKit controls which expect `UIImage` objects already.
 ```swift
-let image = Iconic.imageForFontAwesomeIcon(.CaretRight, size: 16, color: self.view.tintColor)
+let image = Iconic.imageForFontAwesomeIcon(.Home, size: 20, color: .blueColor())
 let imageView = UIImageView(image: image)
 ```
 
 Images are created using NSStringDraw APIs to render a `UIImage` out of an `NSAttributedString`.
 
 ### Use as attributed strings
-You may need to icons as text too, to simplify your layout work.
+You may need to icons as text too, and simplify your layout work.
 For example, instead of having an image and a label, you can combined it all in one single label:
 ```swift
-let iconString = Iconic.attributedStringForFontAwesomeIcon(.Home, size: 20, color: .orangeColor())
+let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 10)
+let iconString = Iconic.attributedStringForFontAwesomeIcon(.Home, size: 20, color: .blueColor(), edgeInsets: edgeInsets)
 
-let attributes = [NSForegroundColorAttributeName: UIColor.orangeColor(),
-                  NSFontAttributeName: UIFont.boldSystemFontOfSize(20)]
+let attributes = [NSForegroundColorAttributeName: UIColor.blueColor(),
+                  NSFontAttributeName: UIFont.systemFontOfSize(20)]
 
-let labelString = NSMutableAttributedString(string: "  Home", attributes: attributes)
+let labelString = NSMutableAttributedString(string: "Home", attributes: attributes)
 labelString.insertAttributedString(iconString!, atIndex: 0)
 
 let label = UILabel()

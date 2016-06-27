@@ -28,5 +28,5 @@
     "ios": "8.0",
     "tvos": "9.0"
   },
-  "prepare_command": "cd Vendor/SwiftGen/ && rake install\ncd ../..\nsh Source/Iconizer/Iconizer.sh Playground/Fonts/FontAwesome.ttf Source/ --verbose"
+  "prepare_command": "cd Vendor/SwiftGen/ && rake install\ncd ../..\nsh Source/Iconizer/Iconizer.sh Samples/Fonts/FontAwesome.ttf Source/ --verbose"
 }
