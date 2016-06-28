@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Iconic:
-    :commit: 6c88e9346dd57b0a48504b0afbae401d39529c5b
+    :commit: 34cd7ca0775448507666ed5795e46a9a2d3702a6
     :git: https://github.com/dzenbot/Iconic.git
     :submodules: true
 
