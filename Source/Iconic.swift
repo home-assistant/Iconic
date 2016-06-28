@@ -60,35 +60,36 @@ public class Iconic: NSObject {
     
     class func attributedStringForIndex(idx: Int, size: CGFloat, color: UIColor?) -> NSAttributedString? {
 
-        return attributedStringForIndex(idx, size: size, color: color, edgeInsets: UIEdgeInsetsZero)
-    }
-    
-    class func attributedStringForIndex(idx: Int, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
-        
         guard let font = iconFontOfSize(size), let unicode = unicodeStringForIndex(idx) else {
             return nil
         }
         
-        let string = " " + unicode + " "
-        
-        var attributes = [NSFontAttributeName: font,
-                          NSBaselineOffsetAttributeName: edgeInsets.bottom-edgeInsets.top]
+        var attributes = [String : AnyObject]()
+        attributes[NSFontAttributeName] = font
         
         if let color = color {
             attributes[NSForegroundColorAttributeName] = color
         }
         
-        let attrString = NSAttributedString(string: string, attributes: attributes).mutableCopy()
+        return NSAttributedString(string: unicode, attributes: attributes)
+    }
+    
+    class func attributedStringForIndex(idx: Int, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
         
-        if edgeInsets.left > 0 {
-            attrString.setAttributes([NSKernAttributeName: edgeInsets.left], range: NSMakeRange(0, 1))
+        guard let string = attributedStringForIndex(idx, size: size, color: color) else {
+            return nil
         }
         
-        if edgeInsets.right > 0 {
-            attrString.setAttributes([NSKernAttributeName: edgeInsets.right], range: NSMakeRange(2, 1))
-        }
+        let mutableString = string.mutableCopy()
+        mutableString.addAttributes([NSBaselineOffsetAttributeName: edgeInsets.bottom-edgeInsets.top], range: NSMakeRange(0, string.length))
         
-        return attrString as? NSAttributedString
+        let leftSpace = NSAttributedString(string: " ", attributes: [NSKernAttributeName: edgeInsets.left])
+        let rightSpace = NSAttributedString(string: " ", attributes: [NSKernAttributeName: edgeInsets.right])
+
+        mutableString.insertAttributedString(rightSpace, atIndex: string.length)
+        mutableString.insertAttributedString(leftSpace, atIndex: 0)
+        
+        return mutableString as? NSAttributedString
     }
     
     class func imageForIndex(idx: Int, size: CGFloat, color: UIColor?) -> UIImage? {
