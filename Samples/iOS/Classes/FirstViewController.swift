@@ -25,7 +25,7 @@ class FirstViewController: UITableViewController {
     
     func commonInit() -> Void {
         
-        let tabItem = UITabBarItem(fontAwesomeIcon: .Book, size:20, title: "Catalog", tag: 0)
+        let tabItem = UITabBarItem(fontAwesomeIcon: .Book, size:20, title: "Catalog", tag: FontAwesomeIcon.Book.rawValue)
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
@@ -36,6 +36,8 @@ class FirstViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateTitleView()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -105,3 +107,31 @@ class FirstViewController: UITableViewController {
     }
 }
 
+extension UIViewController {
+    
+    func updateTitleView() {
+        
+        guard let title = self.title else {
+            return
+        }
+        
+        let icon = FontAwesomeIcon(rawValue: self.tabBarItem.tag)
+        let color = self.view.tintColor
+        let titleSize = CGFloat(20)
+        let edgeInsets = UIEdgeInsetsMake(0, 0, 0, titleSize/2)
+        
+        let iconString = Iconic.attributedStringForFontAwesomeIcon(icon!, size: titleSize, color: color, edgeInsets: edgeInsets)
+        
+        let attributes = [NSForegroundColorAttributeName: color,
+                          NSFontAttributeName: UIFont.systemFontOfSize(titleSize)]
+        
+        let labelString = NSMutableAttributedString(string: title, attributes: attributes)
+        labelString.insertAttributedString(iconString!, atIndex: 0)
+        
+        let label = UILabel()
+        label.attributedText = labelString
+        label.sizeToFit()
+        
+        self.navigationItem.titleView = label
+    }
+}
