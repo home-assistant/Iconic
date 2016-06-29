@@ -25,7 +25,7 @@ class SecondViewController: UIViewController {
     }
     
     func commonInit() -> Void {
-        let tabItem = UITabBarItem(fontAwesomeIcon: .Picture, size:20, title: "As Image", tag: 1)
+        let tabItem = UITabBarItem(fontAwesomeIcon: .Picture, size:20, title: "As Image", tag: FontAwesomeIcon.Picture.rawValue)
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
@@ -38,6 +38,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         updateImage(1.0)
+        updateTitleView()
     }
     
     override func viewWillAppear(animated: Bool) {

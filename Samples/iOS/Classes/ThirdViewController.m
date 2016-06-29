@@ -8,6 +8,8 @@
 
 #import "ThirdViewController.h"
 
+#import "iOS-Swift.h"
+
 @import Iconic;
 
 @interface ThirdViewController ()
@@ -38,13 +40,20 @@
 
 - (void)commonInit
 {
-    self.tabBarItem = [[UITabBarItem alloc] initWithFontAwesomeIcon:FontAwesomeIcon_546 size:20.0 title:@"As Text" tag:2];
+    self.tabBarItem = [[UITabBarItem alloc] initWithFontAwesomeIcon:FontAwesomeIcon_546 size:20.0 title:@"As Text" tag:FontAwesomeIcon_546];
     self.title = self.tabBarItem.title;
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithFontAwesomeIcon:FontAwesomeIconCog size:24.0 target:self action:@selector(didTapRightButtonItem:)];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willShowKeyboard:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willHideKeyboard:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self updateTitleView];
 }
 
 - (void)viewWillAppear:(BOOL)animated

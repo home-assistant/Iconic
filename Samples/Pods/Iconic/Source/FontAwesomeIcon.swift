@@ -23,7 +23,7 @@ extension Iconic {
     }
 
     /**
-    Creates an attributed string with the specified icon enum type.
+    Creates an attributed string with the specified icon enum type, with optional color.
 
     - parameter icon: The icon enum type.
     - parameter size: The size of the text, in points.
@@ -31,6 +31,20 @@ extension Iconic {
     */
     public class func attributedStringForFontAwesomeIcon(icon: FontAwesomeIcon, size: CGFloat, color: UIColor?) -> NSAttributedString? {
         return Iconic.attributedStringForIndex(icon.rawValue, size: size, color: color)
+    }
+
+    /**
+    Creates an attributed string with the specified icon enum type, with optional color and alignment.
+    The optional alinment can be really helpful when appending an icon to another attributed string with different fonts.
+    It may also help for adjusting the icon's baseline, when using either top and bottom insets.
+
+    - parameter icon: The icon enum type.
+    - parameter size: The size of the text, in points.
+    - parameter color: Optional color to be applied to the icon.
+    - parameter edgeInsets: Optional edge insets to be used as horizontal and vertical margins.
+    */
+    public class func attributedStringForFontAwesomeIcon(icon: FontAwesomeIcon, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
+        return Iconic.attributedStringForIndex(icon.rawValue, size: size, color: color, edgeInsets: edgeInsets)
     }
 
     /**
