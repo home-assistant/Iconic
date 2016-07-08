@@ -58,9 +58,9 @@ public class Iconic: NSObject {
         return font
     }
     
-    class func attributedStringForIndex(idx: Int, size: CGFloat, color: UIColor?) -> NSAttributedString? {
+    class func attributedString(forIndex idx: Int, size: CGFloat, color: UIColor?) -> NSAttributedString? {
 
-        guard let font = iconFontOfSize(size), let unicode = unicodeStringForIndex(idx) else {
+        guard let font = iconFontOfSize(size), let unicode = unicodeString(forIndex: idx) else {
             return nil
         }
         
@@ -74,9 +74,9 @@ public class Iconic: NSObject {
         return NSAttributedString(string: unicode, attributes: attributes)
     }
     
-    class func attributedStringForIndex(idx: Int, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
+    class func attributedString(forIndex idx: Int, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
         
-        guard let string = attributedStringForIndex(idx, size: size, color: color) else {
+        guard let string = attributedString(forIndex: idx, size: size, color: color) else {
             return nil
         }
         
@@ -92,9 +92,9 @@ public class Iconic: NSObject {
         return mutableString as? NSAttributedString
     }
     
-    class func imageForIndex(idx: Int, size: CGFloat, color: UIColor?) -> UIImage? {
+    class func image(forIndex idx: Int, size: CGFloat, color: UIColor?) -> UIImage? {
         
-        guard let attributedString = Iconic.attributedStringForIndex(idx, size: size, color: color)?.mutableCopy() else {
+        guard let attributedString = Iconic.attributedString(forIndex: idx, size: size, color: color)?.mutableCopy() else {
             return nil
         }
         
@@ -113,7 +113,7 @@ public class Iconic: NSObject {
         return image
     }
     
-    class func unicodeStringForIndex(idx: Int) -> String? {
+    class func unicodeString(forIndex idx: Int) -> String? {
         
         guard let map = Array(icons.values).first where idx < map.count else {
             return nil
@@ -196,7 +196,7 @@ extension UIBarButtonItem {
     
     internal convenience init(idx: Int, size: CGFloat, target: AnyObject?, action: Selector) {
         
-        let image = Iconic.imageForIndex(idx, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: idx, size: size, color: .blackColor())
         self.init(image: image, style: .Plain, target: target, action: action)
     }
 }
@@ -205,7 +205,7 @@ extension UITabBarItem {
     
     internal convenience init(idx: Int, size: CGFloat, title: String?, tag: Int) {
         
-        let image = Iconic.imageForIndex(idx, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: idx, size: size, color: .blackColor())
         self.init(title: title, image: image, tag: tag)
     }
 }
@@ -214,7 +214,7 @@ extension UIButton {
     
     internal func setIconForIndex(idx: Int, size: CGFloat, forState state: UIControlState) {
         
-        let image = Iconic.imageForIndex(idx, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: idx, size: size, color: .blackColor())
         self.setImage(image, forState: state)
     }
 }

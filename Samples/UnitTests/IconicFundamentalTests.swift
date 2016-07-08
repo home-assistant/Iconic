@@ -39,7 +39,7 @@ class IconicFundamentalTests: XCTestCase {
     
     func testUnicodeConstructor() {
         
-        let str = Iconic.unicodeStringForIndex(0)
+        let str = Iconic.unicodeString(forIndex: 0)
         
         XCTAssertNotNil(str)
         XCTAssertEqual(str, "\u{F129}")
@@ -55,7 +55,7 @@ class IconicFundamentalTests: XCTestCase {
     
     func testAttributedStringConstructor() {
         
-        let att = Iconic.attributedStringForIndex(0, size: 20, color: nil)
+        let att = Iconic.attributedString(forIndex: 0, size: 20, color: nil)
         
         XCTAssertNotNil(att)
         
@@ -68,7 +68,7 @@ class IconicFundamentalTests: XCTestCase {
     
     func testImageConstructor() {
         
-        let img = Iconic.imageForIndex(0, size: 20, color: nil)
+        let img = Iconic.image(forIndex: 0, size: 20, color: nil)
         
         XCTAssertNotNil(img)
         XCTAssertEqual(img?.size, CGSizeMake(20, 20))
