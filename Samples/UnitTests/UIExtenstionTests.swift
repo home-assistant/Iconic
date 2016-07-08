@@ -37,7 +37,7 @@ class UIExtenstionTests: XCTestCase {
     func testButton() {
         
         let button = UIButton(type: .System)
-        button.setIconForIndex(0, size: 20, forState: .Normal)
+        button.setIcon(forIndex: 0, size: 20, forState: .Normal)
         
         let image = button.imageForState(.Normal)
         

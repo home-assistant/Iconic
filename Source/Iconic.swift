@@ -212,7 +212,7 @@ extension UITabBarItem {
 
 extension UIButton {
     
-    internal func setIconForIndex(idx: Int, size: CGFloat, forState state: UIControlState) {
+    internal func setIcon(forIndex idx: Int, size: CGFloat, forState state: UIControlState) {
         
         let image = Iconic.image(forIndex: idx, size: size, color: .blackColor())
         self.setImage(image, forState: state)
