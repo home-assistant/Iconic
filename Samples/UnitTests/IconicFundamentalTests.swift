@@ -73,4 +73,13 @@ class IconicFundamentalTests: XCTestCase {
         XCTAssertNotNil(img)
         XCTAssertEqual(img?.size, CGSizeMake(20, 20))
     }
+    
+    func testImageInsetsConstructor() {
+        
+        let insets = UIEdgeInsetsMake(-5, -5, -5, -5)
+        let img = Iconic.image(forIndex: 0, size: 20, color: nil, edgeInsets: insets)
+        
+        XCTAssertNotNil(img)
+        XCTAssertEqual(img?.size, CGSizeMake(30, 30))
+    }
 }

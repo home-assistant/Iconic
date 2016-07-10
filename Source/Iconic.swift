@@ -42,7 +42,7 @@ public class Iconic: NSObject {
         registerFontFromURL(NSURL.fileURLWithPath(path), map:map)
     }
     
-    // MARK: - Constructors
+    // MARK: - Font Constructor
     
     class func iconFontOfSize(fontSize: CGFloat) -> UIFont? {
         
@@ -57,6 +57,25 @@ public class Iconic: NSObject {
         
         return font
     }
+    
+    // MARK: - Unicode Constructor
+    
+    class func unicodeString(forIndex idx: Int) -> String? {
+        
+        guard let map = Array(icons.values).first where idx < map.count else {
+            return nil
+        }
+        
+        let unicode = map[idx]
+        
+        guard let string = NSString(UTF8String: unicode) else {
+            return nil
+        }
+        
+        return string as String
+    }
+    
+    // MARK: - Attributed String Constructors
     
     class func attributedString(forIndex idx: Int, size: CGFloat, color: UIColor?) -> NSAttributedString? {
 
@@ -92,13 +111,20 @@ public class Iconic: NSObject {
         return mutableString as? NSAttributedString
     }
     
+    // MARK: - Image Constructors
+
     class func image(forIndex idx: Int, size: CGFloat, color: UIColor?) -> UIImage? {
+        
+        return image(forIndex: idx, size: size, color: color, edgeInsets: UIEdgeInsetsZero)
+    }
+    
+    class func image(forIndex idx: Int, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage? {
         
         guard let attributedString = Iconic.attributedString(forIndex: idx, size: size, color: color)?.mutableCopy() else {
             return nil
         }
         
-        let rect = CGRectMake(0, 0, size, size)
+        let rect = UIEdgeInsetsInsetRect(CGRectMake(0, 0, size, size), edgeInsets)
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .Center
@@ -111,21 +137,6 @@ public class Iconic: NSObject {
         UIGraphicsEndImageContext()
         
         return image
-    }
-    
-    class func unicodeString(forIndex idx: Int) -> String? {
-        
-        guard let map = Array(icons.values).first where idx < map.count else {
-            return nil
-        }
-        
-        let unicode = map[idx]
-        
-        guard let string = NSString(UTF8String: unicode) else {
-            return nil
-        }
-        
-        return string as String
     }
 }
 
