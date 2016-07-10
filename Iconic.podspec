@@ -34,8 +34,6 @@ Pod::Spec.new do |s|
   font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Samples/Fonts/FontAwesome.ttf'
 
   s.prepare_command = <<-CMD
-                      cd Vendor/SwiftGen/ && rake install
-                      cd ../..
                       sh Source/Iconizer/Iconizer.sh #{font_path} Source/ --verbose
                       CMD
 
