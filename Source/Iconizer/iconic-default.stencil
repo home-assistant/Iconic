@@ -32,7 +32,7 @@ extension Iconic {
     - parameter color: Optional color to be applied to the icon.
     */
     public class func attributedStringFor{{enumName}}(icon: {{enumName}}, size: CGFloat, color: UIColor?) -> NSAttributedString? {
-        return Iconic.attributedStringForIndex(icon.rawValue, size: size, color: color)
+        return Iconic.attributedString(forIndex: icon.rawValue, size: size, color: color)
     }
 
     /**
@@ -46,7 +46,7 @@ extension Iconic {
     - parameter edgeInsets: Optional edge insets to be used as horizontal and vertical margins.
     */
     public class func attributedStringFor{{enumName}}(icon: {{enumName}}, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
-        return Iconic.attributedStringForIndex(icon.rawValue, size: size, color: color, edgeInsets: edgeInsets)
+        return Iconic.attributedString(forIndex: icon.rawValue, size: size, color: color, edgeInsets: edgeInsets)
     }
 
     /**
@@ -57,7 +57,7 @@ extension Iconic {
     - parameter color: Optional color to be applied to the icon.
     */
     public class func imageFor{{enumName}}(icon: {{enumName}}, size: CGFloat, color: UIColor?) -> UIImage? {
-        return Iconic.imageForIndex(icon.rawValue, size: size, color: color)
+        return Iconic.image(forIndex: icon.rawValue, size: size, color: color)
     }
 
     /**
@@ -67,7 +67,7 @@ extension Iconic {
      - returns An unicode string representation.
      */
     public class func unicodeStringFor{{enumName}}(icon: {{enumName}}) -> String? {
-        return Iconic.unicodeStringForIndex(icon.rawValue)
+        return Iconic.unicodeString(forIndex: icon.rawValue)
     }
 }
 
@@ -83,7 +83,7 @@ extension UIBarButtonItem {
     */
     public convenience init({{enumName|lowerFirstWord}}: {{enumName}}, size: CGFloat, target: AnyObject?, action: Selector) {
         
-        let image = Iconic.imageForIndex({{enumName|lowerFirstWord}}.rawValue, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: {{enumName|lowerFirstWord}}.rawValue, size: size, color: .blackColor())
         self.init(image: image, style: .Plain, target: target, action: action)
     }
 }
@@ -100,7 +100,7 @@ extension UITabBarItem {
     */
     public convenience init({{enumName|lowerFirstWord}}: {{enumName}}, size: CGFloat, title: String?, tag: Int) {
         
-        let image = Iconic.imageForIndex({{enumName|lowerFirstWord}}.rawValue, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: {{enumName|lowerFirstWord}}.rawValue, size: size, color: .blackColor())
         self.init(title: title, image: image, tag: tag)
     }
 }
@@ -116,7 +116,7 @@ extension UIButton {
     */
     public func set{{enumName}}({{enumName|lowerFirstWord}}: {{enumName}}, size: CGFloat, forState: UIControlState) {
         
-        self.setIconForIndex({{enumName|lowerFirstWord}}.rawValue, size: size, forState: state)
+        self.setIcon(forIndex: {{enumName|lowerFirstWord}}.rawValue, size: size, forState: state)
     }
 }
 
