@@ -30,7 +30,7 @@ extension Iconic {
     - parameter color: Optional color to be applied to the icon.
     */
     public class func attributedStringForFontAwesomeIcon(icon: FontAwesomeIcon, size: CGFloat, color: UIColor?) -> NSAttributedString? {
-        return Iconic.attributedStringForIndex(icon.rawValue, size: size, color: color)
+        return Iconic.attributedString(forIndex: icon.rawValue, size: size, color: color)
     }
 
     /**
@@ -44,7 +44,7 @@ extension Iconic {
     - parameter edgeInsets: Optional edge insets to be used as horizontal and vertical margins.
     */
     public class func attributedStringForFontAwesomeIcon(icon: FontAwesomeIcon, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
-        return Iconic.attributedStringForIndex(icon.rawValue, size: size, color: color, edgeInsets: edgeInsets)
+        return Iconic.attributedString(forIndex: icon.rawValue, size: size, color: color, edgeInsets: edgeInsets)
     }
 
     /**
@@ -55,7 +55,7 @@ extension Iconic {
     - parameter color: Optional color to be applied to the icon.
     */
     public class func imageForFontAwesomeIcon(icon: FontAwesomeIcon, size: CGFloat, color: UIColor?) -> UIImage? {
-        return Iconic.imageForIndex(icon.rawValue, size: size, color: color)
+        return Iconic.image(forIndex: icon.rawValue, size: size, color: color)
     }
 
     /**
@@ -65,7 +65,7 @@ extension Iconic {
      - returns An unicode string representation.
      */
     public class func unicodeStringForFontAwesomeIcon(icon: FontAwesomeIcon) -> String? {
-        return Iconic.unicodeStringForIndex(icon.rawValue)
+        return Iconic.unicodeString(forIndex: icon.rawValue)
     }
 }
 
@@ -80,7 +80,7 @@ extension UIBarButtonItem {
     - parameter action: The action to send to target when this item is selected.
     */
     public convenience init(fontAwesomeIcon: FontAwesomeIcon, size: CGFloat, target: AnyObject?, action: Selector) {
-        let image = Iconic.imageForIndex(fontAwesomeIcon.rawValue, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: fontAwesomeIcon.rawValue, size: size, color: .blackColor())
         self.init(image: image, style: .Plain, target: target, action: action)
     }
 }
@@ -96,7 +96,7 @@ extension UITabBarItem {
     - parameter tag: The receiver's tag, an integer that you can use to identify bar item objects in your application.
     */
     public convenience init(fontAwesomeIcon: FontAwesomeIcon, size: CGFloat, title: String?, tag: Int) {
-        let image = Iconic.imageForIndex(fontAwesomeIcon.rawValue, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: fontAwesomeIcon.rawValue, size: size, color: .blackColor())
         self.init(title: title, image: image, tag: tag)
     }
 }
@@ -111,7 +111,7 @@ extension UIButton {
     - parameter state: The state that uses the specified title. The values are described in UIControlState.
     */
     public func setFontAwesomeIcon(fontAwesomeIcon: FontAwesomeIcon, size: CGFloat, forState: UIControlState) {
-        self.setIconForIndex(fontAwesomeIcon.rawValue, size: size, forState: state)
+        self.setIcon(forIndex: fontAwesomeIcon.rawValue, size: size, forState: state)
     }
 }
 

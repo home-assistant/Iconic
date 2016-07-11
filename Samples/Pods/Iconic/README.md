@@ -59,7 +59,9 @@ Note: Some open sourced icon fonts don't include the names of each of their glyp
 
 #### Via CocoaPods
 ```ruby
-FONT_PATH='path_to_your_icon_font.ttf' pod install Iconic
+FONT_PATH='path_to_your_icon_font.ttf' pod install
+
+FONT_PATH='path_to_your_icon_font.ttf' pod update Iconic
 ```
 When using the `FONT_PATH` environment variable, it will install Iconic with your icon font and auto-generate all files with its name.
 
