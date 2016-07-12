@@ -26,7 +26,7 @@ class IconicFundamentalTests: XCTestCase {
     override class func setUp() {
         super.setUp()
         
-        Iconic.registerFont("FontAwesome", map: IconMap)
+        Iconic.registerFont(withName: "FontAwesome", map: IconMap)
     }
     
     override func setUp() {
@@ -47,7 +47,7 @@ class IconicFundamentalTests: XCTestCase {
     
     func testFontConstructor() {
         
-        let font = Iconic.iconFontOfSize(20)
+        let font = Iconic.iconFont(ofSize: 20)
         
         XCTAssertNotNil(font)
         XCTAssertEqual(font!.familyName, "FontAwesome")

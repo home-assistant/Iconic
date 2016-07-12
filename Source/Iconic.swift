@@ -11,9 +11,6 @@ import CoreText
 
 public class Iconic: NSObject {
     
-    static var icons = [String: [String]]()
-    static var fontUrls = [String: NSURL]()
-    
     // MARK: - Font Registration
     
     /**
@@ -25,8 +22,9 @@ public class Iconic: NSObject {
     class func registerFont(withName familyName: String, map: [String]) {
         
         if let url = urlForFontWithName(familyName) {
-            return registerFontFromURL(url, map:map)
-        } else {
+            return registerFont(fromURL: url, map: map)
+        }
+        else {
             print("Could not find any font with the name '\(familyName)' in the application's main bundle.")
         }
     }
@@ -39,7 +37,27 @@ public class Iconic: NSObject {
      */
     class func registerFont(withPath path: String, map: [String]) {
         
-        registerFontFromURL(NSURL.fileURLWithPath(path), map:map)
+        registerFont(fromURL: NSURL.fileURLWithPath(path), map: map)
+    }
+    
+    /**
+     Unregisters the current registered font, if any.
+     */
+    class func unregisterFont() {
+        
+        guard let name = fontName, let url = fontURL else {
+            return
+        }
+        
+        var error: Unmanaged<CFErrorRef>? = nil
+        
+        if CTFontManagerUnregisterFontsForURL(url, .None, &error) == true {
+            configure(withURL: nil, name: nil, map: nil)
+            print("'\(name)' has been unregistered.")
+        }
+        else {
+            print("Failed unregistering font with the name '\(name)' at path \(url) with error: \(error).")
+        }
     }
     
     // MARK: - Font Constructor
@@ -51,7 +69,7 @@ public class Iconic: NSObject {
             return nil
         }
         
-        guard let name = Array(icons.keys).first, let font = UIFont(name: name, size: fontSize) else {
+        guard let name = fontName, let font = UIFont(name: name, size: fontSize) else {
             return nil
         }        
         
@@ -62,7 +80,7 @@ public class Iconic: NSObject {
     
     class func unicodeString(forIndex idx: Int) -> String? {
         
-        guard let map = Array(icons.values).first where idx < map.count else {
+        guard let map = iconsMap where idx < map.count else {
             return nil
         }
         
@@ -140,34 +158,13 @@ public class Iconic: NSObject {
     }
 }
 
-public extension Iconic {
-    
-    /**
-     Unregisters all registered icon fonts.
-     */
-    class func unregisterAllFonts() {
-        
-        let fontNames = Array(icons.keys)
-        
-        var error: Unmanaged<CFErrorRef>? = nil
-        
-        for i in 0..<fontNames.count {
-            
-            let postScriptName = fontNames[i]
-            let fontUrl = fontUrls[postScriptName]
-            
-            if CTFontManagerUnregisterFontsForURL(fontUrl!, .None, &error) == true {
-                icons.removeAll()
-            } else {
-                print("Failed unregistering font with the name '\(postScriptName)' at path \(fontUrl) with error: \(error).")
-            }
-        }
-    }
-}
-
 private extension Iconic {
     
-    class func registerFontFromURL(url: NSURL, map: [String]) {
+    static var iconsMap:[String]?
+    static var fontName:String?
+    static var fontURL:NSURL?
+    
+    class func registerFont(fromURL url: NSURL, map: [String]) {
         
         guard map.count > 0 else {
             print("Failed registering font. The icon map cannot be empty.")
@@ -182,16 +179,23 @@ private extension Iconic {
         }
         
         let font = CTFontCreateWithFontDescriptorAndOptions(descriptor, 0.0, nil, [.PreventAutoActivation])
-        let postScriptName = CTFontCopyPostScriptName(font) as String
+        let fontName = CTFontCopyPostScriptName(font) as String
         var error: Unmanaged<CFErrorRef>? = nil
         
         // Registers font dynamically
         if CTFontManagerRegisterFontsForURL(url, .None, &error) == true {
-            icons[postScriptName] = map
-            fontUrls[postScriptName] = url
-        } else {
-            print("Failed registering font with the postscript name '\(postScriptName)' at path \(url) with error: \(error).")
+            configure(withURL: url, name: fontName, map: map)
         }
+        else {
+            print("Failed registering font with the postscript name '\(fontName)' at path \(url) with error: \(error).")
+        }
+    }
+    
+    class func configure(withURL url: NSURL?, name: String?, map: [String]?) {
+        
+        fontURL = url
+        fontName = name
+        iconsMap = map
     }
     
     class func urlForFontWithName(familyName: String) -> NSURL? {
