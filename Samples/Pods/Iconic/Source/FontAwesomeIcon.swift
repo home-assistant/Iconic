@@ -2,24 +2,15 @@
 
 import UIKit
 
-extension Iconic {
+public extension Iconic {
 
     /**
-    Registers the FontAwesome font to Iconic.
+    Registers the icon font to Iconic.
     You shall do this once, when launching your application. Internally, the icon mapping is retrieved and
     kept in memory during the application's life term.
     */
-    public class func registerFontAwesomeIcon() {
-        Iconic.registerFont("FontAwesome", map: FontAwesomeIconMap)
-    }
-
-    /**
-     Returns the FontAwesome font object in the specified size.
-     - parameter fontSize: The size (in points) to which the font is scaled.
-     This value must be greater than 0.0, or a system Font object will be returned.
-     */
-    public class func fontAwesomeIconFontOfSize(fontSize: CGFloat) -> UIFont? {
-        return Iconic.iconFontOfSize(fontSize)
+    class func registerIconFont() {
+        Iconic.registerFont(withName: "FontAwesome", map: IconMap)
     }
 
     /**
@@ -29,7 +20,7 @@ extension Iconic {
     - parameter size: The size of the text, in points.
     - parameter color: Optional color to be applied to the icon.
     */
-    public class func attributedStringForFontAwesomeIcon(icon: FontAwesomeIcon, size: CGFloat, color: UIColor?) -> NSAttributedString? {
+    class func attributedString(forIcon icon: Icon, size: CGFloat, color: UIColor?) -> NSAttributedString? {
         return Iconic.attributedString(forIndex: icon.rawValue, size: size, color: color)
     }
 
@@ -43,7 +34,7 @@ extension Iconic {
     - parameter color: Optional color to be applied to the icon.
     - parameter edgeInsets: Optional edge insets to be used as horizontal and vertical margins.
     */
-    public class func attributedStringForFontAwesomeIcon(icon: FontAwesomeIcon, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
+    class func attributedString(forIcon icon: Icon, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
         return Iconic.attributedString(forIndex: icon.rawValue, size: size, color: color, edgeInsets: edgeInsets)
     }
 
@@ -54,7 +45,7 @@ extension Iconic {
     - parameter size: The size of the text, in points.
     - parameter color: Optional color to be applied to the icon.
     */
-    public class func imageForFontAwesomeIcon(icon: FontAwesomeIcon, size: CGFloat, color: UIColor?) -> UIImage? {
+    class func image(forIcon icon: Icon, size: CGFloat, color: UIColor?) -> UIImage? {
         return Iconic.image(forIndex: icon.rawValue, size: size, color: color)
     }
 
@@ -64,61 +55,61 @@ extension Iconic {
      - parameter icon: The icon enum type.
      - returns An unicode string representation.
      */
-    public class func unicodeStringForFontAwesomeIcon(icon: FontAwesomeIcon) -> String? {
+    class func unicodeString(forIcon icon: Icon) -> String? {
         return Iconic.unicodeString(forIndex: icon.rawValue)
     }
 }
 
-extension UIBarButtonItem {
+public extension UIBarButtonItem {
 
     /**
     Initializes a new item using the specified icon enum type and other properties.
 
-    - parameter fontAwesomeIcon: The icon enum type to be used as image.
+    - parameter icon: The icon enum type to be used as image.
     - parameter size: The size of the image, in points.
     - parameter target: The object that receives the action message.
     - parameter action: The action to send to target when this item is selected.
     */
-    public convenience init(fontAwesomeIcon: FontAwesomeIcon, size: CGFloat, target: AnyObject?, action: Selector) {
-        let image = Iconic.image(forIndex: fontAwesomeIcon.rawValue, size: size, color: .blackColor())
+    convenience init(icon: Icon, size: CGFloat, target: AnyObject?, action: Selector) {
+        let image = Iconic.image(forIndex: icon.rawValue, size: size, color: .blackColor())
         self.init(image: image, style: .Plain, target: target, action: action)
     }
 }
 
-extension UITabBarItem {
+public extension UITabBarItem {
 
     /**
     Initializes a new item using the specified icon enum type and other properties.
 
-    - parameter fontAwesomeIcon: The icon enum type to be used as image.
+    - parameter icon: The icon enum type to be used as image.
     - parameter size: The size of the image, in points.
     - parameter title: The item's title. If nil, a title is not displayed.
     - parameter tag: The receiver's tag, an integer that you can use to identify bar item objects in your application.
     */
-    public convenience init(fontAwesomeIcon: FontAwesomeIcon, size: CGFloat, title: String?, tag: Int) {
-        let image = Iconic.image(forIndex: fontAwesomeIcon.rawValue, size: size, color: .blackColor())
+    convenience init(icon: Icon, size: CGFloat, title: String?, tag: Int) {
+        let image = Iconic.image(forIndex: icon.rawValue, size: size, color: .blackColor())
         self.init(title: title, image: image, tag: tag)
     }
 }
 
-extension UIButton {
+public extension UIButton {
 
     /**
     Sets the icon to use for the specified state.
 
-    - parameter fontAwesomeIcon: The icon enum type to be used as image.
+    - parameter icon: The icon enum type to be used as image.
     - parameter size: The size of the image, in points.
     - parameter state: The state that uses the specified title. The values are described in UIControlState.
     */
-    public func setFontAwesomeIcon(fontAwesomeIcon: FontAwesomeIcon, size: CGFloat, forState: UIControlState) {
-        self.setIcon(forIndex: fontAwesomeIcon.rawValue, size: size, forState: state)
+    func setIcon(icon: Icon, size: CGFloat, forState: UIControlState) {
+        self.setIcon(forIndex: icon.rawValue, size: size, forState: state)
     }
 }
 
 /**
-A strongly typed representation of every available icon name.
+A list with available glyphs detected from the icon font.
 */
-@objc public enum FontAwesomeIcon: Int {
+@objc public enum Icon: Int {
     case _279
     case _283
     case _303
@@ -774,9 +765,9 @@ A strongly typed representation of every available icon name.
 }
 
 /**
-A list of unicode characters associated with each FontAwesomeIcon case, in order.
+A list of unicode characters associated with each Icon case, in order.
 */
-public let FontAwesomeIconMap: Array<String> = [
+public let IconMap: Array<String> = [
     "\u{F129}",
     "\u{F12D}",
     "\u{F143}",
@@ -1431,8 +1422,8 @@ public let FontAwesomeIconMap: Array<String> = [
 /**
 Returns the name of an icon enum type as a string.
 */
-public func NSStringFromFontAwesomeIcon(fontawesomeicon: FontAwesomeIcon) -> String {
-    switch fontawesomeicon {
+public func NSStringFromIcon(icon: Icon) -> String {
+    switch icon {
     case ._279: return "_279"
     case ._283: return "_283"
     case ._303: return "_303"

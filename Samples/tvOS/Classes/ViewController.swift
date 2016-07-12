@@ -22,8 +22,8 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        upButton.setFontAwesomeIcon(.AngleUp, size: 60, forState: .Normal)
-        downButton.setFontAwesomeIcon(.AngleDown, size: 60, forState: .Normal)
+        upButton.setIcon(.AngleUp, size: 60, forState: .Normal)
+        downButton.setIcon(.AngleDown, size: 60, forState: .Normal)
         
         updateImage(scale)
     }
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     func updateImage(scale: UInt) {
         
         let size = 20 * scale
-        let image = Iconic.imageForFontAwesomeIcon(.GithubAlt, size: CGFloat(size), color: .blackColor())
+        let image = Iconic.image(forIcon: .GithubAlt, size: CGFloat(size), color: .blackColor())
         
         imageView.image = image
         
