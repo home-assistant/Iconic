@@ -22,7 +22,7 @@ public class Iconic: NSObject {
      - parameter familyName: The font's family name available in the application's bundle to be used for registering.
      - parameter map: An array of icon glyph unicodes.
      */
-    class func registerFont(familyName: String, map: [String]) {
+    class func registerFont(withName familyName: String, map: [String]) {
         
         if let url = urlForFontWithName(familyName) {
             return registerFontFromURL(url, map:map)
@@ -37,14 +37,14 @@ public class Iconic: NSObject {
      - parameter path: The path of the font file (generally from the application bundle)
      - parameter map: An array of icon glyph unicodes.
      */
-    class func registerFontWithPath(path: String, map: [String]) {
+    class func registerFont(withPath path: String, map: [String]) {
         
         registerFontFromURL(NSURL.fileURLWithPath(path), map:map)
     }
     
     // MARK: - Font Constructor
     
-    class func iconFontOfSize(fontSize: CGFloat) -> UIFont? {
+    class func iconFont(ofSize fontSize: CGFloat) -> UIFont? {
         
         // Calling UIFont.init() with zero would return a system font object.
         if fontSize == 0 {
@@ -79,7 +79,7 @@ public class Iconic: NSObject {
     
     class func attributedString(forIndex idx: Int, size: CGFloat, color: UIColor?) -> NSAttributedString? {
 
-        guard let font = iconFontOfSize(size), let unicode = unicodeString(forIndex: idx) else {
+        guard let font = iconFont(ofSize: size), let unicode = unicodeString(forIndex: idx) else {
             return nil
         }
         
