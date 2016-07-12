@@ -62,6 +62,12 @@ public class Iconic: NSObject {
     
     // MARK: - Font Constructor
     
+    /**
+     Returns the icon font object in the specified size.
+     This value must be greater than 0.0, or a system Font object will be returned.
+     
+     - parameter fontSize: The size (in points) to which the font is scaled.
+     */
     class func iconFont(ofSize fontSize: CGFloat) -> UIFont? {
         
         // Calling UIFont.init() with zero would return a system font object.

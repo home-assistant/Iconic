@@ -15,16 +15,6 @@ public extension Iconic {
     }
 
     /**
-     Returns the icon font object in the specified size.
-     
-     - parameter fontSize: The size (in points) to which the font is scaled.
-     This value must be greater than 0.0, or a system Font object will be returned.
-     */
-    class func iconFont(ofSize size: CGFloat) -> UIFont? {
-        return Iconic.iconFont(ofSize: size)
-    }
-
-    /**
     Creates an attributed string with the specified icon enum type, with optional color.
 
     - parameter icon: The icon enum type.
