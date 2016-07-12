@@ -7,14 +7,14 @@ import Iconic
 print(IconicVersionNumber)
 
 // Registering the icon font
-Iconic.registerFontAwesomeIcon()
+Iconic.registerIconFont()
 
 
 // Icon font object
-let font:UIFont = Iconic.fontAwesomeIconFontOfSize(23)!
+let font:UIFont = Iconic.iconFont(ofSize: 23)!
 
 // Icon as unicode
-let unicode = Iconic.unicodeStringForFontAwesomeIcon(.Bolt)
+let unicode = Iconic.unicodeString(forIcon: .Bolt)
 let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 20)
 
 let iconAttributes = [NSFontAttributeName: font,
@@ -35,7 +35,7 @@ iconAttrString.setAttributes([NSKernAttributeName: edgeInsets.right], range: NSM
 let titleAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(25),
                        NSForegroundColorAttributeName: UIColor.redColor()]
 
-let titleAttrString = NSAttributedString(string: NSStringFromFontAwesomeIcon(.Bolt), attributes: titleAttributes)
+let titleAttrString = NSAttributedString(string: NSStringFromIcon(.Bolt), attributes: titleAttributes)
 
 let attributedText = NSMutableAttributedString()
 attributedText.appendAttributedString(iconAttrString as! NSAttributedString)
