@@ -9,7 +9,7 @@ Iconic will help you make icon fonts integration on iOS easy and effortless. Its
 
 You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of the `Iconic.swift` class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
 
-Note: **This library hasn't yet been used in production. Consider it in beta!**
+Note: **This library is currently in beta. It hasn't yet been used in production. APIs may change without backwards compatibility.**
 
 <p align="center">
 <img src="https://github.com/dzenbot/Iconic/blob/master/Screenshots/screenshot_scale.gif?raw=true" alt="Scale Example"/>
