@@ -40,10 +40,10 @@
 
 - (void)commonInit
 {
-    self.tabBarItem = [[UITabBarItem alloc] initWithFontAwesomeIcon:FontAwesomeIcon_546 size:20.0 title:@"As Text" tag:FontAwesomeIcon_546];
+    self.tabBarItem = [[UITabBarItem alloc] initWithIcon:Icon_546 size:20.0 title:@"As Text" tag:Icon_546];
     self.title = self.tabBarItem.title;
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithFontAwesomeIcon:FontAwesomeIconCog size:24.0 target:self action:@selector(didTapRightButtonItem:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithIcon:IconCog size:24.0 target:self action:@selector(didTapRightButtonItem:)];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willShowKeyboard:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willHideKeyboard:) name:UIKeyboardWillHideNotification object:nil];
@@ -64,9 +64,9 @@
 
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] init];
     
-    for (int i = 0; i < FontAwesomeIconTotalCount; i++) {
+    for (int i = 0; i < IconTotalCount; i++) {
         
-        NSMutableAttributedString *fontString = [[Iconic attributedStringForFontAwesomeIcon:i size:24.0 color:color] mutableCopy];
+        NSMutableAttributedString *fontString = [[Iconic attributedStringForIcon:i size:24.0 color:color] mutableCopy];
         [fontString addAttribute:NSKernAttributeName value:@(5) range:NSMakeRange(0, fontString.length)];
         
         [attributedText appendAttributedString:fontString];
@@ -99,7 +99,7 @@
 
 - (void)willShowKeyboard:(NSNotification *)note
 {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithFontAwesomeIcon:FontAwesomeIconAngleDown size:30.0 target:self action:@selector(didTapLeftButtonItem:)];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithIcon:IconAngleDown size:30.0 target:self action:@selector(didTapLeftButtonItem:)];
     [self.navigationItem setLeftBarButtonItem:item animated:YES];
     
     CGRect keyboardFrame = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];

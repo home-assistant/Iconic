@@ -286,7 +286,6 @@
 				F558DA031CF1AF1A0014717C /* Sources */,
 				F558DA041CF1AF1A0014717C /* Frameworks */,
 				F558DA051CF1AF1A0014717C /* Resources */,
-				F56503171CFAAA2C0083F1D9 /* Icon Font Mapper */,
 				A9DCEAF0AB24DA62F5580C5C /* 📦 Embed Pods Frameworks */,
 				946B5AEB2C822643354B96BF /* 📦 Copy Pods Resources */,
 			);
@@ -509,20 +508,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tvOS/Pods-tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		F56503171CFAAA2C0083F1D9 /* Icon Font Mapper */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Icon Font Mapper";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#\"${SRCROOT}/Pods/Iconic/mappermapper.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
