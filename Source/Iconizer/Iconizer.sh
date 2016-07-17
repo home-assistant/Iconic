@@ -31,8 +31,8 @@ function generate()
     fi
 
     #Declares the output path
-    SOURCE_DIR=${OUTPUT_DIR}Source
-    CATALOG_DIR=${OUTPUT_DIR}catalog/${FILE_TITLE}
+    SOURCE_DIR=${OUTPUT_DIR}
+    CATALOG_DIR=${SOURCE_DIR}catalog/${FILE_TITLE}
 
     # Capitalized first word of the file name, with the 'Icons' suffix.
     # ie: SlackIcons out of a string like 'slack-icon-font'
