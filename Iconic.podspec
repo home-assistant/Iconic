@@ -26,6 +26,7 @@ Pod::Spec.new do |s|
   s.source_files    = 'Source/*.{swift}'
   s.resources       = 'Source/*.{ttf,otf}'
   #s.preserve_paths  = 'Source/Iconizer/catalog/**/*.*'
+  s.preserve_paths  = 'Source/catalog/**/*.*'
   s.framework       = 'UIKit', 'CoreText'
 
   s.ios.deployment_target = '8.0'
