@@ -63,7 +63,7 @@ function generate()
     cp -r ${HTML_DIR}/* ${CATALOG_DIR}
 
     # Copies the original font to src/
-    #cp -r ${FILE_FULL} ${SOURCE_DIR}
+    cp -r ${FILE_FULL} ${SOURCE_DIR}
     cp -r ${FILE_FULL} ${CATALOG_DIR}/html/
 }
 
