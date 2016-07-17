@@ -17,7 +17,8 @@ Pod::Spec.new do |s|
   }
 
   s.source = {
-      :git => 'https://github.com/dzenbot/Iconic.git',
+      #      :git => 'https://github.com/dzenbot/Iconic.git',
+      :git => 'https://github.com/connectdotz/Iconic.git',
       :tag => @version,
       :submodules => true
   }
