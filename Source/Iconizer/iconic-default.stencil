@@ -21,7 +21,7 @@ public extension Iconic {
     - parameter size: The size of the text, in points.
     - parameter color: Optional color to be applied to the icon.
     */
-    class func attributedString(forIcon icon: Icon, size: CGFloat, color: UIColor?) -> NSAttributedString? {
+    class func attributedString(forIcon icon: {{enumName}}, size: CGFloat, color: UIColor?) -> NSAttributedString? {
         return Iconic.attributedString(forIndex: icon.rawValue, size: size, color: color)
     }
 
@@ -35,7 +35,7 @@ public extension Iconic {
     - parameter color: Optional color to be applied to the icon.
     - parameter edgeInsets: Optional edge insets to be used as horizontal and vertical margins.
     */
-    class func attributedString(forIcon icon: Icon, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
+    class func attributedString(forIcon icon: {{enumName}}, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
         return Iconic.attributedString(forIndex: icon.rawValue, size: size, color: color, edgeInsets: edgeInsets)
     }
 
@@ -46,7 +46,7 @@ public extension Iconic {
     - parameter size: The size of the text, in points.
     - parameter color: Optional color to be applied to the icon.
     */
-    class func image(forIcon icon: Icon, size: CGFloat, color: UIColor?) -> UIImage? {
+    class func image(forIcon icon: {{enumName}}, size: CGFloat, color: UIColor?) -> UIImage? {
         return Iconic.image(forIndex: icon.rawValue, size: size, color: color)
     }
 
@@ -56,7 +56,7 @@ public extension Iconic {
      - parameter icon: The icon enum type.
      - returns An unicode string representation.
      */
-    class func unicodeString(forIcon icon: Icon) -> String? {
+    class func unicodeString(forIcon icon: {{enumName}}) -> String? {
         return Iconic.unicodeString(forIndex: icon.rawValue)
     }
 }
@@ -71,7 +71,7 @@ public extension UIBarButtonItem {
     - parameter target: The object that receives the action message.
     - parameter action: The action to send to target when this item is selected.
     */
-    convenience init(icon: Icon, size: CGFloat, target: AnyObject?, action: Selector) {
+    convenience init(icon: {{enumName}}, size: CGFloat, target: AnyObject?, action: Selector) {
         let image = Iconic.image(forIndex: icon.rawValue, size: size, color: .blackColor())
         self.init(image: image, style: .Plain, target: target, action: action)
     }
@@ -87,7 +87,7 @@ public extension UITabBarItem {
     - parameter title: The item's title. If nil, a title is not displayed.
     - parameter tag: The receiver's tag, an integer that you can use to identify bar item objects in your application.
     */
-    convenience init(icon: Icon, size: CGFloat, title: String?, tag: Int) {
+    convenience init(icon: {{enumName}}, size: CGFloat, title: String?, tag: Int) {
         let image = Iconic.image(forIndex: icon.rawValue, size: size, color: .blackColor())
         self.init(title: title, image: image, tag: tag)
     }
@@ -102,7 +102,7 @@ public extension UIButton {
     - parameter size: The size of the image, in points.
     - parameter state: The state that uses the specified title. The values are described in UIControlState.
     */
-    func setIcon(icon: Icon, size: CGFloat, forState: UIControlState) {
+    func setIcon(icon: {{enumName}}, size: CGFloat, forState: UIControlState) {
         self.setIcon(forIndex: icon.rawValue, size: size, forState: state)
     }
 }
@@ -110,7 +110,7 @@ public extension UIButton {
 /**
 A list with available glyphs detected from the icon font.
 */
-@objc public enum Icon: Int {
+@objc public enum {{enumName}}: Int {
     {% for icon in icons %}
     case {{icon.name|swiftIdentifier|snakeToCamelCase}}
     {% endfor %}
@@ -131,7 +131,7 @@ public let IconMap: Array<String> = [
 /**
 Returns the name of an icon enum type as a string.
 */
-public func NSStringFromIcon(icon: Icon) -> String {
+public func NSStringFromIcon(icon: {{enumName}}) -> String {
     switch icon {
     {% for icon in icons %}
     case .{{icon.name|swiftIdentifier|snakeToCamelCase}}: return "{{icon.name|swiftIdentifier|snakeToCamelCase}}"
