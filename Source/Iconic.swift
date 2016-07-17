@@ -90,13 +90,15 @@ public class Iconic: NSObject {
             return nil
         }
         
-        let unicode = map[idx]
+        return String(map[idx])
         
-        guard let string = NSString(UTF8String: unicode) else {
-            return nil
-        }
-        
-        return string as String
+//        let unicode = map[idx]
+//
+//        guard let string = NSString(UTF8String: unicode) else {
+//            return nil
+//        }
+//        
+//        return string as String
     }
     
     // MARK: - Attributed String Constructors

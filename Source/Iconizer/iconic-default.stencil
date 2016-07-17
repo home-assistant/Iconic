@@ -87,7 +87,7 @@ public extension UITabBarItem {
     - parameter title: The item's title. If nil, a title is not displayed.
     - parameter tag: The receiver's tag, an integer that you can use to identify bar item objects in your application.
     */
-    convenience init(icon: {{enumName}}, size: CGFloat, title: String?, tag: Int) {
+convenience init(with{{enumName}} icon: {{enumName}}, size: CGFloat, title: String?, tag: Int) {
         let image = Iconic.image(forIndex: icon.rawValue, size: size, color: .blackColor())
         self.init(title: title, image: image, tag: tag)
     }

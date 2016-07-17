@@ -16,7 +16,7 @@ function usage()
 # File/Directory paths
 EXEC_PATH=./Vendor/SwiftGen/build/swiftgen/bin/swiftgen
 STENCIL_PATH=./Source/Iconizer/iconic-default.stencil
-HTML_DIR=./Source/Iconizer/catalog/
+HTML_DIR=./Source/Iconizer/catalog
 
 function generate()
 {
@@ -53,10 +53,10 @@ function generate()
     mkdir -p ${CATALOG_DIR}/html
 
     # Executes Swiftgen with a custom stencil template
-    ${EXEC_PATH} icons ${FILE_FULL} --templatePath ${STENCIL_PATH} --output ${SOURCE_DIR}/${OUTPUT_NAME}.swift --enumName ${OUTPUT_NAME}
+    ${EXEC_PATH} icons ${FILE_FULL} --templatePath ${STENCIL_PATH} --output ${SOURCE_DIR}${OUTPUT_NAME}.swift --enumName ${OUTPUT_NAME}
 
     # Renames and moves the JSON output to the HTML source directory
-    mv ${SOURCE_DIR}/${OUTPUT_NAME}.json ${CATALOG_DIR}/html/data.json
+    mv ${SOURCE_DIR}${OUTPUT_NAME}.json ${CATALOG_DIR}/html/data.json
 
     # Copies the HTML template over
     #cp -r ${HTML_DIR}/* ${OUTPUT_PATH}
