@@ -11,7 +11,8 @@ import Iconic
 
 class FirstViewController: UITableViewController {
 
-    let cellIconSize:CGFloat = 22.0
+    let cellIconSize = CGSizeMake( 22.0, 22)
+    let iconFontType: IconFont.Type = FontAwesomeIcon.self
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -25,12 +26,12 @@ class FirstViewController: UITableViewController {
     
     func commonInit() -> Void {
         
-        let tabItem = UITabBarItem(icon: .Book, size:20, title: "Catalog", tag: Icon.Book.rawValue)
+        let tabItem = UITabBarItem(withFontAwesomeIcon: .Book, size: CGSizeMake(20, 20), color:.greenColor(), title: "Catalog", tag: FontAwesomeIcon.Book.rawValue)
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
         
-        let buttonItem = UIBarButtonItem(icon: .Cog, size:24, target: self, action: NSSelectorFromString("didTapRightItem"))
+        let buttonItem = UIBarButtonItem(withFontAwesomeIcon: .Cog, size: CGSizeMake(30, 24), color: .blueColor(), target: self, action: NSSelectorFromString("didTapRightItem"))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -49,20 +50,21 @@ class FirstViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Icon.TotalCount.rawValue
+//        return Iconic.fontAwesomeIconCount
+        return iconFontType.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("Cell") {
             
-            if let icon = Icon(rawValue: indexPath.row) {
-                cell.imageView?.image = Iconic.image(forIcon: icon, size: cellIconSize, color: tableView.tintColor)
-                cell.imageView?.highlightedImage = Iconic.image(forIcon: icon, size: cellIconSize, color: .whiteColor())
+            if let icon = FontAwesomeIcon(rawValue: indexPath.row) {
+                cell.imageView?.image = icon.image(size: cellIconSize, color: tableView.tintColor)
+                cell.imageView?.highlightedImage = icon.image(size: cellIconSize, color: .whiteColor())
                 
-                cell.textLabel?.text = NSStringFromIcon(icon)
+                cell.textLabel?.text = icon.name
 
-                if let unicode = Iconic.unicodeString(forIcon: icon),
+                if let unicode = Iconic.unicodeString(withFontAwesomeIcon: icon),
                     let unicodedData = unicode.dataUsingEncoding(NSNonLossyASCIIStringEncoding),
                     let unicodeString = String(data: unicodedData, encoding: NSUTF8StringEncoding) {
                     cell.detailTextLabel?.text = unicodeString
@@ -81,7 +83,7 @@ class FirstViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return cellIconSize + cellIconSize*1.2
+        return cellIconSize.height + cellIconSize.height * 1.2
     }
     
     override func tableView(tableView: UITableView, shouldShowMenuForRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -97,10 +99,9 @@ class FirstViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, performAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
         // Copy
-        if let icon = Icon(rawValue: indexPath.row) {
+        if let icon = FontAwesomeIcon(rawValue: indexPath.row) {
             let pasteboard = UIPasteboard.generalPasteboard()
-            let string = NSStringFromIcon(icon)
-            
+            let string = icon.name
             pasteboard.string = string
             print("Copied '\(string)' to paste board!")
         }
@@ -115,12 +116,12 @@ extension UIViewController {
             return
         }
         
-        let icon = Icon(rawValue: self.tabBarItem.tag)
+        let icon = FontAwesomeIcon(rawValue: self.tabBarItem.tag)
         let color = self.view.tintColor
         let titleSize = CGFloat(20)
         let edgeInsets = UIEdgeInsetsMake(0, 0, 0, titleSize/2)
         
-        let iconString = Iconic.attributedString(forIcon: icon!, size: titleSize, color: color, edgeInsets: edgeInsets)
+        let iconString = icon?.attributedString(pointSize: titleSize, color: color, edgeInsets: edgeInsets)
         
         let attributes = [NSForegroundColorAttributeName: color,
                           NSFontAttributeName: UIFont.systemFontOfSize(titleSize)]

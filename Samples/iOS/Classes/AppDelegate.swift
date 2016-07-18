@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // It is important to register the icon font when initializing the app delegate
         // Specially when using IB Storyboard, since the layout needs the resources available asap.
         
-        Iconic.registerIconFont()
+        Iconic.registerFontAwesomeIconFont()
     }
 
     func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {

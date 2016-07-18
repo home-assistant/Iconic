@@ -25,12 +25,12 @@ class SecondViewController: UIViewController {
     }
     
     func commonInit() -> Void {
-        let tabItem = UITabBarItem(icon: .Picture, size:20, title: "As Image", tag: Icon.Picture.rawValue)
+        let tabItem = UITabBarItem(withFontAwesomeIcon: .Picture, size: CGSizeMake(20, 20), color: nil, title: "As Image", tag: FontAwesomeIcon.Picture.rawValue)
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
         
-        let buttonItem = UIBarButtonItem(icon: .Cog, size:24, target: self, action: NSSelectorFromString("didTapRightItem"))
+        let buttonItem = UIBarButtonItem(withFontAwesomeIcon: .Cog, size:CGSizeMake(24, 24), color:nil, target: self, action: NSSelectorFromString("didTapRightItem"))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -58,8 +58,8 @@ class SecondViewController: UIViewController {
     
     func updateImage(scale: Float) {
         
-        let size = ceil(20.0 * scale)
-        let image = Iconic.image(forIcon: .GithubAlt, size: CGFloat(size), color: .blackColor())
+        let size = CGFloat(ceil(20.0 * scale))
+        let image = FontAwesomeIcon.GithubAlt.image(size: CGSizeMake(size, size), color: .blackColor())
         
         imageView.image = image
     }
