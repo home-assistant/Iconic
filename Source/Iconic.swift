@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import CoreText
 
 /**
  a wrapper class mainly for objective-c compatibility. Swift classes

@@ -26,12 +26,15 @@ class FirstViewController: UITableViewController {
     
     func commonInit() -> Void {
         
-        let tabItem = UITabBarItem(withFontAwesomeIcon: .Book, size: CGSizeMake(20, 20), color:.greenColor(), title: "Catalog", tag: FontAwesomeIcon.Book.rawValue)
+        let bookImage = FontAwesomeIcon.Book.image(size: CGSizeMake(20, 20), color:.greenColor())
+        let cogImage = FontAwesomeIcon.Cog.image(size: CGSizeMake(30, 24), color:.blueColor())
+        
+        let tabItem = UITabBarItem(title: "Catalog", image: bookImage, tag: FontAwesomeIcon.Book.rawValue)
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
         
-        let buttonItem = UIBarButtonItem(withFontAwesomeIcon: .Cog, size: CGSizeMake(30, 24), color: .blueColor(), target: self, action: NSSelectorFromString("didTapRightItem"))
+        let buttonItem = UIBarButtonItem(image: cogImage, style:.Plain, target: self, action: NSSelectorFromString("didTapRightItem"))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -50,7 +53,6 @@ class FirstViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return Iconic.fontAwesomeIconCount
         return iconFontType.count
     }
     
@@ -63,11 +65,12 @@ class FirstViewController: UITableViewController {
                 cell.imageView?.highlightedImage = icon.image(size: cellIconSize, color: .whiteColor())
                 
                 cell.textLabel?.text = icon.name
-
-                if let unicode = Iconic.unicodeString(withFontAwesomeIcon: icon),
-                    let unicodedData = unicode.dataUsingEncoding(NSNonLossyASCIIStringEncoding),
-                    let unicodeString = String(data: unicodedData, encoding: NSUTF8StringEncoding) {
+                
+                let unicode = icon.unicode
+                if let unicodedData = unicode.dataUsingEncoding(NSNonLossyASCIIStringEncoding),
+                    unicodeString = String(data: unicodedData, encoding: NSUTF8StringEncoding) {
                     cell.detailTextLabel?.text = unicodeString
+                    
                 }
             }
             

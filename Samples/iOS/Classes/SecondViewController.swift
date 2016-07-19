@@ -25,12 +25,16 @@ class SecondViewController: UIViewController {
     }
     
     func commonInit() -> Void {
-        let tabItem = UITabBarItem(withFontAwesomeIcon: .Picture, size: CGSizeMake(20, 20), color: nil, title: "As Image", tag: FontAwesomeIcon.Picture.rawValue)
+        
+        let pictureImage = FontAwesomeIcon.Picture.image(size: CGSizeMake(20, 20), color:.greenColor())
+        let cogImage = FontAwesomeIcon.Cog.image(size: CGSizeMake(30, 24), color:.blueColor())
+        
+        let tabItem = UITabBarItem(title: "As Image", image: pictureImage, tag: FontAwesomeIcon.Picture.rawValue)
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
         
-        let buttonItem = UIBarButtonItem(withFontAwesomeIcon: .Cog, size:CGSizeMake(24, 24), color:nil, target: self, action: NSSelectorFromString("didTapRightItem"))
+        let buttonItem = UIBarButtonItem(image: cogImage, style:.Plain, target: self, action: NSSelectorFromString("didTapRightItem"))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     

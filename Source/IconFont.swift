@@ -8,8 +8,6 @@
 
 import Foundation
 
-//private var iconFonts = [String: IconFont.Type]()
-
 public protocol IconFont {
     var name: String { get }
     var unicode: String { get }
