@@ -8,10 +8,17 @@
 
 import XCTest
 
+private enum FontAwesomeIcon: IconFont {
+    var name:String { return ""}
+    var unicode:String {return ""}
+    static var familyName: String { return "FontAwesome" }
+    static var count: Int { return 0 }
+}
+
 class FontRegistrationTests: XCTestCase {
     
-    let kFontName: String = "FontAwesome"
-    let kFakeMap = ["",""]
+//    let kFontName: String = "FontAwesome"
+//    let kFakeMap = ["",""]
     
     override func setUp() {
         super.setUp()
@@ -19,51 +26,51 @@ class FontRegistrationTests: XCTestCase {
     
     override func tearDown() {
         
-        Iconic.unregisterFont()
+        FontAwesomeIcon.unregister()
         
         super.tearDown()
     }
     
     func testRegisteringFontInBundle() {
         
-        Iconic.registerFont(withName: kFontName, map: kFakeMap)
+        FontAwesomeIcon.register()
         
-        let font = Iconic.iconFont(ofSize: 10)
+        let font = FontAwesomeIcon.iconFont(pointSize: 10)
         
         XCTAssertNotNil(font)
-        XCTAssertEqual(font?.familyName, kFontName)
+        XCTAssertEqual(font?.familyName, FontAwesomeIcon.familyName)
     }
     
     func testRegisteringFontAtPath() {
+        //Note: not implemented, not clear about the use case...
         
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let path = bundle.pathForResource(kFontName, ofType: "otf")
-        
-        Iconic.registerFont(withPath: path!, map: kFakeMap)
-        
-        let font = Iconic.iconFont(ofSize: 10)
-        
-        XCTAssertNotNil(font)
-        XCTAssertEqual(font?.familyName, kFontName)
+//        let bundle = NSBundle(forClass: self.dynamicType)
+//        let path = bundle.pathForResource(kFontName, ofType: "otf")
+//        
+//        Iconic.registerFont(withPath: path!, map: kFakeMap)
+//        
+//        let font = Iconic.iconFont(ofSize: 10)
+//        
+//        XCTAssertNotNil(font)
+//        XCTAssertEqual(font?.familyName, kFontName)
     }
     
     func testRegisteringEmptyMap() {
         
-        let emptyMap = Array<String>()
+        FontAwesomeIcon.register()
         
-        Iconic.registerFont(withPath: kFontName, map: emptyMap)
+        let font = FontAwesomeIcon.iconFont(pointSize: 10)
         
-        let font = Iconic.iconFont(ofSize: 10)
-        
-        XCTAssertNil(font)
+        XCTAssertNotNil(font)
+       
     }
     
     // Fonts with zero point size would return a system font object.
     func testFontSizeZero() {
         
-        Iconic.registerFont(withName: kFontName, map: kFakeMap)
+        FontAwesomeIcon.register()
         
-        let font = Iconic.iconFont(ofSize: 0)
+        let font = FontAwesomeIcon.iconFont(pointSize: 0)
         
         XCTAssertNil(font)
     }
