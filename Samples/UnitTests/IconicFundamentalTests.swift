@@ -8,25 +8,42 @@
 
 import XCTest
 
-let IconMap = [
-    "\u{F129}",
-    "\u{F12D}",
-    "\u{F143}",
-    "\u{F14C}",
-    "\u{F152}",
-    "\u{F15E}",
-    "\u{F164}",
-    "\u{F165}",
-    "\u{F186}",
-    "\u{F18C}"
-]
+private enum FontAwesomeIcon: IconFont {
+    case a, b, c, d, e
+    
+    var name:String {
+        switch self {
+        case .a: return "icon-a"
+        case .b: return "icon-b"
+        case .c: return "icon-c"
+        case .d: return "icon-d"
+        case .e: return "icon-e"
+        }
+    }
+    var unicode:String {
+        switch self {
+        case .a: return "\u{F129}"
+        case .b: return "\u{F12D}"
+        case .c: return "\u{F143}"
+        case .d: return "\u{F14C}"
+        case .e: return "\u{F152}"
+        }
+    }
+    static var familyName: String { return "FontAwesome" }
+    static var count: Int { return 5 }
+}
 
 class IconicFundamentalTests: XCTestCase {
     
     override class func setUp() {
         super.setUp()
         
-        Iconic.registerFont(withName: "FontAwesome", map: IconMap)
+        FontAwesomeIcon.register()
+    }
+    override class func tearDown() {
+        super.tearDown()
+        
+        FontAwesomeIcon.unregister()
     }
     
     override func setUp() {
@@ -39,15 +56,14 @@ class IconicFundamentalTests: XCTestCase {
     
     func testUnicodeConstructor() {
         
-        let str = Iconic.unicodeString(forIndex: 0)
-        
+        let str = FontAwesomeIcon.a.unicode
         XCTAssertNotNil(str)
         XCTAssertEqual(str, "\u{F129}")
     }
     
     func testFontConstructor() {
         
-        let font = Iconic.iconFont(ofSize: 20)
+        let font = FontAwesomeIcon.iconFont(pointSize: 20)
         
         XCTAssertNotNil(font)
         XCTAssertEqual(font!.familyName, "FontAwesome")
@@ -55,11 +71,11 @@ class IconicFundamentalTests: XCTestCase {
     
     func testAttributedStringConstructor() {
         
-        let att = Iconic.attributedString(forIndex: 0, size: 20, color: nil)
+        let att = FontAwesomeIcon.a.attributedString(pointSize: 20, color: nil)
         
         XCTAssertNotNil(att)
         
-        att!.enumerateAttribute(NSFontAttributeName, inRange: NSMakeRange(0, att!.length), options: NSAttributedStringEnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
+        att.enumerateAttribute(NSFontAttributeName, inRange: NSMakeRange(0, att.length), options: NSAttributedStringEnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
             if let font = value as? UIFont {
                 XCTAssertEqual(font.familyName, "FontAwesome")
             }
@@ -68,18 +84,18 @@ class IconicFundamentalTests: XCTestCase {
     
     func testImageConstructor() {
         
-        let img = Iconic.image(forIndex: 0, size: 20, color: nil)
+        let img = FontAwesomeIcon.a.image(size: CGSizeMake(20, 30), color: nil)
         
         XCTAssertNotNil(img)
-        XCTAssertEqual(img?.size, CGSizeMake(20, 20))
+        XCTAssertEqual(img.size, CGSizeMake(20, 30))
     }
     
     func testImageInsetsConstructor() {
         
         let insets = UIEdgeInsetsMake(-5, -5, -5, -5)
-        let img = Iconic.image(forIndex: 0, size: 20, color: nil, edgeInsets: insets)
+        let img = FontAwesomeIcon.a.image(size: CGSize(width: 30, height: 50), color: nil, edgeInsets: insets)
         
         XCTAssertNotNil(img)
-        XCTAssertEqual(img?.size, CGSizeMake(30, 30))
+        XCTAssertEqual(img.size, CGSizeMake(40, 60))
     }
 }
