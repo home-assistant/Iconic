@@ -8,21 +8,27 @@ print(IconicVersionNumber)
 Iconic.registerIconFont()
 
 
-// Icon font object
-let font:UIFont = Iconic.iconFont(ofSize: 23)!
+// Global variables
+let icon = Icon.Dribble
+let iconSize:CGFloat = 23
+let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 10)
+let color = UIColor.orangeColor()
+
+//////////////////////////////
+// USING TEXT KIT APIs
 
 // Icon as unicode
-let unicode = Iconic.unicodeString(forIcon: .Bolt)
-let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 20)
+let unicode = Iconic.unicodeString(forIcon: icon)
+let font:UIFont = Iconic.iconFont(ofSize: iconSize)!
 
 let iconAttributes = [NSFontAttributeName: font,
-                      NSForegroundColorAttributeName: UIColor.orangeColor(),
+                      NSForegroundColorAttributeName: color,
                       NSBaselineOffsetAttributeName: edgeInsets.bottom-edgeInsets.top]
 
 let iconString = " " + unicode! + " "
 
 // Icon as text
-let iconAttrString = NSAttributedString(string: iconString, attributes: iconAttributes).mutableCopy()
+var iconAttrString = NSAttributedString(string: iconString, attributes: iconAttributes).mutableCopy()
 
 print(iconAttrString.length as Int)
 
@@ -31,10 +37,21 @@ iconAttrString.setAttributes([NSKernAttributeName: edgeInsets.left], range: NSMa
 iconAttrString.setAttributes([NSKernAttributeName: edgeInsets.right], range: NSMakeRange(2, 1))
 
 let titleAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(25),
-                       NSForegroundColorAttributeName: UIColor.redColor()]
+                       NSForegroundColorAttributeName: color]
 
-let titleAttrString = NSAttributedString(string: NSStringFromIcon(.Bolt), attributes: titleAttributes)
+let titleAttrString = NSAttributedString(string: NSStringFromIcon(icon), attributes: titleAttributes)
 
-let attributedText = NSMutableAttributedString()
+var attributedText = NSMutableAttributedString()
 attributedText.appendAttributedString(iconAttrString as! NSAttributedString)
 attributedText.appendAttributedString(titleAttrString)
+
+
+//////////////////////////////
+// USING ICONIC APIs
+
+attributedText = NSMutableAttributedString()
+iconAttrString = Iconic.attributedString(forIcon: icon, size: 23, color: color, edgeInsets: edgeInsets)!
+
+attributedText.appendAttributedString(iconAttrString as! NSAttributedString)
+attributedText.appendAttributedString(titleAttrString)
+
