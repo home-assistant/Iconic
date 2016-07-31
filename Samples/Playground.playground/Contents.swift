@@ -1,7 +1,5 @@
 //: Playground - noun: a place where people can play
 import XCPlayground
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-
 import Iconic
 
 print(IconicVersionNumber)
