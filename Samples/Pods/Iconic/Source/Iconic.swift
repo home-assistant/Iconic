@@ -68,7 +68,7 @@ public class Iconic: NSObject {
      
      - parameter fontSize: The size (in points) to which the font is scaled.
      */
-    class func iconFont(ofSize fontSize: CGFloat) -> UIFont? {
+    public class func iconFont(ofSize fontSize: CGFloat) -> UIFont? {
         
         // Calling UIFont.init() with zero would return a system font object.
         if fontSize == 0 {
