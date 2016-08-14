@@ -1,5 +1,5 @@
 PODS:
-  - Iconic (1.0.0-beta1)
+  - Iconic (1.0.0-beta2)
 
 DEPENDENCIES:
   - Iconic (from `https://github.com/dzenbot/Iconic.git`)
@@ -11,12 +11,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Iconic:
-    :commit: e620714b7c506a836b7d026b3380754d4db2f8c4
+    :commit: d05c406441f9c1fb1fccfab4581b236c5c392959
     :git: https://github.com/dzenbot/Iconic.git
     :submodules: true
 
 SPEC CHECKSUMS:
-  Iconic: 9f0b62ebb6f77d320aff81f66f9dfc11a34f85d6
+  Iconic: a988d10415b097084316bc2a3385420c4bedd4dc
 
 PODFILE CHECKSUM: 76c8b6f4ca4f3f5b6dc05290c88c84144de3155b
 
