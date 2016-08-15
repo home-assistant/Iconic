@@ -120,6 +120,19 @@ A list with available glyphs detected from the icon font.
 }
 
 /**
+Convenience Initializer of an Icon enum out of its name.
+*/
+extension Icon {
+    init(named iconName: String) {
+        switch iconName.lowercaseString {
+        {% for icon in icons %}
+        case "{{icon.name|swiftIdentifier|snakeToCamelCase}}": self = .{{icon.name|swiftIdentifier|snakeToCamelCase}}
+        {% endfor %}
+        }
+    }
+}
+
+/**
 A list of unicode characters associated with each Icon case, in order.
 */
 public let IconMap: Array<String> = [
