@@ -179,10 +179,13 @@ Besides the auto-generated Swift code, you will notice a `catalog.html` file bei
 Note: if you are using Chrome as your default browser, you will need to restart it using the `open -a 'Google Chrome' --args -allow-file-access-from-files` in the command line to be able to open view the catalog. This is because the html's javascript loads a local json file and Chrome has built-in security features to disable it.
 
 
-## Thanks to
-- [Olivier Halligon](https://github.com/AliSoftware/) for building and sharing [SwiftGen](https://github.com/AliSoftware/SwiftGen). Such a great tool! 
-- The [CocoaPods team](https://cocoapods.org/about) for always being so responsive and helpful.
-- [Dave Gandy](https://twitter.com/davegandy) for making [FontAwesome](http://fontawesome.io/) so awesome.
+## Icon Font Samples
+This repository also contains a some open source and free icon fonts for you to try Iconic with:
+* [FontAwesome](https://github.com/FortAwesome/Font-Awesome) by *Dave Gandy*
+* [Dripicons](https://github.com/amitjakhu/dripicons) by *Amit Jakhu*
+* [open-iconic](https://github.com/iconic/open-iconic) by *Waybury*
+* [MaterialIcons](https://github.com/google/material-design-icons) by *Google*
+* [Linearicons](https://linearicons.com/) by *Perxis*
 
 
 ## License
