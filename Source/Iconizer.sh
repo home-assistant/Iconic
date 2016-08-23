@@ -7,11 +7,11 @@
 #  Copyright © 2016 DZN Labs All rights reserved.
 #
 
-# File/Directory paths
-EXEC_PATH =     ./Vendor/SwiftGen/build/swiftgen/bin/swiftgen
-STENCIL_PATH =  ./Source/iconic-default.stencil
-HTML_PATH =     ./Source/catalog.html
-HTML_DIR =      ./Source/html/
+# Source file paths
+EXEC_PATH=./Vendor/SwiftGen/build/swiftgen/bin/swiftgen
+STENCIL_PATH=./Source/iconic-default.stencil
+HTML_PATH=./Source/catalog.html
+HTML_DIR=./Source/html/
 
 # Font file path
 FILE_PATH=$1
