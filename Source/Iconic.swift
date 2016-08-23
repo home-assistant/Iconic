@@ -188,8 +188,12 @@ private extension Iconic {
         let fontName = CTFontCopyPostScriptName(font) as String
         var error: Unmanaged<CFErrorRef>? = nil
         
+        // In case the font is already registered
+        if let uifont = UIFont(name: fontName, size: 10) where uifont.fontName == fontName {
+            configure(withURL: url, name: fontName, map: map)
+        }
         // Registers font dynamically
-        if CTFontManagerRegisterFontsForURL(url, .None, &error) == true {
+        else if CTFontManagerRegisterFontsForURL(url, .None, &error) == true {
             configure(withURL: url, name: fontName, map: map)
         }
         else {
