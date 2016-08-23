@@ -8,7 +8,7 @@
 
 import XCTest
 
-class FontRegistrationTests: XCTestCase {
+class RegistrationTests: XCTestCase {
     
     let kFontName: String = "FontAwesome"
     let kFakeMap = ["",""]

@@ -21,7 +21,7 @@ let IconMap = [
     "\u{F18C}"
 ]
 
-class IconicFundamentalTests: XCTestCase {
+class FoundationTests: XCTestCase {
     
     override class func setUp() {
         super.setUp()
