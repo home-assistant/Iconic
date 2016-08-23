@@ -221,7 +221,7 @@ extension UIBarButtonItem {
     
     internal convenience init(idx: Int, size: CGFloat, target: AnyObject?, action: Selector) {
         
-        let image = Iconic.image(forIndex: idx, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: idx, size: size, color: nil)
         self.init(image: image, style: .Plain, target: target, action: action)
     }
 }
@@ -230,7 +230,7 @@ extension UITabBarItem {
     
     internal convenience init(idx: Int, size: CGFloat, title: String?, tag: Int) {
         
-        let image = Iconic.image(forIndex: idx, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: idx, size: size, color: nil)
         self.init(title: title, image: image, tag: tag)
     }
 }
@@ -239,7 +239,7 @@ extension UIButton {
     
     internal func setIcon(forIndex idx: Int, size: CGFloat, forState state: UIControlState) {
         
-        let image = Iconic.image(forIndex: idx, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: idx, size: size, color: nil)
         self.setImage(image, forState: state)
     }
 }
