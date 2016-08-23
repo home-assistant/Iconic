@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.prepare_command = <<-CMD
                       cd Vendor/SwiftGen/ && rake install
                       cd ../..
-                      sh Source/Iconizer/Iconizer.sh #{font_path} Source/ --verbose
+                      sh Source/Iconizer.sh #{font_path} Source/ --verbose
                       CMD
 
 end
