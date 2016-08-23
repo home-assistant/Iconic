@@ -8,9 +8,10 @@
 #
 
 # File/Directory paths
-EXEC_PATH=./Vendor/SwiftGen/build/swiftgen/bin/swiftgen
-STENCIL_PATH=./Source/Iconizer/iconic-default.stencil
-HTML_DIR=./Source/Iconizer/catalog/
+EXEC_PATH =     ./Vendor/SwiftGen/build/swiftgen/bin/swiftgen
+STENCIL_PATH =  ./Source/iconic-default.stencil
+HTML_PATH =     ./Source/catalog.html
+HTML_DIR =      ./Source/html/
 
 # Font file path
 FILE_PATH=$1
@@ -58,14 +59,14 @@ elif [ ${FILE_EXTENSION} = 'ttf' ] || [ ${FILE_EXTENSION} = 'otf' ]; then
 	${EXEC_PATH} icons ${FONT_PATH} --templatePath ${STENCIL_PATH} --output ${OUTPUT_PATH}${OUTPUT_NAME}.swift --enumName ${OUTPUT_NAME}
 
     # Renames and moves the JSON output to the HTML source directory
-    cp -r ${OUTPUT_PATH}${OUTPUT_NAME}.json ${HTML_DIR}/html/data.json
+    cp -r ${OUTPUT_PATH}${OUTPUT_NAME}.json ${HTML_DIR}/data.json
 
 	# Copies the HTML template over
 	cp -r ${HTML_DIR}/* ${OUTPUT_PATH}
 	
 	# Copies the original font to src/
 	cp -r ${FONT_PATH} ${OUTPUT_PATH}${FILE_NAME}
-	cp -r ${FONT_PATH} ${HTML_DIR}/html/${FILE_NAME}
+	cp -r ${FONT_PATH} ${HTML_DIR}/${FILE_NAME}
 	
 else
 	echo "Please provide a TTF or OTF file."
