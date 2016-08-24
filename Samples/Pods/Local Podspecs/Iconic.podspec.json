@@ -18,8 +18,8 @@
     "submodules": true
   },
   "source_files": "Source/*.{swift}",
-  "resources": "Source/*.{ttf,otf}",
-  "preserve_paths": "Source/Iconizer/catalog/**/*.*",
+  "resources": "Source/**/*.{ttf,otf}",
+  "preserve_paths": "Source/Catalog/**/*.*",
   "frameworks": [
     "UIKit",
     "CoreText"
@@ -28,5 +28,5 @@
     "ios": "8.0",
     "tvos": "9.0"
   },
-  "prepare_command": "cd Vendor/SwiftGen/ && rake install\ncd ../..\nsh Source/Iconizer/Iconizer.sh Samples/Fonts/FontAwesome.ttf Source/ --verbose"
+  "prepare_command": "cd Vendor/SwiftGen/ && rake install\ncd ../..\nsh Source/Iconizer.sh Fonts/FontAwesome-4.6.3/FontAwesome.ttf Source --verbose"
 }

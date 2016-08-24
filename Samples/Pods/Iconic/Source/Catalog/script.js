@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    $.getJSON( "html/data.json", function(data) {
+    $.getJSON( "data.json", function(data) {
         importFont(data);
         buildHeader(data);
         buildList(data);
@@ -11,7 +11,7 @@ $(document).ready(function(){
 function importFont(data){
     var font_name = data["name"];
     var file_name = data["filename"];
-    $("head").append($('<style>@font-face {font-family:'+font_name+'; src: url(html/'+file_name+');}</style>'));
+    $("head").append($('<style>@font-face {font-family:'+font_name+'; src: url('+file_name+');}</style>'));
 }
 
 function buildHeader(data){
