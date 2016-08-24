@@ -22,16 +22,16 @@ Pod::Spec.new do |s|
       :submodules => true
   }
   
-  s.source_files    = 'Source/*.{swift}'
-  s.resources       = 'Source/html/*.{ttf,otf}'
-  s.preserve_paths  = 'Source/catalog.html','Source/html/script.js','Source/html/script.css'
+  s.source_files    = 'Source/Iconic.swift'
+  s.resources       = 'Source/**/*.{ttf,otf}'
+  s.preserve_paths  = 'Source/Catalog/**/*.*'
   s.framework       = 'UIKit', 'CoreText'
   
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
   
   # If not specified, FontAwesome is used as the default font
-  font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Icon\ Fonts/FontAwesome-4.6.3/FontAwesome.ttf'
+  font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Fonts/FontAwesome-4.6.3/FontAwesome.ttf'
   
   s.prepare_command = <<-CMD
                       cd Vendor/SwiftGen/ && rake install

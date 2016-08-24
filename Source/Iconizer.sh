@@ -10,8 +10,7 @@
 # Source file paths
 EXEC_PATH=./Vendor/SwiftGen/build/swiftgen/bin/swiftgen
 STENCIL_PATH=./Source/iconic-default.stencil
-HTML_PATH=./Source/catalog.html
-HTML_DIR=./Source/html
+CATALOG_PATH=./Source/Catalog
 
 # Font file path
 INPUT_PATH=$1
@@ -24,60 +23,48 @@ fi
 
 
 
-function generate()
+function iconize()
 {
-    FILE_PATH=$1
+    FONT_PATH=$1
+    FONT_NAME=$2
+
+    echo "Iconizing with file path ${FONT_PATH}"
 
     # Input's file name and extension
-    FILE_NAME=$(basename "${FILE_PATH}")
-    FILE_EXTENSION="${FILE_NAME##*.}"
-    FILE_TITLE="${FILE_NAME%.*}"
-
-    ICON_NAME="${FILE_TITLE%%"-"*}Icon"
+    FILE_TITLE="${FONT_NAME%.*}"
+    FILE_NAME="${FILE_TITLE%%"-"*}Icon"
 
     # Capitalized first word of the file name, with the 'Icons' suffix.
     # ie: SlackIcons out of a string like 'slack-icon-font'
-    OUTPUT_NAME=$(tr '[:lower:]' '[:upper:]' <<< ${ICON_NAME:0:1})${ICON_NAME:1}
+    OUTPUT_NAME=$(tr '[:lower:]' '[:upper:]' <<< ${FILE_NAME:0:1})${FILE_NAME:1}
 
-	# Copies the original font to Library/Fonts if not already
-	# The font file needs to be available before executing the SwiftGen template.
-    FONT_PATH=/Library/Fonts/${FILE_NAME}
-
-	if [ ! -f ${FONT_PATH} ]; then
-    	cp -r ${FILE_PATH} ${FONT_PATH}
-	fi
-	
-	# Creates the output folder
+	# Creates the output folder (no error if existing)
 	mkdir -p ${OUTPUT_PATH}/
 	
 	# Executes Swiftgen with a custom stencil template
 	${EXEC_PATH} icons ${FONT_PATH} --templatePath ${STENCIL_PATH} --output ${OUTPUT_PATH}/${OUTPUT_NAME}.swift --enumName ${OUTPUT_NAME}
 
-    # Renames and moves the JSON output to the HTML source directory
-    cp -r ${OUTPUT_PATH}/${OUTPUT_NAME}.json ${CATALOG_DIR}/data.json
+    # Moves and renames the JSON output to the HTML directory
+    mv ${OUTPUT_PATH}/${OUTPUT_NAME}.json ${CATALOG_PATH}/data.json
 
-	# Copies the HTML template over
-	cp -r ${CATALOG_DIR}/* ${OUTPUT_PATH}/
-	
-	# Copies the original font to src/
-	cp -r ${FONT_PATH} ${OUTPUT_PATH}/${FILE_NAME}
-	cp -r ${FONT_PATH} ${CATALOG_DIR}/${FILE_NAME}
+	# Copies the font file to the HTML directory
+	cp -r ${FONT_PATH} ${CATALOG_PATH}/${FONT_NAME}
 }
 
 
 
-##Only TTF and OTF are supported font files
+# Only TTF and OTF are supported font files
 if [ -z ${INPUT_PATH} ]; then
 	echo "Missing font file. Please provide a TTF or OTF file path."
 else
     # Input's file name and extension
     INPUT_NAME=$(basename "${INPUT_PATH}")
     INPUT_EXTENSION="${INPUT_NAME##*.}"
-
+    
     if [ ${INPUT_EXTENSION} = 'ttf' ] || [ ${INPUT_EXTENSION} = 'otf' ]; then
 
-        generate ${INPUT_PATH}
+        iconize ${INPUT_PATH} ${INPUT_NAME}
     else
-        echo "Unsupported font file. Please provide a TTF or OTF file path."
+        echo "Unsupported ${INPUT_EXTENSION} file. Please provide a TTF or OTF file path."
     fi
 fi

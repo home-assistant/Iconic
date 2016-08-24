@@ -11,13 +11,6 @@
 		F50ADC081D112CDA004A5A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50ADC071D112CDA004A5A4C /* Assets.xcassets */; };
 		F50ADC111D112D0B004A5A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50ADC0F1D112D0B004A5A4C /* AppDelegate.swift */; };
 		F50ADC121D112D0B004A5A4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50ADC101D112D0B004A5A4C /* ViewController.swift */; };
-		F546C12F1D638BF800749737 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F546C12E1D638BF800749737 /* FontAwesome.ttf */; };
-		F546C1311D638C0000749737 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F546C1301D638C0000749737 /* FontAwesome.otf */; };
-		F546C1331D638C0700749737 /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F546C1321D638C0700749737 /* Linearicons-Free.ttf */; };
-		F546C1351D638C0E00749737 /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F546C1341D638C0E00749737 /* MaterialIcons-Regular.ttf */; };
-		F546C1381D638C1500749737 /* open-iconic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F546C1361D638C1500749737 /* open-iconic.otf */; };
-		F546C1391D638C1500749737 /* open-iconic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F546C1371D638C1500749737 /* open-iconic.ttf */; };
-		F546C13B1D638C1E00749737 /* dripicons-v2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F546C13A1D638C1E00749737 /* dripicons-v2.ttf */; };
 		F54BAFC71D0A609F004757C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54BAFBB1D0A609F004757C9 /* LaunchScreen.storyboard */; };
 		F54BAFC81D0A609F004757C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54BAFBD1D0A609F004757C9 /* Main.storyboard */; };
 		F54BAFC91D0A609F004757C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFC01D0A609F004757C9 /* AppDelegate.swift */; };
@@ -29,6 +22,20 @@
 		F54BAFF41D0A9617004757C9 /* UIExtenstionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFF31D0A9617004757C9 /* UIExtenstionTests.swift */; };
 		F54BAFF61D0A9633004757C9 /* FoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFF51D0A9633004757C9 /* FoundationTests.swift */; };
 		F58D6D251D0429FE00D68109 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F58D6D241D0429FE00D68109 /* Podfile */; };
+		F5DE76C31D6D4F0F008757EF /* dripicons-v2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B11D6D4F0F008757EF /* dripicons-v2.ttf */; };
+		F5DE76C41D6D4F0F008757EF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B21D6D4F0F008757EF /* LICENSE */; };
+		F5DE76C51D6D4F0F008757EF /* FONT-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B41D6D4F0F008757EF /* FONT-LICENSE */; };
+		F5DE76C61D6D4F0F008757EF /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B51D6D4F0F008757EF /* FontAwesome.otf */; };
+		F5DE76C71D6D4F0F008757EF /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B61D6D4F0F008757EF /* FontAwesome.ttf */; };
+		F5DE76C81D6D4F0F008757EF /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B71D6D4F0F008757EF /* License.txt */; };
+		F5DE76C91D6D4F0F008757EF /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B91D6D4F0F008757EF /* License.txt */; };
+		F5DE76CA1D6D4F0F008757EF /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76BA1D6D4F0F008757EF /* Linearicons-Free.ttf */; };
+		F5DE76CB1D6D4F0F008757EF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76BC1D6D4F0F008757EF /* LICENSE */; };
+		F5DE76CC1D6D4F0F008757EF /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76BD1D6D4F0F008757EF /* MaterialIcons-Regular.ttf */; };
+		F5DE76CD1D6D4F0F008757EF /* FONT-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76BF1D6D4F0F008757EF /* FONT-LICENSE */; };
+		F5DE76CE1D6D4F0F008757EF /* ICON-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76C01D6D4F0F008757EF /* ICON-LICENSE */; };
+		F5DE76CF1D6D4F0F008757EF /* open-iconic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76C11D6D4F0F008757EF /* open-iconic.otf */; };
+		F5DE76D01D6D4F0F008757EF /* open-iconic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76C21D6D4F0F008757EF /* open-iconic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,13 +45,6 @@
 		F50ADC091D112CDA004A5A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F50ADC0F1D112D0B004A5A4C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50ADC101D112D0B004A5A4C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F546C12E1D638BF800749737 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../../Icon Fonts/FontAwesome-4.6.3/FontAwesome.ttf"; sourceTree = "<group>"; };
-		F546C1301D638C0000749737 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = "../../Icon Fonts/FontAwesome-4.6.3/FontAwesome.otf"; sourceTree = "<group>"; };
-		F546C1321D638C0700749737 /* Linearicons-Free.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Linearicons-Free.ttf"; path = "../../Icon Fonts/Linearicons-1.0/Linearicons-Free.ttf"; sourceTree = "<group>"; };
-		F546C1341D638C0E00749737 /* MaterialIcons-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MaterialIcons-Regular.ttf"; path = "../../Icon Fonts/MaterialIcons-2.2/MaterialIcons-Regular.ttf"; sourceTree = "<group>"; };
-		F546C1361D638C1500749737 /* open-iconic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "open-iconic.otf"; path = "../../Icon Fonts/open-iconic-1.1.1/open-iconic.otf"; sourceTree = "<group>"; };
-		F546C1371D638C1500749737 /* open-iconic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "open-iconic.ttf"; path = "../../Icon Fonts/open-iconic-1.1.1/open-iconic.ttf"; sourceTree = "<group>"; };
-		F546C13A1D638C1E00749737 /* dripicons-v2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "dripicons-v2.ttf"; path = "../../Icon Fonts/Dripicons-2.0/dripicons-v2.ttf"; sourceTree = "<group>"; };
 		F54BAFBC1D0A609F004757C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F54BAFBE1D0A609F004757C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F54BAFC01D0A609F004757C9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +68,23 @@
 		F5D930CE1D03F6B9009CCB69 /* Iconic.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Iconic.podspec; path = ../Iconic.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F5DE76AD1D6CF827008757EF /* iconic-default.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; name = "iconic-default.stencil"; path = "../Source/iconic-default.stencil"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F5DE76AE1D6CF82E008757EF /* Iconizer.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = Iconizer.sh; path = ../Source/Iconizer.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
+		F5DE76B11D6D4F0F008757EF /* dripicons-v2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dripicons-v2.ttf"; sourceTree = "<group>"; };
+		F5DE76B21D6D4F0F008757EF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F5DE76B41D6D4F0F008757EF /* FONT-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "FONT-LICENSE"; sourceTree = "<group>"; };
+		F5DE76B51D6D4F0F008757EF /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		F5DE76B61D6D4F0F008757EF /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		F5DE76B71D6D4F0F008757EF /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		F5DE76B91D6D4F0F008757EF /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		F5DE76BA1D6D4F0F008757EF /* Linearicons-Free.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Linearicons-Free.ttf"; sourceTree = "<group>"; };
+		F5DE76BC1D6D4F0F008757EF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F5DE76BD1D6D4F0F008757EF /* MaterialIcons-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaterialIcons-Regular.ttf"; sourceTree = "<group>"; };
+		F5DE76BF1D6D4F0F008757EF /* FONT-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "FONT-LICENSE"; sourceTree = "<group>"; };
+		F5DE76C01D6D4F0F008757EF /* ICON-LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ICON-LICENSE"; sourceTree = "<group>"; };
+		F5DE76C11D6D4F0F008757EF /* open-iconic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "open-iconic.otf"; sourceTree = "<group>"; };
+		F5DE76C21D6D4F0F008757EF /* open-iconic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "open-iconic.ttf"; sourceTree = "<group>"; };
+		F5DE76D11D6D5937008757EF /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = index.html; path = ../Source/Catalog/index.html; sourceTree = "<group>"; };
+		F5DE76D21D6D5937008757EF /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = script.js; path = ../Source/Catalog/script.js; sourceTree = "<group>"; };
+		F5DE76D31D6D5937008757EF /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = style.css; path = ../Source/Catalog/style.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,20 +132,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		F546C12D1D638BEC00749737 /* Font Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				F546C1301D638C0000749737 /* FontAwesome.otf */,
-				F546C12E1D638BF800749737 /* FontAwesome.ttf */,
-				F546C1321D638C0700749737 /* Linearicons-Free.ttf */,
-				F546C1341D638C0E00749737 /* MaterialIcons-Regular.ttf */,
-				F546C1361D638C1500749737 /* open-iconic.otf */,
-				F546C1371D638C1500749737 /* open-iconic.ttf */,
-				F546C13A1D638C1E00749737 /* dripicons-v2.ttf */,
-			);
-			name = "Font Fixtures";
-			sourceTree = "<group>";
-		};
 		F54BAFBA1D0A609F004757C9 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +162,7 @@
 				F54BAFF51D0A9633004757C9 /* FoundationTests.swift */,
 				F54BAFD41D0A6123004757C9 /* RegistrationTests.swift */,
 				F54BAFF31D0A9617004757C9 /* UIExtenstionTests.swift */,
-				F546C12D1D638BEC00749737 /* Font Fixtures */,
+				F5DE76AF1D6D4F0F008757EF /* Fonts */,
 				F54BAFE11D0A7404004757C9 /* Source */,
 				F54BAFD61D0A6123004757C9 /* Info.plist */,
 			);
@@ -187,6 +190,7 @@
 				F54BAFBA1D0A609F004757C9 /* iOS */,
 				F50ADBFF1D112CDA004A5A4C /* tvOS */,
 				F54BAFD31D0A6123004757C9 /* UnitTests */,
+				F5DE76D41D6D5BE2008757EF /* Catalog */,
 				F558DA081CF1AF1A0014717C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -199,6 +203,78 @@
 				F50ADBFE1D112CDA004A5A4C /* tvOS.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F5DE76AF1D6D4F0F008757EF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F5DE76B01D6D4F0F008757EF /* Dripicons-2.0 */,
+				F5DE76B31D6D4F0F008757EF /* FontAwesome-4.6.3 */,
+				F5DE76B81D6D4F0F008757EF /* Linearicons-1.0 */,
+				F5DE76BB1D6D4F0F008757EF /* MaterialIcons-2.2 */,
+				F5DE76BE1D6D4F0F008757EF /* open-iconic-1.1.1 */,
+			);
+			name = Fonts;
+			path = ../../Fonts;
+			sourceTree = "<group>";
+		};
+		F5DE76B01D6D4F0F008757EF /* Dripicons-2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				F5DE76B11D6D4F0F008757EF /* dripicons-v2.ttf */,
+				F5DE76B21D6D4F0F008757EF /* LICENSE */,
+			);
+			path = "Dripicons-2.0";
+			sourceTree = "<group>";
+		};
+		F5DE76B31D6D4F0F008757EF /* FontAwesome-4.6.3 */ = {
+			isa = PBXGroup;
+			children = (
+				F5DE76B41D6D4F0F008757EF /* FONT-LICENSE */,
+				F5DE76B51D6D4F0F008757EF /* FontAwesome.otf */,
+				F5DE76B61D6D4F0F008757EF /* FontAwesome.ttf */,
+				F5DE76B71D6D4F0F008757EF /* License.txt */,
+			);
+			path = "FontAwesome-4.6.3";
+			sourceTree = "<group>";
+		};
+		F5DE76B81D6D4F0F008757EF /* Linearicons-1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				F5DE76B91D6D4F0F008757EF /* License.txt */,
+				F5DE76BA1D6D4F0F008757EF /* Linearicons-Free.ttf */,
+			);
+			path = "Linearicons-1.0";
+			sourceTree = "<group>";
+		};
+		F5DE76BB1D6D4F0F008757EF /* MaterialIcons-2.2 */ = {
+			isa = PBXGroup;
+			children = (
+				F5DE76BC1D6D4F0F008757EF /* LICENSE */,
+				F5DE76BD1D6D4F0F008757EF /* MaterialIcons-Regular.ttf */,
+			);
+			path = "MaterialIcons-2.2";
+			sourceTree = "<group>";
+		};
+		F5DE76BE1D6D4F0F008757EF /* open-iconic-1.1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				F5DE76BF1D6D4F0F008757EF /* FONT-LICENSE */,
+				F5DE76C01D6D4F0F008757EF /* ICON-LICENSE */,
+				F5DE76C11D6D4F0F008757EF /* open-iconic.otf */,
+				F5DE76C21D6D4F0F008757EF /* open-iconic.ttf */,
+			);
+			path = "open-iconic-1.1.1";
+			sourceTree = "<group>";
+		};
+		F5DE76D41D6D5BE2008757EF /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				F5DE76D11D6D5937008757EF /* index.html */,
+				F5DE76D21D6D5937008757EF /* script.js */,
+				F5DE76D31D6D5937008757EF /* style.css */,
+			);
+			name = Catalog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,13 +386,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F546C1331D638C0700749737 /* Linearicons-Free.ttf in Resources */,
-				F546C1391D638C1500749737 /* open-iconic.ttf in Resources */,
-				F546C1381D638C1500749737 /* open-iconic.otf in Resources */,
-				F546C1311D638C0000749737 /* FontAwesome.otf in Resources */,
-				F546C12F1D638BF800749737 /* FontAwesome.ttf in Resources */,
-				F546C1351D638C0E00749737 /* MaterialIcons-Regular.ttf in Resources */,
-				F546C13B1D638C1E00749737 /* dripicons-v2.ttf in Resources */,
+				F5DE76C51D6D4F0F008757EF /* FONT-LICENSE in Resources */,
+				F5DE76CE1D6D4F0F008757EF /* ICON-LICENSE in Resources */,
+				F5DE76C71D6D4F0F008757EF /* FontAwesome.ttf in Resources */,
+				F5DE76C81D6D4F0F008757EF /* License.txt in Resources */,
+				F5DE76CC1D6D4F0F008757EF /* MaterialIcons-Regular.ttf in Resources */,
+				F5DE76D01D6D4F0F008757EF /* open-iconic.ttf in Resources */,
+				F5DE76C41D6D4F0F008757EF /* LICENSE in Resources */,
+				F5DE76C61D6D4F0F008757EF /* FontAwesome.otf in Resources */,
+				F5DE76CD1D6D4F0F008757EF /* FONT-LICENSE in Resources */,
+				F5DE76C91D6D4F0F008757EF /* License.txt in Resources */,
+				F5DE76CB1D6D4F0F008757EF /* LICENSE in Resources */,
+				F5DE76CF1D6D4F0F008757EF /* open-iconic.otf in Resources */,
+				F5DE76CA1D6D4F0F008757EF /* Linearicons-Free.ttf in Resources */,
+				F5DE76C31D6D4F0F008757EF /* dripicons-v2.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
