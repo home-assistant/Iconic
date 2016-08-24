@@ -62,14 +62,16 @@
     
     UIColor *color = self.tabBarController.tabBar.tintColor;
 
-    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] init];
+    NSMutableAttributedString *attributedText = [NSMutableAttributedString new];
     
     for (int i = 0; i < IconTotalCount; i++) {
         
         NSMutableAttributedString *fontString = [[Iconic attributedStringForIcon:i size:24.0 color:color] mutableCopy];
-        [fontString addAttribute:NSKernAttributeName value:@(5) range:NSMakeRange(0, fontString.length)];
         
-        [attributedText appendAttributedString:fontString];
+        if (fontString) {
+            [fontString addAttribute:NSKernAttributeName value:@(5) range:NSMakeRange(0, fontString.length)];
+            [attributedText appendAttributedString:fontString];
+        }
     }
     
     CGFloat space = 5.0;

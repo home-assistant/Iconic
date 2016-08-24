@@ -120,13 +120,15 @@ extension UIViewController {
         let titleSize = CGFloat(20)
         let edgeInsets = UIEdgeInsetsMake(0, 0, 0, titleSize/2)
         
-        let iconString = Iconic.attributedString(forIcon: icon!, size: titleSize, color: color, edgeInsets: edgeInsets)
         
         let attributes = [NSForegroundColorAttributeName: color,
                           NSFontAttributeName: UIFont.systemFontOfSize(titleSize)]
         
         let labelString = NSMutableAttributedString(string: title, attributes: attributes)
-        labelString.insertAttributedString(iconString!, atIndex: 0)
+        
+        if let iconString = Iconic.attributedString(forIcon: icon!, size: titleSize, color: color, edgeInsets: edgeInsets) {
+            labelString.insertAttributedString(iconString, atIndex: 0)
+        }
         
         let label = UILabel()
         label.attributedText = labelString

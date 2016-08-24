@@ -27,10 +27,10 @@
 		F54BAFCA1D0A609F004757C9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFC21D0A609F004757C9 /* FirstViewController.swift */; };
 		F54BAFCB1D0A609F004757C9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFC31D0A609F004757C9 /* SecondViewController.swift */; };
 		F54BAFCC1D0A609F004757C9 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFC51D0A609F004757C9 /* ThirdViewController.m */; };
-		F54BAFD51D0A6123004757C9 /* FontRegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFD41D0A6123004757C9 /* FontRegistrationTests.swift */; };
+		F54BAFD51D0A6123004757C9 /* RegistrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFD41D0A6123004757C9 /* RegistrationTests.swift */; };
 		F54BAFE31D0A788D004757C9 /* Iconic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFE01D0A73EF004757C9 /* Iconic.swift */; };
 		F54BAFF41D0A9617004757C9 /* UIExtenstionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFF31D0A9617004757C9 /* UIExtenstionTests.swift */; };
-		F54BAFF61D0A9633004757C9 /* IconicFundamentalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFF51D0A9633004757C9 /* IconicFundamentalTests.swift */; };
+		F54BAFF61D0A9633004757C9 /* FoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFF51D0A9633004757C9 /* FoundationTests.swift */; };
 		F58D6D251D0429FE00D68109 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F58D6D241D0429FE00D68109 /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -66,13 +66,13 @@
 		F54BAFC51D0A609F004757C9 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		F54BAFC61D0A609F004757C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F54BAFD21D0A6123004757C9 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F54BAFD41D0A6123004757C9 /* FontRegistrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRegistrationTests.swift; sourceTree = "<group>"; };
+		F54BAFD41D0A6123004757C9 /* RegistrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTests.swift; sourceTree = "<group>"; };
 		F54BAFD61D0A6123004757C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F54BAFE01D0A73EF004757C9 /* Iconic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Iconic.swift; path = ../../Source/Iconic.swift; sourceTree = "<group>"; };
 		F54BAFF11D0A9509004757C9 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F54BAFF21D0A9509004757C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F54BAFF31D0A9617004757C9 /* UIExtenstionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtenstionTests.swift; sourceTree = "<group>"; };
-		F54BAFF51D0A9633004757C9 /* IconicFundamentalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconicFundamentalTests.swift; sourceTree = "<group>"; };
+		F54BAFF51D0A9633004757C9 /* FoundationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationTests.swift; sourceTree = "<group>"; };
 		F558DA071CF1AF1A0014717C /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57B56541D1FE785000E6551 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		F58D6D201D0426D400D68109 /* iconic-default.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "iconic-default.stencil"; path = "../Source/Iconizer/iconic-default.stencil"; sourceTree = "<group>"; };
@@ -194,8 +194,8 @@
 		F54BAFD31D0A6123004757C9 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				F54BAFD41D0A6123004757C9 /* FontRegistrationTests.swift */,
-				F54BAFF51D0A9633004757C9 /* IconicFundamentalTests.swift */,
+				F54BAFF51D0A9633004757C9 /* FoundationTests.swift */,
+				F54BAFD41D0A6123004757C9 /* RegistrationTests.swift */,
 				F54BAFF31D0A9617004757C9 /* UIExtenstionTests.swift */,
 				F546C12D1D638BEC00749737 /* Font Fixtures */,
 				F54BAFE11D0A7404004757C9 /* Source */,
@@ -535,8 +535,8 @@
 			files = (
 				F54BAFE31D0A788D004757C9 /* Iconic.swift in Sources */,
 				F54BAFF41D0A9617004757C9 /* UIExtenstionTests.swift in Sources */,
-				F54BAFF61D0A9633004757C9 /* IconicFundamentalTests.swift in Sources */,
-				F54BAFD51D0A6123004757C9 /* FontRegistrationTests.swift in Sources */,
+				F54BAFF61D0A9633004757C9 /* FoundationTests.swift in Sources */,
+				F54BAFD51D0A6123004757C9 /* RegistrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
