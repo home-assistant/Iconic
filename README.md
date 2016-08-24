@@ -89,8 +89,6 @@ There is a known bug where sometimes, calling `pod install Iconic` would not run
 This is how the module ouput is going to look like (plus documentation, which has been removed for this example).
 Notice that API names are adopting the font's file name to make it easy to work with, and everything is strongly typed, making it safe and auto-completable.
 
-![Iconic Module](Screenshots/screenshot_iconic_module.png)
-
 
 ## How to use
 For complete documentation, visit [CocoaPods' auto-generated docs](http://cocoadocs.org/docsets/Iconic/).
@@ -172,7 +170,7 @@ Check out the sample project, everything is demo'd there.
 
 
 ## Icon Font Catalog
-Besides the auto-generated Swift code, you will notice a `catalog.html` file being added to your directory. This is your icon font catalog, to be used for visual reference about all the icons you have available.
+Besides the auto-generated Swift code, an icon font catalog will be added in `Pods/Iconic/Source/Catalog`. Use this as a visual reference about the icons and their names.
 
 ![Icon Font Catalog](Screenshots/screenshot_icon_catalog.png)
 
