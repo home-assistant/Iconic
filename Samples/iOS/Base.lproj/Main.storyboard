@@ -84,7 +84,6 @@
                             </slider>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zL9-Fl-E3t" customClass="IconView" customModule="iOS" customModuleProvider="target">
                                 <rect key="frame" x="200" y="200" width="200" height="200"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.052886746453900707" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="D5X-ag-TMz"/>
                                     <constraint firstAttribute="height" constant="200" id="fn3-2h-sdi"/>

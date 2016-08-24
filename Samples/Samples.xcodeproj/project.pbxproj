@@ -10,6 +10,7 @@
 		6E2DE7CEADCF7D32164DC25C /* Pods_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613918C3DF2AB61F725228B6 /* Pods_tvOS.framework */; };
 		DEB0B7DA7E3B9A18FB7946DC /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5723503241FCD7C2A31D8D92 /* Pods_iOS.framework */; };
 		EB381FDCA4BBF8AD9C34DE2E /* Pods_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6598691EE34A35192F2A2E34 /* Pods_UnitTests.framework */; };
+		F502824E1D6E011B00E1AA12 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502824D1D6E011B00E1AA12 /* IconView.swift */; };
 		F50ADC061D112CDA004A5A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50ADC041D112CDA004A5A4C /* Main.storyboard */; };
 		F50ADC081D112CDA004A5A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50ADC071D112CDA004A5A4C /* Assets.xcassets */; };
 		F50ADC111D112D0B004A5A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50ADC0F1D112D0B004A5A4C /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		78230169932E450203A516F0 /* Pods-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB4D491A35D9B967184245DF /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F00FE753C2446C1FC931C7C0 /* Pods-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		F502824D1D6E011B00E1AA12 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		F50ADBFE1D112CDA004A5A4C /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50ADC051D112CDA004A5A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50ADC071D112CDA004A5A4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				F54BAFC31D0A609F004757C9 /* SecondViewController.swift */,
 				F54BAFC41D0A609F004757C9 /* ThirdViewController.h */,
 				F54BAFC51D0A609F004757C9 /* ThirdViewController.m */,
+				F502824D1D6E011B00E1AA12 /* IconView.swift */,
 				F54BAFC11D0A609F004757C9 /* iOS-Bridging-Header.h */,
 			);
 			path = Classes;
@@ -627,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F502824E1D6E011B00E1AA12 /* IconView.swift in Sources */,
 				F54BAFCC1D0A609F004757C9 /* ThirdViewController.m in Sources */,
 				F54BAFCA1D0A609F004757C9 /* FirstViewController.swift in Sources */,
 				F54BAFCB1D0A609F004757C9 /* SecondViewController.swift in Sources */,
