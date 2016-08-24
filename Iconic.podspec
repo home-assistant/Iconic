@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
       :submodules => true
   }
   
-  s.source_files    = 'Source/Iconic.swift'
+  s.source_files    = 'Source/*.{swift}'
   s.resources       = 'Source/**/*.{ttf,otf}'
   s.preserve_paths  = 'Source/Catalog/**/*.*'
   s.framework       = 'UIKit', 'CoreText'
