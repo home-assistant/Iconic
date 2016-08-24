@@ -1,0 +1,6 @@
+framework module Iconic {
+  umbrella header "Iconic-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

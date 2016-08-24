@@ -1,0 +1,23 @@
+PODS:
+  - Iconic (1.0.0-beta2)
+
+DEPENDENCIES:
+  - Iconic (from `https://github.com/dzenbot/Iconic.git`)
+
+EXTERNAL SOURCES:
+  Iconic:
+    :git: https://github.com/dzenbot/Iconic.git
+    :submodules: true
+
+CHECKOUT OPTIONS:
+  Iconic:
+    :commit: 435ba66aacee2f06073aad69d3b5f23549323cf4
+    :git: https://github.com/dzenbot/Iconic.git
+    :submodules: true
+
+SPEC CHECKSUMS:
+  Iconic: a988d10415b097084316bc2a3385420c4bedd4dc
+
+PODFILE CHECKSUM: cebd6ca67a5fd41e00c961d7b2dc73d45f7213ca
+
+COCOAPODS: 1.0.0

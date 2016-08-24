@@ -9,10 +9,10 @@ def common_pods
     # and other automations, we need to install it as a remote pod.
     
     # remote
-    # pod 'Iconic', :git => 'https://github.com/dzenbot/Iconic.git', :submodules => true
+    pod 'Iconic', :git => 'https://github.com/dzenbot/Iconic.git', :submodules => true
     
     # local
-    pod 'Iconic', :path => '/Users/iromero/Desktop/DZN/OSS/Iconic/Iconic.podspec', :submodules => true
+#    pod 'Iconic', :path => '/Users/iromero/Desktop/DZN/OSS/Iconic/Iconic.podspec', :submodules => true
 end
 
 target 'iOS' do
