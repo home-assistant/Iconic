@@ -51,9 +51,9 @@ _Note: Some open sourced icon fonts don't include the names of each of their gly
 
 
 ### Missing Features in Beta
-- [ ] Allow rectangular icon glyphs (right now, the lib assumes they're all square sized).
-- [ ] Multiple-font support.
-- [ ] More Swifty approach.
+- [ ] Interface Builder Support.
+- [ ] Solid API definition with a more Swifty approach (see #2 and #26).
+- [ ] Fully covered with snapshot tests.
 
 
 ## Installation
