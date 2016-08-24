@@ -188,8 +188,12 @@ private extension Iconic {
         let fontName = CTFontCopyPostScriptName(font) as String
         var error: Unmanaged<CFErrorRef>? = nil
         
+        // In case the font is already registered
+        if let uifont = UIFont(name: fontName, size: 10) where uifont.fontName == fontName {
+            configure(withURL: url, name: fontName, map: map)
+        }
         // Registers font dynamically
-        if CTFontManagerRegisterFontsForURL(url, .None, &error) == true {
+        else if CTFontManagerRegisterFontsForURL(url, .None, &error) == true {
             configure(withURL: url, name: fontName, map: map)
         }
         else {
@@ -217,7 +221,7 @@ extension UIBarButtonItem {
     
     internal convenience init(idx: Int, size: CGFloat, target: AnyObject?, action: Selector) {
         
-        let image = Iconic.image(forIndex: idx, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: idx, size: size, color: nil)
         self.init(image: image, style: .Plain, target: target, action: action)
     }
 }
@@ -226,7 +230,7 @@ extension UITabBarItem {
     
     internal convenience init(idx: Int, size: CGFloat, title: String?, tag: Int) {
         
-        let image = Iconic.image(forIndex: idx, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: idx, size: size, color: nil)
         self.init(title: title, image: image, tag: tag)
     }
 }
@@ -235,7 +239,7 @@ extension UIButton {
     
     internal func setIcon(forIndex idx: Int, size: CGFloat, forState state: UIControlState) {
         
-        let image = Iconic.image(forIndex: idx, size: size, color: .blackColor())
+        let image = Iconic.image(forIndex: idx, size: size, color: nil)
         self.setImage(image, forState: state)
     }
 }

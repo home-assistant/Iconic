@@ -110,15 +110,10 @@ Note: the method name may change depending of your icon font's name:
 Iconic.registerFontAwesomeIcon()
 ```
 
-You can also register the font with its family name and unicode mapping:
-```swift
-Iconic.registerFont("FontAwesome", map: FontAwesomeIconMap)
-```
-
 ### Use as images
 You can construct an `UIImage` instance out of a font's icon and tint it. This may be very convenient for integrating with existing UIKit controls which expect `UIImage` objects already.
 ```swift
-let image = Iconic.imageForFontAwesomeIcon(.Home, size: 20, color: .blueColor())
+let image = Iconic.image(forIcon: .Home, size: 20, color: .blueColor())
 let imageView = UIImageView(image: image)
 ```
 
@@ -129,7 +124,7 @@ You may need to icons as text too, and simplify your layout work.
 For example, instead of having an image and a label, you can combined it all in one single label:
 ```swift
 let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 10)
-let iconString = Iconic.attributedStringForFontAwesomeIcon(.Home, size: 20, color: .blueColor(), edgeInsets: edgeInsets)
+let iconString = Iconic.attributedString(forIcon: .Home, size: 20, color: .blueColor(), edgeInsets: edgeInsets)
 
 let attributes = [NSForegroundColorAttributeName: UIColor.blueColor(),
                   NSFontAttributeName: UIFont.systemFontOfSize(20)]
@@ -145,13 +140,13 @@ label.sizeToFit()
 ### Use as unicode string
 Ultimately, you may need to retrieve the unicode string representation on an icon to do more advanced things:
 ```swift
-let unicode = Iconic.unicodeStringForFontAwesomeIcon(.Apple)
+let unicode = Iconic.unicodeString(forIcon: .Apple)
 ```
 
 ### Use its font object
 For further customization, you may need to use the UIFont object instead:
 ```swift
-let font = Iconic.fontAwesomeIconFontOfSize(20)
+let font = Iconic.iconFont(ofSize: 20)
 ```
 
 
@@ -159,14 +154,14 @@ let font = Iconic.fontAwesomeIconFontOfSize(20)
 UIKit extensions are also included, just to make your code look simpler:
 ```swift
 // UITarbBarItem
-let tabItem = UITabBarItem(fontAwesomeIcon: .Book, size:20, title: "Book", tag: 0)
+let tabItem = UITabBarItem(icon: .Book, size:20, title: "Catalog", tag: 0)
 
 // UIBarButtonItem
-let buttonItem = UIBarButtonItem(fontAwesomeIcon: .Book, size:20, target: self, action: #selector(didTapButton))
+let buttonItem = UIBarButtonItem(icon: .Book, size:20, target: self, action: #selector(didTapButton))
 
 // UIButton
 let button = UIButton(type: .System)
-button.setFontAwesomeIcon(.Code, size: 20, forState: .Normal)
+button.setIcon(icon: .Code, size: 20, forState: .Normal)
 ```
 
 
@@ -184,10 +179,13 @@ Besides the auto-generated Swift code, you will notice a `catalog.html` file bei
 Note: if you are using Chrome as your default browser, you will need to restart it using the `open -a 'Google Chrome' --args -allow-file-access-from-files` in the command line to be able to open view the catalog. This is because the html's javascript loads a local json file and Chrome has built-in security features to disable it.
 
 
-## Thanks to
-- [Olivier Halligon](https://github.com/AliSoftware/) for building and sharing [SwiftGen](https://github.com/AliSoftware/SwiftGen). Such a great tool! 
-- The [CocoaPods team](https://cocoapods.org/about) for always being so responsive and helpful.
-- [Dave Gandy](https://twitter.com/davegandy) for making [FontAwesome](http://fontawesome.io/) so awesome.
+## Icon Font Samples
+This repository also contains a some open source and free icon fonts for you to try Iconic with:
+* [FontAwesome](https://github.com/FortAwesome/Font-Awesome) by *Dave Gandy*
+* [Dripicons](https://github.com/amitjakhu/dripicons) by *Amit Jakhu*
+* [open-iconic](https://github.com/iconic/open-iconic) by *Waybury*
+* [MaterialIcons](https://github.com/google/material-design-icons) by *Google*
+* [Linearicons](https://linearicons.com/) by *Perxis*
 
 
 ## License
