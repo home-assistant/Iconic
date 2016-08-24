@@ -5,11 +5,11 @@
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 
-Iconic will help you make icon fonts integration on iOS easy and effortless. Its main component is in charge of auto-generating strongly typed code in Swift, fully compatible with Objective-C, allowing the integration of vector icons as image or text in your apps.
+**Iconic** will help making icon fonts integration effortless on iOS. Its main component is in charge of auto-generating strongly typed Swift code, fully compatible with Objective-C.
 
 You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of the `Iconic.swift` class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
 
-Note: **This library is currently in beta. It hasn't yet been used in production. APIs may change without backwards compatibility.**
+_Note: This library is currently in beta. APIs may change without backwards compatibility._
 
 <p align="center">
 <img src="https://github.com/dzenbot/Iconic/blob/master/Screenshots/screenshot_scale.gif?raw=true" alt="Scale Example"/>
@@ -17,9 +17,9 @@ Note: **This library is currently in beta. It hasn't yet been used in production
 
 
 ## Why Icon Fonts
-Web developers have been using icon fonts for quite some time now. It's really, really great!
+Web developers have been using icon fonts for quite some time now.
 
-There are many advantages of using icon fonts on iOS:
+#### There are many advantages of using icon fonts on iOS:
 - Resolution independent: scale and tint without quality loss.
 - Automatically scaled for different screen densities.
 - Work with (way) less image files.
@@ -28,14 +28,11 @@ There are many advantages of using icon fonts on iOS:
 - Add better UI accessibility.
 - Simple to work with.
 
-#### Think about the power of rendering vector icons, natively!
-
-
-_Great. Now, how do I create an icon font,_ you say?
-- You can ask your nearest friendly designer! Making an icon font isn't that hard, specially if you already have the assets.
+#### Where can I find awesome icon fonts?
+- Check out the [icon fonts available in this repo](./Fonts)!
 - There are many [open sourced icon fonts](http://fontello.com/) out there (most are available under the [SIL Open Font License](http://scripts.sil.org/OFL)). They are designed for the web but they are still very useful for iOS.
+- You can ask your nearest friendly designer! Making an icon font isn't that hard, specially if you already have the assets.
 - You can [read this article](http://rafaltomal.com/how-to-create-and-use-your-own-icon-fonts/) and give [fontastic.me](http://fontastic.me/) a shot.
-- Check out the [icon fonts available in this repo](./Samples/Fonts).
 
 
 ## Key Features
@@ -49,11 +46,15 @@ _Great. Now, how do I create an icon font,_ you say?
 - Auto-generated [icon font html catalog](#icon-font-catalog).
 - iOS 8, and tvOS 9 or later.
 
-Note: Some open sourced icon fonts don't include the names of each of their glyphs. This could result in a non-descriptive enum, which can make things less intuitive for you when using Iconic. If you create your own icon font, make sure to properly name each glyph.
+_Note: Some open sourced icon fonts don't include the names of each of their glyphs. This could result in a non-descriptive enum, which can make things less intuitive for you when using Iconic. If you create your own icon font, make sure to properly name each glyph._
 
-## Missing Features in Beta
+
+### Missing Features in Beta
 - [ ] Allow rectangular icon glyphs (right now, the lib assumes they're all square sized).
-- [ ] Provide OSS icon fonts with fully named glyphs for better usability.
+- [ ] Multiple-font support.
+- [ ] More Swifty approach.
+- [ ] Interface Builder support.
+
 
 ## Installation
 
@@ -63,10 +64,12 @@ FONT_PATH='path_to_your_icon_font.ttf' pod install
 
 FONT_PATH='path_to_your_icon_font.ttf' pod update Iconic
 ```
-When using the `FONT_PATH` environment variable, it will install Iconic with your icon font and auto-generate all files with its name.
 
 You should then see a similar setup like this:
 ![Pod Setup](Screenshots/screenshot_pod_setup.png)
+
+When using the `FONT_PATH` environment variable, CocoaPods will install Iconic with a custom icon font and auto-generate all files with its name.
+
 
 ```ruby
 pod install Iconic
@@ -75,7 +78,7 @@ Will install Iconic with its default font, [FontAwesome](https://github.com/Fort
 
 
 ### Under the hood
-When installing Iconic, several things are happening under the hood:
+When installing Iconic, several things are happening:
 - After the Iconic repo is cloned, a custom version of [SwiftGen](https://github.com/DZNLabs/SwiftGen) is downloaded along with its dependencies.
 - Before pods are installed, `SwiftGen` is compiled
 - [Iconizer](Source/Iconizer/Iconizer.sh) is ran, executing `SwiftGen` using a [custom stencil for Iconic](Source/Iconizer/iconic-default.stencil).
@@ -85,16 +88,16 @@ When installing Iconic, several things are happening under the hood:
 There is a known bug where sometimes, calling `pod install Iconic` would not run correctly SwiftGen an retrieve all the icon unicode from a font. If this happens to you, make sure to call `pod update Iconic` to retrigger SwiftGen.
 
 
-### Result
-This is how the module ouput is going to look like (plus documentation, which has been removed for this example).
-Notice that API names are adopting the font's file name to make it easy to work with, and everything is strongly typed, making it safe and auto-completable.
-
-
 ## How to use
 For complete documentation, visit [CocoaPods' auto-generated docs](http://cocoadocs.org/docsets/Iconic/).
 
 ### Import
-In Objective-C, you will need to import the Iconic module:
+Import the Iconic module:
+##### Swift
+```swift
+import Iconic
+```
+##### Obj-C
 ```objc
 @import Iconic;
 ```
@@ -105,14 +108,13 @@ Registration is required to activate Iconic. You shall do this once, when launch
 Iconic provides a convenient way to register the icon font:
 Note: the method name may change depending of your icon font's name:
 ```swift
-Iconic.registerFontAwesomeIcon()
+Iconic.registerIconFont()
 ```
 
 ### Use as images
 You can construct an `UIImage` instance out of a font's icon and tint it. This may be very convenient for integrating with existing UIKit controls which expect `UIImage` objects already.
 ```swift
 let image = Iconic.image(forIcon: .Home, size: 20, color: .blueColor())
-let imageView = UIImageView(image: image)
 ```
 
 Images are created using NSStringDraw APIs to render a `UIImage` out of an `NSAttributedString`.
@@ -123,16 +125,6 @@ For example, instead of having an image and a label, you can combined it all in 
 ```swift
 let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 10)
 let iconString = Iconic.attributedString(forIcon: .Home, size: 20, color: .blueColor(), edgeInsets: edgeInsets)
-
-let attributes = [NSForegroundColorAttributeName: UIColor.blueColor(),
-                  NSFontAttributeName: UIFont.systemFontOfSize(20)]
-
-let labelString = NSMutableAttributedString(string: "Home", attributes: attributes)
-labelString.insertAttributedString(iconString!, atIndex: 0)
-
-let label = UILabel()
-label.attributedText = labelString
-label.sizeToFit()
 ```
 
 ### Use as unicode string
@@ -141,7 +133,7 @@ Ultimately, you may need to retrieve the unicode string representation on an ico
 let unicode = Iconic.unicodeString(forIcon: .Apple)
 ```
 
-### Use its font object
+### Use as font
 For further customization, you may need to use the UIFont object instead:
 ```swift
 let font = Iconic.iconFont(ofSize: 20)
@@ -174,11 +166,11 @@ Besides the auto-generated Swift code, an icon font catalog will be added in `Po
 
 ![Icon Font Catalog](Screenshots/screenshot_icon_catalog.png)
 
-Note: if you are using Chrome as your default browser, you will need to restart it using the `open -a 'Google Chrome' --args -allow-file-access-from-files` in the command line to be able to open view the catalog. This is because the html's javascript loads a local json file and Chrome has built-in security features to disable it.
+_Note: if you are using Chrome as your default browser, you will need to restart it using the `open -a 'Google Chrome' --args -allow-file-access-from-files` in the command line to be able to open view the catalog. This is because the html's javascript loads a local json file and Chrome has built-in security features to disable it._
 
 
 ## Icon Font Samples
-This repository also contains a some open source and free icon fonts for you to try Iconic with:
+This repository also [includes a few open source and free icon fonts](./Fonts) for you to try Iconic with:
 * [FontAwesome](https://github.com/FortAwesome/Font-Awesome) by *Dave Gandy*
 * [Dripicons](https://github.com/amitjakhu/dripicons) by *Amit Jakhu*
 * [open-iconic](https://github.com/iconic/open-iconic) by *Waybury*
