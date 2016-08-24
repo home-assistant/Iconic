@@ -16,21 +16,21 @@
 		34BE3A05510B71B274A45BD5722711F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFE0A1C5D4E2A0F503236293A22F9E0 /* UIKit.framework */; };
 		3826C04E01841F2BCBB33B28D13BD8E3 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BF147A7E2A23724694E979009AC874 /* CoreText.framework */; };
 		38D1296DE38509CEB221C5ECDBEDB8FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DD2384FE0522CFB96142C30D07817D /* Foundation.framework */; };
-		3987C574067E7B1FE9164526B55E7381 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBE8E122B0E4787BE80C23F47F0E4238 /* FontAwesome.ttf */; };
 		42AB6557434F5095FE9DAE147D9122B6 /* Iconic-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7AD4C841C9F38E365E5E0EAF24BFEC /* Iconic-iOS-dummy.m */; };
 		7971F2F8D897B0223A35B54717CA5BA4 /* FontAwesomeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B39A31B543D62876E0FB803C3EA24B /* FontAwesomeIcon.swift */; };
 		7B5623C3D76AD8AFB2F2E4C706715496 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAB75BD3B4997AD510DE9E931CBF7F2 /* Foundation.framework */; };
 		7F7DE142BB977C12D340CF9A60A9D546 /* Iconic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B8CD527225500BE09284DF568B443 /* Iconic.swift */; };
 		A52806BB7B74D0692E158ABF7D18312A /* Iconic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B8CD527225500BE09284DF568B443 /* Iconic.swift */; };
 		A94BF36844A97FFCF70B022364716E7F /* Pods-UnitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D64BA35405D54FB49DE3E7ADEA60D6F /* Pods-UnitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFD282EEB22126C46B87D7567091BBBD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FA911C1568A2E701F697F92DC2E934E /* FontAwesome.ttf */; };
 		BDB9680A669AE37E61DB5278A1C6394F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DD2384FE0522CFB96142C30D07817D /* Foundation.framework */; };
 		CCD66F4C4391651964B8DFED90E61FFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB644186D556EE6B6C5FC75FB81F0E9 /* UIKit.framework */; };
 		D5108AEB5F71BEBFF01917E8AC59D613 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAB75BD3B4997AD510DE9E931CBF7F2 /* Foundation.framework */; };
 		D983D910235A3B6864DDC9B669F0BFD4 /* Pods-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CECFE06CF5153BB82F91930691925E9B /* Pods-iOS-dummy.m */; };
-		DE6E95DEB8C21E0E75571D05E32646D0 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBE8E122B0E4787BE80C23F47F0E4238 /* FontAwesome.ttf */; };
 		E0499CDB2B0160214808F2A87E0C711D /* FontAwesomeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B39A31B543D62876E0FB803C3EA24B /* FontAwesomeIcon.swift */; };
 		E283585AB873041EF35493621B2EDF7B /* Pods-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E22416DCA58669F7F2997C78CEB3B2 /* Pods-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE1C1EA1B075E8C614F314A4D57E7188 /* Iconic-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1399BE1DAF6A3FADD8B33379B3BFD8D3 /* Iconic-tvOS-dummy.m */; };
+		EFE54E14615EC746570E97C4A0D9C220 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FA911C1568A2E701F697F92DC2E934E /* FontAwesome.ttf */; };
 		F1BB364F259BBE7E6010C36C58CD7FCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DD2384FE0522CFB96142C30D07817D /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +77,7 @@
 		7EB644186D556EE6B6C5FC75FB81F0E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7EFCAA00D6B8E075865184A754CBAB5D /* Pods-UnitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UnitTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		7F5E174040A6895EEA38F73A455ED0A3 /* Iconic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Iconic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FA911C1568A2E701F697F92DC2E934E /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.ttf; path = Source/Catalog/FontAwesome.ttf; sourceTree = "<group>"; };
 		8227479E6284C1225908736385F66021 /* Pods-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		86DF88162839D74742566E6BBC9B9F78 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.2.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		87234ABB13A259B13026DB33BB6974C3 /* Pods-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-tvOS-frameworks.sh"; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		EA3AC4383D1C312B8A06B51835A6F639 /* Pods-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-tvOS-resources.sh"; sourceTree = "<group>"; };
 		EA8DB57E830C1FC97D12AC5106C571A0 /* Iconic-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Iconic-iOS-prefix.pch"; sourceTree = "<group>"; };
 		EB8AB70BB5837765F60014BB8A220867 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBE8E122B0E4787BE80C23F47F0E4238 /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.ttf; path = Source/FontAwesome.ttf; sourceTree = "<group>"; };
 		EBEC4754D5940CBBF0D971C70D1ABDA6 /* Iconic-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Iconic-tvOS-umbrella.h"; path = "../Iconic-tvOS/Iconic-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		F8CDE4BC2101FFF91FF7C1B2F8EEA7AF /* Pods-UnitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UnitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F9DD2384FE0522CFB96142C30D07817D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -197,10 +197,10 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		714656380D76C2F7A7332F59EA3A2C33 /* Resources */ = {
+		5F046143DF029DA9E24F685C744BE4B7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EBE8E122B0E4787BE80C23F47F0E4238 /* FontAwesome.ttf */,
+				7FA911C1568A2E701F697F92DC2E934E /* FontAwesome.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -248,7 +248,7 @@
 			children = (
 				E1B39A31B543D62876E0FB803C3EA24B /* FontAwesomeIcon.swift */,
 				336B8CD527225500BE09284DF568B443 /* Iconic.swift */,
-				714656380D76C2F7A7332F59EA3A2C33 /* Resources */,
+				5F046143DF029DA9E24F685C744BE4B7 /* Resources */,
 				AC94D4B404F0FE45A13764F713A2E24F /* Support Files */,
 			);
 			path = Iconic;
@@ -492,7 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3987C574067E7B1FE9164526B55E7381 /* FontAwesome.ttf in Resources */,
+				EFE54E14615EC746570E97C4A0D9C220 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +500,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6E95DEB8C21E0E75571D05E32646D0 /* FontAwesome.ttf in Resources */,
+				AFD282EEB22126C46B87D7567091BBBD /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
