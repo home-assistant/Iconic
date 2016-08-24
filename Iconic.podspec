@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   }
   
   s.source_files    = 'Source/*.{swift}'
-  s.resources       = 'Source/*.{ttf,otf}'
+  s.resources       = 'Source/html/*.{ttf,otf}'
   s.preserve_paths  = 'Source/catalog.html','Source/html/script.js','Source/html/script.css'
   s.framework       = 'UIKit', 'CoreText'
   
