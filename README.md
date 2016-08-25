@@ -44,16 +44,16 @@ Web developers have been using icon fonts for quite some time now.
 - Fonts are registered dynamically, effortless. No need to import the file to your project.
 - [UIKit extensions](#uikit-extensions) (`UIBarButtonItem` and `UITabBarItem`).
 - Auto-generated [icon font html catalog](#icon-font-catalog).
+- Interface Builder support (prototype).
 - iOS 8, and tvOS 9 or later.
 
 _Note: Some open sourced icon fonts don't include the names of each of their glyphs. This could result in a non-descriptive enum, which can make things less intuitive for you when using Iconic. If you create your own icon font, make sure to properly name each glyph._
 
 
 ### Missing Features in Beta
-- [ ] Allow rectangular icon glyphs (right now, the lib assumes they're all square sized).
-- [ ] Multiple-font support.
-- [ ] More Swifty approach.
-- [ ] Interface Builder support.
+- [ ] Interface Builder Support.
+- [ ] Solid API definition with a more Swifty approach (see #2 and #26).
+- [ ] Fully covered with snapshot tests.
 
 
 ## Installation

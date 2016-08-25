@@ -11,13 +11,10 @@ import Iconic
 
 class SecondViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var iconView: IconView!
+    @IBOutlet weak var iconWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var iconHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var slider: UISlider!
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        commonInit()
-    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -37,8 +34,8 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateImage(1.0)
         updateTitleView()
+        updateIcon(200)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -53,15 +50,17 @@ class SecondViewController: UIViewController {
     @IBAction func didChangeScale(sender: UISlider) {
         print("did change scale to '\(sender.value)'")
         
-        updateImage(sender.value)
+        updateIcon(sender.value)
     }
     
-    func updateImage(scale: Float) {
+    func updateIcon(scale: Float) {
         
-        let size = ceil(20.0 * scale)
-        let image = Iconic.image(forIcon: .GithubAlt, size: CGFloat(size), color: .blackColor())
+        let size = CGFloat(ceil(scale))
         
-        imageView.image = image
+        // Need to figure out a better way to update both axis with 1 single constraint.
+        // Maybe with aspect ratio 1:1 ?
+        iconWidthConstraint.constant = size
+        iconHeightConstraint.constant = size
     }
 }
 

@@ -9,7 +9,7 @@
         <!--First View Controller-->
         <scene sceneID="UVg-rd-jcR">
             <objects>
-                <tableViewController id="4qd-Ww-v5p" customClass="FirstViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="4qd-Ww-v5p" customClass="FirstViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ore-9V-wE0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
         <!--Second View Controller-->
         <scene sceneID="Pls-5z-YHW">
             <objects>
-                <viewController id="0yR-jT-3Z1" customClass="SecondViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0yR-jT-3Z1" customClass="SecondViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bR3-Sc-2Ar"/>
                         <viewControllerLayoutGuide type="bottom" id="se9-zp-Tve"/>
@@ -65,44 +65,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adjust the slider to update the size of the icon image." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJw-Ut-2nB">
-                                <rect key="frame" x="75" y="547" width="450" height="4"/>
+                                <rect key="frame" x="75" y="496" width="450" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VOy-KG-hQJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.70488542259999998" green="0.70488542259999998" blue="0.70488542259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZNm-eS-cnB" customClass="StepSlider" customModule="Example" customModuleProvider="target">
-                                <rect key="frame" x="130" y="505" width="341" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="20" maxValue="420" translatesAutoresizingMaskIntoConstraints="NO" id="ZNm-eS-cnB" customClass="StepSlider" customModule="iOS" customModuleProvider="target">
+                                <rect key="frame" x="130" y="454" width="341" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="337" id="s5i-s7-dEp"/>
+                                    <constraint firstAttribute="width" constant="337" id="JfI-Tb-dtu"/>
                                 </constraints>
                                 <connections>
                                     <action selector="didChangeScale:" destination="0yR-jT-3Z1" eventType="valueChanged" id="twA-vQ-kjo"/>
                                 </connections>
                             </slider>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VnG-T5-pMn">
-                                <rect key="frame" x="20" y="72" width="560" height="425"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zL9-Fl-E3t" customClass="IconView" customModule="iOS" customModuleProvider="target">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="425" id="Qkl-pB-gJR"/>
+                                    <constraint firstAttribute="width" constant="200" id="D5X-ag-TMz"/>
+                                    <constraint firstAttribute="height" constant="200" id="fn3-2h-sdi"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="iconName" value="github"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xJw-Ut-2nB" firstAttribute="bottom" secondItem="se9-zp-Tve" secondAttribute="top" id="1eg-Wo-Bhh"/>
-                            <constraint firstItem="xJw-Ut-2nB" firstAttribute="leading" secondItem="iGm-Kc-Plu" secondAttribute="leadingMargin" constant="55" id="1fm-KR-zbk"/>
-                            <constraint firstItem="VnG-T5-pMn" firstAttribute="centerX" secondItem="ZNm-eS-cnB" secondAttribute="centerX" id="ABy-O5-Zqs"/>
-                            <constraint firstItem="xJw-Ut-2nB" firstAttribute="centerX" secondItem="ZNm-eS-cnB" secondAttribute="centerX" id="GGi-bp-G81"/>
-                            <constraint firstItem="se9-zp-Tve" firstAttribute="top" secondItem="ZNm-eS-cnB" secondAttribute="bottom" constant="16" id="RcM-ey-O4e"/>
-                            <constraint firstItem="xJw-Ut-2nB" firstAttribute="top" secondItem="VnG-T5-pMn" secondAttribute="bottom" constant="50" id="S7E-Cj-vcM"/>
-                            <constraint firstItem="ZNm-eS-cnB" firstAttribute="top" secondItem="VnG-T5-pMn" secondAttribute="bottom" constant="8" symbolic="YES" id="Z6J-PR-OcG"/>
-                            <constraint firstItem="VnG-T5-pMn" firstAttribute="top" secondItem="bR3-Sc-2Ar" secondAttribute="bottom" constant="8" symbolic="YES" id="aYi-yR-rGH"/>
-                            <constraint firstItem="VnG-T5-pMn" firstAttribute="leading" secondItem="iGm-Kc-Plu" secondAttribute="leadingMargin" id="e6O-r4-xjk"/>
-                            <constraint firstItem="VnG-T5-pMn" firstAttribute="trailing" secondItem="iGm-Kc-Plu" secondAttribute="trailingMargin" id="uli-Rx-krQ"/>
+                            <constraint firstItem="zL9-Fl-E3t" firstAttribute="centerX" secondItem="ZNm-eS-cnB" secondAttribute="centerX" id="2EK-a0-QvP"/>
+                            <constraint firstItem="xJw-Ut-2nB" firstAttribute="top" secondItem="ZNm-eS-cnB" secondAttribute="bottom" constant="12" id="J2Q-LO-f6F"/>
+                            <constraint firstItem="ZNm-eS-cnB" firstAttribute="centerX" secondItem="xJw-Ut-2nB" secondAttribute="centerX" id="JDS-jI-Yst"/>
+                            <constraint firstItem="se9-zp-Tve" firstAttribute="top" secondItem="xJw-Ut-2nB" secondAttribute="bottom" constant="15" id="Xrr-HF-aXo"/>
+                            <constraint firstItem="xJw-Ut-2nB" firstAttribute="leading" secondItem="iGm-Kc-Plu" secondAttribute="leadingMargin" constant="55" id="bpo-fH-MET"/>
+                            <constraint firstItem="zL9-Fl-E3t" firstAttribute="centerX" secondItem="iGm-Kc-Plu" secondAttribute="centerX" id="mvY-6E-wxM"/>
+                            <constraint firstItem="zL9-Fl-E3t" firstAttribute="centerY" secondItem="iGm-Kc-Plu" secondAttribute="centerY" id="t87-M2-fWq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R6Q-pv-5bf"/>
                     <connections>
-                        <outlet property="imageView" destination="VnG-T5-pMn" id="fcY-eN-M2F"/>
+                        <outlet property="iconHeightConstraint" destination="fn3-2h-sdi" id="PQm-Im-uda"/>
+                        <outlet property="iconWidthConstraint" destination="D5X-ag-TMz" id="GHZ-OM-cAM"/>
                         <outlet property="slider" destination="ZNm-eS-cnB" id="KVj-i6-sEG"/>
                     </connections>
                 </viewController>
