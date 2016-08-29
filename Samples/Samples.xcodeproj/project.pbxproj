@@ -26,6 +26,7 @@
 		F54BAFF41D0A9617004757C9 /* UIExtenstionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFF31D0A9617004757C9 /* UIExtenstionTests.swift */; };
 		F54BAFF61D0A9633004757C9 /* FoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFF51D0A9633004757C9 /* FoundationTests.swift */; };
 		F58D6D251D0429FE00D68109 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F58D6D241D0429FE00D68109 /* Podfile */; };
+		F5D616021D73D111009545DD /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502824D1D6E011B00E1AA12 /* IconView.swift */; };
 		F5DE76C31D6D4F0F008757EF /* dripicons-v2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B11D6D4F0F008757EF /* dripicons-v2.ttf */; };
 		F5DE76C41D6D4F0F008757EF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B21D6D4F0F008757EF /* LICENSE */; };
 		F5DE76C51D6D4F0F008757EF /* FONT-LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B41D6D4F0F008757EF /* FONT-LICENSE */; };
@@ -611,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50ADC111D112D0B004A5A4C /* AppDelegate.swift in Sources */,
+				F5D616021D73D111009545DD /* IconView.swift in Sources */,
 				F50ADC121D112D0B004A5A4C /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

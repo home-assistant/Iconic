@@ -15,14 +15,14 @@ class IconView: UIImageView {
     // MARK: - Public & Inspectable variables
     
     @available(*, unavailable, message = "This property is reserved for Interface Builder. Use 'icon' instead.")
-    @IBInspectable var iconName: String? {
+    @IBInspectable dynamic var iconName: String? {
         willSet {
             icon = Icon(named: newValue ?? "")
         }
     }
     
     @available(*, unavailable, message = "This property is reserved for Interface Builder. Use 'tintColor' instead.")
-    @IBInspectable var iconColor: UIColor! {
+    @IBInspectable dynamic var iconColor: UIColor! {
         willSet {
             tintColor = newValue ?? .blackColor()
         }
@@ -75,7 +75,29 @@ class IconView: UIImageView {
     
     @available(*, unavailable, message = "Reserved for when designable objects are created in Interface Builder.")
     override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        
+        // The icon font needs to be registered first
         Iconic.registerIconFont()
+        
+        // When there is no image, mimics UIImageView's native placeholder in IB
+        if super.image == nil {
+            self.layer.borderColor = UIColor(white: 0.72, alpha: 1).CGColor
+            self.layer.borderWidth = 1
+            
+            let backdrop = UIView(frame: CGRectInset(frame, 2, 2))
+            backdrop.backgroundColor = UIColor(red: 53/255, green: 105/255, blue: 193/255, alpha: 89/255)
+            self.addSubview(backdrop)
+            
+            let label = UILabel(frame: CGRectZero)
+            label.text = "Icon View"
+            label.font = UIFont(name: "Arial-BoldMT", size: 14)
+            label.textColor = .whiteColor()
+            label.textAlignment = .Center
+            label.sizeToFit()
+            label.center = center
+            self.addSubview(label)
+        }
     }
     
     // MARK: - Constructor
