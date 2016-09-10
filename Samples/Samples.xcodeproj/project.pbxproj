@@ -36,6 +36,8 @@
 		F5C1652C1D83CB80003D76E0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C165271D83CB80003D76E0 /* Info.plist */; };
 		F5C1652D1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C1652B1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m */; };
 		F5C165301D83CFD1003D76E0 /* pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C1652F1D83CFD1003D76E0 /* pattern.png */; };
+		F5C165321D83D29D003D76E0 /* StringIconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C165311D83D29D003D76E0 /* StringIconTests.swift */; };
+		F5C165341D83D2C2003D76E0 /* UIExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C165331D83D2C2003D76E0 /* UIExtensionTests.swift */; };
 		F5D616021D73D111009545DD /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502824D1D6E011B00E1AA12 /* IconView.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,8 @@
 		F5C1652A1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase+Swift.h"; sourceTree = "<group>"; };
 		F5C1652B1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase+Swift.m"; sourceTree = "<group>"; };
 		F5C1652F1D83CFD1003D76E0 /* pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pattern.png; sourceTree = "<group>"; };
+		F5C165311D83D29D003D76E0 /* StringIconTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringIconTests.swift; sourceTree = "<group>"; };
+		F5C165331D83D2C2003D76E0 /* UIExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensionTests.swift; sourceTree = "<group>"; };
 		F5D930CE1D03F6B9009CCB69 /* Iconic.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Iconic.podspec; path = ../Iconic.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F5DE76AD1D6CF827008757EF /* iconic-default.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; name = "iconic-default.stencil"; path = "../Source/iconic-default.stencil"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F5DE76AE1D6CF82E008757EF /* Iconizer.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = Iconizer.sh; path = ../Source/Iconizer.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
@@ -207,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				F5C165241D83CAF7003D76E0 /* ImageIconTests.swift */,
+				F5C165311D83D29D003D76E0 /* StringIconTests.swift */,
+				F5C165331D83D2C2003D76E0 /* UIExtensionTests.swift */,
 				F5C165291D83CB80003D76E0 /* Tools */,
 				F5C165261D83CB80003D76E0 /* Supporting Files */,
 			);
@@ -761,7 +767,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5C165251D83CAF7003D76E0 /* ImageIconTests.swift in Sources */,
+				F5C165321D83D29D003D76E0 /* StringIconTests.swift in Sources */,
 				F5C1652D1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m in Sources */,
+				F5C165341D83D2C2003D76E0 /* UIExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
