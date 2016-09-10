@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Iconic-iOS8.0/Iconic.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Iconic-iOS9.3/Iconic.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/FBSnapshotTestCase/FBSnapshotTestCase.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Iconic-iOS8.0/Iconic.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Iconic-iOS9.3/Iconic.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/FBSnapshotTestCase/FBSnapshotTestCase.framework"
 fi

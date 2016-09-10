@@ -39,7 +39,7 @@
 }
 
 - (void)commonInit
-{
+{    
     self.tabBarItem = [[UITabBarItem alloc] initWithIcon:Icon_546 size:20.0 title:@"As Text" tag:Icon_546];
     self.title = self.tabBarItem.title;
 

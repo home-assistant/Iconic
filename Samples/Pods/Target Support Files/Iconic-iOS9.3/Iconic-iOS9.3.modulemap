@@ -1,5 +1,5 @@
 framework module Iconic {
-  umbrella header "Iconic-tvOS-umbrella.h"
+  umbrella header "Iconic-iOS9.3-umbrella.h"
 
   export *
   module * { export * }
