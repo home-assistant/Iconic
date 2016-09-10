@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F54BAFD11D0A6123004757C9"
-               BuildableName = "UnitTests.xctest"
-               BlueprintName = "UnitTests"
+               BlueprintIdentifier = "F558DA061CF1AF1A0014717C"
+               BuildableName = "iOS.app"
+               BlueprintName = "iOS"
                ReferencedContainer = "container:Samples.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,6 +32,21 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F529152A1D83B08E006305E4"
+               BuildableName = "SnapshotTests.xctest"
+               BlueprintName = "SnapshotTests"
+               ReferencedContainer = "container:Samples.xcodeproj">
+            </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "SnapshotTests">
+               </Test>
+            </SkippedTests>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F54BAFD11D0A6123004757C9"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
@@ -39,6 +54,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F558DA061CF1AF1A0014717C"
+            BuildableName = "iOS.app"
+            BlueprintName = "iOS"
+            ReferencedContainer = "container:Samples.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -52,15 +76,23 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F54BAFD11D0A6123004757C9"
-            BuildableName = "UnitTests.xctest"
-            BlueprintName = "UnitTests"
+            BlueprintIdentifier = "F558DA061CF1AF1A0014717C"
+            BuildableName = "iOS.app"
+            BlueprintName = "iOS"
             ReferencedContainer = "container:Samples.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "FB_REFERENCE_IMAGE_DIR"
+            value = "$(SOURCE_ROOT)/SnapshotTests/ReferenceImages"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,15 +102,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F54BAFD11D0A6123004757C9"
-            BuildableName = "UnitTests.xctest"
-            BlueprintName = "UnitTests"
+            BlueprintIdentifier = "F558DA061CF1AF1A0014717C"
+            BuildableName = "iOS.app"
+            BlueprintName = "iOS"
             ReferencedContainer = "container:Samples.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

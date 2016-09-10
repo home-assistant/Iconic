@@ -10,6 +10,7 @@ import FBSnapshotTestCase
 import Iconic
 
 extension Icon {
+    // TODO: Update in Swift 3
     static func enumerate() -> AnyGenerator<Icon> {
         var nextIndex = 0
         return AnyGenerator { Icon(rawValue: nextIndex++) }
@@ -21,7 +22,7 @@ class StringIconTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
         
-        self.recordMode = true
+        self.recordMode = false
     }
     
     func testSimpleString() {
