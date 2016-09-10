@@ -20,7 +20,6 @@
 		F52915441D83B124006305E4 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B61D6D4F0F008757EF /* FontAwesome.ttf */; };
 		F52915451D83B125006305E4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B51D6D4F0F008757EF /* FontAwesome.otf */; };
 		F52915461D83B125006305E4 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B61D6D4F0F008757EF /* FontAwesome.ttf */; };
-		F52915491D83B522006305E4 /* SnapshotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F52915481D83B522006305E4 /* SnapshotTests.m */; };
 		F529154B1D83B6E5006305E4 /* Iconic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F529154A1D83B6E5006305E4 /* Iconic.framework */; };
 		F54BAFC71D0A609F004757C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54BAFBB1D0A609F004757C9 /* LaunchScreen.storyboard */; };
 		F54BAFC81D0A609F004757C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54BAFBD1D0A609F004757C9 /* Main.storyboard */; };
@@ -33,6 +32,9 @@
 		F54BAFF41D0A9617004757C9 /* UIExtenstionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFF31D0A9617004757C9 /* UIExtenstionTests.swift */; };
 		F54BAFF61D0A9633004757C9 /* FoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFF51D0A9633004757C9 /* FoundationTests.swift */; };
 		F58D6D251D0429FE00D68109 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F58D6D241D0429FE00D68109 /* Podfile */; };
+		F5C165251D83CAF7003D76E0 /* ImageIconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C165241D83CAF7003D76E0 /* ImageIconTests.swift */; };
+		F5C1652C1D83CB80003D76E0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C165271D83CB80003D76E0 /* Info.plist */; };
+		F5C1652D1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C1652B1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m */; };
 		F5D616021D73D111009545DD /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502824D1D6E011B00E1AA12 /* IconView.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,9 +68,6 @@
 		F50ADC0F1D112D0B004A5A4C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50ADC101D112D0B004A5A4C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F529152B1D83B08E006305E4 /* SnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F529152F1D83B08E006305E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F52915471D83B521006305E4 /* SnapshotTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapshotTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		F52915481D83B522006305E4 /* SnapshotTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnapshotTests.m; sourceTree = "<group>"; };
 		F529154A1D83B6E5006305E4 /* Iconic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Iconic.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Samples-cykmpndyapzgkhgkcrvenvbgkcpc/Build/Products/Debug-iphonesimulator/Iconic-iOS9.3/Iconic.framework"; sourceTree = "<group>"; };
 		F54BAFBC1D0A609F004757C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F54BAFBE1D0A609F004757C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +89,11 @@
 		F558DA071CF1AF1A0014717C /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57B56541D1FE785000E6551 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		F58D6D241D0429FE00D68109 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F5C165241D83CAF7003D76E0 /* ImageIconTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageIconTests.swift; sourceTree = "<group>"; };
+		F5C165271D83CB80003D76E0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5C165281D83CB80003D76E0 /* SnapshotTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SnapshotTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F5C1652A1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase+Swift.h"; sourceTree = "<group>"; };
+		F5C1652B1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase+Swift.m"; sourceTree = "<group>"; };
 		F5D930CE1D03F6B9009CCB69 /* Iconic.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Iconic.podspec; path = ../Iconic.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F5DE76AD1D6CF827008757EF /* iconic-default.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; name = "iconic-default.stencil"; path = "../Source/iconic-default.stencil"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F5DE76AE1D6CF82E008757EF /* Iconizer.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = Iconizer.sh; path = ../Source/Iconizer.sh; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
@@ -200,9 +204,9 @@
 		F529152C1D83B08E006305E4 /* SnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
-				F52915481D83B522006305E4 /* SnapshotTests.m */,
-				F529152F1D83B08E006305E4 /* Info.plist */,
-				F52915471D83B521006305E4 /* SnapshotTests-Bridging-Header.h */,
+				F5C165241D83CAF7003D76E0 /* ImageIconTests.swift */,
+				F5C165291D83CB80003D76E0 /* Tools */,
+				F5C165261D83CB80003D76E0 /* Supporting Files */,
 			);
 			path = SnapshotTests;
 			sourceTree = "<group>";
@@ -283,6 +287,24 @@
 				F529152B1D83B08E006305E4 /* SnapshotTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F5C165261D83CB80003D76E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5C165271D83CB80003D76E0 /* Info.plist */,
+				F5C165281D83CB80003D76E0 /* SnapshotTests-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5C165291D83CB80003D76E0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F5C1652A1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.h */,
+				F5C1652B1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		F5DE76AF1D6D4F0F008757EF /* Fonts */ = {
@@ -503,6 +525,7 @@
 			files = (
 				F52915451D83B125006305E4 /* FontAwesome.otf in Resources */,
 				F52915461D83B125006305E4 /* FontAwesome.ttf in Resources */,
+				F5C1652C1D83CB80003D76E0 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,7 +748,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F52915491D83B522006305E4 /* SnapshotTests.m in Sources */,
+				F5C165251D83CAF7003D76E0 /* ImageIconTests.swift in Sources */,
+				F5C1652D1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,13 +850,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F713E68432BB8694263EDE02 /* Pods-SnapshotTests.debug.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = SnapshotTests/Info.plist;
+				INFOPLIST_FILE = "SnapshotTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzn.SnapshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SnapshotTests/SnapshotTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnapshotTests/Supporting Files/SnapshotTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS.app/iOS";
 			};
@@ -842,13 +867,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 085D0292D69FDA1D896E9617 /* Pods-SnapshotTests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = SnapshotTests/Info.plist;
+				INFOPLIST_FILE = "SnapshotTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzn.SnapshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SnapshotTests/SnapshotTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnapshotTests/Supporting Files/SnapshotTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS.app/iOS";
 			};
 			name = Release;
