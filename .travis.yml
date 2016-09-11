@@ -1,6 +1,7 @@
 
-xcrun xcodebuild clean build test \
-    -scheme iOS \
-    -workspace ./Samples/Samples.xcworkspace \
-    -configuration Debug \
-    -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.3' \
+language: objective-c
+
+osx_image: xcode7.3
+
+script:
+- xcodebuild clean build test -scheme iOS-Sample -workspace ./Samples/Samples.xcworkspace -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.3'
