@@ -51,9 +51,9 @@ _Note: Some open sourced icon fonts don't include the names of each of their gly
 
 
 ### Missing Features in Beta
-- [ ] Interface Builder Support.
-- [ ] Solid API definition with a more Swifty approach (see #2 and #26).
-- [ ] Fully covered with snapshot tests.
+- [x] Interface Builder Support. (Added in [#41](https://github.com/dzenbot/Iconic/pull/41) and [#43](https://github.com/dzenbot/Iconic/pull/43))
+- [ ] Solid API definition with a more Swifty approach (see [#2](https://github.com/dzenbot/Iconic/issues/2) and [#26](https://github.com/dzenbot/Iconic/issues/26)).
+- [x] Fully covered with snapshot tests. (Added in [#44](https://github.com/dzenbot/Iconic/pull/44))
 
 
 ## Installation
