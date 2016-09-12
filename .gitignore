@@ -20,6 +20,6 @@ DerivedData
 # Pods
 Samples/Pods/*
 Samples/Podfile.lock
-./Source/Catalog/FontAwesome.ttf
-./Source/Catalog/data.json
-./Source/FontAwesomeIcon.swift
+*/Catalog/FontAwesome.ttf
+*/Catalog/data.json
+*/FontAwesomeIcon.swift
