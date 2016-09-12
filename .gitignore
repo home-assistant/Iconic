@@ -17,6 +17,9 @@ DerivedData
 *.hmap
 .gutter.json
 
-SlackTextViewController/Pods
-SlackTextViewController/Podfile.lock
-SlackTextViewController/*.xcworkspace
+# Pods
+*/Pods/*
+*/Podfile.lock
+*/Source/Catalog/FontAwesome.ttf
+*/Source/Catalog/data.json
+*/Source/FontAwesomeIcon.swift
