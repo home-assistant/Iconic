@@ -18,8 +18,8 @@ DerivedData
 .gutter.json
 
 # Pods
-*/Pods/*
-*/Podfile.lock
-*/Source/Catalog/FontAwesome.ttf
-*/Source/Catalog/data.json
-*/Source/FontAwesomeIcon.swift
+Samples/Pods/*
+Samples/Podfile.lock
+./Source/Catalog/FontAwesome.ttf
+./Source/Catalog/data.json
+./Source/FontAwesomeIcon.swift
