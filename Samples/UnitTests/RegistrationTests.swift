@@ -1,6 +1,6 @@
 //
 //  FontRegistrationTests.swift
-//  UnitTests
+//  Iconic
 //
 //  Created by Ignacio Romero on 6/9/16.
 //  Copyright © 2016 DZN. All rights reserved.
