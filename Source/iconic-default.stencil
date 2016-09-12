@@ -27,7 +27,7 @@ public extension Iconic {
 
     /**
     Creates an attributed string with the specified icon enum type, with optional color and alignment.
-    The optional alinment can be really helpful when appending an icon to another attributed string with different fonts.
+    The optional alignment can be really helpful when appending an icon to another attributed string with different fonts.
     It may also help for adjusting the icon's baseline, when using either top and bottom insets.
 
     - parameter icon: The icon enum type.
@@ -40,7 +40,7 @@ public extension Iconic {
     }
 
     /**
-    Creates an image out of an attributed string with the specified icon enum type.
+    Creates an image out of an attributed string with the specified icon enum type, with optional color.
 
     - parameter icon: The icon enum type.
     - parameter size: The size of the text, in points.
@@ -48,6 +48,19 @@ public extension Iconic {
     */
     class func image(forIcon icon: Icon, size: CGFloat, color: UIColor?) -> UIImage? {
         return Iconic.image(forIndex: icon.rawValue, size: size, color: color)
+    }
+    
+    /**
+     Creates an image out of an attributed string with the specified icon enum type, with optional color and padding.
+     The optional padding can be really helpful when wanting to add more space to an image, specially for larger hit test area.
+     
+     - parameter icon: The icon enum type.
+     - parameter size: The size of the text, in points.
+     - parameter color: Optional color to be applied to the icon.
+     - parameter edgeInsets: Optional edge insets to be used as additional padding.
+     */
+    class func image(forIcon icon: Icon, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage? {
+        return Iconic.image(forIndex: icon.rawValue, size: size, color: color, edgeInsets: edgeInsets)
     }
 
     /**

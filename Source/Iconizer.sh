@@ -7,14 +7,15 @@
 #  Copyright © 2016 DZN Labs All rights reserved.
 #
 
-# Source file paths
-EXEC_PATH=./Vendor/SwiftGen/build/swiftgen/bin/swiftgen
-STENCIL_PATH=./Source/iconic-default.stencil
-CATALOG_PATH=./Source/Catalog
-
 # Font file path
 INPUT_PATH=$1
 OUTPUT_PATH=$2
+ROOT_PATH=$3
+
+# Source file paths
+EXEC_PATH=${ROOT_PATH}/Vendor/SwiftGen/build/swiftgen/bin/swiftgen
+STENCIL_PATH=${ROOT_PATH}/Source/iconic-default.stencil
+CATALOG_PATH=${ROOT_PATH}/Source/Catalog
 
 # If the output param is missing, use the same directory than the input's
 if [ -z ${OUTPUT_PATH} ] ; then
@@ -28,7 +29,7 @@ function iconize()
     FONT_PATH=$1
     FONT_NAME=$2
 
-    echo "Iconizing with file path ${FONT_PATH}"
+    echo "Iconizer: Starting with file path ${FONT_PATH}"
 
     # Input's file name and extension
     FILE_TITLE="${FONT_NAME%.*}"
@@ -60,11 +61,13 @@ else
     # Input's file name and extension
     INPUT_NAME=$(basename "${INPUT_PATH}")
     INPUT_EXTENSION="${INPUT_NAME##*.}"
-    
+
+    echo "Iconizer: Initializing"
+
     if [ ${INPUT_EXTENSION} = 'ttf' ] || [ ${INPUT_EXTENSION} = 'otf' ]; then
 
         iconize ${INPUT_PATH} ${INPUT_NAME}
     else
-        echo "Unsupported ${INPUT_EXTENSION} file. Please provide a TTF or OTF file path."
+        echo "Iconizer: Unsupported ${INPUT_EXTENSION} file. Please provide a TTF or OTF file path."
     fi
 fi

@@ -54,7 +54,7 @@ class StringIconTests: FBSnapshotTestCase {
         paragraphStyle.headIndent = space;
         paragraphStyle.tailIndent = -space;
         paragraphStyle.lineSpacing = space;
-
+        
         attributedString.addAttributes([NSParagraphStyleAttributeName: paragraphStyle, NSKernAttributeName: space],
                                        range: NSMakeRange(0, attributedString.length))
         

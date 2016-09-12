@@ -26,10 +26,15 @@ end
 
 target 'UnitTests' do
     # No need for installing the pod.
-    # This target tests 'Iconic' main class only.
+    # This target only tests the Iconic.swift class
 end
 
 target 'SnapshotTests' do
     common_pods
     pod 'FBSnapshotTestCase/Core'
+end
+
+# Since prepare_command is not executed when using :path
+pre_install do |installer|
+    system("sh ../Source/Iconizer.sh ../Fonts/FontAwesome-4.6.3/FontAwesome.ttf ../Source ../ --verbose")
 end
