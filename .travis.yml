@@ -5,7 +5,9 @@ cache:
 - cocoapods
 
 before_install:
-- cd Samples && pod install
+- cd Samples
+- pod deintegrate
+- pod update Iconic --verbose
 
 script:
 - xcodebuild clean build test -scheme iOS-Sample -workspace Samples.xcworkspace -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.3'
