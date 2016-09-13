@@ -36,5 +36,5 @@ end
 
 # Since prepare_command is not executed when using :path
 pre_install do |installer|
-    system("sh ../Source/Iconizer.sh ../Fonts/FontAwesome-4.6.3/FontAwesome.ttf ../Source .. --verbose")
+    system("sh ../Installer.sh ../Fonts/FontAwesome-4.6.3/FontAwesome.ttf ../Source ../ --verbose")
 end

@@ -25,7 +25,7 @@ class FirstViewController: UITableViewController {
     
     func commonInit() -> Void {
         
-        let tabItem = UITabBarItem(icon: .Book, size:20, title: "Catalog", tag: Icon.Book.rawValue)
+        let tabItem = UITabBarItem(icon: .Book, size:20, title: "Catalog", tag: 0)
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;

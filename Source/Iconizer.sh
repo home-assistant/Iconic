@@ -7,6 +7,12 @@
 #  Copyright © 2016 DZN Labs All rights reserved.
 #
 
+#
+# Disclaimer:
+# Script in charge of executing SwitfGen, passing the icon font file path, the enum name and the custom stencil as arguments.
+# This script is ran automatically by the installer.
+#
+
 # Font file path
 INPUT_PATH=$1
 OUTPUT_PATH=$2
@@ -21,8 +27,6 @@ CATALOG_PATH=${ROOT_PATH}/Source/Catalog
 if [ -z ${OUTPUT_PATH} ] ; then
     OUTPUT_PATH=$(dirname ${INPUT_PATH})
 fi
-
-
 
 function iconize()
 {
