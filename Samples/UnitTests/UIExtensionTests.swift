@@ -1,6 +1,6 @@
 //
-//  UIExtenstionTests.swift
-//  Playground
+//  UIExtensionTests.swift
+//  Iconic
 //
 //  Created by Ignacio Romero on 6/9/16.
 //  Copyright © 2016 DZN. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class UIExtenstionTests: XCTestCase {
+class UIExtensionTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

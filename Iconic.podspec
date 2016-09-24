@@ -31,11 +31,9 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   
   # If not specified, FontAwesome is used as the default font
-  font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Fonts/FontAwesome-4.6.3/FontAwesome.ttf'
+  font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Fonts/FontAwesome-4.6.3/FontAwesome.otf'
   
   s.prepare_command = <<-CMD
-                      cd Vendor/SwiftGen/ && rake install
-                      cd ../..
-                      sh Source/Iconizer.sh #{font_path} Source --verbose
+                      sh Installer.sh #{font_path}
                       CMD
 end

@@ -22,7 +22,7 @@ class SecondViewController: UIViewController {
     }
     
     func commonInit() -> Void {
-        let tabItem = UITabBarItem(icon: .Picture, size:20, title: "As Image", tag: Icon.Picture.rawValue)
+        let tabItem = UITabBarItem(icon: .Picture, size:20, title: "As Image", tag: 0)
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;

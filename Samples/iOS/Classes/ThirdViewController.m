@@ -40,7 +40,7 @@
 
 - (void)commonInit
 {    
-    self.tabBarItem = [[UITabBarItem alloc] initWithIcon:Icon_546 size:20.0 title:@"As Text" tag:Icon_546];
+    self.tabBarItem = [[UITabBarItem alloc] initWithIcon:Icon_546 size:20.0 title:@"As Text" tag:0];
     self.title = self.tabBarItem.title;
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithIcon:IconCog size:24.0 target:self action:@selector(didTapRightButtonItem:)];

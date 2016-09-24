@@ -1,6 +1,6 @@
 //
 //  StringIconTests.swift
-//  Samples
+//  Iconic
 //
 //  Created by Ignacio Romero on 9/10/16.
 //  Copyright © 2016 DZN. All rights reserved.
@@ -17,12 +17,12 @@ extension Icon {
     }
 }
 
-class StringIconTests: FBSnapshotTestCase {
+class StringIconTests: BaseSnapshotTestCase {
     
     override func setUp() {
         super.setUp()
         
-        self.recordMode = false
+//        self.recordMode = false
     }
     
     func testSimpleString() {
@@ -54,7 +54,7 @@ class StringIconTests: FBSnapshotTestCase {
         paragraphStyle.headIndent = space;
         paragraphStyle.tailIndent = -space;
         paragraphStyle.lineSpacing = space;
-
+        
         attributedString.addAttributes([NSParagraphStyleAttributeName: paragraphStyle, NSKernAttributeName: space],
                                        range: NSMakeRange(0, attributedString.length))
         

@@ -77,7 +77,7 @@ public class Iconic: NSObject {
         
         guard let name = fontName, let font = UIFont(name: name, size: fontSize) else {
             return nil
-        }        
+        }
         
         return font
     }
@@ -102,7 +102,7 @@ public class Iconic: NSObject {
     // MARK: - Attributed String Constructors
     
     class func attributedString(forIndex idx: Int, size: CGFloat, color: UIColor?) -> NSAttributedString? {
-
+        
         guard let font = iconFont(ofSize: size), let unicode = unicodeString(forIndex: idx) else {
             return nil
         }
@@ -128,7 +128,7 @@ public class Iconic: NSObject {
         
         let leftSpace = NSAttributedString(string: " ", attributes: [NSKernAttributeName: edgeInsets.left])
         let rightSpace = NSAttributedString(string: " ", attributes: [NSKernAttributeName: edgeInsets.right])
-
+        
         mutableString.insertAttributedString(rightSpace, atIndex: string.length)
         mutableString.insertAttributedString(leftSpace, atIndex: 0)
         
@@ -136,7 +136,7 @@ public class Iconic: NSObject {
     }
     
     // MARK: - Image Constructors
-
+    
     class func image(forIndex idx: Int, size: CGFloat, color: UIColor?) -> UIImage? {
         
         return image(forIndex: idx, size: size, color: color, edgeInsets: UIEdgeInsetsZero)
@@ -148,12 +148,18 @@ public class Iconic: NSObject {
             return nil
         }
         
-        let rect = UIEdgeInsetsInsetRect(CGRectMake(0, 0, size, size), edgeInsets)
+        var rect = CGRectMake(0, 0, size, size)
+        rect.origin.y -= edgeInsets.top
+        rect.size.width -= edgeInsets.left + edgeInsets.right
+        rect.size.height -= edgeInsets.top + edgeInsets.bottom
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .Center
         
         attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
+        
+        attributedString.size
+        
         
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         attributedString.drawInRect(rect)
@@ -192,7 +198,7 @@ private extension Iconic {
         if let uifont = UIFont(name: fontName, size: 10) where uifont.fontName == fontName {
             configure(withURL: url, name: fontName, map: map)
         }
-        // Registers font dynamically
+            // Registers font dynamically
         else if CTFontManagerRegisterFontsForURL(url, .None, &error) == true {
             configure(withURL: url, name: fontName, map: map)
         }

@@ -1,6 +1,6 @@
 //
 //  IconicFundamentalTests.swift
-//  Playground
+//  Iconic
 //
 //  Created by Ignacio Romero on 6/9/16.
 //  Copyright © 2016 DZN. All rights reserved.
@@ -8,7 +8,8 @@
 
 import XCTest
 
-let IconMap = [
+private let fontName: String = "FontAwesome"
+private let iconMap = [
     "\u{F129}",
     "\u{F12D}",
     "\u{F143}",
@@ -26,7 +27,7 @@ class FoundationTests: XCTestCase {
     override class func setUp() {
         super.setUp()
         
-        Iconic.registerFont(withName: "FontAwesome", map: IconMap)
+        Iconic.registerFont(withName: fontName, map: iconMap)
     }
     
     override func setUp() {
@@ -42,7 +43,7 @@ class FoundationTests: XCTestCase {
         let str = Iconic.unicodeString(forIndex: 0)
         
         XCTAssertNotNil(str)
-        XCTAssertEqual(str, "\u{F129}")
+        XCTAssertEqual(str, iconMap.first)
     }
     
     func testFontConstructor() {
@@ -50,7 +51,7 @@ class FoundationTests: XCTestCase {
         let font = Iconic.iconFont(ofSize: 20)
         
         XCTAssertNotNil(font)
-        XCTAssertEqual(font!.familyName, "FontAwesome")
+        XCTAssertEqual(font!.familyName, fontName)
     }
     
     func testAttributedStringConstructor() {
@@ -61,7 +62,7 @@ class FoundationTests: XCTestCase {
         
         att!.enumerateAttribute(NSFontAttributeName, inRange: NSMakeRange(0, att!.length), options: NSAttributedStringEnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
             if let font = value as? UIFont {
-                XCTAssertEqual(font.familyName, "FontAwesome")
+                XCTAssertEqual(font.familyName, fontName)
             }
         }
     }
