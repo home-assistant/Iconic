@@ -9,12 +9,12 @@
 import FBSnapshotTestCase
 import Iconic
 
-class UIExtensionTests: FBSnapshotTestCase {
+class UIExtensionTests: BaseSnapshotTestCase {
     
     override func setUp() {
         super.setUp()
         
-        self.recordMode = false
+//        self.recordMode = false
     }
     
     func testUIBarButtonItem() {

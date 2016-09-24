@@ -9,19 +9,21 @@
 
 #
 # Disclaimer:
+#
 # Script in charge of executing SwitfGen, passing the icon font file path, the enum name and the custom stencil as arguments.
 # This script is ran automatically by the installer.
 #
 
+
 # Font file path
 INPUT_PATH=$1
-OUTPUT_PATH=$2
-ROOT_PATH=$3
 
 # Source file paths
-EXEC_PATH=${ROOT_PATH}/Vendor/SwiftGen/build/swiftgen/bin/swiftgen
-STENCIL_PATH=${ROOT_PATH}/Source/iconic-default.stencil
-CATALOG_PATH=${ROOT_PATH}/Source/Catalog
+EXEC_PATH=Vendor/SwiftGen/build/swiftgen/bin/swiftgen
+STENCIL_PATH=Source/iconic-default.stencil
+CATALOG_PATH=Source/Catalog
+OUTPUT_PATH=Source/
+
 
 # If the output param is missing, use the same directory than the input's
 if [ -z ${OUTPUT_PATH} ] ; then
@@ -60,13 +62,13 @@ function iconize()
 
 # Only TTF and OTF are supported font files
 if [ -z ${INPUT_PATH} ]; then
-	echo "Missing font file. Please provide a TTF or OTF file path."
+	echo "Missing font file at path ${INPUT_PATH}. Please provide a TTF or OTF file path."
 else
     # Input's file name and extension
     INPUT_NAME=$(basename "${INPUT_PATH}")
     INPUT_EXTENSION="${INPUT_NAME##*.}"
 
-    echo "Iconizer: Initializing"
+    echo "Iconizer: Initializing..."
 
     if [ ${INPUT_EXTENSION} = 'ttf' ] || [ ${INPUT_EXTENSION} = 'otf' ]; then
 

@@ -9,12 +9,12 @@
 import FBSnapshotTestCase
 import Iconic
 
-class ImageIconTests: FBSnapshotTestCase {
+class ImageIconTests: BaseSnapshotTestCase {
     
     override func setUp() {
         super.setUp()
         
-        self.recordMode = false
+//        self.recordMode = false
     }
     
     func testImageDefaultColor() {

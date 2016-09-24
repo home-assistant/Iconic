@@ -17,12 +17,12 @@ extension Icon {
     }
 }
 
-class StringIconTests: FBSnapshotTestCase {
+class StringIconTests: BaseSnapshotTestCase {
     
     override func setUp() {
         super.setUp()
         
-        self.recordMode = false
+//        self.recordMode = false
     }
     
     func testSimpleString() {
