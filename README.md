@@ -155,10 +155,21 @@ button.setIcon(icon: .Code, size: 20, forState: .Normal)
 
 ## Sample Project
 Check out the sample project, everything is demo'd there.
-
-You may need to call `pod install` before using the workspace, since pod files are not versioned.
-
 ![Sample Project](Screenshots/screenshot_sample_proj.png)
+
+Iconic is installed as a development pod, to allow tweaks easier.
+Because of this, pod files are not versioned. Therefore, you will first need to fetch the submodule manually:
+```
+git submodule init
+git submodule update
+```
+
+and install the pods:
+```
+pod install
+```
+
+Please report any issues you may be facing during this process, or suggestions to improve the setup.
 
 
 ## Icon Font Catalog
