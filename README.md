@@ -9,6 +9,8 @@
 
 You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of the `Iconic.swift` class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
 
+Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and pick the `Samples.xcworkspace`.
+
 _Note: This library is currently in beta. APIs may change without backwards compatibility._
 
 <p align="center">
@@ -157,19 +159,18 @@ button.setIcon(icon: .Code, size: 20, forState: .Normal)
 Check out the sample project, everything is demo'd there.
 ![Sample Project](Screenshots/screenshot_sample_proj.png)
 
-Iconic is installed as a development pod, to allow tweaks easier.
-Because of this, pod files are not versioned. Therefore, you will first need to fetch the submodule manually:
+Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and pick the `Samples.xcworkspace`.
+
+On the sample project, Iconic is installed as a development pod. Because of this, pod files are not versioned. Therefore, if you clone the repo, you will also need to fetch the submodules:
 ```
 git submodule init
 git submodule update
 ```
 
-and install the pods:
+and then, install the pods:
 ```
 pod install
 ```
-
-Please report any issues you may be facing during this process, or suggestions to improve the setup.
 
 
 ## Icon Font Catalog
