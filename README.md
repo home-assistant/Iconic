@@ -156,6 +156,8 @@ button.setIcon(icon: .Code, size: 20, forState: .Normal)
 ## Sample Project
 Check out the sample project, everything is demo'd there.
 
+You may need to call `pod install` before using the workspace, since pod files are not versioned.
+
 ![Sample Project](Screenshots/screenshot_sample_proj.png)
 
 

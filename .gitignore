@@ -17,10 +17,12 @@ DerivedData
 *.hmap
 .gutter.json
 
-# Pods
-Samples/Pods/*
-Samples/Podfile.lock
+# Pods Specifics
+*/Pods/*
+*/Podfile.lock
+
+# Iconic Specifics, since they may be stored in ./Source directory
 */Catalog/*.ttf
 */Catalog/*.otf
-*/Catalog/data.json
-*/FontAwesomeIcon.swift
+*/Catalog/*.json
+*/*Icon.swift

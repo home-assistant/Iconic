@@ -4,13 +4,6 @@ abstract_target 'Playground'
 use_frameworks!
 
 def common_pods
-    # Since this library depends on 'prepare_command' for compiling SwiftGen
-    # and other automations, we need to install it as a remote pod.
-    
-    # remote
-    # pod 'Iconic', :git => 'https://github.com/dzenbot/Iconic.git', :submodules => true
-    
-    # local
     pod 'Iconic', :path => '../Iconic.podspec', :submodules => true
 end
 
@@ -26,15 +19,10 @@ end
 
 target 'UnitTests' do
     # No need for installing the pod.
-    # This target only tests the Iconic.swift class
+    # This target only tests the Iconic.swift base class
 end
 
 target 'SnapshotTests' do
     common_pods
     pod 'FBSnapshotTestCase/Core'
-end
-
-# Since prepare_command is not executed when using :path
-pre_install do |installer|
-    system("sh ../Installer.sh ../Fonts/FontAwesome-4.6.3/FontAwesome.ttf ../Source ../ --verbose")
 end
