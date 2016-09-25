@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--First View Controller-->
@@ -11,29 +12,29 @@
             <objects>
                 <tableViewController id="4qd-Ww-v5p" customClass="FirstViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ore-9V-wE0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="QxM-Dm-1ZI" detailTextLabel="lYz-Ue-52H" style="IBUITableViewCellStyleValue1" id="eie-dd-TgF">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eie-dd-TgF" id="ftS-JB-rty">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QxM-Dm-1ZI">
-                                            <rect key="frame" x="15" y="12" width="31.5" height="19.5"/>
+                                            <frame key="frameInset" minX="15" minY="12" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lYz-Ue-52H">
-                                            <rect key="frame" x="543.5" y="12" width="41.5" height="19.5"/>
+                                            <frame key="frameInset" minX="318" minY="12" width="42" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -61,20 +62,18 @@
                         <viewControllerLayoutGuide type="bottom" id="se9-zp-Tve"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iGm-Kc-Plu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adjust the slider to update the size of the icon image." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJw-Ut-2nB">
-                                <rect key="frame" x="75" y="496" width="450" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VOy-KG-hQJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.70488542259999998" green="0.70488542259999998" blue="0.70488542259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.64564841985702515" green="0.64562904834747314" blue="0.64564001560211182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="20" maxValue="420" translatesAutoresizingMaskIntoConstraints="NO" id="ZNm-eS-cnB" customClass="StepSlider" customModule="iOS" customModuleProvider="target">
-                                <rect key="frame" x="130" y="454" width="341" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="337" id="JfI-Tb-dtu"/>
                                 </constraints>
@@ -82,21 +81,20 @@
                                     <action selector="didChangeScale:" destination="0yR-jT-3Z1" eventType="valueChanged" id="twA-vQ-kjo"/>
                                 </connections>
                             </slider>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zL9-Fl-E3t" customClass="IconView" customModule="iOS" customModuleProvider="target">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zL9-Fl-E3t" customClass="IconImageView" customModule="iOS" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="D5X-ag-TMz"/>
                                     <constraint firstAttribute="height" constant="200" id="fn3-2h-sdi"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="iconName" value="Github"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zL9-Fl-E3t" firstAttribute="centerX" secondItem="ZNm-eS-cnB" secondAttribute="centerX" id="2EK-a0-QvP"/>
                             <constraint firstItem="xJw-Ut-2nB" firstAttribute="top" secondItem="ZNm-eS-cnB" secondAttribute="bottom" constant="12" id="J2Q-LO-f6F"/>
@@ -110,6 +108,7 @@
                     <navigationItem key="navigationItem" id="R6Q-pv-5bf"/>
                     <connections>
                         <outlet property="iconHeightConstraint" destination="fn3-2h-sdi" id="PQm-Im-uda"/>
+                        <outlet property="iconImageView" destination="zL9-Fl-E3t" id="qAV-yK-agz"/>
                         <outlet property="iconWidthConstraint" destination="D5X-ag-TMz" id="GHZ-OM-cAM"/>
                         <outlet property="slider" destination="ZNm-eS-cnB" id="KVj-i6-sEG"/>
                     </connections>
@@ -126,7 +125,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="dBE-9q-SfV" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -138,12 +137,14 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Section 1-->
         <scene sceneID="aDf-4A-owt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dBE-9q-SfV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Section 1" id="acW-dT-cKf"/>
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qc5-mQ-qis">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -166,17 +167,16 @@
                         <viewControllerLayoutGuide type="bottom" id="l1j-Tg-oRT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Dn-Mo-AKZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LPB-z6-7V9">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="LPB-z6-7V9" secondAttribute="trailing" id="HmI-Sa-LSB"/>
                             <constraint firstItem="LPB-z6-7V9" firstAttribute="leading" secondItem="6Dn-Mo-AKZ" secondAttribute="leading" id="ZWp-Ds-84o"/>
@@ -193,12 +193,14 @@
             </objects>
             <point key="canvasLocation" x="1598" y="777"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Section 3-->
         <scene sceneID="pCm-fC-aJf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CtP-tO-4wT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="95L-zJ-um8"/>
+                    <tabBarItem key="tabBarItem" title="Section 3" id="95L-zJ-um8"/>
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lXU-fq-Bej">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -212,12 +214,14 @@
             </objects>
             <point key="canvasLocation" x="786" y="777"/>
         </scene>
-        <!--Item-->
+        <!--Section 2-->
         <scene sceneID="Ctd-2O-UyJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rVY-YH-icp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="sa8-wR-T73"/>
+                    <tabBarItem key="tabBarItem" title="Section 2" id="sa8-wR-T73"/>
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rP4-nW-i0L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -1,5 +1,5 @@
 //
-//  IconView.swift
+//  IconImageView.swift
 //  Samples
 //
 //  Created by Ignacio Romero on 7/28/16.
@@ -10,21 +10,21 @@ import UIKit
 import Iconic
 
 @IBDesignable
-class IconView: UIImageView {
+class IconImageView: UIImageView {
     
     // MARK: - Public & Inspectable variables
     
-    @available(*, unavailable, message = "This property is reserved for Interface Builder. Use 'icon' instead.")
+    @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'icon' instead.")
     @IBInspectable dynamic var iconName: String? {
         willSet {
             icon = Icon(named: newValue ?? "")
         }
     }
     
-    @available(*, unavailable, message = "This property is reserved for Interface Builder. Use 'tintColor' instead.")
+    @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'tintColor' instead.")
     @IBInspectable dynamic var iconColor: UIColor! {
         willSet {
-            tintColor = newValue ?? .blackColor()
+            tintColor = newValue ?? UIColor.black
         }
     }
     
@@ -34,8 +34,8 @@ class IconView: UIImageView {
         }
     }
     
-    private func commonInit() {
-        self.backgroundColor = .clearColor()
+    fileprivate func commonInit() {
+        self.backgroundColor = UIColor.clear
     }
     
     // MARK: - Overrides
@@ -73,31 +73,12 @@ class IconView: UIImageView {
         updateIconImage()
     }
     
-    @available(*, unavailable, message = "Reserved for when designable objects are created in Interface Builder.")
+    @available(*, unavailable, message : "Reserved for when designable objects are created in Interface Builder.")
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         
         // The icon font needs to be registered first
         Iconic.registerIconFont()
-        
-        // When there is no image, mimics UIImageView's native placeholder in IB
-        if super.image == nil {
-            self.layer.borderColor = UIColor(white: 0.72, alpha: 1).CGColor
-            self.layer.borderWidth = 1
-            
-            let backdrop = UIView(frame: CGRectInset(frame, 2, 2))
-            backdrop.backgroundColor = UIColor(red: 53/255, green: 105/255, blue: 193/255, alpha: 89/255)
-            self.addSubview(backdrop)
-            
-            let label = UILabel(frame: CGRectZero)
-            label.text = "Icon View"
-            label.font = UIFont(name: "Arial-BoldMT", size: 14)
-            label.textColor = .whiteColor()
-            label.textAlignment = .Center
-            label.sizeToFit()
-            label.center = center
-            self.addSubview(label)
-        }
     }
     
     // MARK: - Constructor
@@ -105,9 +86,9 @@ class IconView: UIImageView {
     func updateIconImage() {
         
         // no need to update if the sizing is empty or too small
-        if CGRectIsEmpty(frame) ||
-            CGRectIsNull(frame) ||
-            CGRectGetWidth(frame) < 5 {
+        if frame.isEmpty ||
+            frame.isNull ||
+            frame.width < 5 {
             return
         }
 
@@ -115,7 +96,7 @@ class IconView: UIImageView {
             super.image = nil
         }
         else {
-            let size = max(CGRectGetWidth(frame), CGRectGetHeight(frame))
+            let size = max(frame.width, frame.height)
             let image = Iconic.image(forIcon: icon!, size: size, color: tintColor)
             
             super.image = image
@@ -126,11 +107,11 @@ class IconView: UIImageView {
 extension Icon {
     
     init(named iconName: String) {
-        switch iconName.lowercaseString {
-        case "dribble": self = .Dribble
-        case "dropbox": self = .Dropbox
-        case "github":  self = .Github
-        default: self = TotalCount
+        switch iconName.lowercased() {
+        case "dribble": self = .dribble
+        case "dropbox": self = .dropbox
+        case "github":  self = .github
+        default: self = .totalCount
         }
     }
 }

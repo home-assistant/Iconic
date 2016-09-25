@@ -5,3 +5,5 @@
 // FBSnapshotTestCase
 #import <FBSnapshotTestCase/FBSnapshotTestCase.h>
 #import "FBSnapshotTestCase+Swift.h"
+
+#import "NSAttributedString+IconMapping.h"

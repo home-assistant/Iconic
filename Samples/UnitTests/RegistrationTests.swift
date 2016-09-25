@@ -36,8 +36,8 @@ class RegistrationTests: XCTestCase {
     
     func testRegisteringFontAtPath() {
         
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let path = bundle.pathForResource(fontName, ofType: "otf")
+        let bundle = Bundle(for: type(of: self))
+        let path = bundle.path(forResource: fontName, ofType: "otf")
         
         Iconic.registerFont(withPath: path!, map: emptyMap)
         

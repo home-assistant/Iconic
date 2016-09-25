@@ -9,14 +9,6 @@
 import FBSnapshotTestCase
 import Iconic
 
-extension Icon {
-    // TODO: Update in Swift 3
-    static func enumerate() -> AnyGenerator<Icon> {
-        var nextIndex = 0
-        return AnyGenerator { Icon(rawValue: nextIndex++) }
-    }
-}
-
 class StringIconTests: BaseSnapshotTestCase {
     
     override func setUp() {
@@ -27,7 +19,7 @@ class StringIconTests: BaseSnapshotTestCase {
     
     func testSimpleString() {
         
-        let iconString = Iconic.attributedString(forIcon: Icon.CameraRetro, size: 50, color: nil)
+        let iconString = Iconic.attributedString(forIcon: .cameraRetro, size: 50, color: nil)
         let textView = UITextView()
         
         textView.attributedText = iconString
@@ -38,25 +30,8 @@ class StringIconTests: BaseSnapshotTestCase {
     
     func testFullIconMap() {
         
-        var rect = CGRectMake(0, 0, 500, 0)
-        let attributedString = NSMutableAttributedString()
-        
-        for icon in Icon.enumerate() {
-            
-            if let iconString = Iconic.attributedString(forIcon: icon, size: 20, color: nil) {
-                attributedString.appendAttributedString(iconString)
-            }
-        }
-        
-        let space = CGFloat(5)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.firstLineHeadIndent = space;
-        paragraphStyle.headIndent = space;
-        paragraphStyle.tailIndent = -space;
-        paragraphStyle.lineSpacing = space;
-        
-        attributedString.addAttributes([NSParagraphStyleAttributeName: paragraphStyle, NSKernAttributeName: space],
-                                       range: NSMakeRange(0, attributedString.length))
+        var rect = CGRect(x: 0, y: 0, width: 500, height: 0)
+        let attributedString = NSAttributedString.iconMap(withSize: 20, spacing: 5, andColor: nil)
         
         let textView = UITextView(frame: rect)
         textView.attributedText = attributedString
@@ -69,7 +44,7 @@ class StringIconTests: BaseSnapshotTestCase {
     
     func testComposeString() {
         
-        let icon = Icon.Dribble
+        let icon = Icon.dribble
         
         let edgeInsets = ["left": UIEdgeInsetsMake(0, 0, 0, 15),
                           "bottom": UIEdgeInsetsMake(15, 0, 0, 0),
@@ -81,13 +56,13 @@ class StringIconTests: BaseSnapshotTestCase {
             let attributedText = NSMutableAttributedString()
             let iconString = Iconic.attributedString(forIcon: icon, size: 25, color: nil, edgeInsets: edgeInset)!
             
-            let titleAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(25),
-                                   NSForegroundColorAttributeName: UIColor.blackColor()]
+            let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 25),
+                                   NSForegroundColorAttributeName: UIColor.black] as [String : Any]
             
             let titleAttrString = NSAttributedString(string: NSStringFromIcon(icon), attributes: titleAttributes)
             
-            attributedText.appendAttributedString(iconString)
-            attributedText.appendAttributedString(titleAttrString)
+            attributedText.append(iconString)
+            attributedText.append(titleAttrString)
             
             let textView = UITextView()
             

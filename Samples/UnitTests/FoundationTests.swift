@@ -60,7 +60,7 @@ class FoundationTests: XCTestCase {
         
         XCTAssertNotNil(att)
         
-        att!.enumerateAttribute(NSFontAttributeName, inRange: NSMakeRange(0, att!.length), options: NSAttributedStringEnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
+        att!.enumerateAttribute(NSFontAttributeName, in: NSMakeRange(0, att!.length), options: NSAttributedString.EnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
             if let font = value as? UIFont {
                 XCTAssertEqual(font.familyName, fontName)
             }
@@ -72,7 +72,7 @@ class FoundationTests: XCTestCase {
         let img = Iconic.image(forIndex: 0, size: 20, color: nil)
         
         XCTAssertNotNil(img)
-        XCTAssertEqual(img?.size, CGSizeMake(20, 20))
+        XCTAssertEqual(img?.size, CGSize(width: 20, height: 20))
     }
     
     func testImageInsetsConstructor() {
@@ -81,6 +81,6 @@ class FoundationTests: XCTestCase {
         let img = Iconic.image(forIndex: 0, size: 20, color: nil, edgeInsets: insets)
         
         XCTAssertNotNil(img)
-        XCTAssertEqual(img?.size, CGSizeMake(30, 30))
+        XCTAssertEqual(img?.size, CGSize(width: 30, height: 30))
     }
 }

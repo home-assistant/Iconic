@@ -19,12 +19,12 @@ class UIExtensionTests: BaseSnapshotTestCase {
     
     func testUIBarButtonItem() {
         
-        let buttonItem = UIBarButtonItem(icon: .Spinner, size: 40, target: nil, action: nil)
+        let buttonItem = UIBarButtonItem(icon: .spinner, size: 40, target: nil, action: #selector(tearDown))
         
         let navItem = UINavigationItem()
         navItem.leftBarButtonItem = buttonItem
         
-        let navbar = UINavigationBar(frame: CGRectMake(0, 0, 44, 44))
+        let navbar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         
         navbar.setItems([navItem], animated: false)
         
@@ -33,8 +33,8 @@ class UIExtensionTests: BaseSnapshotTestCase {
     
     func testUITabBarItem() {
         
-        let item = UITabBarItem(icon: .Sun, size: 40, title: "tab", tag: 0)
-        let tabbar = UITabBar(frame: CGRectMake(0, 0, 80, 80))
+        let item = UITabBarItem(icon: .sun, size: 40, title: "tab", tag: 0)
+        let tabbar = UITabBar(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
         
         tabbar.items = [item]
         
@@ -43,8 +43,8 @@ class UIExtensionTests: BaseSnapshotTestCase {
     
     func testUIButton() {
         
-        let button = UIButton(type: .System)
-        button.setIcon(.Download, size: 40, forState: .Normal)
+        let button = UIButton(type: .system)
+        button.setIcon(.download, size: 40, forState: .normal)
         button.sizeToFit()
         
         self.verifyView(button, withIdentifier: "")

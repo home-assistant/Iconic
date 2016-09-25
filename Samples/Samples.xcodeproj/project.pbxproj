@@ -11,7 +11,6 @@
 		32943616B857774D006A33D4 /* Pods_SnapshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E694EAFE5348E5FE4D65127 /* Pods_SnapshotTests.framework */; };
 		A7BD63F44D9BCC36A1EABBD9 /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D4140F3209A7D2EB9A0B80 /* Pods_iOS.framework */; };
 		CBFDBF753D062B22BA68E3E7 /* Pods_UnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E546B6791883A4DC6EEF5EE3 /* Pods_UnitTests.framework */; };
-		F502824E1D6E011B00E1AA12 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502824D1D6E011B00E1AA12 /* IconView.swift */; };
 		F50ADC061D112CDA004A5A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50ADC041D112CDA004A5A4C /* Main.storyboard */; };
 		F50ADC081D112CDA004A5A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50ADC071D112CDA004A5A4C /* Assets.xcassets */; };
 		F50ADC111D112D0B004A5A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50ADC0F1D112D0B004A5A4C /* AppDelegate.swift */; };
@@ -21,6 +20,11 @@
 		F52915451D83B125006305E4 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B51D6D4F0F008757EF /* FontAwesome.otf */; };
 		F52915461D83B125006305E4 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5DE76B61D6D4F0F008757EF /* FontAwesome.ttf */; };
 		F529154B1D83B6E5006305E4 /* Iconic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F529154A1D83B6E5006305E4 /* Iconic.framework */; };
+		F540FDBC1D97C34600E532BA /* IconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502824D1D6E011B00E1AA12 /* IconImageView.swift */; };
+		F540FDBD1D97C34700E532BA /* IconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502824D1D6E011B00E1AA12 /* IconImageView.swift */; };
+		F540FDC31D9860EA00E532BA /* NSAttributedString+IconMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F540FDC21D9860EA00E532BA /* NSAttributedString+IconMapping.m */; };
+		F540FDC41D98643E00E532BA /* NSAttributedString+IconMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F540FDC21D9860EA00E532BA /* NSAttributedString+IconMapping.m */; };
+		F540FDC51D98643F00E532BA /* NSAttributedString+IconMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F540FDC21D9860EA00E532BA /* NSAttributedString+IconMapping.m */; };
 		F54BAFC71D0A609F004757C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54BAFBB1D0A609F004757C9 /* LaunchScreen.storyboard */; };
 		F54BAFC81D0A609F004757C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54BAFBD1D0A609F004757C9 /* Main.storyboard */; };
 		F54BAFC91D0A609F004757C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BAFC01D0A609F004757C9 /* AppDelegate.swift */; };
@@ -38,7 +42,6 @@
 		F5C165301D83CFD1003D76E0 /* pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C1652F1D83CFD1003D76E0 /* pattern.png */; };
 		F5C165321D83D29D003D76E0 /* StringIconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C165311D83D29D003D76E0 /* StringIconTests.swift */; };
 		F5C165341D83D2C2003D76E0 /* UIExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C165331D83D2C2003D76E0 /* UIExtensionTests.swift */; };
-		F5D616021D73D111009545DD /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F502824D1D6E011B00E1AA12 /* IconView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +66,7 @@
 		DBAE8ED8562683BB2DC5FB93 /* Pods_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE157647526B69D30E38F3A5 /* Pods-SnapshotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapshotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapshotTests/Pods-SnapshotTests.release.xcconfig"; sourceTree = "<group>"; };
 		E546B6791883A4DC6EEF5EE3 /* Pods_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F502824D1D6E011B00E1AA12 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		F502824D1D6E011B00E1AA12 /* IconImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconImageView.swift; sourceTree = "<group>"; };
 		F50ADBFE1D112CDA004A5A4C /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50ADC051D112CDA004A5A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50ADC071D112CDA004A5A4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 		F51C442E1D8836110065E8F3 /* Installer.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = Installer.sh; path = ../Installer.sh; sourceTree = "<group>"; };
 		F529152B1D83B08E006305E4 /* SnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F529154A1D83B6E5006305E4 /* Iconic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Iconic.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Samples-cykmpndyapzgkhgkcrvenvbgkcpc/Build/Products/Debug-iphonesimulator/Iconic-iOS9.3/Iconic.framework"; sourceTree = "<group>"; };
+		F540FDC11D9860E900E532BA /* NSAttributedString+IconMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+IconMapping.h"; sourceTree = "<group>"; };
+		F540FDC21D9860EA00E532BA /* NSAttributedString+IconMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+IconMapping.m"; sourceTree = "<group>"; };
 		F54BAFBC1D0A609F004757C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F54BAFBE1D0A609F004757C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F54BAFC01D0A609F004757C9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -241,7 +246,7 @@
 				F54BAFC31D0A609F004757C9 /* SecondViewController.swift */,
 				F54BAFC41D0A609F004757C9 /* ThirdViewController.h */,
 				F54BAFC51D0A609F004757C9 /* ThirdViewController.m */,
-				F502824D1D6E011B00E1AA12 /* IconView.swift */,
+				F502824D1D6E011B00E1AA12 /* IconImageView.swift */,
 				F54BAFC11D0A609F004757C9 /* iOS-Bridging-Header.h */,
 			);
 			path = Classes;
@@ -317,6 +322,8 @@
 				F5A3423A1D96616700E7029B /* BaseSnapshotTestCase.swift */,
 				F5C1652A1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.h */,
 				F5C1652B1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m */,
+				F540FDC11D9860E900E532BA /* NSAttributedString+IconMapping.h */,
+				F540FDC21D9860EA00E532BA /* NSAttributedString+IconMapping.m */,
 				F5C1652E1D83CFD1003D76E0 /* Resources */,
 			);
 			path = Tools;
@@ -493,7 +500,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = DZN;
 				TargetAttributes = {
 					F50ADBFD1D112CDA004A5A4C = {
@@ -501,13 +508,16 @@
 					};
 					F529152A1D83B08E006305E4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = F558DA061CF1AF1A0014717C;
 					};
 					F54BAFD11D0A6123004757C9 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					F558DA061CF1AF1A0014717C = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -762,8 +772,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50ADC111D112D0B004A5A4C /* AppDelegate.swift in Sources */,
-				F5D616021D73D111009545DD /* IconView.swift in Sources */,
 				F50ADC121D112D0B004A5A4C /* ViewController.swift in Sources */,
+				F540FDC51D98643F00E532BA /* NSAttributedString+IconMapping.m in Sources */,
+				F540FDBC1D97C34600E532BA /* IconImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,6 +786,7 @@
 				F5C165321D83D29D003D76E0 /* StringIconTests.swift in Sources */,
 				F5C1652D1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m in Sources */,
 				F5C165341D83D2C2003D76E0 /* UIExtensionTests.swift in Sources */,
+				F540FDC31D9860EA00E532BA /* NSAttributedString+IconMapping.m in Sources */,
 				F5A3423B1D96616700E7029B /* BaseSnapshotTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,10 +806,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F502824E1D6E011B00E1AA12 /* IconView.swift in Sources */,
 				F54BAFCC1D0A609F004757C9 /* ThirdViewController.m in Sources */,
+				F540FDBD1D97C34700E532BA /* IconImageView.swift in Sources */,
 				F54BAFCA1D0A609F004757C9 /* FirstViewController.swift in Sources */,
 				F54BAFCB1D0A609F004757C9 /* SecondViewController.swift in Sources */,
+				F540FDC41D98643E00E532BA /* NSAttributedString+IconMapping.m in Sources */,
 				F54BAFC91D0A609F004757C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -844,11 +857,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A4DFB37133475278A5BB7E2 /* Pods-tvOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dzn.tvOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-tvos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -860,11 +874,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13CAA5FBBF7B1E16D8588820 /* Pods-tvOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dzn.tvOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-tvos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -876,6 +891,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70D1C39BDC84F074D433056F /* Pods-SnapshotTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "SnapshotTests/Supporting Files/Info.plist";
@@ -885,6 +901,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SnapshotTests/Supporting Files/SnapshotTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS.app/iOS";
 			};
 			name = Debug;
@@ -893,6 +910,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DE157647526B69D30E38F3A5 /* Pods-SnapshotTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "SnapshotTests/Supporting Files/Info.plist";
@@ -901,6 +919,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzn.SnapshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SnapshotTests/Supporting Files/SnapshotTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS.app/iOS";
 			};
 			name = Release;
@@ -915,6 +934,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzn.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -928,6 +948,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzn.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -945,8 +966,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -990,8 +1013,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1010,6 +1035,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1018,13 +1044,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F036585646786633146D0E5 /* Pods-iOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dzn.iOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-ios";
 				PRODUCT_NAME = iOS;
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS/Classes/iOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1033,12 +1061,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F317426B727F09D03F38149 /* Pods-iOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dzn.iOS;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-ios";
 				PRODUCT_NAME = iOS;
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS/Classes/iOS-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

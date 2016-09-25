@@ -20,10 +20,10 @@ class UIExtensionTests: XCTestCase {
     
     func testBarButtonItem() {
         
-        let item = UIBarButtonItem(idx: 0, size: 20, target: nil, action: nil)
+        let item = UIBarButtonItem(idx: 0, size: 20, target: nil, action: #selector(tearDown))
         
         XCTAssertNotNil(item)
-        XCTAssertEqual(item.image?.size, CGSizeMake(20, 20))
+        XCTAssertEqual(item.image?.size, CGSize(width: 20, height: 20))
     }
     
     func testTabBarItem() {
@@ -31,17 +31,17 @@ class UIExtensionTests: XCTestCase {
         let item = UITabBarItem(idx: 0, size:20, title: "", tag: 0)
         
         XCTAssertNotNil(item)
-        XCTAssertEqual(item.image?.size, CGSizeMake(20, 20))
+        XCTAssertEqual(item.image?.size, CGSize(width: 20, height: 20))
     }
     
     func testButton() {
         
-        let button = UIButton(type: .System)
-        button.setIcon(forIndex: 0, size: 20, forState: .Normal)
+        let button = UIButton(type: .system)
+        button.setIcon(forIndex: 0, size: 20, forState: UIControlState())
         
-        let image = button.imageForState(.Normal)
+        let image = button.image(for: UIControlState())
         
         XCTAssertNotNil(image)
-        XCTAssertEqual(image?.size, CGSizeMake(20, 20))
+        XCTAssertEqual(image?.size, CGSize(width: 20, height: 20))
     }
 }

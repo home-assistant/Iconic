@@ -7,6 +7,7 @@
 //
 
 #import "ThirdViewController.h"
+#import "NSAttributedString+IconMapping.h"
 
 #import "iOS-Swift.h"
 
@@ -40,7 +41,7 @@
 
 - (void)commonInit
 {    
-    self.tabBarItem = [[UITabBarItem alloc] initWithIcon:Icon_546 size:20.0 title:@"As Text" tag:0];
+    self.tabBarItem = [[UITabBarItem alloc] initWithIcon:Icon_546 size:20.0 title:@"As Text" tag:Icon_546];
     self.title = self.tabBarItem.title;
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithIcon:IconCog size:24.0 target:self action:@selector(didTapRightButtonItem:)];
@@ -61,28 +62,7 @@
     [super viewWillAppear:animated];
     
     UIColor *color = self.tabBarController.tabBar.tintColor;
-
-    NSMutableAttributedString *attributedText = [NSMutableAttributedString new];
-    
-    for (int i = 0; i < IconTotalCount; i++) {
-        
-        NSMutableAttributedString *fontString = [[Iconic attributedStringForIcon:i size:24.0 color:color] mutableCopy];
-        
-        if (fontString) {
-            [fontString addAttribute:NSKernAttributeName value:@(5) range:NSMakeRange(0, fontString.length)];
-            [attributedText appendAttributedString:fontString];
-        }
-    }
-    
-    CGFloat space = 5.0;
-    
-    NSMutableParagraphStyle *paragrahStyle = [NSMutableParagraphStyle new];
-    paragrahStyle.firstLineHeadIndent = space;
-    paragrahStyle.headIndent = space;
-    paragrahStyle.tailIndent = -space;
-    paragrahStyle.lineSpacing = space;
-    
-    [attributedText addAttribute:NSParagraphStyleAttributeName value:paragrahStyle range:NSMakeRange(0, attributedText.length)];
+    NSAttributedString *attributedText = [NSAttributedString iconMapWithSize:24.0 spacing:5.0 andColor:color];
     
     self.textView.attributedText = attributedText;
 }

@@ -37,7 +37,7 @@ public class Iconic: NSObject {
      */
     class func registerFont(withPath path: String, map: [String]) {
         
-        registerFont(fromURL: NSURL.fileURLWithPath(path), map: map)
+        registerFont(fromURL: URL(fileURLWithPath: path), map: map)
     }
     
     /**
@@ -49,9 +49,9 @@ public class Iconic: NSObject {
             return
         }
         
-        var error: Unmanaged<CFErrorRef>? = nil
+        var error: Unmanaged<CFError>? = nil
         
-        if CTFontManagerUnregisterFontsForURL(url, .None, &error) == true {
+        if CTFontManagerUnregisterFontsForURL(url as CFURL, .none, &error) == true {
             configure(withURL: nil, name: nil, map: nil)
             print("'\(name)' has been unregistered.")
         }
@@ -68,7 +68,7 @@ public class Iconic: NSObject {
      
      - parameter fontSize: The size (in points) to which the font is scaled.
      */
-    public class func iconFont(ofSize fontSize: CGFloat) -> UIFont? {
+    class func iconFont(ofSize fontSize: CGFloat) -> UIFont? {
         
         // Calling UIFont.init() with zero would return a system font object.
         if fontSize == 0 {
@@ -86,13 +86,13 @@ public class Iconic: NSObject {
     
     class func unicodeString(forIndex idx: Int) -> String? {
         
-        guard let map = iconsMap where idx < map.count else {
+        guard let map = iconsMap , idx < map.count else {
             return nil
         }
         
         let unicode = map[idx]
         
-        guard let string = NSString(UTF8String: unicode) else {
+        guard let string = NSString(utf8String: unicode) else {
             return nil
         }
         
@@ -102,7 +102,7 @@ public class Iconic: NSObject {
     // MARK: - Attributed String Constructors
     
     class func attributedString(forIndex idx: Int, size: CGFloat, color: UIColor?) -> NSAttributedString? {
-        
+
         guard let font = iconFont(ofSize: size), let unicode = unicodeString(forIndex: idx) else {
             return nil
         }
@@ -118,51 +118,51 @@ public class Iconic: NSObject {
     }
     
     class func attributedString(forIndex idx: Int, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
-        
-        guard let string = attributedString(forIndex: idx, size: size, color: color) else {
+
+        guard let aString = attributedString(forIndex: idx, size: size, color: color) else {
             return nil
         }
         
-        let mutableString = string.mutableCopy()
-        mutableString.addAttributes([NSBaselineOffsetAttributeName: edgeInsets.bottom-edgeInsets.top], range: NSMakeRange(0, string.length))
+        let mString = NSMutableAttributedString(attributedString: aString)
+        
+        mString.addAttribute(NSBaselineOffsetAttributeName, value: edgeInsets.bottom-edgeInsets.top, range: NSMakeRange(0, mString.length))
         
         let leftSpace = NSAttributedString(string: " ", attributes: [NSKernAttributeName: edgeInsets.left])
         let rightSpace = NSAttributedString(string: " ", attributes: [NSKernAttributeName: edgeInsets.right])
         
-        mutableString.insertAttributedString(rightSpace, atIndex: string.length)
-        mutableString.insertAttributedString(leftSpace, atIndex: 0)
+        mString.insert(rightSpace, at: mString.length)
+        mString.insert(leftSpace, at: 0)
         
-        return mutableString as? NSAttributedString
+        return mString
     }
     
     // MARK: - Image Constructors
     
     class func image(forIndex idx: Int, size: CGFloat, color: UIColor?) -> UIImage? {
-        
-        return image(forIndex: idx, size: size, color: color, edgeInsets: UIEdgeInsetsZero)
+        return image(forIndex: idx, size: size, color: color, edgeInsets: UIEdgeInsets.zero)
     }
     
     class func image(forIndex idx: Int, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage? {
         
-        guard let attributedString = Iconic.attributedString(forIndex: idx, size: size, color: color)?.mutableCopy() else {
+        guard let aString = Iconic.attributedString(forIndex: idx, size: size, color: color) else {
             return nil
         }
         
-        var rect = CGRectMake(0, 0, size, size)
+        let mString = NSMutableAttributedString(attributedString: aString)
+
+        
+        var rect = CGRect(x: 0, y: 0, width: size, height: size)
         rect.origin.y -= edgeInsets.top
         rect.size.width -= edgeInsets.left + edgeInsets.right
         rect.size.height -= edgeInsets.top + edgeInsets.bottom
         
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .Center
+        paragraphStyle.alignment = .center
         
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
-        
-        attributedString.size
-        
+        mString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, mString.length))
         
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
-        attributedString.drawInRect(rect)
+        mString.draw(in: rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -174,32 +174,32 @@ private extension Iconic {
     
     static var iconsMap:[String]?
     static var fontName:String?
-    static var fontURL:NSURL?
+    static var fontURL:URL?
     
-    class func registerFont(fromURL url: NSURL, map: [String]) {
+    class func registerFont(fromURL url: URL, map: [String]) {
         
         guard map.count > 0 else {
             print("Failed registering font. The icon map cannot be empty.")
             return
         }
         
-        let descriptors = CTFontManagerCreateFontDescriptorsFromURL(url) as NSArray?
+        let descriptors = CTFontManagerCreateFontDescriptorsFromURL(url as CFURL) as NSArray?
         
-        guard let descriptor = (descriptors as? [CTFontDescriptorRef])?.first else {
+        guard let descriptor = (descriptors as? [CTFontDescriptor])?.first else {
             print("Could not retrieve font descriptors of font at path \(url).")
             return
         }
         
-        let font = CTFontCreateWithFontDescriptorAndOptions(descriptor, 0.0, nil, [.PreventAutoActivation])
+        let font = CTFontCreateWithFontDescriptorAndOptions(descriptor, 0.0, nil, [.preventAutoActivation])
         let fontName = CTFontCopyPostScriptName(font) as String
-        var error: Unmanaged<CFErrorRef>? = nil
+        var error: Unmanaged<CFError>? = nil
         
         // In case the font is already registered
-        if let uifont = UIFont(name: fontName, size: 10) where uifont.fontName == fontName {
+        if let uifont = UIFont(name: fontName, size: 10) , uifont.fontName == fontName {
             configure(withURL: url, name: fontName, map: map)
         }
             // Registers font dynamically
-        else if CTFontManagerRegisterFontsForURL(url, .None, &error) == true {
+        else if CTFontManagerRegisterFontsForURL(url as CFURL, .none, &error) == true {
             configure(withURL: url, name: fontName, map: map)
         }
         else {
@@ -207,19 +207,19 @@ private extension Iconic {
         }
     }
     
-    class func configure(withURL url: NSURL?, name: String?, map: [String]?) {
+    class func configure(withURL url: URL?, name: String?, map: [String]?) {
         
         fontURL = url
         fontName = name
         iconsMap = map
     }
     
-    class func urlForFontWithName(familyName: String) -> NSURL? {
+    class func urlForFontWithName(_ familyName: String) -> URL? {
         
         let extensions = ["otf", "ttf"]
-        let bundle = NSBundle(forClass: Iconic.self)
+        let bundle = Bundle(for: Iconic.self)
         
-        return extensions.flatMap { bundle.URLForResource(familyName, withExtension: $0) }.first
+        return extensions.flatMap { bundle.url(forResource: familyName, withExtension: $0) }.first
     }
 }
 
@@ -228,7 +228,7 @@ extension UIBarButtonItem {
     internal convenience init(idx: Int, size: CGFloat, target: AnyObject?, action: Selector) {
         
         let image = Iconic.image(forIndex: idx, size: size, color: nil)
-        self.init(image: image, style: .Plain, target: target, action: action)
+        self.init(image: image, style: .plain, target: target, action: action)
     }
 }
 
@@ -246,6 +246,6 @@ extension UIButton {
     internal func setIcon(forIndex idx: Int, size: CGFloat, forState state: UIControlState) {
         
         let image = Iconic.image(forIndex: idx, size: size, color: nil)
-        self.setImage(image, forState: state)
+        self.setImage(image, for: state)
     }
 }

@@ -11,9 +11,9 @@ import Iconic
 
 class FirstViewController: UITableViewController {
 
-    let cellIconSize:CGFloat = 22.0
+    let cellIconSize:CGFloat = 22
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         commonInit()
     }
@@ -25,12 +25,12 @@ class FirstViewController: UITableViewController {
     
     func commonInit() -> Void {
         
-        let tabItem = UITabBarItem(icon: .Book, size:20, title: "Catalog", tag: 0)
+        let tabItem = UITabBarItem(icon: .book, size:20, title: "Catalog", tag: Icon.book.rawValue)
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
         
-        let buttonItem = UIBarButtonItem(icon: .Cog, size:24, target: self, action: NSSelectorFromString("didTapRightItem"))
+        let buttonItem = UIBarButtonItem(icon: .cog, size:24, target: self, action: #selector(didTapRightItem))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -40,7 +40,7 @@ class FirstViewController: UITableViewController {
         updateTitleView()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
@@ -48,23 +48,23 @@ class FirstViewController: UITableViewController {
         // Do something
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Icon.TotalCount.rawValue
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Icon.totalCount.rawValue
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier("Cell") {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") {
             
             if let icon = Icon(rawValue: indexPath.row) {
                 cell.imageView?.image = Iconic.image(forIcon: icon, size: cellIconSize, color: tableView.tintColor)
-                cell.imageView?.highlightedImage = Iconic.image(forIcon: icon, size: cellIconSize, color: .whiteColor())
+                cell.imageView?.highlightedImage = Iconic.image(forIcon: icon, size: cellIconSize, color: UIColor.white)
                 
                 cell.textLabel?.text = NSStringFromIcon(icon)
 
                 if let unicode = Iconic.unicodeString(forIcon: icon),
-                    let unicodedData = unicode.dataUsingEncoding(NSNonLossyASCIIStringEncoding),
-                    let unicodeString = String(data: unicodedData, encoding: NSUTF8StringEncoding) {
+                    let unicodedData = unicode.data(using: String.Encoding.nonLossyASCII),
+                    let unicodeString = String(data: unicodedData, encoding: String.Encoding.utf8) {
                     cell.detailTextLabel?.text = unicodeString
                 }
             }
@@ -75,30 +75,30 @@ class FirstViewController: UITableViewController {
         return UITableViewCell()
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
         cell?.setSelected(false, animated: true)
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return cellIconSize + cellIconSize*1.2
     }
     
-    override func tableView(tableView: UITableView, shouldShowMenuForRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    override func tableView(tableView: UITableView, canPerformAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        if action == #selector(NSObject.copy(_:)) {
+    override func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        if action == #selector(self.copy(_:)) {
             return true
         }
         return false
     }
     
-    override func tableView(tableView: UITableView, performAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
+    override func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
         // Copy
         if let icon = Icon(rawValue: indexPath.row) {
-            let pasteboard = UIPasteboard.generalPasteboard()
+            let pasteboard = UIPasteboard.general
             let string = NSStringFromIcon(icon)
             
             pasteboard.string = string
@@ -116,22 +116,22 @@ extension UIViewController {
         }
         
         let icon = Icon(rawValue: self.tabBarItem.tag)
-        let color = self.view.tintColor
+        let color = self.view.tintColor ?? UIColor.blue
         let titleSize = CGFloat(20)
         let edgeInsets = UIEdgeInsetsMake(0, 0, 0, titleSize/2)
         
         
         let attributes = [NSForegroundColorAttributeName: color,
-                          NSFontAttributeName: UIFont.systemFontOfSize(titleSize)]
+                          NSFontAttributeName: UIFont.systemFont(ofSize: titleSize)] as [String : Any]
         
-        let labelString = NSMutableAttributedString(string: title, attributes: attributes)
+        let mString = NSMutableAttributedString(string: title, attributes: attributes)
         
         if let iconString = Iconic.attributedString(forIcon: icon!, size: titleSize, color: color, edgeInsets: edgeInsets) {
-            labelString.insertAttributedString(iconString, atIndex: 0)
+            mString.insert(iconString, at: 0)
         }
         
         let label = UILabel()
-        label.attributedText = labelString
+        label.attributedText = mString
         label.sizeToFit()
         
         self.navigationItem.titleView = label

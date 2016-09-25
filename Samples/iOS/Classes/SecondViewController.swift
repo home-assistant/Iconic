@@ -11,7 +11,7 @@ import Iconic
 
 class SecondViewController: UIViewController {
     
-    @IBOutlet weak var iconView: IconView!
+    @IBOutlet weak var iconImageView: IconImageView!
     @IBOutlet weak var iconWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var iconHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var slider: UISlider!
@@ -22,12 +22,12 @@ class SecondViewController: UIViewController {
     }
     
     func commonInit() -> Void {
-        let tabItem = UITabBarItem(icon: .Picture, size:20, title: "As Image", tag: 0)
+        let tabItem = UITabBarItem(icon: .picture, size:20, title: "As Image", tag: Icon.picture.rawValue)
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
         
-        let buttonItem = UIBarButtonItem(icon: .Cog, size:24, target: self, action: NSSelectorFromString("didTapRightItem"))
+        let buttonItem = UIBarButtonItem(icon: .cog, size:24, target: self, action: NSSelectorFromString("didTapRightItem"))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -38,22 +38,22 @@ class SecondViewController: UIViewController {
         updateIcon(200)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
     func didTapRightItem() {
-        navigationController?.navigationBar.hidden = true
-        tabBarController?.tabBar.hidden = true
+        navigationController?.navigationBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
     }
     
-    @IBAction func didChangeScale(sender: UISlider) {
+    @IBAction func didChangeScale(_ sender: UISlider) {
         print("did change scale to '\(sender.value)'")
         
         updateIcon(sender.value)
     }
     
-    func updateIcon(scale: Float) {
+    func updateIcon(_ scale: Float) {
         
         let size = CGFloat(ceil(scale))
         
@@ -74,16 +74,16 @@ class StepSlider: UISlider {
         self.addGestureRecognizer(tapGesture)
     }
     
-    func didTapSlider(gesture: UIGestureRecognizer) {
+    func didTapSlider(_ gesture: UIGestureRecognizer) {
         
-        let location = gesture.locationInView(gesture.view)
+        let location = gesture.location(in: gesture.view)
         
         let maxValue = CGFloat(self.maximumValue)
-        let newValue = location.x * maxValue / CGRectGetWidth(self.frame)
+        let newValue = location.x * maxValue / self.frame.width
         
         self.value = Float(newValue)
         
-        self.sendActionsForControlEvents(.ValueChanged)
+        self.sendActions(for: .valueChanged)
     }
 }
 

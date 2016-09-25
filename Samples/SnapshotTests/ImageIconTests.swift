@@ -19,7 +19,7 @@ class ImageIconTests: BaseSnapshotTestCase {
     
     func testImageDefaultColor() {
         
-        let image = Iconic.image(forIcon: Icon.Save, size: 60, color: nil)
+        let image = Iconic.image(forIcon: .save, size: 60, color: nil)
         let imageView = UIImageView(image: image)
         
         self.verifyView(imageView, withIdentifier: "")
@@ -27,11 +27,11 @@ class ImageIconTests: BaseSnapshotTestCase {
     
     func testImagePatternColor() {
         
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let pattern = UIImage(named: "pattern", inBundle: bundle, compatibleWithTraitCollection: nil)
+        let bundle = Bundle(for: type(of: self))
+        let pattern = UIImage(named: "pattern", in: bundle, compatibleWith: nil)
         let color = UIColor(patternImage: pattern!)
         
-        let image = Iconic.image(forIcon: Icon.WarningSign, size: 60, color: color)
+        let image = Iconic.image(forIcon: .warningSign, size: 60, color: color)
         let imageView = UIImageView(image: image)
         
         self.verifyView(imageView, withIdentifier: "")
@@ -43,7 +43,7 @@ class ImageIconTests: BaseSnapshotTestCase {
         
         for size in sizes {
             
-            let image = Iconic.image(forIcon: Icon.GithubAlt, size: CGFloat(size), color: UIColor.redColor())
+            let image = Iconic.image(forIcon: .githubAlt, size: CGFloat(size), color: UIColor.red)
             let imageView = UIImageView(image: image)
             
             XCTAssertEqual(image!.size.width, CGFloat(size))
@@ -56,7 +56,7 @@ class ImageIconTests: BaseSnapshotTestCase {
         
         let padding = UIEdgeInsetsMake(-5, -5, -5, -5)
         
-        let image = Iconic.image(forIcon: Icon.Github, size: 88, color: nil, edgeInsets: padding)
+        let image = Iconic.image(forIcon: .github, size: 88, color: nil, edgeInsets: padding)
         let imageView = UIImageView(image: image)
         
         XCTAssertEqual(image!.size.width, 98)
@@ -66,7 +66,7 @@ class ImageIconTests: BaseSnapshotTestCase {
     
     func testImageNoPadding() {
         
-        let image = Iconic.image(forIcon: Icon.Github, size: 88, color: nil, edgeInsets: UIEdgeInsetsZero)
+        let image = Iconic.image(forIcon: .github, size: 88, color: nil, edgeInsets: UIEdgeInsets.zero)
         let imageView = UIImageView(image: image)
         
         XCTAssertEqual(image!.size.width, 88)
