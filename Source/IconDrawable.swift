@@ -9,12 +9,18 @@
 import UIKit
 import CoreText
 
+// Wrapper class for Objective-C compatibility.
+open class Iconic: NSObject { }
+
+//
 public protocol IconDrawable {
     
     var name: String { get }
     var unicode: String { get }
     static var familyName: String { get }
     static var count: Int { get }
+    
+    init(named iconName: String)
     
     func attributedString(ofSize pointSize: CGFloat, color: UIColor?) -> NSAttributedString
     func attributedString(ofSize pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString
@@ -41,7 +47,7 @@ extension IconDrawable {
         return NSAttributedString(string: unicode, attributes: attributes)
     }
     
-    func attributedString(ofSize pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
+    public func attributedString(ofSize pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
         
         let aString = attributedString(ofSize: pointSize, color: color)
         let mString = NSMutableAttributedString(attributedString: aString)
@@ -90,32 +96,28 @@ extension IconDrawable {
     public static func font(ofSize fontSize: CGFloat) -> UIFont {
         
         // Needs a default size, since zero would return a system font object.
-        var size = fontSize ?? 10
+        let size = (fontSize == 0) ? 10.0 : fontSize
         
-        return UIFont(name: familyName, size: fontSize)!
+        return UIFont(name: familyName, size: size)!
     }
     
     public static func register() {
         
-        guard let url = resourceUrl() else {
-            assertionFailure("Error: Resource not found in bundle.")
-            return
-        }
-        
-        let descriptors = CTFontManagerCreateFontDescriptorsFromURL(url as CFURL) as NSArray?
+        let url = resourceUrl()
+        var error: Unmanaged<CFError>? = nil
+        let descriptors = CTFontManagerCreateFontDescriptorsFromURL(url) as NSArray?
         
         guard let descriptor = (descriptors as? [CTFontDescriptor])?.first else {
-            assertionFailure("Error: Could not retrieve font descriptors of font at path '\(url)'.")
+            assertionFailure("Could not retrieve font descriptors of font at path '\(url)',")
             return
         }
         
         let font = CTFontCreateWithFontDescriptorAndOptions(descriptor, 0.0, nil, [.preventAutoActivation])
         let fontName = CTFontCopyPostScriptName(font) as String
-        var error: Unmanaged<CFError>? = nil
         
         // Registers font dynamically
-        if CTFontManagerRegisterFontsForURL(url as CFURL, .none, &error) == false || error != nil {
-            assertionFailure("Error: Failed registering font with the postscript name '\(fontName)' at path '\(url)' with error: \(error).")
+        if CTFontManagerRegisterFontsForURL(url, .none, &error) == false || error != nil {
+            assertionFailure("Failed registering font with the postscript name '\(fontName)' at path '\(url)' with error: \(error).")
         }
         
         print("Font '\(familyName)' registered successfully!")
@@ -123,30 +125,27 @@ extension IconDrawable {
     
     public static func unregister() {
         
-        guard let url = resourceUrl() else {
-            assertionFailure("Error: Resource not found in bundle.")
-            return
-        }
-        
+        let url = resourceUrl()
         var error: Unmanaged<CFError>? = nil
         
-        if CTFontManagerUnregisterFontsForURL(url as CFURL, .none, &error) == false || error != nil {
-            assertionFailure("Error: Failed unregistering font with name '\(familyName)' at path '\(url)' with error: \(error).")
+        if CTFontManagerUnregisterFontsForURL(url, .none, &error) == false || error != nil {
+            assertionFailure("Failed unregistering font with name '\(familyName)' at path '\(url)' with error: \(error).")
         }
         
         print("Font '\(familyName)' unregistered successfully!")
     }
     
-    private static func resourceUrl() -> URL? {
+    private static func resourceUrl() -> CFURL {
         
         let extensions = ["otf", "ttf"]
-        let bundle = Bundle(for: type(of: self) as! AnyClass)
+        let bundle = Bundle(for: Iconic.self)
         
-        guard let url = (extensions.flatMap { bundle.url(forResource: familyName, withExtension: $0) }).first else {
-            print("Error: Could not find the '\(familyName)' font in bundle:\(bundle).")
-            return nil
+        let url = (extensions.flatMap { bundle.url(forResource: familyName, withExtension: $0) }).first
+        
+        if url == nil {
+            assertionFailure("Could not find the '\(familyName)' font in bundle:\(bundle).")
         }
         
-        return url
+        return url as! CFURL
     }
 }

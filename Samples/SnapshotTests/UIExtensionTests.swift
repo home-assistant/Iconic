@@ -11,6 +11,8 @@ import Iconic
 
 class UIExtensionTests: BaseSnapshotTestCase {
     
+    let size = CGSize(width: 40, height: 40)
+    
     override func setUp() {
         super.setUp()
         
@@ -19,7 +21,7 @@ class UIExtensionTests: BaseSnapshotTestCase {
     
     func testUIBarButtonItem() {
         
-        let buttonItem = UIBarButtonItem(icon: .spinner, size: 40, target: nil, action: #selector(tearDown))
+        let buttonItem = UIBarButtonItem(withFontAwesomeIcon: .Spinner, size: size, target: nil, action: #selector(tearDown))
         
         let navItem = UINavigationItem()
         navItem.leftBarButtonItem = buttonItem
@@ -33,10 +35,10 @@ class UIExtensionTests: BaseSnapshotTestCase {
     
     func testUITabBarItem() {
         
-        let item = UITabBarItem(icon: .sun, size: 40, title: "tab", tag: 0)
+        let tabItem = UITabBarItem(withFontAwesomeIcon: .Sun, size: size, title: "tab")
         let tabbar = UITabBar(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
         
-        tabbar.items = [item]
+        tabbar.items = [tabItem]
         
         self.verifyView(tabbar, withIdentifier: "")
     }
@@ -44,7 +46,7 @@ class UIExtensionTests: BaseSnapshotTestCase {
     func testUIButton() {
         
         let button = UIButton(type: .system)
-        button.setIcon(.download, size: 40, forState: .normal)
+        button.setIconImage(withFontAwesomeIcon: .Download, size: size, color: nil, forState: .normal)
         button.sizeToFit()
         
         self.verifyView(button, withIdentifier: "")

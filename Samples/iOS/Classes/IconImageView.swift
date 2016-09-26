@@ -17,7 +17,7 @@ class IconImageView: UIImageView {
     @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'icon' instead.")
     @IBInspectable dynamic var iconName: String? {
         willSet {
-            icon = Icon(named: newValue ?? "")
+            icon = FontAwesomeIcon(named: newValue ?? "")
         }
     }
     
@@ -28,7 +28,7 @@ class IconImageView: UIImageView {
         }
     }
     
-    var icon: Icon? {
+    var icon: FontAwesomeIcon? {
         didSet {
             updateIconImage()
         }
@@ -40,7 +40,7 @@ class IconImageView: UIImageView {
     
     // MARK: - Overrides
     
-    init(icon: Icon!) {
+    init(icon: FontAwesomeIcon) {
         super.init(image: nil)
         commonInit()
         self.icon = icon
@@ -78,7 +78,7 @@ class IconImageView: UIImageView {
         super.prepareForInterfaceBuilder()
         
         // The icon font needs to be registered first
-        Iconic.registerIconFont()
+        FontAwesomeIcon.register()
     }
     
     // MARK: - Constructor
@@ -96,22 +96,8 @@ class IconImageView: UIImageView {
             super.image = nil
         }
         else {
-            let size = max(frame.width, frame.height)
-            let image = Iconic.image(forIcon: icon!, size: size, color: tintColor)
-            
+            let image = icon?.image(ofSize: frame.size, color: tintColor)
             super.image = image
-        }
-    }
-}
-
-extension Icon {
-    
-    init(named iconName: String) {
-        switch iconName.lowercased() {
-        case "dribble": self = .dribble
-        case "dropbox": self = .dropbox
-        case "github":  self = .github
-        default: self = .totalCount
         }
     }
 }

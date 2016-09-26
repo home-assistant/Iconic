@@ -19,10 +19,10 @@ class StringIconTests: BaseSnapshotTestCase {
     
     func testSimpleString() {
         
-        let iconString = Iconic.attributedString(forIcon: .cameraRetro, size: 50, color: nil)
+        let string = FontAwesomeIcon.CameraRetro.attributedString(ofSize: 50, color: nil)
         let textView = UITextView()
         
-        textView.attributedText = iconString
+        textView.attributedText = string
         textView.sizeToFit()
         
         self.verifyView(textView, withIdentifier: "")
@@ -44,7 +44,7 @@ class StringIconTests: BaseSnapshotTestCase {
     
     func testComposeString() {
         
-        let icon = Icon.dribble
+        let icon = FontAwesomeIcon.Dribble
         
         let edgeInsets = ["left": UIEdgeInsetsMake(0, 0, 0, 15),
                           "bottom": UIEdgeInsetsMake(15, 0, 0, 0),
@@ -54,12 +54,12 @@ class StringIconTests: BaseSnapshotTestCase {
         for (kind, edgeInset) in edgeInsets {
             
             let attributedText = NSMutableAttributedString()
-            let iconString = Iconic.attributedString(forIcon: icon, size: 25, color: nil, edgeInsets: edgeInset)!
+            let iconString = icon.attributedString(ofSize: 25, color: nil, edgeInsets: edgeInset)
             
             let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 25),
                                    NSForegroundColorAttributeName: UIColor.black] as [String : Any]
             
-            let titleAttrString = NSAttributedString(string: NSStringFromIcon(icon), attributes: titleAttributes)
+            let titleAttrString = NSAttributedString(string: icon.name, attributes: titleAttributes)
             
             attributedText.append(iconString)
             attributedText.append(titleAttrString)

@@ -22,12 +22,13 @@ class SecondViewController: UIViewController {
     }
     
     func commonInit() -> Void {
-        let tabItem = UITabBarItem(icon: .picture, size:20, title: "As Image", tag: Icon.picture.rawValue)
+        
+        let tabItem = UITabBarItem(withFontAwesomeIcon: .Picture, size: CGSize(width: 20, height: 20), title: "As Image")
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
         
-        let buttonItem = UIBarButtonItem(icon: .cog, size:24, target: self, action: NSSelectorFromString("didTapRightItem"))
+        let buttonItem = UIBarButtonItem(withFontAwesomeIcon: .Cog, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -57,7 +58,7 @@ class SecondViewController: UIViewController {
         
         let size = CGFloat(ceil(scale))
         
-        // Need to figure out a better way to update both axis with 1 single constraint.
+        // TODO: Need to figure out a better way to update both axis with 1 single constraint.
         // Maybe with aspect ratio 1:1 ?
         iconWidthConstraint.constant = size
         iconHeightConstraint.constant = size

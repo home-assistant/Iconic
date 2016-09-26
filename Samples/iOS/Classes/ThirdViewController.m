@@ -40,11 +40,12 @@
 }
 
 - (void)commonInit
-{    
-    self.tabBarItem = [[UITabBarItem alloc] initWithIcon:Icon_546 size:20.0 title:@"As Text" tag:Icon_546];
+{
+    self.tabBarItem = [[UITabBarItem alloc] initWithFontAwesomeIcon:FontAwesomeIconOl size:CGSizeMake(20.0, 20.0) title:@"As Text"];
     self.title = self.tabBarItem.title;
-
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithIcon:IconCog size:24.0 target:self action:@selector(didTapRightButtonItem:)];
+    
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithFontAwesomeIcon:FontAwesomeIconCog size:CGSizeMake(24.0, 24.0) target:self action:@selector(didTapRightButtonItem:)];
+    self.navigationItem.rightBarButtonItem = buttonItem;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willShowKeyboard:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willHideKeyboard:) name:UIKeyboardWillHideNotification object:nil];
@@ -62,7 +63,7 @@
     [super viewWillAppear:animated];
     
     UIColor *color = self.tabBarController.tabBar.tintColor;
-    NSAttributedString *attributedText = [NSAttributedString iconMapWithSize:24.0 spacing:5.0 andColor:color];
+    NSAttributedString *attributedText = [NSAttributedString iconMapWithSize:24.0 spacing:10.0 andColor:color];
     
     self.textView.attributedText = attributedText;
 }
@@ -81,8 +82,8 @@
 
 - (void)willShowKeyboard:(NSNotification *)note
 {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithIcon:IconAngleDown size:30.0 target:self action:@selector(didTapLeftButtonItem:)];
-    [self.navigationItem setLeftBarButtonItem:item animated:YES];
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithFontAwesomeIcon:FontAwesomeIconAngleDown size:CGSizeMake(30.0, 30.0) target:self action:@selector(didTapLeftButtonItem:)];
+    [self.navigationItem setLeftBarButtonItem:buttonItem animated:YES];
     
     CGRect keyboardFrame = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     

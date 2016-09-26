@@ -14,13 +14,14 @@
 {
     NSMutableAttributedString *attributedText = [NSMutableAttributedString new];
     
-    for (int i = 0; i < IconTotalCount; i++) {
+    for (int i = 0; i < [Iconic fontAwesomeIconCount]; i++) {
         
-        NSMutableAttributedString *fontString = [[Iconic attributedStringForIcon:i size:size color:color] mutableCopy];
+        NSAttributedString *aString = [Iconic attributedStringWithFontAwesomeIcon:i pointSize:size color:color];
+        NSMutableAttributedString *mString = [[NSMutableAttributedString alloc] initWithAttributedString:aString];
         
-        if (fontString) {
-            [fontString addAttribute:NSKernAttributeName value:@(spacing) range:NSMakeRange(0, fontString.length)];
-            [attributedText appendAttributedString:fontString];
+        if (mString) {
+            [mString addAttribute:NSKernAttributeName value:@(spacing) range:NSMakeRange(0, mString.length)];
+            [attributedText appendAttributedString:mString];
         }
     }
     
