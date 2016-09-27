@@ -53,7 +53,7 @@ class IconImageView: UIImageView {
         commonInit()
     }
     
-    private func commonInit() {
+    fileprivate func commonInit() {
         self.backgroundColor = UIColor.clear
     }
     

@@ -15,17 +15,18 @@ open class Iconic: NSObject { }
 /** */
 public protocol IconDrawable {
     
+    /** The icon font's family name. */
+    static var familyName: String { get }
+    
+    /** The icon font's total count of available icons. */
+    static var count: Int { get }
+    
     /** The icon's name. */
     var name: String { get }
     
     /** The icon's unicode. */
     var unicode: String { get }
     
-    /** The icon font's family name. */
-    static var familyName: String { get }
-    
-    /** The icon font's total count of available icons. */
-    static var count: Int { get }
     
     /**
      Creates a new instance with the specified icon name.
