@@ -39,16 +39,16 @@ public protocol IconDrawable {
     /**
      Returns the icon as an attributed string with the given pointSize and color.
      
-     - parameter pointSize:  The size of the font.
-     - parameter color:      The tint color of the font.
+     - parameter pointSize: The size of the font.
+     - parameter color: The tint color of the font.
      */
     func attributedString(ofSize pointSize: CGFloat, color: UIColor?) -> NSAttributedString
     
     /**
      Returns the icon as an attributed string with the given pointSize, color and padding.
      
-     - parameter pointSize:  The size of the font.
-     - parameter color:      The tint color of the font.
+     - parameter pointSize: The size of the font.
+     - parameter color: The tint color of the font.
      - parameter edgeInsets: The edge insets to be used as horizontal and vertical padding.
      */
     func attributedString(ofSize pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString
@@ -56,17 +56,17 @@ public protocol IconDrawable {
     /**
      Returns the icon as an image with the given size and color.
      
-     - parameter size:      The size of the image, in points.
-     - parameter color:     A tint color for the image.
+     - parameter size: The size of the image, in points.
+     - parameter color: A tint color for the image.
      */
     func image(ofSize size: CGSize, color: UIColor?) -> UIImage
     
     /**
      Returns the icon as an image with the given size and color.
      
-     - parameter size:          The size of the image, in points.
-     - parameter color:         The tint color of the image.
-     - parameter edgeInsets:    The edge insets to be used as padding values.
+     - parameter size: The size of the image, in points.
+     - parameter color: The tint color of the image.
+     - parameter edgeInsets: The edge insets to be used as padding values.
      */
     func image(ofSize size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage
     

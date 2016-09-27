@@ -20,8 +20,8 @@ public extension Iconic {
     /**
      Returns the icon as an attributed string with the given pointSize and color.
      
-     - parameter pointSize:  The size of the font.
-     - parameter color:      The tint color of the font.
+     - parameter pointSize: The size of the font.
+     - parameter color: The tint color of the font.
      */
     @objc class func attributedString(with{{enumName}} icon: {{enumName}}, pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
         return icon.attributedString(ofSize: pointSize, color: color)
@@ -30,8 +30,8 @@ public extension Iconic {
     /**
      Returns the icon as an image with the given size and color.
      
-     - parameter size:      The size of the image, in points.
-     - parameter color:     A tint color for the image.
+     - parameter size: The size of the image, in points.
+     - parameter color: A tint color for the image.
      */
     @objc class func image(with{{enumName}} icon: {{enumName}}, size: CGSize, color: UIColor?) -> UIImage {
         return icon.image(ofSize: size, color: color)
