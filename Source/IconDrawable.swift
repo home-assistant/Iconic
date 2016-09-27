@@ -15,46 +15,57 @@ open class Iconic: NSObject { }
 /** */
 public protocol IconDrawable {
     
-    /** */
+    /** The icon's name. */
     var name: String { get }
     
-    /** */
+    /** The icon's unicode. */
     var unicode: String { get }
     
-    /** */
+    /** The icon font's family name. */
     static var familyName: String { get }
     
-    /** */
+    /** The icon font's total count of available icons. */
     static var count: Int { get }
     
     /**
- 
+     Creates a new instance with the specified icon name.
+     If there is no valid name is recognised, this initializer falls back to the first available icon.
+     
+     - parameter iconName: The icon name to use for the new instance.
      */
     init(named iconName: String)
     
     /**
-     Returns the icon as an attributedString with the given pointSize and color.
-     Note: If the font hasn't been registered, it will throw exception
+     Returns the icon as an attributed string with the given pointSize and color.
      
-     - parameter pointSize: The size of the font
-     - parameter color:     The optional color for the font.
-     
-     - returns: a NSAttributedString
+     - parameter pointSize:  The size of the font.
+     - parameter color:      The tint color of the font.
      */
     func attributedString(ofSize pointSize: CGFloat, color: UIColor?) -> NSAttributedString
     
     /**
+     Returns the icon as an attributed string with the given pointSize, color and padding.
      
+     - parameter pointSize:  The size of the font.
+     - parameter color:      The tint color of the font.
+     - parameter edgeInsets: The edge insets to be used as horizontal and vertical padding.
      */
     func attributedString(ofSize pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString
 
     /**
+     Returns the icon as an image with the given size and color.
      
+     - parameter size:      The size of the image, in points.
+     - parameter color:     A tint color for the image.
      */
     func image(ofSize size: CGSize, color: UIColor?) -> UIImage
     
     /**
+     Returns the icon as an image with the given size and color.
      
+     - parameter size:          The size of the image, in points.
+     - parameter color:         The tint color of the image.
+     - parameter edgeInsets:    The edge insets to be used as padding values.
      */
     func image(ofSize size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage
     
@@ -76,6 +87,7 @@ public protocol IconDrawable {
      */
     static func unregister()
 }
+
 
 /** This extension adds the required default implementation for Iconic to work. */
 extension IconDrawable {

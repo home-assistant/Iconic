@@ -1,6 +1,6 @@
 //
 //  IconImageView.swift
-//  Samples
+//  Iconic
 //
 //  Created by Ignacio Romero on 7/28/16.
 //  Copyright © 2016 DZN. All rights reserved.
@@ -12,7 +12,7 @@ import Iconic
 @IBDesignable
 class IconImageView: UIImageView {
     
-    // MARK: - Public & Inspectable variables
+    // MARK: - Public & Inspectable properties
     
     @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'icon' instead.")
     @IBInspectable dynamic var iconName: String? {
@@ -34,11 +34,8 @@ class IconImageView: UIImageView {
         }
     }
     
-    fileprivate func commonInit() {
-        self.backgroundColor = UIColor.clear
-    }
     
-    // MARK: - Overrides
+    // MARK: - Initializers
     
     init(icon: IconDrawable) {
         super.init(image: nil)
@@ -56,6 +53,13 @@ class IconImageView: UIImageView {
         commonInit()
     }
     
+    private func commonInit() {
+        self.backgroundColor = UIColor.clear
+    }
+    
+    
+    // MARK: - Overrides
+
     override var image: UIImage? {
         get { return nil }
         set {}
@@ -77,27 +81,26 @@ class IconImageView: UIImageView {
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         
-        // The icon font needs to be registered first
+        // The icon font needs to be registered first.
         FontAwesomeIcon.register()
     }
     
-    // MARK: - Constructor
+    
+    // MARK: - Image Constructor
     
     func updateIconImage() {
         
-        // no need to update if the sizing is empty or too small
-        if frame.isEmpty ||
-            frame.isNull ||
-            frame.width < 5 {
+        // No need to update if the sizing is empty or too small
+        if frame.isEmpty || frame.isNull || min(frame.width,frame.height) < 5 {
             return
         }
 
-        if drawable == nil {
-            super.image = nil
-        }
-        else {
+        if drawable != nil {
             let image = drawable?.image(ofSize: frame.size, color: tintColor)
             super.image = image
+        }
+        else {
+            super.image = nil
         }
     }
 }
