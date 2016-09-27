@@ -1,5 +1,5 @@
 //
-//  ImageIconTests.swift
+//  ImageIconSnapshotTests.swift
 //  Iconic
 //
 //  Created by Ignacio Romero on 9/10/16.
@@ -7,9 +7,8 @@
 //
 
 import FBSnapshotTestCase
-import Iconic
 
-class ImageIconTests: BaseSnapshotTestCase {
+class ImageIconSnapshotTests: BaseSnapshotTestCase {
     
     override func setUp() {
         super.setUp()

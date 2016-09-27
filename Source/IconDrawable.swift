@@ -9,30 +9,75 @@
 import UIKit
 import CoreText
 
-// Wrapper class for Objective-C compatibility.
+/** A wrapper class for Objective-C compatibility. */
 open class Iconic: NSObject { }
 
-//
+/** */
 public protocol IconDrawable {
     
+    /** */
     var name: String { get }
+    
+    /** */
     var unicode: String { get }
+    
+    /** */
     static var familyName: String { get }
+    
+    /** */
     static var count: Int { get }
     
+    /**
+ 
+     */
     init(named iconName: String)
     
+    /**
+     Returns the icon as an attributedString with the given pointSize and color.
+     Note: If the font hasn't been registered, it will throw exception
+     
+     - parameter pointSize: The size of the font
+     - parameter color:     The optional color for the font.
+     
+     - returns: a NSAttributedString
+     */
     func attributedString(ofSize pointSize: CGFloat, color: UIColor?) -> NSAttributedString
+    
+    /**
+     
+     */
     func attributedString(ofSize pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString
 
+    /**
+     
+     */
     func image(ofSize size: CGSize, color: UIColor?) -> UIImage
+    
+    /**
+     
+     */
     func image(ofSize size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage
     
+    /**
+     Creates and returns the icon font object for the specified size.
+     
+     - parameter fontSize: The size (in points) to which the font is scaled.
+     */
     static func font(ofSize fontSize: CGFloat) -> UIFont
+    
+    /**
+     Registers the icon font with the font manager.
+     Note: an exception will be thrown if the resource (ttf/otf) font file is not found in the bundle.
+     */
     static func register()
+    
+    /**
+     Unregisters the icon font from the font manager.
+     */
     static func unregister()
 }
 
+/** This extension adds the required default implementation for Iconic to work. */
 extension IconDrawable {
     
     public func attributedString(ofSize pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
@@ -103,6 +148,11 @@ extension IconDrawable {
     
     public static func register() {
         
+        // No need to register the font more than once
+        if UIFont.familyNames.contains(familyName) {
+            return
+        }
+        
         let url = resourceUrl()
         var error: Unmanaged<CFError>? = nil
         let descriptors = CTFontManagerCreateFontDescriptorsFromURL(url) as NSArray?
@@ -124,6 +174,11 @@ extension IconDrawable {
     }
     
     public static func unregister() {
+        
+        // No need to unregister if the font isn't registered
+        if UIFont.familyNames.contains(familyName) == false {
+            return
+        }
         
         let url = resourceUrl()
         var error: Unmanaged<CFError>? = nil

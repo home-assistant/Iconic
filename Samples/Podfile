@@ -17,12 +17,7 @@ target 'tvOS' do
     common_pods
 end
 
-target 'UnitTests' do
-    # No need for installing the pod.
-    # This target only tests the Iconic.swift base class
-end
-
-target 'SnapshotTests' do
+target 'Tests' do
     common_pods
     pod 'FBSnapshotTestCase/Core'
 end

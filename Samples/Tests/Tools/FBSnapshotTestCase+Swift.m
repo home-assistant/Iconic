@@ -1,6 +1,6 @@
 //
 //  FBSnapshotTestCase+Swift.m
-//  slack
+//  Iconic
 //
 //  Created by Ignacio Romero on 7/23/16.
 //  Copyright © 2016 Tiny Speck, Inc. All rights reserved.

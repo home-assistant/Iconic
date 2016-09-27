@@ -17,7 +17,7 @@ class IconImageView: UIImageView {
     @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'icon' instead.")
     @IBInspectable dynamic var iconName: String? {
         willSet {
-            icon = FontAwesomeIcon(named: newValue ?? "")
+            drawable = FontAwesomeIcon(named: newValue ?? "")
         }
     }
     
@@ -28,7 +28,7 @@ class IconImageView: UIImageView {
         }
     }
     
-    var icon: FontAwesomeIcon? {
+    var drawable: IconDrawable?{
         didSet {
             updateIconImage()
         }
@@ -40,10 +40,10 @@ class IconImageView: UIImageView {
     
     // MARK: - Overrides
     
-    init(icon: FontAwesomeIcon) {
+    init(icon: IconDrawable) {
         super.init(image: nil)
         commonInit()
-        self.icon = icon
+        drawable = icon
     }
     
     required override init(frame: CGRect) {
@@ -92,11 +92,11 @@ class IconImageView: UIImageView {
             return
         }
 
-        if icon == nil {
+        if drawable == nil {
             super.image = nil
         }
         else {
-            let image = icon?.image(ofSize: frame.size, color: tintColor)
+            let image = drawable?.image(ofSize: frame.size, color: tintColor)
             super.image = image
         }
     }

@@ -60,14 +60,10 @@ class IconDrawableTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        
-        TestIcon.register()
     }
     
     override func tearDown() {
         super.tearDown()
-
-        TestIcon.unregister()
     }
     
     func testFundamentals() {

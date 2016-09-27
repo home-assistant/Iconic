@@ -4,25 +4,31 @@ import UIKit
 
 {% if icons %}
 
-/**
- Wrapper functions for Objective-C compatibility.
- */
+/** A wrapper class for Objective-C compatibility. */
 public extension Iconic {
 
-    @objc class var {{enumName|lowerFirstWord}}Count: Int{
+    @objc class func attributedString(with{{enumName}} icon: {{enumName}}, pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
+        return icon.attributedString(ofSize: pointSize, color: color)
+    }
+    
+    @objc class func image(with{{enumName}} icon: {{enumName}}, size: CGSize, color: UIColor?) -> UIImage {
+        return icon.image(ofSize: size, color: color)
+    }
+    
+    @objc class var {{enumName|lowerFirstWord}}Count: Int {
         return {{enumName}}.count
+    }
+    
+    @objc class var {{familyName|lowerFirstWord}}FamilyName: NSString {
+        return {{enumName}}.familyName as NSString
     }
     
     @objc class func register{{enumName}}() {
         {{enumName}}.register()
     }
     
-    @objc class func attributedString(with{{enumName}} icon: {{enumName}}, pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
-        return icon.attributedString(ofSize: pointSize, color: color)
-    }
-    
-    @objc class func image(with{{enumName}} icon: {{enumName}}, pointSize: CGSize, color: UIColor?) -> UIImage {
-        return icon.image(ofSize: pointSize, color: color)
+    @objc class func unregister{{enumName}}() {
+        {{enumName}}.unregister()
     }
 }
 
@@ -53,9 +59,7 @@ public extension UIButton {
     }
 }
 
-/**
-A list with available glyphs detected from the icon font.
-*/
+/** A list with available glyphs detected from the icon font. */
 @objc public enum {{enumName}}: Int {
     {% for icon in icons %}
     case {{icon.name|swiftIdentifier|snakeToCamelCase}}
@@ -98,5 +102,6 @@ extension {{enumName}} : IconDrawable {
 }
 
 {% else %}
-// No icon found
+// No icons found for {{familyName}} font!
+// Visit https://github.com/dzenbot/Iconic/issues for further information.
 {% endif %}

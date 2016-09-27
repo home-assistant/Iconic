@@ -1,5 +1,5 @@
 //
-//  UIExtensionTests.swift
+//  UIExtensionSnapshotTests.swift
 //  Iconic
 //
 //  Created by Ignacio Romero on 9/10/16.
@@ -7,9 +7,8 @@
 //
 
 import FBSnapshotTestCase
-import Iconic
 
-class UIExtensionTests: BaseSnapshotTestCase {
+class UIExtensionSnapshotTests: BaseSnapshotTestCase {
     
     let size = CGSize(width: 40, height: 40)
     

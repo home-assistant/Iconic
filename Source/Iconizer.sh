@@ -34,15 +34,15 @@ function iconize()
 {
     FONT_PATH=$1
     FONT_NAME=$2
-
+    
     echo "Iconizer: Starting with file path ${FONT_PATH}"
 
     # Input's file name and extension
     FILE_TITLE="${FONT_NAME%.*}"
     FILE_NAME="${FILE_TITLE%%"-"*}Icon"
 
-    # Capitalized first word of the file name, with the 'Icons' suffix.
-    # ie: SlackIcons out of a string like 'slack-icon-font'
+    # Capitalized first word of the file name, with the 'Icon' suffix.
+    # ie: FontAwesomeIcon out of a string like 'FontAwesome'
     OUTPUT_NAME=$(tr '[:lower:]' '[:upper:]' <<< ${FILE_NAME:0:1})${FILE_NAME:1}
 
 	# Creates the output folder (no error if existing)
