@@ -94,6 +94,7 @@
 		F57B56541D1FE785000E6551 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		F58D6D241D0429FE00D68109 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F5A3423A1D96616700E7029B /* BaseSnapshotTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSnapshotTestCase.swift; sourceTree = "<group>"; };
+		F5A533B51D9C68FA00B42CE9 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; };
 		F5AD84611D9BAC0600536F6C /* .codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .codecov.yml; path = ../.codecov.yml; sourceTree = "<group>"; };
 		F5C165241D83CAF7003D76E0 /* ImageIconTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageIconTests.swift; sourceTree = "<group>"; };
 		F5C165271D83CB80003D76E0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -272,13 +273,14 @@
 		F558D9FE1CF1AF1A0014717C = {
 			isa = PBXGroup;
 			children = (
-				F58D6D241D0429FE00D68109 /* Podfile */,
 				F5D930CE1D03F6B9009CCB69 /* Iconic.podspec */,
 				F51C442E1D8836110065E8F3 /* Installer.sh */,
 				F5DE76AE1D6CF82E008757EF /* Iconizer.sh */,
 				F5DE76AD1D6CF827008757EF /* iconic-default.stencil */,
 				F54BAFF11D0A9509004757C9 /* LICENSE */,
 				F54BAFF21D0A9509004757C9 /* README.md */,
+				F58D6D241D0429FE00D68109 /* Podfile */,
+				F5A533B51D9C68FA00B42CE9 /* Gemfile */,
 				F57B56541D1FE785000E6551 /* .travis.yml */,
 				F5AD84611D9BAC0600536F6C /* .codecov.yml */,
 				F5F6ABF41D863B64003B80D4 /* .gitignore */,
