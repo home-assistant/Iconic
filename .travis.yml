@@ -2,26 +2,26 @@ language: objective-c
 osx_image: xcode7.3
 
 cache:
-	- bundler
-	- cocoapods
+    - bundler
+    - cocoapods
 
 before_install:
-	- bundle install
-	- cd Samples && pod deintegrate && pod install
+    - bundle install
+    - cd Samples && pod deintegrate && pod install
 
 env:
-	global:
-	- LANG=en_US.UTF-8
+    global:
+    - LANG=en_US.UTF-8
 
-	- WORKSPACE="Samples.xcworkspace"
-	- IOS_SCHEME="iOS-Sample"
-	- IOS_SDK=iphonesimulator9.3
+    - WORKSPACE="Samples.xcworkspace"
+    - IOS_SCHEME="iOS-Sample"
+    - IOS_SDK=iphonesimulator9.3
 
-	matrix:
-	- DESTINATION="OS=9.3,name=iPhone 6s"    SDK="$IOS_SDK"     SCHEME="$IOS_SCHEME"
+    matrix:
+    - DESTINATION="OS=9.3,name=iPhone 6s"    SDK="$IOS_SDK"     SCHEME="$IOS_SCHEME"
 
 script:
-	- xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug
+    - xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug
 
 after_success:
-	- bash <(curl -s https://codecov.io/bash)
+    - bash <(curl -s https://codecov.io/bash)
