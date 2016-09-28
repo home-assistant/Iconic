@@ -2,7 +2,6 @@ language: objective-c
 osx_image: xcode7.3
 
 cache:
-    - bundler
     - cocoapods
 
 before_install:
