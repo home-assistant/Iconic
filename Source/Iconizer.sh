@@ -6,12 +6,7 @@
 #  Created by Ignacio Romero on 5/28/16.
 #  Copyright © 2016 DZN Labs All rights reserved.
 #
-
-#
-# Disclaimer:
-#
 # Script in charge of executing SwitfGen, passing the icon font file path, the enum name and the custom stencil as arguments.
-# This script is ran automatically by the installer.
 #
 
 
@@ -32,6 +27,7 @@ fi
 
 function iconize()
 {
+    # Input variables
     FONT_PATH=$1
     FONT_NAME=$2
 
@@ -53,7 +49,7 @@ function iconize()
 
     # Moves and renames the JSON output to the HTML directory
     mv ${OUTPUT_PATH}/${OUTPUT_NAME}.json ${CATALOG_PATH}/data.json
-
+    
 	# Copies the font file to the HTML directory
 	cp -r ${FONT_PATH} ${CATALOG_PATH}/${FONT_NAME}
 }
