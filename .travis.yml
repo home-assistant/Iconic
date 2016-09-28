@@ -18,7 +18,7 @@ env:
    - DESTINATION="OS=9.3,name=iPhone 6s"    SDK="$IOS_SDK"     SCHEME="$IOS_SCHEME"
 
 script:
-- xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -configuration Debug -destination "$DESTINATION" -configuration Debug
+- xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
