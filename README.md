@@ -1,6 +1,7 @@
 ![Iconic Header](Screenshots/screenshot_iconic_header.png)
 
 [![Travis](https://travis-ci.org/dzenbot/Iconic.svg?branch=master)](https://travis-ci.org/dzenbot/Iconic/builds)
+[![codecov](https://codecov.io/gh/dzenbot/Iconic/badge.svg)](https://codecov.io/gh/dzenbot/Iconic)
 [![Pod Version](http://img.shields.io/cocoapods/v/Iconic.svg)](http://cocoadocs.org/docsets/Iconic/)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
