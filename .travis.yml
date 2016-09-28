@@ -5,7 +5,7 @@ cache:
     - cocoapods
 
 before_install:
-    - cd Samples && pod deintegrate && pod install
+    - cd Samples && pod install
 
 env:
     global:
