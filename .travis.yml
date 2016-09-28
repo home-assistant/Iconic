@@ -11,3 +11,6 @@ before_install:
 
 script:
 - xcodebuild clean build test -scheme iOS-Sample -workspace Samples.xcworkspace -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.3'
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
