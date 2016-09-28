@@ -1,4 +1,4 @@
-language: objective-c
+language: swift
 osx_image: xcode7.3
 
 cache:
@@ -22,4 +22,4 @@ script:
     - xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug
 
 after_success:
-    - bash <(curl -s https://codecov.io/bash)
+    - bash <(curl -s https://codecov.io/bash) -J 'Samples'
