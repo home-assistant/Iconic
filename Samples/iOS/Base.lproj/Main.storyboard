@@ -75,7 +75,7 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="20" maxValue="420" translatesAutoresizingMaskIntoConstraints="NO" id="ZNm-eS-cnB" customClass="StepSlider" customModule="iOS" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="337" id="JfI-Tb-dtu"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="337" id="JfI-Tb-dtu"/>
                                 </constraints>
                                 <connections>
                                     <action selector="didChangeScale:" destination="0yR-jT-3Z1" eventType="valueChanged" id="twA-vQ-kjo"/>
@@ -99,8 +99,11 @@
                             <constraint firstItem="zL9-Fl-E3t" firstAttribute="centerX" secondItem="ZNm-eS-cnB" secondAttribute="centerX" id="2EK-a0-QvP"/>
                             <constraint firstItem="xJw-Ut-2nB" firstAttribute="top" secondItem="ZNm-eS-cnB" secondAttribute="bottom" constant="12" id="J2Q-LO-f6F"/>
                             <constraint firstItem="ZNm-eS-cnB" firstAttribute="centerX" secondItem="xJw-Ut-2nB" secondAttribute="centerX" id="JDS-jI-Yst"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZNm-eS-cnB" secondAttribute="trailing" constant="10" id="X3T-a0-tPc"/>
                             <constraint firstItem="se9-zp-Tve" firstAttribute="top" secondItem="xJw-Ut-2nB" secondAttribute="bottom" constant="15" id="Xrr-HF-aXo"/>
                             <constraint firstItem="xJw-Ut-2nB" firstAttribute="leading" secondItem="iGm-Kc-Plu" secondAttribute="leadingMargin" constant="55" id="bpo-fH-MET"/>
+                            <constraint firstItem="ZNm-eS-cnB" firstAttribute="leading" secondItem="iGm-Kc-Plu" secondAttribute="leadingMargin" constant="10" id="e40-M8-JOI"/>
+                            <constraint firstItem="ZNm-eS-cnB" firstAttribute="centerX" secondItem="iGm-Kc-Plu" secondAttribute="centerX" id="g4Q-kv-9GC"/>
                             <constraint firstItem="zL9-Fl-E3t" firstAttribute="centerX" secondItem="iGm-Kc-Plu" secondAttribute="centerX" id="mvY-6E-wxM"/>
                             <constraint firstItem="zL9-Fl-E3t" firstAttribute="centerY" secondItem="iGm-Kc-Plu" secondAttribute="centerY" id="t87-M2-fWq"/>
                         </constraints>

@@ -17,11 +17,11 @@ DerivedData
 *.hmap
 .gutter.json
 
-# Pods Specifics
+# CocoaPods
 */Pods/*
 */Podfile.lock
 
-# Iconic Specifics, since they may be stored in ./Source directory
+# Iconic
 */Catalog/*.ttf
 */Catalog/*.otf
 */Catalog/*.json
