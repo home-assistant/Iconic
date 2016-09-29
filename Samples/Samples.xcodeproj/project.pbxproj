@@ -365,6 +365,7 @@
 				TargetAttributes = {
 					F50ADBFD1D112CDA004A5A4C = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					F529152A1D83B08E006305E4 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -655,6 +656,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-tvos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -672,6 +674,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-tvos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
