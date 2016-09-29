@@ -10,10 +10,10 @@ env:
 
     - WORKSPACE="Samples.xcworkspace"
     - IOS_SCHEME="iOS-Sample"
-    - IOS_SDK="iphonesimulator9.3"
+    - IOS_SDK="iphonesimulator10.0"
 
     matrix:
-    - DESTINATION="OS=9.3,name=iPhone 6s" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME"
+    - DESTINATION="OS=10.0,name=iPhone 6s" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME"
 
 script:
     - xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug  GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES;
