@@ -5,10 +5,8 @@ language: objective-c
 git:
     submodules: false
 
-# use sed to replace the SSH URL with the public URL, then init and update submodules
 before_install:
     - gem install cocoapods -v '1.0.1'
-    - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
     - git submodule update --init --recursive
     - sh Installer.sh 'Fonts/FontAwesome-4.6.3/FontAwesome.otf'
     - cd Samples && pod deintegrate && pod install
