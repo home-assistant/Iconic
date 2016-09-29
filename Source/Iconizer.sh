@@ -58,7 +58,7 @@ function iconize()
 
 # Only TTF and OTF are supported font files
 if [ -z ${INPUT_PATH} ]; then
-	echo "Missing font file at path ${INPUT_PATH}. Please provide a TTF or OTF file path."
+	echo "Iconizer: Missing font file at path ${INPUT_PATH}. Please provide a TTF or OTF file path."
 else
     # Input's file name and extension
     INPUT_NAME=$(basename "${INPUT_PATH}")
