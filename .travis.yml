@@ -4,6 +4,7 @@ language: objective-c
 before_install:
     - gem install cocoapods -v '1.0.1'
     - git submodule init && git submodule update
+    - sh Installer.sh 'Fonts/FontAwesome-4.6.3/FontAwesome.otf'
     - cd Samples && pod deintegrate && pod install
 
 env:
