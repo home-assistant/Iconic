@@ -22,6 +22,10 @@ target 'Tests' do
     pod 'FBSnapshotTestCase/Core'
 end
 
+pre_install do |installer|
+    sh ../Installer.sh '../Fonts/FontAwesome-4.6.3/FontAwesome.otf'
+end
+
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
