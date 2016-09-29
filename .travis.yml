@@ -19,4 +19,4 @@ script:
     - xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug  GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES;
 
 after_success:
-    - bash <(curl -s https://codecov.io/bash) -J 'Samples'
+    - bash <(curl -s https://codecov.io/bash)
