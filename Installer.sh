@@ -13,4 +13,4 @@ if [ $2 ]; then ROOT_PATH=$2; else ROOT_PATH='.'; fi
 
 cd ${ROOT_PATH}/Vendor/SwiftGen/ && rake install
 cd ../..
-sh Source/Iconizer.sh ${INPUT_PATH}
+sh ${ROOT_PATH}/Source/Iconizer.sh ${ROOT_PATH}/${INPUT_PATH}
