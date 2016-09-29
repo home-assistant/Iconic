@@ -3,7 +3,7 @@ language: objective-c
 
 # disable the default submodule logic
 git:
-    - submodules: false
+    submodules: false
 
 # use sed to replace the SSH URL with the public URL, then init and update submodules
 before_install:
