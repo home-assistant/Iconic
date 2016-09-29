@@ -22,8 +22,10 @@ target 'Tests' do
     pod 'FBSnapshotTestCase/Core'
 end
 
+# prepare_command doesn't consistently work with local pods
+# This might cause double installation in local environment, but at least not fail in CI environment.
 pre_install do |installer|
-    sh ../Installer.sh '../Fonts/FontAwesome-4.6.3/FontAwesome.otf'
+    system("sh ../Installer.sh Fonts/FontAwesome-4.6.3/FontAwesome.otf ../")
 end
 
 post_install do |installer|

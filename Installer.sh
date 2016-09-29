@@ -9,6 +9,8 @@
 
 INPUT_PATH=$1
 
-cd ./Vendor/SwiftGen/ && rake install
+if [ $2 ]; then ROOT_PATH=$2; else ROOT_PATH='.'; fi
+
+cd ${ROOT_PATH}/Vendor/SwiftGen/ && rake install
 cd ../..
-sh ./Source/Iconizer.sh ${INPUT_PATH}
+sh Source/Iconizer.sh ${INPUT_PATH}
