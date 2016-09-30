@@ -166,7 +166,11 @@ extension IconDrawable {
             return
         }
         
-        let url = resourceUrl()
+        guard let url = resourceUrl() else {
+            assertionFailure("Could not find the '\(self.familyName)'")
+            return
+        }
+        
         var error: Unmanaged<CFError>? = nil
         let descriptors = CTFontManagerCreateFontDescriptorsFromURL(url) as NSArray?
         
@@ -193,7 +197,11 @@ extension IconDrawable {
             return
         }
         
-        let url = resourceUrl()
+        guard let url = resourceUrl() else {
+            assertionFailure("Could not find the '\(self.familyName)'")
+            return
+        }
+        
         var error: Unmanaged<CFError>? = nil
         
         if CTFontManagerUnregisterFontsForURL(url, .none, &error) == false || error != nil {
@@ -203,17 +211,13 @@ extension IconDrawable {
         print("Font '\(familyName)' unregistered successfully!")
     }
     
-    private static func resourceUrl() -> CFURL {
+    private static func resourceUrl() -> CFURL? {
         
         let extensions = ["otf", "ttf"]
         let bundle = Bundle(for: Iconic.self)
         
         let url = (extensions.flatMap { bundle.url(forResource: familyName, withExtension: $0) }).first
         
-        if url == nil {
-            assertionFailure("Could not find the '\(familyName)' font in bundle:\(bundle).")
-        }
-        
-        return url as! CFURL
+        return url as CFURL?
     }
 }
