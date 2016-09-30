@@ -36,7 +36,7 @@
 
 - (void)testAttributedStringConstructor
 {
-    NSAttributedString *attributedText = [Iconic attributedStringWithFontAwesomeIcon:FontAwesomeIconOk pointSize:20 color:nil];
+    NSAttributedString *attributedText = [Iconic attributedStringWithIcon:FontAwesomeIconOk pointSize:20 color:nil];
     
     XCTAssertNotNil(attributedText);
     XCTAssertEqual(attributedText.length, 1);
@@ -45,7 +45,7 @@
 - (void)testImageConstructor
 {
     CGSize size = CGSizeMake(20.0, 20.0);
-    UIImage *image = [Iconic imageWithFontAwesomeIcon:FontAwesomeIconOk size:size color:nil];
+    UIImage *image = [Iconic imageWithIcon:FontAwesomeIconOk size:size color:nil];
     
     XCTAssertNotNil(image);
     XCTAssertTrue(CGSizeEqualToSize(image.size, size));
@@ -55,11 +55,11 @@
 {
     CGSize size = CGSizeMake(24.0, 24.0);
     
-    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithFontAwesomeIcon:FontAwesomeIconOk size:size title:@"Title"];
-    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithFontAwesomeIcon:FontAwesomeIconOk size:size target:nil action:@selector(tearDown)];
+    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithIcon:FontAwesomeIconOk size:size title:@"Title"];
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithIcon:FontAwesomeIconOk size:size target:nil action:@selector(tearDown)];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [button setIconImageWithFontAwesomeIcon:FontAwesomeIconOk size:size color:nil forState:UIControlStateNormal];
+    [button setIconImageWithIcon:FontAwesomeIconOk size:size color:nil forState:UIControlStateNormal];
     
     XCTAssertNotNil(tabBarItem);
     XCTAssertNotNil(buttonItem);

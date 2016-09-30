@@ -23,7 +23,7 @@ public extension Iconic {
      - parameter pointSize: The size of the font.
      - parameter color: The tint color of the font.
      */
-    @objc class func attributedString(with{{enumName}} icon: {{enumName}}, pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
+    @objc class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
         return icon.attributedString(ofSize: pointSize, color: color)
     }
     
@@ -33,7 +33,7 @@ public extension Iconic {
      - parameter size: The size of the image, in points.
      - parameter color: A tint color for the image.
      */
-    @objc class func image(with{{enumName}} icon: {{enumName}}, size: CGSize, color: UIColor?) -> UIImage {
+    @objc class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?) -> UIImage {
         return icon.image(ofSize: size, color: color)
     }
     
@@ -64,7 +64,7 @@ public extension UIBarButtonItem {
      - parameter target: The object that receives the action message.
      - parameter action: The action to send to target when this item is selected.
      */
-    convenience init(with{{enumName}} icon: {{enumName}}, size: CGSize, target: AnyObject?, action: Selector) {
+    convenience init(withIcon icon: {{enumName}}, size: CGSize, target: AnyObject?, action: Selector) {
         
         let image = icon.image(ofSize: size, color: UIColor.black)
         self.init(image: image, style: .plain, target: target, action: action)
@@ -82,7 +82,7 @@ public extension UITabBarItem {
      - parameter size: The size of the image, in points.
      - parameter title: The item's title. If nil, a title is not displayed.
      */
-    convenience init(with{{enumName}} icon: {{enumName}}, size: CGSize, title: String?) {
+    convenience init(withIcon icon: {{enumName}}, size: CGSize, title: String?) {
         
         let image = icon.image(ofSize: size, color: UIColor.black)
         self.init(title: title, image: image, tag: icon.rawValue)
@@ -100,7 +100,7 @@ public extension UIButton {
      - parameter color: The color of the image.
      - parameter state: The state that uses the specified title. The values are described in UIControlState.
      */
-    func setIconImage(with{{enumName}} icon: {{enumName}}, size: CGSize, color:UIColor?, forState state: UIControlState) {
+    func setIconImage(withIcon icon: {{enumName}}, size: CGSize, color:UIColor?, forState state: UIControlState) {
         
         let image = icon.image(ofSize: size, color: color ?? UIColor.black)
         setImage(image, for: state)

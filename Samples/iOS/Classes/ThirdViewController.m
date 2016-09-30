@@ -41,10 +41,10 @@
 
 - (void)commonInit
 {
-    self.tabBarItem = [[UITabBarItem alloc] initWithFontAwesomeIcon:FontAwesomeIconOl size:CGSizeMake(20.0, 20.0) title:@"As Text"];
+    self.tabBarItem = [[UITabBarItem alloc] initWithIcon:FontAwesomeIconOl size:CGSizeMake(20.0, 20.0) title:@"As Text"];
     self.title = self.tabBarItem.title;
     
-    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithFontAwesomeIcon:FontAwesomeIconCog size:CGSizeMake(24.0, 24.0) target:self action:@selector(didTapRightButtonItem:)];
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithIcon:FontAwesomeIconCog size:CGSizeMake(24.0, 24.0) target:self action:@selector(didTapRightButtonItem:)];
     self.navigationItem.rightBarButtonItem = buttonItem;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willShowKeyboard:) name:UIKeyboardWillShowNotification object:nil];
@@ -82,7 +82,7 @@
 
 - (void)willShowKeyboard:(NSNotification *)note
 {
-    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithFontAwesomeIcon:FontAwesomeIconAngleDown size:CGSizeMake(30.0, 30.0) target:self action:@selector(didTapLeftButtonItem:)];
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithIcon:FontAwesomeIconAngleDown size:CGSizeMake(30.0, 30.0) target:self action:@selector(didTapLeftButtonItem:)];
     [self.navigationItem setLeftBarButtonItem:buttonItem animated:YES];
     
     CGRect keyboardFrame = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];

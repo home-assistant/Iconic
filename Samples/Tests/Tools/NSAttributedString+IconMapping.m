@@ -16,7 +16,7 @@
     
     for (int i = 0; i < [Iconic fontAwesomeIconCount]; i++) {
         
-        NSAttributedString *aString = [Iconic attributedStringWithFontAwesomeIcon:i pointSize:size color:color];
+        NSAttributedString *aString = [Iconic attributedStringWithIcon:i pointSize:size color:color];
         NSMutableAttributedString *mString = [[NSMutableAttributedString alloc] initWithAttributedString:aString];
         
         if (mString) {

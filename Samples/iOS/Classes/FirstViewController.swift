@@ -25,12 +25,12 @@ class FirstViewController: UITableViewController {
     
     func commonInit() -> Void {
         
-        let tabItem = UITabBarItem(withFontAwesomeIcon: .Book, size: CGSize(width: 20, height: 20), title: "Catalog")
+        let tabItem = UITabBarItem(withIcon: .Book, size: CGSize(width: 20, height: 20), title: "Catalog")
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
         
-        let buttonItem = UIBarButtonItem(withFontAwesomeIcon: .Cog, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
+        let buttonItem = UIBarButtonItem(withIcon: .Cog, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -122,7 +122,7 @@ extension UIViewController {
         
         
         let attributes = [NSForegroundColorAttributeName: color,
-                          NSFontAttributeName: UIFont.systemFont(ofSize: titleSize)] as [String : Any]
+                          NSFontAttributeName: UIFont.boldSystemFont(ofSize: titleSize)] as [String : Any]
         
         let mString = NSMutableAttributedString(string: title, attributes: attributes)
         

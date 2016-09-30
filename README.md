@@ -53,21 +53,15 @@ Web developers have been using icon fonts for quite some time now.
 _Note: Some open sourced icon fonts don't include the names of each of their glyphs. This could result in a non-descriptive enum, which can make things less intuitive for you when using Iconic. If you create your own icon font, make sure to properly name each glyph._
 
 
-### Missing Features in Beta
-- [x] Interface Builder Support. (Added in [#41](https://github.com/dzenbot/Iconic/pull/41) and [#43](https://github.com/dzenbot/Iconic/pull/43))
-- [ ] Solid API definition with a more Swifty approach (see [#2](https://github.com/dzenbot/Iconic/issues/2) and [#26](https://github.com/dzenbot/Iconic/issues/26)).
-- [x] Fully covered with snapshot tests. (Added in [#44](https://github.com/dzenbot/Iconic/pull/44))
-
-
 ## Installation
 
 #### Via CocoaPods
 ```ruby
-FONT_PATH='path_to_your_icon_font.ttf' pod install
+FONT_PATH='path_to_your_icon_font.otf' pod install
 
-FONT_PATH='path_to_your_icon_font.ttf' pod update Iconic
+FONT_PATH='path_to_your_icon_font.otf' pod update Iconic
 ```
-When using the `FONT_PATH` environment variable, CocoaPods will install Iconic with a custom icon font and auto-generate all files with its name.
+When using the `FONT_PATH` environment variable, Iconic will be installed with a custom icon font and the auto-generated files and APIs will adopt the fon't name.
 
 ```ruby
 pod install Iconic
@@ -76,17 +70,6 @@ Will install Iconic with its default font, [FontAwesome](https://github.com/Fort
 
 After the installation, you should see a similar setup like this:
 ![Pod Setup](Screenshots/screenshot_pod_setup.png)
-
-
-### Under the hood
-When installing Iconic, several things are happening:
-- After the Iconic repo is cloned, a custom version of [SwiftGen](https://github.com/DZNLabs/SwiftGen) is downloaded along with its dependencies.
-- Before pods are installed, `SwiftGen` is compiled
-- [Iconizer](Source/Iconizer/Iconizer.sh) is ran, executing `SwiftGen` using a [custom stencil for Iconic](Source/Iconizer/iconic-default.stencil).
-- `SwiftGen` does its magic, detecting all unicodes from the [PUA range](https://en.wikipedia.org/wiki/Private_Use_Areas) of the provided font file, extracting their unicode values as well as their glyph names. All this data is then used for auto-generating a Switft class of name `{FontName}Icon.swift`; a json file is also exported afterwards.
-- Once everything is exported, an [HTML icon font catalog](#icon-font-catalog) is also created.  
-
-There is a known bug where sometimes, calling `pod install Iconic` would not run correctly SwiftGen an retrieve all the icon unicode from a font. If this happens to you, make sure to call `pod update Iconic` to retrigger SwiftGen.
 
 
 ## How to use
@@ -103,41 +86,73 @@ import Iconic
 @import Iconic;
 ```
 
+
 ### Registering the icon font
 Registration is required to activate Iconic. You shall do this once, when launching your application. Internally, the icon mapping is retrieved and kept in memory during the application's life term.
 
 Iconic provides a convenient way to register the icon font:
 Note: the method name may change depending of your icon font's name:
+##### Swift
 ```swift
-Iconic.registerIconFont()
+FontAwesomeIcon.register()
 ```
+```
+##### Obj-C
+```objc
+[Iconic registerFontAwesomeIcon];
+```
+
 
 ### Use as images
 You can construct an `UIImage` instance out of a font's icon and tint it. This may be very convenient for integrating with existing UIKit controls which expect `UIImage` objects already.
-```swift
-let image = Iconic.image(forIcon: .Home, size: 20, color: .blueColor())
-```
 
 Images are created using NSStringDraw APIs to render a `UIImage` out of an `NSAttributedString`.
+
+```swift
+let size = CGSize(width: 20, height: 20)
+
+let icon = FontAwesomeIcon.Home
+let image = icon.image(ofSize: size, color: UIColor.blue)
+```
+##### Obj-C
+```objc
+[Iconic imageWithIcon:FontAwesomeIconHome size:CGSizeMake(20, 20) color:[UIColor blueColor]];
+```
 
 ### Use as attributed strings
 You may need to icons as text too, and simplify your layout work.
 For example, instead of having an image and a label, you can combined it all in one single label:
 ```swift
 let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 10)
-let iconString = Iconic.attributedString(forIcon: .Home, size: 20, color: .blueColor(), edgeInsets: edgeInsets)
+
+let icon = FontAwesomeIcon.Home 
+let iconString = icon.attributedString(ofSize: 20, color: UIColor.blue, edgeInsets: edgeInsets)
 ```
+##### Obj-C
+```objc
+
+```
+
 
 ### Use as unicode string
 Ultimately, you may need to retrieve the unicode string representation on an icon to do more advanced things:
 ```swift
-let unicode = Iconic.unicodeString(forIcon: .Apple)
+let unicode = FontAwesomeIcon.Home.unicode
 ```
+##### Obj-C
+```objc
+NSString *unicode = [Iconic unicodeStringWithIcon:FontAwesomeIconHome];
+```
+
 
 ### Use as font
 For further customization, you may need to use the UIFont object instead:
 ```swift
-let font = Iconic.iconFont(ofSize: 20)
+let font = FontAwesomeIcon.font(ofSize: 20)
+```
+##### Obj-C
+```swift
+UIFont *font =  [Iconic fontAwesomeFontOfSize:20.0];
 ```
 
 
