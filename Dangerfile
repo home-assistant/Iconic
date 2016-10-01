@@ -35,7 +35,7 @@ if outliers.any?
   
   warnings = most_expensive_swift_table.lines[0...outliers.count].map do |line|
     time, location, function_name = line.split "\t"
-    github_loc = location.gsub("/dzenbot/Iconic/tree/#{current_branch}")
+    github_loc = location.gsub("/#{TRAVIS_REPO_SLUG}/tree/#{current_branch}")
     github_loc_code = github_loc.split(":")[0...-1].join("#L")
     name = File.basename(location).split(":").first
     "#{time} | [#{name}](#{github_loc_code}) | #{function_name}"
