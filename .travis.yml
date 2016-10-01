@@ -9,7 +9,7 @@ before_install:
     - bundle install
     - bundle exec danger
 
-script:
+before_script:
     - git submodule update --init --recursive
     - sh Installer.sh 'Fonts/FontAwesome-4.6.3/FontAwesome.otf'
     - cd Samples && pod deintegrate && pod install
@@ -18,7 +18,7 @@ env:
     global:
     - LANG=en_US.UTF-8
 
-    - WORKSPACE="Samples/Samples.xcworkspace"
+    - WORKSPACE="Samples.xcworkspace"
     - IOS_SCHEME="iOS-Sample"
     - IOS_SDK="iphonesimulator10.0"
 
