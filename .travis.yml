@@ -1,12 +1,15 @@
 osx_image: xcode8
 language: objective-c
 
-# disable the default submodule logic
-git:
-    submodules: false
+cache:
+    - bundler
+    - cocoapods
 
 before_install:
-    - gem install cocoapods -v '1.0.1'
+    - bundle install
+    - bundle exec danger
+
+before_script:
     - git submodule update --init --recursive
     - sh Installer.sh 'Fonts/FontAwesome-4.6.3/FontAwesome.otf'
     - cd Samples && pod deintegrate && pod install
@@ -23,7 +26,7 @@ env:
     - DESTINATION="OS=10.0,name=iPhone 6s" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME"
 
 script:
-    - xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug  GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES;
+    - xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug  GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | tee $TRAVIS_BUILD_DIR/xcode_build_raw.log | bundle exec xcpretty -c
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)

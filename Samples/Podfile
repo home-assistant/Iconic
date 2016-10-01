@@ -1,4 +1,5 @@
-source 'https://github.com/CocoaPods/Specs.git'
+
+source "https://github.com/CocoaPods/Specs.git"
 
 abstract_target 'Playground'
 use_frameworks!
