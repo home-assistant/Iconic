@@ -7,7 +7,7 @@
 warn("This PR is too big. Consider breaking it down into multiple PRs.") if git.lines_of_code > 500
 
 # Warn about incomplete PR description.
-fail("Please provide a summary in the Pull Request description") if github.pr_body.length < 5
+warn("Please provide a summary in the Pull Request description") if github.pr_body.length < 5
 
 ####################################################################################################
 
