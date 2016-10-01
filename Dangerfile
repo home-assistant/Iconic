@@ -20,9 +20,11 @@ build_file = File.join(ENV["TRAVIS_BUILD_DIR"], "xcode_build_raw.log")
 # so look at the top 1000 Swift symbols from the build log 
 most_expensive_swift_table = `cat #{build_file} | egrep '\.[0-9]ms' | sort -t "." -k 1 -n | tail -1000 | sort -t "." -k 1 -n -r`
 
-# each line looks like "29.2ms
+# each line looks like "29.2ms   ~/IconDrawable.swift.swift:50:19   @objc override func viewDidLoad()"
 time_values = most_expensive_swift_table.lines.map { |line| line.split.first.to_i }.reject { |value| value == 0 }
+
 # Looks for outliers
+require_relative "config/enumerable_stats"
 outliers = time_values.outliers(3)
 
 # Take any build timeing outliers, and convert them into a useful markdown table.  
