@@ -2,7 +2,8 @@ osx_image: xcode8
 language: objective-c
 
 before_install:
-    - gem install bundler -v 1.9.10 --quiet
+    - gem update --system
+    - gem install bundler
     - gem install cocoapods -v '1.0.1' --no-rdoc --no-ri --no-document --quiet
     - bundle exec danger
 
