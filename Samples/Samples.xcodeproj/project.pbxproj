@@ -84,6 +84,8 @@
 		F558DA071CF1AF1A0014717C /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57B56541D1FE785000E6551 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		F58D6D241D0429FE00D68109 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F59D5ABD1D9FBAD900DC5AFD /* Dangerfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Dangerfile; path = ../Dangerfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F59D5ABE1D9FBAD900DC5AFD /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F5A3423A1D96616700E7029B /* BaseSnapshotTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSnapshotTestCase.swift; sourceTree = "<group>"; };
 		F5C165241D83CAF7003D76E0 /* ImageIconSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageIconSnapshotTests.swift; sourceTree = "<group>"; };
 		F5C165271D83CB80003D76E0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -226,6 +228,8 @@
 				F54BAFF11D0A9509004757C9 /* LICENSE */,
 				F54BAFF21D0A9509004757C9 /* README.md */,
 				F58D6D241D0429FE00D68109 /* Podfile */,
+				F59D5ABD1D9FBAD900DC5AFD /* Dangerfile */,
+				F59D5ABE1D9FBAD900DC5AFD /* Gemfile */,
 				F57B56541D1FE785000E6551 /* .travis.yml */,
 				F515106E1D9BBB0700D0DC6F /* .codecov.yml */,
 				F5F6ABF41D863B64003B80D4 /* .gitignore */,
