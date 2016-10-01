@@ -6,7 +6,6 @@ cache:
     - cocoapods
 
 before_install:
-    - brew install swiftlint
     - bundle install
     - bundle exec danger
 
