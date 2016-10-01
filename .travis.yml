@@ -1,6 +1,5 @@
 osx_image: xcode8
 language: objective-c
-sudo: false
 
 before_install:
     - gem install bundler -v 1.9.10 --quiet
