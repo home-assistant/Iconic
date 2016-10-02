@@ -23,13 +23,13 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        upButton.setIconImage(withFontAwesomeIcon: .AngleUp, size: buttonSize, color: nil, forState: .normal)
-        downButton.setIconImage(withFontAwesomeIcon: .AngleDown, size: buttonSize, color: nil, forState: .normal)
+        upButton.setIconImage(withIcon: .AngleUp, size: buttonSize, color: nil, forState: .Normal)
+        downButton.setIconImage(withIcon: .AngleDown, size: buttonSize, color: nil, forState: .Normal)
         
         updateImage(scale)
     }
     
-    @IBAction func didPressUp(_ sender: UIButton) {
+    @IBAction func didPressUp(sender: UIButton) {
         
         if scale > maxScale {
             return
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         updateImage(scale)
     }
     
-    @IBAction func didPressDown(_ sender: UIButton) {
+    @IBAction func didPressDown(sender: UIButton) {
         
         if scale <= 2 {
             return
@@ -49,11 +49,11 @@ class ViewController: UIViewController {
         updateImage(scale)
     }
     
-    func updateImage(_ scale: UInt) {
+    func updateImage(scale: UInt) {
         
         let width = CGFloat(20 * scale)
         let imgSize = CGSize(width: width, height: width)
-        let image = FontAwesomeIcon.GithubAlt.image(ofSize: imgSize, color: UIColor.black)
+        let image = FontAwesomeIcon.GithubAlt.image(ofSize: imgSize, color: UIColor.blackColor())
         
         imageView.image = image
         
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         transition.type = kCATransitionFade
         
-        imageView.layer.add(transition, forKey: nil)
+        imageView.layer.addAnimation(transition, forKey: nil)
     }
 }
 

@@ -1,0 +1,28 @@
+// Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen
+
+import UIKit
+
+/**
+A strongly typed representation of every icon glyph name.
+*/
+@objc public enum Icon: Int {
+    case AlignLeft
+    case AlokHeader
+    case Cogs
+    case GgCircle
+    case SteamSquare
+
+    // Useful to get the total count of icons. This index doesn't have any associated unicode value.
+    case TotalCount
+}
+
+/**
+A list of unicode characters associated with each Icon case, in order.
+*/
+public let IconMapping: Array<String> = [
+    "\u{E001}",
+    "\u{E000}",
+    "\u{E002}",
+    "\u{E003}",
+    "\u{E004}",
+]

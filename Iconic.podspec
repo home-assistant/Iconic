@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
   s.source = {
       :git => 'https://github.com/dzenbot/Iconic.git',
       :tag => @version,
-      :submodules => true
   }
   
   s.source_files    = 'Source/*.{swift}'

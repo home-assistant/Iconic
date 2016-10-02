@@ -1,0 +1,87 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Release/GenumKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GenumKit-Swift.h",
+          'external-contents': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Release/GenumKit.framework/Versions/A/Headers/GenumKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "GenumKit-umbrella.h",
+          'external-contents': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Target Support Files/GenumKit/GenumKit-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Release/GenumKit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Pods.build/Release/GenumKit.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Release/PathKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "PathKit-Swift.h",
+          'external-contents': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Release/PathKit.framework/Versions/A/Headers/PathKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "PathKit-umbrella.h",
+          'external-contents': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Target Support Files/PathKit/PathKit-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Release/PathKit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Pods.build/Release/PathKit.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Release/Stencil.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Stencil-Swift.h",
+          'external-contents': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Release/Stencil.framework/Versions/A/Headers/Stencil-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Stencil-umbrella.h",
+          'external-contents': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Target Support Files/Stencil/Stencil-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Release/Stencil.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Pods.build/Release/Stencil.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

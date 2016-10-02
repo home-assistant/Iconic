@@ -39,22 +39,22 @@ class SecondViewController: UIViewController {
         updateIcon(200)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
     
     func didTapRightItem() {
-        navigationController?.navigationBar.isHidden = true
-        tabBarController?.tabBar.isHidden = true
+        navigationController?.navigationBar.hidden = true
+        tabBarController?.tabBar.hidden = true
     }
     
-    @IBAction func didChangeScale(_ sender: UISlider) {
+    @IBAction func didChangeScale(sender: UISlider) {
         print("did change scale to '\(sender.value)'")
         
         updateIcon(sender.value)
     }
     
-    func updateIcon(_ scale: Float) {
+    func updateIcon(scale: Float) {
         
         let size = CGFloat(ceil(scale))
         
@@ -75,16 +75,16 @@ class StepSlider: UISlider {
         self.addGestureRecognizer(tapGesture)
     }
     
-    func didTapSlider(_ gesture: UIGestureRecognizer) {
+    func didTapSlider(gesture: UIGestureRecognizer) {
         
-        let location = gesture.location(in: gesture.view)
+        let location = gesture.locationInView(gesture.view)
         
         let maxValue = CGFloat(self.maximumValue)
         let newValue = location.x * maxValue / self.frame.width
         
         self.value = Float(newValue)
         
-        self.sendActions(for: .valueChanged)
+        self.sendActionsForControlEvents(.ValueChanged)
     }
 }
 

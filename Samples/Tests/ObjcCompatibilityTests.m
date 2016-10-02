@@ -26,7 +26,11 @@
 {
     XCTAssertTrue([Iconic respondsToSelector:@selector(registerFontAwesomeIcon)]);
     XCTAssertTrue([Iconic respondsToSelector:@selector(unregisterFontAwesomeIcon)]);
-
+    
+    UIFont *font = [Iconic fontAwesomeIconFontOfSize:20.0];
+    XCTAssertTrue([font.familyName isEqualToString:@"FontAwesome"]);
+    XCTAssertEqual(font.pointSize, 20.0);
+    
     NSString *familyName = [Iconic fontAwesomeFamilyName];
     XCTAssertTrue([familyName isEqualToString:@"FontAwesome"]);
     

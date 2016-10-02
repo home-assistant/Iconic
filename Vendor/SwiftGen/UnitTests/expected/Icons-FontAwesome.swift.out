@@ -1,0 +1,1316 @@
+// Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen
+
+import UIKit
+
+/**
+A strongly typed representation of every icon glyph name.
+*/
+@objc public enum Icon: Int {
+    case _279
+    case _283
+    case _303
+    case _312
+    case _317
+    case _329
+    case _334
+    case _335
+    case _366
+    case _372
+    case _374
+    case _376
+    case _378
+    case _380
+    case _382
+    case _383
+    case _384
+    case _385
+    case _386
+    case _387
+    case _388
+    case _389
+    case _392
+    case _393
+    case _395
+    case _396
+    case _397
+    case _398
+    case _399
+    case _400
+    case _402
+    case _403
+    case _404
+    case _406
+    case _407
+    case _408
+    case _409
+    case _410
+    case _411
+    case _412
+    case _413
+    case _414
+    case _415
+    case _416
+    case _417
+    case _418
+    case _419
+    case _422
+    case _423
+    case _424
+    case _425
+    case _426
+    case _427
+    case _428
+    case _429
+    case _430
+    case _431
+    case _432
+    case _433
+    case _434
+    case _438
+    case _439
+    case _443
+    case _444
+    case _445
+    case _446
+    case _447
+    case _448
+    case _449
+    case _451
+    case _452
+    case _453
+    case _454
+    case _455
+    case _456
+    case _457
+    case _458
+    case _459
+    case _460
+    case _461
+    case _462
+    case _463
+    case _464
+    case _466
+    case _467
+    case _469
+    case _470
+    case _471
+    case _472
+    case _473
+    case _474
+    case _475
+    case _476
+    case _478
+    case _479
+    case _480
+    case _481
+    case _482
+    case _483
+    case _484
+    case _485
+    case _486
+    case _487
+    case _488
+    case _489
+    case _490
+    case _491
+    case _492
+    case _493
+    case _494
+    case _496
+    case _498
+    case _499
+    case _500
+    case _501
+    case _502
+    case _503
+    case _504
+    case _505
+    case _506
+    case _507
+    case _508
+    case _509
+    case _511
+    case _512
+    case _513
+    case _514
+    case _515
+    case _516
+    case _517
+    case _518
+    case _519
+    case _520
+    case _521
+    case _522
+    case _523
+    case _524
+    case _525
+    case _526
+    case _527
+    case _528
+    case _529
+    case _530
+    case _531
+    case _532
+    case _533
+    case _534
+    case _535
+    case _536
+    case _537
+    case _538
+    case _539
+    case _540
+    case _541
+    case _542
+    case _543
+    case _544
+    case _545
+    case _546
+    case _547
+    case _548
+    case _549
+    case _550
+    case _551
+    case _552
+    case _553
+    case _554
+    case _555
+    case _556
+    case _557
+    case _558
+    case _559
+    case _560
+    case _561
+    case _562
+    case _563
+    case _564
+    case _565
+    case _566
+    case _567
+    case _568
+    case _569
+    case _572
+    case _574
+    case _575
+    case _576
+    case _577
+    case _578
+    case _579
+    case _580
+    case _581
+    case _582
+    case _583
+    case _584
+    case _585
+    case _586
+    case _587
+    case _588
+    case _589
+    case _590
+    case _591
+    case _592
+    case _593
+    case _594
+    case _595
+    case _596
+    case _597
+    case _598
+    case _602
+    case _603
+    case _604
+    case _607
+    case _608
+    case _609
+    case _610
+    case _611
+    case _612
+    case _613
+    case _614
+    case _615
+    case _616
+    case _617
+    case _618
+    case _619
+    case _620
+    case _621
+    case _622
+    case _623
+    case _624
+    case _625
+    case _626
+    case _627
+    case _628
+    case _629
+    case Adjust
+    case Adn
+    case AlignCenter
+    case AlignJustify
+    case AlignLeft
+    case AlignRight
+    case Ambulance
+    case Anchor
+    case Android
+    case AngleDown
+    case AngleLeft
+    case AngleRight
+    case AngleUp
+    case Apple
+    case Archive
+    case ArrowCircleAltLeft
+    case ArrowDown
+    case ArrowLeft
+    case ArrowRight
+    case ArrowUp
+    case Asterisk
+    case Backward
+    case BanCircle
+    case BarChart
+    case Barcode
+    case Beaker
+    case Beer
+    case Bell
+    case BellAlt
+    case BitbucketSign
+    case Bold
+    case Bolt
+    case Book
+    case Bookmark
+    case BookmarkEmpty
+    case Briefcase
+    case Btc
+    case Bug
+    case Building
+    case Bullhorn
+    case Bullseye
+    case Calendar
+    case CalendarEmpty
+    case Camera
+    case CameraRetro
+    case CaretDown
+    case CaretLeft
+    case CaretRight
+    case CaretUp
+    case Certificate
+    case Check
+    case CheckEmpty
+    case CheckMinus
+    case CheckSign
+    case ChevronDown
+    case ChevronLeft
+    case ChevronRight
+    case ChevronSignDown
+    case ChevronSignLeft
+    case ChevronSignRight
+    case ChevronSignUp
+    case ChevronUp
+    case Circle
+    case CircleArrowDown
+    case CircleArrowLeft
+    case CircleArrowRight
+    case CircleArrowUp
+    case CircleBlank
+    case Cloud
+    case CloudDownload
+    case CloudUpload
+    case Code
+    case CodeFork
+    case Coffee
+    case Cog
+    case Cogs
+    case Collapse
+    case CollapseAlt
+    case CollapseTop
+    case Columns
+    case Comment
+    case CommentAlt
+    case Comments
+    case CommentsAlt
+    case Compass
+    case Copy
+    case CreditCard
+    case Crop
+    case Css3
+    case Cut
+    case Dashboard
+    case Desktop
+    case DotCircleAlt
+    case DoubleAngleDown
+    case DoubleAngleLeft
+    case DoubleAngleRight
+    case DoubleAngleUp
+    case Download
+    case DownloadAlt
+    case Dribble
+    case Dropbox
+    case Edit
+    case EditSign
+    case Eject
+    case EllipsisHorizontal
+    case EllipsisVertical
+    case Envelope
+    case EnvelopeAlt
+    case Eur
+    case Exchange
+    case Exclamation
+    case ExclamationSign
+    case ExpandAlt
+    case ExternalLink
+    case EyeClose
+    case EyeOpen
+    case F0fe
+    case F171
+    case F1a1
+    case F1a4
+    case F1ab
+    case F1f3
+    case F1fc
+    case F210
+    case F212
+    case F260
+    case F261
+    case F263
+    case F27e
+    case Facebook
+    case FacebookSign
+    case FacetimeVideo
+    case FastBackward
+    case FastForward
+    case Female
+    case FighterJet
+    case File
+    case FileAlt
+    case FileText
+    case FileTextAlt
+    case Film
+    case Filter
+    case Fire
+    case FireExtinguisher
+    case Flag
+    case FlagAlt
+    case FlagCheckered
+    case Flickr
+    case FolderClose
+    case FolderCloseAlt
+    case FolderOpen
+    case FolderOpenAlt
+    case Font
+    case Food
+    case Forward
+    case Foursquare
+    case Frown
+    case Fullscreen
+    case Gamepad
+    case Gbp
+    case Gift
+    case Github
+    case GithubAlt
+    case GithubSign
+    case Gittip
+    case Glass
+    case Globe
+    case GooglePlus
+    case GooglePlusSign
+    case Group
+    case HSign
+    case HandDown
+    case HandLeft
+    case HandRight
+    case HandUp
+    case Hdd
+    case Headphones
+    case Heart
+    case HeartEmpty
+    case Home
+    case Hospital
+    case Html5
+    case Inbox
+    case IndentLeft
+    case IndentRight
+    case InfoSign
+    case Inr
+    case Instagram
+    case Italic
+    case Jpy
+    case Key
+    case Keyboard
+    case Krw
+    case Laptop
+    case Leaf
+    case Legal
+    case Lemon
+    case Lessequal
+    case LevelDown
+    case LevelUp
+    case LightBulb
+    case Link
+    case Linkedin
+    case LinkedinSign
+    case Linux
+    case List
+    case ListAlt
+    case LocationArrow
+    case Lock
+    case LongArrowDown
+    case LongArrowLeft
+    case LongArrowRight
+    case LongArrowUp
+    case Magic
+    case Magnet
+    case Male
+    case MapMarker
+    case Maxcdn
+    case Medkit
+    case Meh
+    case Microphone
+    case MicrophoneOff
+    case Minus
+    case MinusSign
+    case MinusSignAlt
+    case MobilePhone
+    case Money
+    case Move
+    case Music
+    case Off
+    case Ok
+    case OkCircle
+    case OkSign
+    case Ol
+    case PaperClip
+    case Paste
+    case Pause
+    case Pencil
+    case Phone
+    case PhoneSign
+    case Picture
+    case Pinterest
+    case PinterestSign
+    case Plane
+    case Play
+    case PlayCircle
+    case PlaySign
+    case Plus
+    case PlusSign
+    case PlusSquareO
+    case Print
+    case Pushpin
+    case PuzzlePiece
+    case Qrcode
+    case Question
+    case QuestionSign
+    case QuoteLeft
+    case QuoteRight
+    case Random
+    case Refresh
+    case Remove
+    case RemoveCircle
+    case RemoveSign
+    case Renren
+    case Reorder
+    case Repeat
+    case Reply
+    case ReplyAll
+    case ResizeFull
+    case ResizeHorizontal
+    case ResizeSmall
+    case ResizeVertical
+    case Retweet
+    case Road
+    case Rocket
+    case Rss
+    case Rub
+    case Save
+    case Screenshot
+    case Search
+    case Share
+    case ShareAlt
+    case ShareSign
+    case Shield
+    case ShoppingCart
+    case SignBlank
+    case Signal
+    case Signin
+    case Signout
+    case Sitemap
+    case Skype
+    case Smile
+    case Sort
+    case SortByAlphabet
+    case SortByAttributes
+    case SortByAttributesAlt
+    case SortByOrder
+    case SortByOrderAlt
+    case SortDown
+    case SortUp
+    case Spinner
+    case StackExchange
+    case Stackexchange
+    case Star
+    case StarEmpty
+    case StarHalf
+    case StarHalfEmpty
+    case StepBackward
+    case StepForward
+    case Stethoscope
+    case Stop
+    case Strikethrough
+    case Subscript
+    case Suitcase
+    case Sun
+    case Superscript
+    case Table
+    case Tablet
+    case Tag
+    case Tags
+    case Tasks
+    case Terminal
+    case TextHeight
+    case TextWidth
+    case Th
+    case ThLarge
+    case ThList
+    case ThumbsDownAlt
+    case ThumbsUpAlt
+    case Ticket
+    case Time
+    case Tint
+    case Trash
+    case Trello
+    case Trophy
+    case Truck
+    case Tumblr
+    case TumblrSign
+    case Twitter
+    case TwitterSign
+    case Ul
+    case Umbrella
+    case Underline
+    case Undo
+    case UniF1A0
+    case UniF1B1
+    case UniF1C0
+    case UniF1C1
+    case UniF1D0
+    case UniF1D1
+    case UniF1D2
+    case UniF1D5
+    case UniF1D6
+    case UniF1D7
+    case UniF1E0
+    case UniF1F0
+    case UniF280
+    case UniF281
+    case UniF285
+    case UniF286
+    case UniF2A0
+    case UniF2A1
+    case UniF2A2
+    case UniF2A3
+    case UniF2A4
+    case UniF2A5
+    case UniF2A6
+    case UniF2A7
+    case UniF2A8
+    case UniF2A9
+    case UniF2AA
+    case UniF2AB
+    case UniF2AC
+    case UniF2AD
+    case UniF2AE
+    case UniF2B0
+    case UniF2B1
+    case UniF2B2
+    case UniF2B3
+    case UniF2B4
+    case UniF2B5
+    case UniF2B6
+    case UniF2B7
+    case UniF2B8
+    case UniF2B9
+    case UniF2BA
+    case UniF2BB
+    case UniF2BC
+    case UniF2BD
+    case UniF2BE
+    case Unlink
+    case Unlock
+    case UnlockAlt
+    case Upload
+    case UploadAlt
+    case Usd
+    case User
+    case UserMd
+    case Venus
+    case VimeoSquare
+    case Vk
+    case VolumeDown
+    case VolumeOff
+    case VolumeUp
+    case WarningSign
+    case Weibo
+    case Windows
+    case Wrench
+    case Xing
+    case XingSign
+    case Youtube
+    case YoutubePlay
+    case YoutubeSign
+    case ZoomIn
+    case ZoomOut
+
+    // Useful to get the total count of icons. This index doesn't have any associated unicode value.
+    case TotalCount
+}
+
+/**
+A list of unicode characters associated with each Icon case, in order.
+*/
+public let IconMapping: Array<String> = [
+    "\u{F129}",
+    "\u{F12D}",
+    "\u{F143}",
+    "\u{F14C}",
+    "\u{F152}",
+    "\u{F15E}",
+    "\u{F164}",
+    "\u{F165}",
+    "\u{F186}",
+    "\u{F18C}",
+    "\u{F18E}",
+    "\u{F191}",
+    "\u{F193}",
+    "\u{F195}",
+    "\u{F197}",
+    "\u{F198}",
+    "\u{F199}",
+    "\u{F19A}",
+    "\u{F19B}",
+    "\u{F19C}",
+    "\u{F19D}",
+    "\u{F19E}",
+    "\u{F1A2}",
+    "\u{F1A3}",
+    "\u{F1A5}",
+    "\u{F1A6}",
+    "\u{F1A7}",
+    "\u{F1A8}",
+    "\u{F1A9}",
+    "\u{F1AA}",
+    "\u{F1AC}",
+    "\u{F1AD}",
+    "\u{F1AE}",
+    "\u{F1B1}",
+    "\u{F1B2}",
+    "\u{F1B3}",
+    "\u{F1B4}",
+    "\u{F1B5}",
+    "\u{F1B6}",
+    "\u{F1B7}",
+    "\u{F1B8}",
+    "\u{F1B9}",
+    "\u{F1BA}",
+    "\u{F1BB}",
+    "\u{F1BC}",
+    "\u{F1BD}",
+    "\u{F1BE}",
+    "\u{F1C2}",
+    "\u{F1C3}",
+    "\u{F1C4}",
+    "\u{F1C5}",
+    "\u{F1C6}",
+    "\u{F1C7}",
+    "\u{F1C8}",
+    "\u{F1C9}",
+    "\u{F1CA}",
+    "\u{F1CB}",
+    "\u{F1CC}",
+    "\u{F1CD}",
+    "\u{F1CE}",
+    "\u{F1D3}",
+    "\u{F1D4}",
+    "\u{F1D8}",
+    "\u{F1D9}",
+    "\u{F1DA}",
+    "\u{F1DB}",
+    "\u{F1DC}",
+    "\u{F1DD}",
+    "\u{F1DE}",
+    "\u{F1E1}",
+    "\u{F1E2}",
+    "\u{F1E3}",
+    "\u{F1E4}",
+    "\u{F1E5}",
+    "\u{F1E6}",
+    "\u{F1E7}",
+    "\u{F1E8}",
+    "\u{F1E9}",
+    "\u{F1EA}",
+    "\u{F1EB}",
+    "\u{F1EC}",
+    "\u{F1ED}",
+    "\u{F1EE}",
+    "\u{F1F1}",
+    "\u{F1F2}",
+    "\u{F1F4}",
+    "\u{F1F5}",
+    "\u{F1F6}",
+    "\u{F1F7}",
+    "\u{F1F8}",
+    "\u{F1F9}",
+    "\u{F1FA}",
+    "\u{F1FB}",
+    "\u{F1FD}",
+    "\u{F1FE}",
+    "\u{F200}",
+    "\u{F201}",
+    "\u{F202}",
+    "\u{F203}",
+    "\u{F204}",
+    "\u{F205}",
+    "\u{F206}",
+    "\u{F207}",
+    "\u{F208}",
+    "\u{F209}",
+    "\u{F20A}",
+    "\u{F20B}",
+    "\u{F20C}",
+    "\u{F20D}",
+    "\u{F20E}",
+    "\u{F211}",
+    "\u{F213}",
+    "\u{F214}",
+    "\u{F215}",
+    "\u{F216}",
+    "\u{F217}",
+    "\u{F218}",
+    "\u{F219}",
+    "\u{F21A}",
+    "\u{F21B}",
+    "\u{F21C}",
+    "\u{F21D}",
+    "\u{F21E}",
+    "\u{F222}",
+    "\u{F223}",
+    "\u{F224}",
+    "\u{F225}",
+    "\u{F226}",
+    "\u{F227}",
+    "\u{F228}",
+    "\u{F229}",
+    "\u{F22A}",
+    "\u{F22B}",
+    "\u{F22C}",
+    "\u{F22D}",
+    "\u{F22E}",
+    "\u{F22F}",
+    "\u{F230}",
+    "\u{F231}",
+    "\u{F232}",
+    "\u{F233}",
+    "\u{F234}",
+    "\u{F235}",
+    "\u{F236}",
+    "\u{F237}",
+    "\u{F238}",
+    "\u{F239}",
+    "\u{F23A}",
+    "\u{F23B}",
+    "\u{F23C}",
+    "\u{F23D}",
+    "\u{F23E}",
+    "\u{F240}",
+    "\u{F241}",
+    "\u{F242}",
+    "\u{F243}",
+    "\u{F244}",
+    "\u{F245}",
+    "\u{F246}",
+    "\u{F247}",
+    "\u{F248}",
+    "\u{F249}",
+    "\u{F24A}",
+    "\u{F24B}",
+    "\u{F24C}",
+    "\u{F24D}",
+    "\u{F24E}",
+    "\u{F250}",
+    "\u{F251}",
+    "\u{F252}",
+    "\u{F253}",
+    "\u{F254}",
+    "\u{F255}",
+    "\u{F256}",
+    "\u{F257}",
+    "\u{F258}",
+    "\u{F259}",
+    "\u{F25A}",
+    "\u{F25B}",
+    "\u{F25C}",
+    "\u{F25D}",
+    "\u{F25E}",
+    "\u{F262}",
+    "\u{F264}",
+    "\u{F265}",
+    "\u{F266}",
+    "\u{F267}",
+    "\u{F268}",
+    "\u{F269}",
+    "\u{F26A}",
+    "\u{F26B}",
+    "\u{F26C}",
+    "\u{F26D}",
+    "\u{F26E}",
+    "\u{F270}",
+    "\u{F271}",
+    "\u{F272}",
+    "\u{F273}",
+    "\u{F274}",
+    "\u{F275}",
+    "\u{F276}",
+    "\u{F277}",
+    "\u{F278}",
+    "\u{F279}",
+    "\u{F27A}",
+    "\u{F27B}",
+    "\u{F27C}",
+    "\u{F27D}",
+    "\u{F282}",
+    "\u{F283}",
+    "\u{F284}",
+    "\u{F287}",
+    "\u{F288}",
+    "\u{F289}",
+    "\u{F28A}",
+    "\u{F28B}",
+    "\u{F28C}",
+    "\u{F28D}",
+    "\u{F28E}",
+    "\u{F290}",
+    "\u{F291}",
+    "\u{F292}",
+    "\u{F293}",
+    "\u{F294}",
+    "\u{F295}",
+    "\u{F296}",
+    "\u{F297}",
+    "\u{F298}",
+    "\u{F299}",
+    "\u{F29A}",
+    "\u{F29B}",
+    "\u{F29C}",
+    "\u{F29D}",
+    "\u{F29E}",
+    "\u{F042}",
+    "\u{F170}",
+    "\u{F037}",
+    "\u{F039}",
+    "\u{F036}",
+    "\u{F038}",
+    "\u{F0F9}",
+    "\u{F13D}",
+    "\u{F17B}",
+    "\u{F107}",
+    "\u{F104}",
+    "\u{F105}",
+    "\u{F106}",
+    "\u{F179}",
+    "\u{F187}",
+    "\u{F190}",
+    "\u{F063}",
+    "\u{F060}",
+    "\u{F061}",
+    "\u{F062}",
+    "\u{F069}",
+    "\u{F04A}",
+    "\u{F05E}",
+    "\u{F080}",
+    "\u{F02A}",
+    "\u{F0C3}",
+    "\u{F0FC}",
+    "\u{F0A2}",
+    "\u{F0F3}",
+    "\u{F172}",
+    "\u{F032}",
+    "\u{F0E7}",
+    "\u{F02D}",
+    "\u{F02E}",
+    "\u{F097}",
+    "\u{F0B1}",
+    "\u{F15A}",
+    "\u{F188}",
+    "\u{F0F7}",
+    "\u{F0A1}",
+    "\u{F140}",
+    "\u{F073}",
+    "\u{F133}",
+    "\u{F030}",
+    "\u{F083}",
+    "\u{F0D7}",
+    "\u{F0D9}",
+    "\u{F0DA}",
+    "\u{F0D8}",
+    "\u{F0A3}",
+    "\u{F046}",
+    "\u{F096}",
+    "\u{F147}",
+    "\u{F14A}",
+    "\u{F078}",
+    "\u{F053}",
+    "\u{F054}",
+    "\u{F13A}",
+    "\u{F137}",
+    "\u{F138}",
+    "\u{F139}",
+    "\u{F077}",
+    "\u{F111}",
+    "\u{F0AB}",
+    "\u{F0A8}",
+    "\u{F0A9}",
+    "\u{F0AA}",
+    "\u{F10C}",
+    "\u{F0C2}",
+    "\u{F0ED}",
+    "\u{F0EE}",
+    "\u{F121}",
+    "\u{F126}",
+    "\u{F0F4}",
+    "\u{F013}",
+    "\u{F085}",
+    "\u{F150}",
+    "\u{F117}",
+    "\u{F151}",
+    "\u{F0DB}",
+    "\u{F075}",
+    "\u{F0E5}",
+    "\u{F086}",
+    "\u{F0E6}",
+    "\u{F14E}",
+    "\u{F0C5}",
+    "\u{F09D}",
+    "\u{F125}",
+    "\u{F13C}",
+    "\u{F0C4}",
+    "\u{F0E4}",
+    "\u{F108}",
+    "\u{F192}",
+    "\u{F103}",
+    "\u{F100}",
+    "\u{F101}",
+    "\u{F102}",
+    "\u{F01A}",
+    "\u{F019}",
+    "\u{F17D}",
+    "\u{F16B}",
+    "\u{F044}",
+    "\u{F14B}",
+    "\u{F052}",
+    "\u{F141}",
+    "\u{F142}",
+    "\u{F003}",
+    "\u{F0E0}",
+    "\u{F153}",
+    "\u{F0EC}",
+    "\u{F12A}",
+    "\u{F06A}",
+    "\u{F116}",
+    "\u{F08E}",
+    "\u{F070}",
+    "\u{F06E}",
+    "\u{F0FE}",
+    "\u{F171}",
+    "\u{F1A1}",
+    "\u{F1A4}",
+    "\u{F1AB}",
+    "\u{F1F3}",
+    "\u{F1FC}",
+    "\u{F210}",
+    "\u{F212}",
+    "\u{F260}",
+    "\u{F261}",
+    "\u{F263}",
+    "\u{F27E}",
+    "\u{F09A}",
+    "\u{F082}",
+    "\u{F03D}",
+    "\u{F049}",
+    "\u{F050}",
+    "\u{F182}",
+    "\u{F0FB}",
+    "\u{F15B}",
+    "\u{F016}",
+    "\u{F15C}",
+    "\u{F0F6}",
+    "\u{F008}",
+    "\u{F0B0}",
+    "\u{F06D}",
+    "\u{F134}",
+    "\u{F024}",
+    "\u{F11D}",
+    "\u{F11E}",
+    "\u{F16E}",
+    "\u{F07B}",
+    "\u{F114}",
+    "\u{F07C}",
+    "\u{F115}",
+    "\u{F031}",
+    "\u{F0F5}",
+    "\u{F04E}",
+    "\u{F180}",
+    "\u{F119}",
+    "\u{F0B2}",
+    "\u{F11B}",
+    "\u{F154}",
+    "\u{F06B}",
+    "\u{F09B}",
+    "\u{F113}",
+    "\u{F092}",
+    "\u{F184}",
+    "\u{F000}",
+    "\u{F0AC}",
+    "\u{F0D5}",
+    "\u{F0D4}",
+    "\u{F0C0}",
+    "\u{F0FD}",
+    "\u{F0A7}",
+    "\u{F0A5}",
+    "\u{F0A4}",
+    "\u{F0A6}",
+    "\u{F0A0}",
+    "\u{F025}",
+    "\u{F004}",
+    "\u{F08A}",
+    "\u{F015}",
+    "\u{F0F8}",
+    "\u{F13B}",
+    "\u{F01C}",
+    "\u{F03B}",
+    "\u{F03C}",
+    "\u{F05A}",
+    "\u{F156}",
+    "\u{F16D}",
+    "\u{F033}",
+    "\u{F157}",
+    "\u{F084}",
+    "\u{F11C}",
+    "\u{F159}",
+    "\u{F109}",
+    "\u{F06C}",
+    "\u{F0E3}",
+    "\u{F094}",
+    "\u{F500}",
+    "\u{F149}",
+    "\u{F148}",
+    "\u{F0EB}",
+    "\u{F0C1}",
+    "\u{F0E1}",
+    "\u{F08C}",
+    "\u{F17C}",
+    "\u{F03A}",
+    "\u{F022}",
+    "\u{F124}",
+    "\u{F023}",
+    "\u{F175}",
+    "\u{F177}",
+    "\u{F178}",
+    "\u{F176}",
+    "\u{F0D0}",
+    "\u{F076}",
+    "\u{F183}",
+    "\u{F041}",
+    "\u{F136}",
+    "\u{F0FA}",
+    "\u{F11A}",
+    "\u{F130}",
+    "\u{F131}",
+    "\u{F068}",
+    "\u{F056}",
+    "\u{F146}",
+    "\u{F10B}",
+    "\u{F0D6}",
+    "\u{F047}",
+    "\u{F001}",
+    "\u{F011}",
+    "\u{F00C}",
+    "\u{F05D}",
+    "\u{F058}",
+    "\u{F0CB}",
+    "\u{F0C6}",
+    "\u{F0EA}",
+    "\u{F04C}",
+    "\u{F040}",
+    "\u{F095}",
+    "\u{F098}",
+    "\u{F03E}",
+    "\u{F0D2}",
+    "\u{F0D3}",
+    "\u{F072}",
+    "\u{F04B}",
+    "\u{F01D}",
+    "\u{F144}",
+    "\u{F067}",
+    "\u{F055}",
+    "\u{F196}",
+    "\u{F02F}",
+    "\u{F08D}",
+    "\u{F12E}",
+    "\u{F029}",
+    "\u{F128}",
+    "\u{F059}",
+    "\u{F10D}",
+    "\u{F10E}",
+    "\u{F074}",
+    "\u{F021}",
+    "\u{F00D}",
+    "\u{F05C}",
+    "\u{F057}",
+    "\u{F18B}",
+    "\u{F0C9}",
+    "\u{F01E}",
+    "\u{F112}",
+    "\u{F122}",
+    "\u{F065}",
+    "\u{F07E}",
+    "\u{F066}",
+    "\u{F07D}",
+    "\u{F079}",
+    "\u{F018}",
+    "\u{F135}",
+    "\u{F09E}",
+    "\u{F158}",
+    "\u{F0C7}",
+    "\u{F05B}",
+    "\u{F002}",
+    "\u{F045}",
+    "\u{F064}",
+    "\u{F14D}",
+    "\u{F132}",
+    "\u{F07A}",
+    "\u{F0C8}",
+    "\u{F012}",
+    "\u{F090}",
+    "\u{F08B}",
+    "\u{F0E8}",
+    "\u{F17E}",
+    "\u{F118}",
+    "\u{F0DC}",
+    "\u{F15D}",
+    "\u{F160}",
+    "\u{F161}",
+    "\u{F162}",
+    "\u{F163}",
+    "\u{F0DD}",
+    "\u{F0DE}",
+    "\u{F110}",
+    "\u{F18D}",
+    "\u{F16C}",
+    "\u{F005}",
+    "\u{F006}",
+    "\u{F089}",
+    "\u{F123}",
+    "\u{F048}",
+    "\u{F051}",
+    "\u{F0F1}",
+    "\u{F04D}",
+    "\u{F0CC}",
+    "\u{F12C}",
+    "\u{F0F2}",
+    "\u{F185}",
+    "\u{F12B}",
+    "\u{F0CE}",
+    "\u{F10A}",
+    "\u{F02B}",
+    "\u{F02C}",
+    "\u{F0AE}",
+    "\u{F120}",
+    "\u{F034}",
+    "\u{F035}",
+    "\u{F00A}",
+    "\u{F009}",
+    "\u{F00B}",
+    "\u{F088}",
+    "\u{F087}",
+    "\u{F145}",
+    "\u{F017}",
+    "\u{F043}",
+    "\u{F014}",
+    "\u{F181}",
+    "\u{F091}",
+    "\u{F0D1}",
+    "\u{F173}",
+    "\u{F174}",
+    "\u{F099}",
+    "\u{F081}",
+    "\u{F0CA}",
+    "\u{F0E9}",
+    "\u{F0CD}",
+    "\u{F0E2}",
+    "\u{F1A0}",
+    "\u{F1B0}",
+    "\u{F1C0}",
+    "\u{F1C1}",
+    "\u{F1D0}",
+    "\u{F1D1}",
+    "\u{F1D2}",
+    "\u{F1D5}",
+    "\u{F1D6}",
+    "\u{F1D7}",
+    "\u{F1E0}",
+    "\u{F1F0}",
+    "\u{F280}",
+    "\u{F281}",
+    "\u{F285}",
+    "\u{F286}",
+    "\u{F2A0}",
+    "\u{F2A1}",
+    "\u{F2A2}",
+    "\u{F2A3}",
+    "\u{F2A4}",
+    "\u{F2A5}",
+    "\u{F2A6}",
+    "\u{F2A7}",
+    "\u{F2A8}",
+    "\u{F2A9}",
+    "\u{F2AA}",
+    "\u{F2AB}",
+    "\u{F2AC}",
+    "\u{F2AD}",
+    "\u{F2AE}",
+    "\u{F2B0}",
+    "\u{F2B1}",
+    "\u{F2B2}",
+    "\u{F2B3}",
+    "\u{F2B4}",
+    "\u{F2B5}",
+    "\u{F2B6}",
+    "\u{F2B7}",
+    "\u{F2B8}",
+    "\u{F2B9}",
+    "\u{F2BA}",
+    "\u{F2BB}",
+    "\u{F2BC}",
+    "\u{F2BD}",
+    "\u{F2BE}",
+    "\u{F127}",
+    "\u{F09C}",
+    "\u{F13E}",
+    "\u{F01B}",
+    "\u{F093}",
+    "\u{F155}",
+    "\u{F007}",
+    "\u{F0F0}",
+    "\u{F221}",
+    "\u{F194}",
+    "\u{F189}",
+    "\u{F027}",
+    "\u{F026}",
+    "\u{F028}",
+    "\u{F071}",
+    "\u{F18A}",
+    "\u{F17A}",
+    "\u{F0AD}",
+    "\u{F168}",
+    "\u{F169}",
+    "\u{F167}",
+    "\u{F16A}",
+    "\u{F166}",
+    "\u{F00E}",
+    "\u{F010}",
+]

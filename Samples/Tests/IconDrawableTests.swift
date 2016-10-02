@@ -26,7 +26,7 @@ extension TestIcon : IconDrawable {
     }
     
     init(named iconName: String) {
-        switch iconName.lowercased() {
+        switch iconName.lowercaseString {
         case "icon1": self = .icon1
         case "icon2": self = .icon2
         case "icon3": self = .icon3
@@ -36,7 +36,7 @@ extension TestIcon : IconDrawable {
         }
     }
     
-    public var name: String {
+    var name: String {
         switch self {
         case .icon1: return "icon1"
         case .icon2: return "icon2"
@@ -116,7 +116,7 @@ class IconDrawableTests: XCTestCase {
         
         XCTAssertNotNil(string)
         
-        string.enumerateAttribute(NSFontAttributeName, in: range, options: NSAttributedString.EnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
+        string.enumerateAttribute(NSFontAttributeName, inRange: range, options: NSAttributedStringEnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
             if let font = value as? UIFont {
                 XCTAssertEqual(font.familyName, TestIcon.familyName)
             }

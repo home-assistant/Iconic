@@ -1,5 +1,6 @@
 //: Playground - noun: a place where people can play
 import XCPlayground
+import Foundation
 import Iconic
 
 print(IconicVersionNumber)
@@ -12,7 +13,7 @@ FontAwesomeIcon.register()
 let icon = FontAwesomeIcon.Dribble
 let iconSize:CGFloat = 23
 let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 15)
-let color = UIColor.orange
+let color = UIColor.orangeColor()
 var attributedText = NSMutableAttributedString()
 
 //////////////////////////////
@@ -24,7 +25,7 @@ let font:UIFont = FontAwesomeIcon.font(ofSize: iconSize)
 
 let iconAttributes = [NSFontAttributeName: font,
                       NSForegroundColorAttributeName: color,
-                      NSBaselineOffsetAttributeName: edgeInsets.bottom-edgeInsets.top] as [String : Any]
+                      NSBaselineOffsetAttributeName: edgeInsets.bottom-edgeInsets.top]
 
 let iconString = " " + unicode + " "
 
@@ -43,8 +44,8 @@ let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 25),
 
 let titleAttrString = NSAttributedString(string: icon.name, attributes: titleAttributes)
 
-attributedText.append(mString)
-attributedText.append(titleAttrString)
+attributedText.appendAttributedString(mString)
+attributedText.appendAttributedString(titleAttrString)
 
 
 //////////////////////////////
@@ -53,6 +54,5 @@ attributedText.append(titleAttrString)
 attributedText = NSMutableAttributedString()
 aString = icon.attributedString(ofSize: iconSize, color: color, edgeInsets: edgeInsets)
 
-attributedText.append(aString)
-attributedText.append(titleAttrString)
-
+attributedText.appendAttributedString(aString)
+attributedText.appendAttributedString(titleAttrString)

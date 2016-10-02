@@ -61,12 +61,12 @@ FONT_PATH='path_to_your_icon_font.otf' pod install
 
 FONT_PATH='path_to_your_icon_font.otf' pod update Iconic
 ```
-When using the `FONT_PATH` environment variable, Iconic will be installed with a custom icon font and the auto-generated files and APIs will adopt the fon't name.
+When using the `FONT_PATH` environment variable, Iconic will be installed with a custom icon font and the auto-generated files and APIs will adopt the font's name.
 
 ```ruby
 pod install Iconic
 ```
-Will install Iconic with its default font, [FontAwesome](https://github.com/FortAwesome/Font-Awesome).
+will install Iconic with its default font, [FontAwesome](https://github.com/FortAwesome/Font-Awesome).
 
 After the installation, you should see a similar setup like this:
 ![Pod Setup](Screenshots/screenshot_pod_setup.png)

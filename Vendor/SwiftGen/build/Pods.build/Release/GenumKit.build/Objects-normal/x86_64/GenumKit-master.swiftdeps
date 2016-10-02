@@ -1,0 +1,14 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "9984e499d9cd618e8ab09294834a4f58"
+build_time: [528445978, 727578000]
+inputs:
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/GenumKit/Parsers/AssetsCatalogParser.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/GenumKit/Parsers/ColorsFileParser.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/GenumKit/Stencil/Contexts.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/GenumKit/Stencil/Filters.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/GenumKit/Stencil/GenumTemplate.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/GenumKit/Parsers/IconsFileParser.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/GenumKit/Stencil/SetNode.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/GenumKit/Parsers/StoryboardParser.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/GenumKit/Parsers/StringsFileParser.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/GenumKit/Stencil/SwiftIdentifier.swift": [9223372036854775807, 0]

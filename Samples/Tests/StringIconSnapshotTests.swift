@@ -30,7 +30,7 @@ class StringIconSnapshotTests: BaseSnapshotTestCase {
     func testFullIconMap() {
         
         var rect = CGRect(x: 0, y: 0, width: 500, height: 0)
-        let attributedString = NSAttributedString.iconMap(withSize: 20, spacing: 5, andColor: nil)
+        let attributedString = NSAttributedString.iconMapWithSize(20, spacing: 5, andColor: nil)
         
         let textView = UITextView(frame: rect)
         textView.attributedText = attributedString
@@ -55,13 +55,13 @@ class StringIconSnapshotTests: BaseSnapshotTestCase {
             let attributedText = NSMutableAttributedString()
             let iconString = icon.attributedString(ofSize: 25, color: nil, edgeInsets: edgeInset)
             
-            let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 25),
-                                   NSForegroundColorAttributeName: UIColor.black] as [String : Any]
+            let titleAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(25),
+                                   NSForegroundColorAttributeName: UIColor.blackColor()] as [String : AnyObject]
             
             let titleAttrString = NSAttributedString(string: icon.name, attributes: titleAttributes)
             
-            attributedText.append(iconString)
-            attributedText.append(titleAttrString)
+            attributedText.appendAttributedString(iconString)
+            attributedText.appendAttributedString(titleAttrString)
             
             let textView = UITextView()
             

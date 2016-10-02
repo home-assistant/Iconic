@@ -6,7 +6,7 @@
 //  Copyright © 2016 DZN. All rights reserved.
 //
 
-@import Foundation;
+@import UIKit;
 @import Iconic;
 
 @interface NSAttributedString (IconMapping)

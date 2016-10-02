@@ -1,0 +1,10 @@
+framework module GenumKit {
+  umbrella header "GenumKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module GenumKit.Swift {
+    header "GenumKit-Swift.h"
+}
