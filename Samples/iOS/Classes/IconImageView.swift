@@ -14,17 +14,17 @@ class IconImageView: UIImageView {
     
     // MARK: - Public & Inspectable properties
     
-    @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'icon' instead.")
+    @available(*, unavailable, message = "This property is reserved for Interface Builder. Use 'icon' instead.")
     @IBInspectable dynamic var iconName: String? {
         willSet {
             drawable = FontAwesomeIcon(named: newValue ?? "")
         }
     }
     
-    @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'tintColor' instead.")
+    @available(*, unavailable, message = "This property is reserved for Interface Builder. Use 'tintColor' instead.")
     @IBInspectable dynamic var iconColor: UIColor! {
         willSet {
-            tintColor = newValue ?? UIColor.black
+            tintColor = newValue ?? UIColor.blackColor()
         }
     }
     
@@ -53,8 +53,8 @@ class IconImageView: UIImageView {
         commonInit()
     }
     
-    fileprivate func commonInit() {
-        self.backgroundColor = UIColor.clear
+    private func commonInit() {
+        self.backgroundColor = UIColor.clearColor()
     }
     
     
@@ -77,7 +77,7 @@ class IconImageView: UIImageView {
         updateIconImage()
     }
     
-    @available(*, unavailable, message : "Reserved for when designable objects are created in Interface Builder.")
+    @available(*, unavailable, message = "Reserved for when designable objects are created in Interface Builder.")
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         

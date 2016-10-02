@@ -28,8 +28,8 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
     
     func testImagePatternColor() {
         
-        let bundle = Bundle(for: type(of: self))
-        let pattern = UIImage(named: "pattern", in: bundle, compatibleWith: nil)
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let pattern = UIImage(named: "pattern", inBundle: bundle, compatibleWithTraitCollection: nil)
         let color = UIColor(patternImage: pattern!)
         let size = CGSize(width: 60, height: 60)
 
@@ -47,7 +47,7 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
             
             let size = CGSize(width: pointSize, height: pointSize)
 
-            let image = FontAwesomeIcon.GithubAlt.image(ofSize: size, color: UIColor.red)
+            let image = FontAwesomeIcon.GithubAlt.image(ofSize: size, color: UIColor.redColor())
             let imageView = UIImageView(image: image)
             
             XCTAssertEqual(image.size, size)
@@ -74,7 +74,7 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
         
         let size = CGSize(width: 88, height: 88)
 
-        let image = FontAwesomeIcon.Github.image(ofSize: size, color: nil, edgeInsets: UIEdgeInsets.zero)
+        let image = FontAwesomeIcon.Github.image(ofSize: size, color: nil, edgeInsets: UIEdgeInsetsZero)
         let imageView = UIImageView(image: image)
         
         XCTAssertEqual(image.size, size)

@@ -13,8 +13,9 @@
 + (nonnull instancetype)iconMapWithSize:(CGFloat)size spacing:(CGFloat)spacing andColor:(nullable UIColor *)color
 {
     NSMutableAttributedString *attributedText = [NSMutableAttributedString new];
+    NSInteger count = [Iconic fontAwesomeIconCount];
     
-    for (int i = 0; i < [Iconic fontAwesomeIconCount]; i++) {
+    for (int i = 0; i < count; i++) {
         
         NSAttributedString *aString = [Iconic attributedStringWithIcon:i pointSize:size color:color];
         NSMutableAttributedString *mString = [[NSMutableAttributedString alloc] initWithAttributedString:aString];
