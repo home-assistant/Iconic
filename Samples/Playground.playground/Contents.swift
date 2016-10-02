@@ -1,5 +1,6 @@
 //: Playground - noun: a place where people can play
 import XCPlayground
+import Foundation
 import Iconic
 
 print(IconicVersionNumber)
