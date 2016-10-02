@@ -68,8 +68,6 @@ pod install Iconic
 ```
 will install Iconic with its default font, [FontAwesome](https://github.com/FortAwesome/Font-Awesome).
 
-Because Iconic uses SwiftGen as a submodule dependency, you also need to put `:submodules => true` in your Podfile.
-
 After the installation, you should see a similar setup like this:
 ![Pod Setup](Screenshots/screenshot_pod_setup.png)
 

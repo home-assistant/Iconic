@@ -5,7 +5,7 @@ abstract_target 'Playground'
 use_frameworks!
 
 def common_pods
-    pod 'Iconic', :path => '../Iconic.podspec', :submodules => true
+    pod 'Iconic', :path => '../Iconic.podspec'
 end
 
 target 'iOS' do
