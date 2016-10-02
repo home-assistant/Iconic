@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Release/GenumKit.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/build/Pods.build/Release/GenumKit.build/unextended-module.modulemap',
+    }]
+  }]
+}

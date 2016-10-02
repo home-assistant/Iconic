@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "5c8bbc6e2ff301bb52f62931ddc0d4d8"
+build_time: [528445958, 914424000]
+inputs:
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/PathKit/Sources/PathKit.swift": [9223372036854775807, 0]

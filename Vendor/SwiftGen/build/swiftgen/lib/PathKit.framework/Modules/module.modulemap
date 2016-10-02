@@ -1,0 +1,10 @@
+framework module PathKit {
+  umbrella header "PathKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module PathKit.Swift {
+    header "PathKit-Swift.h"
+}
