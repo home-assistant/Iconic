@@ -31,7 +31,7 @@
     XCTAssertTrue([font.familyName isEqualToString:@"FontAwesome"]);
     XCTAssertEqual(font.pointSize, 20.0);
     
-    NSString *familyName = [Iconic fontAwesomeFamilyName];
+    NSString *familyName = [Iconic fontAwesomeIconFamilyName];
     XCTAssertTrue([familyName isEqualToString:@"FontAwesome"]);
     
     NSInteger count = [Iconic fontAwesomeIconCount];

@@ -8,7 +8,7 @@ import UIKit
 public extension Iconic {
 
     /** The icon font's family name. */
-    @objc class var {{familyName|lowerFirstWord}}FamilyName: NSString {
+    @objc class var {{enumName|lowerFirstWord}}FamilyName: NSString {
         return {{enumName}}.familyName as NSString
     }
     
@@ -34,6 +34,17 @@ public extension Iconic {
     @objc class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
         return icon.attributedString(ofSize: pointSize, color: color)
     }
+
+    /**
+     Returns the icon as an attributed string with the given pointSize, color and padding.
+     
+     - parameter pointSize: The size of the font.
+     - parameter color: The tint color of the font.
+     - parameter edgeInsets: The edge insets to be used as horizontal and vertical padding.
+     */
+    @objc class func attributedString2(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
+        return icon.attributedString(ofSize: pointSize, color: color, edgeInsets: edgeInsets)
+    }
     
     /**
      Returns the icon as an image with the given size and color.
@@ -44,7 +55,18 @@ public extension Iconic {
     @objc class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?) -> UIImage {
         return icon.image(ofSize: size, color: color)
     }
-    
+
+    /**
+     Returns the icon as an image with the given size and color.
+     
+     - parameter size: The size of the image, in points.
+     - parameter color: The tint color of the image.
+     - parameter edgeInsets: The edge insets to be used as padding values.
+     */
+    @objc class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage {
+        return icon.image(ofSize: size, color: color, edgeInsets: edgeInsets)
+    }
+
     /**
      Registers the icon font with the font manager.
      Note: an exception will be thrown if the resource (ttf/otf) font file is not found in the bundle.
