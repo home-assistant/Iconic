@@ -19,12 +19,6 @@ STENCIL_PATH=Source/iconic-default.stencil
 CATALOG_PATH=Source/Catalog
 OUTPUT_PATH=Source/
 
-
-# If the output param is missing, use the same directory than the input's
-if [ -z ${OUTPUT_PATH} ] ; then
-    OUTPUT_PATH=$(dirname ${INPUT_PATH})
-fi
-
 function iconize()
 {
     # Input variables
