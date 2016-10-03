@@ -19,6 +19,30 @@ STENCIL_PATH=Source/iconic-default.stencil
 CATALOG_PATH=Source/Catalog
 OUTPUT_PATH=Source/
 
+
+function getFileTitle()
+{
+    # Input variables
+    filename=$1
+
+    # Removes the file extension
+    name="${filename%.*}"
+    
+    # Splits and removes all substrings with the separator characters in the file name
+    # like whitespaces, dash, underscore, etc.
+    title="${name%%[" -_–"]*}"
+    
+    # Specially, we want to strip the string starting from the word "Icon", and append it manually,
+    # so a string like 'MaterialIconsFont' would look like 'MaterialIcon'.
+    title="${title%%"icon"*}"
+    title="${title%%"Icon"*}Icon"
+    
+    # Upper case the first character
+    title="$(tr '[:lower:]' '[:upper:]' <<< ${title:0:1})${title:1}"
+
+    echo "${title}"
+}
+
 function iconize()
 {
     # Input variables
@@ -27,13 +51,9 @@ function iconize()
     
     echo "Iconizer: Starting with file path ${FONT_PATH}"
 
-    # Input's file name and extension
-    FILE_TITLE="${FONT_NAME%.*}"
-    FILE_NAME="${FILE_TITLE%%"-"*}Icon"
-
     # Capitalized first word of the file name, with the 'Icon' suffix.
     # ie: FontAwesomeIcon out of a string like 'FontAwesome'
-    OUTPUT_NAME=$(tr '[:lower:]' '[:upper:]' <<< ${FILE_NAME:0:1})${FILE_NAME:1}
+    OUTPUT_NAME=$( getFileTitle "${FONT_NAME}" )
 
 	# Creates the output folder (no error if existing)
 	mkdir -p ${OUTPUT_PATH}/
@@ -49,16 +69,18 @@ function iconize()
 }
 
 
-
 # Only TTF and OTF are supported font files
 if [ -z ${INPUT_PATH} ]; then
 	echo "Iconizer: Missing font file at path ${INPUT_PATH}. Please provide a TTF or OTF file path."
 else
+    echo "Iconizer: Initializing with path ${INPUT_PATH}"
+
     # Input's file name and extension
     INPUT_NAME=$(basename "${INPUT_PATH}")
+    echo "Iconizer: INPUT_NAME = ${INPUT_NAME}"
+    
     INPUT_EXTENSION="${INPUT_NAME##*.}"
-
-    echo "Iconizer: Initializing..."
+    echo "Iconizer: INPUT_EXTENSION = ${INPUT_EXTENSION}"
 
     if [ ${INPUT_EXTENSION} = 'ttf' ] || [ ${INPUT_EXTENSION} = 'otf' ]; then
 
