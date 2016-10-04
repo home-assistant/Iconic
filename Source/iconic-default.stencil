@@ -22,7 +22,7 @@ public extension Iconic {
      - parameter size: The size (in points) to which the font is scaled.
      */
     @objc class func {{enumName|lowerFirstWord}}Font(ofSize size: CGFloat) -> UIFont {
-        return {{enumName}}.font(ofSize: size)
+        return {{enumNameattributedString}}.font(ofSize: size)
     }
     
     /**
@@ -42,7 +42,7 @@ public extension Iconic {
      - parameter color: The tint color of the font.
      - parameter edgeInsets: The edge insets to be used as horizontal and vertical padding.
      */
-    @objc class func attributedString2(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
+    @objc class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
         return icon.attributedString(ofSize: pointSize, color: color, edgeInsets: edgeInsets)
     }
     
