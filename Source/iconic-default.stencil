@@ -22,7 +22,7 @@ public extension Iconic {
      - parameter size: The size (in points) to which the font is scaled.
      */
     @objc class func {{enumName|lowerFirstWord}}Font(ofSize size: CGFloat) -> UIFont {
-        return {{enumNameattributedString}}.font(ofSize: size)
+        return {{enumName}}.font(ofSize: size)
     }
     
     /**
