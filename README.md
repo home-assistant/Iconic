@@ -12,17 +12,14 @@ You will interact with an auto-generated class under the name of `{FontName}Icon
 
 Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and pick the `Samples.xcworkspace`.
 
-_Note: This library is currently in beta. APIs may change without backwards compatibility._
-
 <p align="center">
 <img src="https://github.com/dzenbot/Iconic/blob/master/Screenshots/screenshot_scale.gif?raw=true" alt="Scale Example"/>
 </p>
 
 
-## Why Icon Fonts
-Web developers have been using icon fonts for quite some time now.
+## Why Icon Fonts?
 
-#### There are many advantages of using icon fonts on iOS:
+#### Many advantages:
 - Resolution independent: scale and tint without quality loss.
 - Automatically scaled for different screen densities.
 - Work with (way) less image files.
@@ -40,7 +37,7 @@ Web developers have been using icon fonts for quite some time now.
 
 ## Key Features
 - [Very easy to install with CocoaPods](#installation).
-- Compatible with Swift and Objective-C.
+- Compatible with Swift 2.3 and Objective-C.
 - Supports TTF and OTF font files.
 - Auto-generates enums and unicodes mapping, out of the font's [PUA range](https://en.wikipedia.org/wiki/Private_Use_Areas).
 - `NSAttributedString` and `UIImage` outputs.
@@ -57,16 +54,16 @@ _Note: Some open sourced icon fonts don't include the names of each of their gly
 
 #### Via CocoaPods
 ```ruby
+pod install Iconic
+```
+will install Iconic with its default font, [FontAwesome](https://github.com/FortAwesome/Font-Awesome).
+
+```ruby
 FONT_PATH='path_to_your_icon_font.otf' pod install
 
 FONT_PATH='path_to_your_icon_font.otf' pod update Iconic
 ```
 When using the `FONT_PATH` environment variable, Iconic will be installed with a custom icon font and the auto-generated files and APIs will adopt the font's name.
-
-```ruby
-pod install Iconic
-```
-will install Iconic with its default font, [FontAwesome](https://github.com/FortAwesome/Font-Awesome).
 
 After the installation, you should see a similar setup like this:
 ![Pod Setup](Screenshots/screenshot_pod_setup.png)
@@ -77,12 +74,12 @@ For complete documentation, visit [CocoaPods' auto-generated docs](http://cocoad
 
 ### Import
 Import the Iconic module:
-##### Swift
 ```swift
+// Swift
 import Iconic
 ```
-##### Obj-C
 ```objc
+// Objc
 @import Iconic;
 ```
 
@@ -92,30 +89,29 @@ Registration is required to activate Iconic. You shall do this once, when launch
 
 Iconic provides a convenient way to register the icon font:
 Note: the method name may change depending of your icon font's name:
-##### Swift
 ```swift
+// Swift
 FontAwesomeIcon.register()
 ```
-```
-##### Obj-C
 ```objc
+// Objc
 [Iconic registerFontAwesomeIcon];
 ```
 
 
-### Use as images
+## Use as images
 You can construct an `UIImage` instance out of a font's icon and tint it. This may be very convenient for integrating with existing UIKit controls which expect `UIImage` objects already.
 
 Images are created using NSStringDraw APIs to render a `UIImage` out of an `NSAttributedString`.
-
 ```swift
+// Swift
 let size = CGSize(width: 20, height: 20)
 
 let icon = FontAwesomeIcon.Home
-let image = icon.image(ofSize: size, color: UIColor.blue)
+let image = icon.image(ofSize: size, color: .blueColor())
 ```
-##### Obj-C
 ```objc
+// Objc
 [Iconic imageWithIcon:FontAwesomeIconHome size:CGSizeMake(20, 20) color:[UIColor blueColor]];
 ```
 
@@ -123,53 +119,66 @@ let image = icon.image(ofSize: size, color: UIColor.blue)
 You may need to icons as text too, and simplify your layout work.
 For example, instead of having an image and a label, you can combined it all in one single label:
 ```swift
-let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 10)
-
+// Swift
 let icon = FontAwesomeIcon.Home 
-let iconString = icon.attributedString(ofSize: 20, color: UIColor.blue, edgeInsets: edgeInsets)
+let iconString = icon.attributedString(ofSize: 20, color: .blueColor())
 ```
-##### Obj-C
 ```objc
-
+// Objc
+[Iconic attributedStringWithIcon:FontAwesomeIconHome pointSize:20.0 color:[UIColor blueColor]];
 ```
 
 
 ### Use as unicode string
 Ultimately, you may need to retrieve the unicode string representation on an icon to do more advanced things:
 ```swift
+// Swift
 let unicode = FontAwesomeIcon.Home.unicode
 ```
-##### Obj-C
 ```objc
-NSString *unicode = [Iconic unicodeStringWithIcon:FontAwesomeIconHome];
+// Not available in Objc
 ```
-
 
 ### Use as font
 For further customization, you may need to use the UIFont object instead:
 ```swift
+// Swift
 let font = FontAwesomeIcon.font(ofSize: 20)
 ```
-##### Obj-C
-```swift
-UIFont *font =  [Iconic fontAwesomeFontOfSize:20.0];
+```objc
+// Objc
+UIFont *font = [Iconic fontAwesomeIconFontOfSize:20.0];
 ```
 
 
 ### UIKit Extensions
 UIKit extensions are also included, just to make your code look simpler:
 ```swift
+// Swift
+
 // UITarbBarItem
-let tabItem = UITabBarItem(icon: .Book, size:20, title: "Catalog", tag: 0)
+UITabBarItem(withIcon: .Book, size: CGSize(width: 20, height: 20), title: "Catalog")
 
 // UIBarButtonItem
-let buttonItem = UIBarButtonItem(icon: .Book, size:20, target: self, action: #selector(didTapButton))
+UIBarButtonItem(withIcon: .Book, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapButton))
 
 // UIButton
 let button = UIButton(type: .System)
-button.setIcon(icon: .Code, size: 20, forState: .Normal)
+button.setIconImage(withIcon: .Heart, size: CGSize(width: 44, height: 44), color: nil, forState: .Normal)
 ```
+```objc
+// Objc
 
+// UITarbBarItem
+[[UITabBarItem alloc] initWithIcon:FontAwesomeIconBook size:CGSizeMake(20.0, 20.0) title:@"Catalog"];
+
+// UIBarButtonItem
+[[UIBarButtonItem alloc] initWithIcon:FontAwesomeIconCog size:CGSizeMake(24.0, 24.0) target:self action:@selector(didTapButton)];
+
+// UIButton
+UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+[button setIconImageWithIcon:FontAwesomeIconHeart size:CGSizeMake(44.0, 44.0) color:nil forState:UIControlStateNormal];
+```
 
 ## Sample Project
 Check out the sample project, everything is demo'd there.
@@ -177,16 +186,7 @@ Check out the sample project, everything is demo'd there.
 
 Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and pick the `Samples.xcworkspace`.
 
-On the sample project, Iconic is installed as a development pod. Because of this, pod files are not versioned. Therefore, if you clone the repo, you will also need to fetch the submodules:
-```
-git submodule init
-git submodule update
-```
-
-and then, install the pods:
-```
-pod install
-```
+On the sample project, Iconic is installed as a development pod. Because of this, pod files are not versioned. Therefore, if you clone the repo manually, you will to install the pods yourself.
 
 
 ## Icon Font Catalog
