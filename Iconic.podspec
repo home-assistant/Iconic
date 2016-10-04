@@ -1,4 +1,4 @@
-@version = '1.0.0-beta4'
+@version = '1.0.0'
 
 Pod::Spec.new do |s|
   
