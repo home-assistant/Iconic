@@ -34,18 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F529152A1D83B08E006305E4"
-               BuildableName = "SnapshotTests.xctest"
-               BlueprintName = "SnapshotTests"
-               ReferencedContainer = "container:Samples.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F54BAFD11D0A6123004757C9"
-               BuildableName = "UnitTests.xctest"
-               BlueprintName = "UnitTests"
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:Samples.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -84,8 +74,13 @@
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
             key = "FB_REFERENCE_IMAGE_DIR"
-            value = "$(SOURCE_ROOT)/SnapshotTests/ReferenceImages"
+            value = "$(SOURCE_ROOT)/Tests/ReferenceImages"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

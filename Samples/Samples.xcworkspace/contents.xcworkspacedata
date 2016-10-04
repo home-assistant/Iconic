@@ -4,6 +4,49 @@
    <FileRef
       location = "group:Playground.playground">
    </FileRef>
+   <Group
+      location = "group:"
+      name = "Config">
+      <FileRef
+         location = "group:../Iconic.podspec">
+      </FileRef>
+      <FileRef
+         location = "group:../Installer.sh">
+      </FileRef>
+      <FileRef
+         location = "group:../Source/Iconizer.sh">
+      </FileRef>
+      <FileRef
+         location = "group:../Source/iconic-default.stencil">
+      </FileRef>
+      <FileRef
+         location = "group:../LICENSE">
+      </FileRef>
+      <FileRef
+         location = "group:../README.md">
+      </FileRef>
+      <FileRef
+         location = "group:Podfile">
+      </FileRef>
+      <FileRef
+         location = "group:../Dangerfile">
+      </FileRef>
+      <FileRef
+         location = "group:../Config/enumerable_stats.rb">
+      </FileRef>
+      <FileRef
+         location = "group:../Gemfile">
+      </FileRef>
+      <FileRef
+         location = "group:../.travis.yml">
+      </FileRef>
+      <FileRef
+         location = "group:../.codecov.yml">
+      </FileRef>
+      <FileRef
+         location = "group:../.gitignore">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Samples.xcodeproj">
    </FileRef>

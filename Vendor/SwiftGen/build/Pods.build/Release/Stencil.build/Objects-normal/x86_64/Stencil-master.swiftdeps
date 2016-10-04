@@ -1,0 +1,16 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "ef1ab3ef9093a7e124ea5710b6bebc2a"
+build_time: [528787711, 775932000]
+inputs:
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Context.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Filters.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Include.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Inheritence.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Lexer.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Namespace.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Node.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Parser.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Template.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/TemplateLoader.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Tokenizer.swift": [9223372036854775807, 0]
+  "/Users/iromero/Desktop/DZN/OSS/Iconic/Vendor/SwiftGen/Pods/Stencil/Sources/Variable.swift": [9223372036854775807, 0]

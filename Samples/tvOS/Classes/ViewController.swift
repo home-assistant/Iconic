@@ -17,13 +17,14 @@ class ViewController: UIViewController {
     
     var scale:UInt = 10
     let maxScale:UInt = 50
-
+    let buttonSize:CGSize = CGSize(width: 60, height: 60)
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        upButton.setIcon(.AngleUp, size: 60, forState: .Normal)
-        downButton.setIcon(.AngleDown, size: 60, forState: .Normal)
+        upButton.setIconImage(withIcon: .AngleUp, size: buttonSize, color: nil, forState: .Normal)
+        downButton.setIconImage(withIcon: .AngleDown, size: buttonSize, color: nil, forState: .Normal)
         
         updateImage(scale)
     }
@@ -50,8 +51,9 @@ class ViewController: UIViewController {
     
     func updateImage(scale: UInt) {
         
-        let size = 20 * scale
-        let image = Iconic.image(forIcon: .GithubAlt, size: CGFloat(size), color: .blackColor())
+        let width = CGFloat(20 * scale)
+        let imgSize = CGSize(width: width, height: width)
+        let image = FontAwesomeIcon.GithubAlt.image(ofSize: imgSize, color: UIColor.blackColor())
         
         imageView.image = image
         

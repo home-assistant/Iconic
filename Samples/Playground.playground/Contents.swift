@@ -1,48 +1,50 @@
 //: Playground - noun: a place where people can play
 import XCPlayground
+import Foundation
 import Iconic
 
 print(IconicVersionNumber)
 
 // Registering the icon font
-Iconic.registerIconFont()
+FontAwesomeIcon.register()
 
 
 // Global variables
-let icon = Icon.Dribble
+let icon = FontAwesomeIcon.Dribble
 let iconSize:CGFloat = 23
-let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 10)
+let edgeInsets = UIEdgeInsetsMake(0, 0, 0, 15)
 let color = UIColor.orangeColor()
+var attributedText = NSMutableAttributedString()
 
 //////////////////////////////
 // USING TEXT KIT APIs
 
 // Icon as unicode
-let unicode = Iconic.unicodeString(forIcon: icon)
-let font:UIFont = Iconic.iconFont(ofSize: iconSize)!
+let unicode = icon.unicode
+let font:UIFont = FontAwesomeIcon.font(ofSize: iconSize)
 
 let iconAttributes = [NSFontAttributeName: font,
                       NSForegroundColorAttributeName: color,
                       NSBaselineOffsetAttributeName: edgeInsets.bottom-edgeInsets.top]
 
-let iconString = " " + unicode! + " "
+let iconString = " " + unicode + " "
 
 // Icon as text
-var iconAttrString = NSAttributedString(string: iconString, attributes: iconAttributes).mutableCopy()
-
-print(iconAttrString.length as Int)
+var aString = NSAttributedString(string: iconString, attributes: iconAttributes)
+var mString = NSMutableAttributedString(attributedString: aString)
+    
+print(mString.length as Int)
 
 // Sets left and right margins
-iconAttrString.setAttributes([NSKernAttributeName: edgeInsets.left], range: NSMakeRange(0, 1))
-iconAttrString.setAttributes([NSKernAttributeName: edgeInsets.right], range: NSMakeRange(2, 1))
+mString.setAttributes([NSKernAttributeName: edgeInsets.left], range: NSMakeRange(0, 1))
+mString.setAttributes([NSKernAttributeName: edgeInsets.right], range: NSMakeRange(2, 1))
 
-let titleAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(25),
+let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 25),
                        NSForegroundColorAttributeName: color]
 
-let titleAttrString = NSAttributedString(string: NSStringFromIcon(icon), attributes: titleAttributes)
+let titleAttrString = NSAttributedString(string: icon.name, attributes: titleAttributes)
 
-var attributedText = NSMutableAttributedString()
-attributedText.appendAttributedString(iconAttrString as! NSAttributedString)
+attributedText.appendAttributedString(mString)
 attributedText.appendAttributedString(titleAttrString)
 
 
@@ -50,8 +52,7 @@ attributedText.appendAttributedString(titleAttrString)
 // USING ICONIC APIs
 
 attributedText = NSMutableAttributedString()
-iconAttrString = Iconic.attributedString(forIcon: icon, size: 23, color: color, edgeInsets: edgeInsets)!
+aString = icon.attributedString(ofSize: iconSize, color: color, edgeInsets: edgeInsets)
 
-attributedText.appendAttributedString(iconAttrString as! NSAttributedString)
+attributedText.appendAttributedString(aString)
 attributedText.appendAttributedString(titleAttrString)
-

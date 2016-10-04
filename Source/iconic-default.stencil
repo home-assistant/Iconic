@@ -1,157 +1,196 @@
-// Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen YOLO
+// Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen
 
 import UIKit
 
 {% if icons %}
+
+/** A wrapper class for Objective-C compatibility. */
 public extension Iconic {
 
-    /**
-    Registers the icon font to Iconic.
-    You shall do this once, when launching your application. Internally, the icon mapping is retrieved and
-    kept in memory during the application's life term.
-    */
-    class func registerIconFont() {
-        Iconic.registerFont(withName: "{{familyName}}", map: IconMap)
+    /** The icon font's family name. */
+    @objc class var {{enumName|lowerFirstWord}}FamilyName: NSString {
+        return {{enumName}}.familyName as NSString
     }
-
-    /**
-    Creates an attributed string with the specified icon enum type, with optional color.
-
-    - parameter icon: The icon enum type.
-    - parameter size: The size of the text, in points.
-    - parameter color: Optional color to be applied to the icon.
-    */
-    class func attributedString(forIcon icon: Icon, size: CGFloat, color: UIColor?) -> NSAttributedString? {
-        return Iconic.attributedString(forIndex: icon.rawValue, size: size, color: color)
-    }
-
-    /**
-    Creates an attributed string with the specified icon enum type, with optional color and alignment.
-    The optional alignment can be really helpful when appending an icon to another attributed string with different fonts.
-    It may also help for adjusting the icon's baseline, when using either top and bottom insets.
-
-    - parameter icon: The icon enum type.
-    - parameter size: The size of the text, in points.
-    - parameter color: Optional color to be applied to the icon.
-    - parameter edgeInsets: Optional edge insets to be used as horizontal and vertical margins.
-    */
-    class func attributedString(forIcon icon: Icon, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString? {
-        return Iconic.attributedString(forIndex: icon.rawValue, size: size, color: color, edgeInsets: edgeInsets)
-    }
-
-    /**
-    Creates an image out of an attributed string with the specified icon enum type, with optional color.
-
-    - parameter icon: The icon enum type.
-    - parameter size: The size of the text, in points.
-    - parameter color: Optional color to be applied to the icon.
-    */
-    class func image(forIcon icon: Icon, size: CGFloat, color: UIColor?) -> UIImage? {
-        return Iconic.image(forIndex: icon.rawValue, size: size, color: color)
+    
+    /** The icon font's total count of available icons. */
+    @objc class var {{enumName|lowerFirstWord}}Count: Int {
+        return {{enumName}}.count
     }
     
     /**
-     Creates an image out of an attributed string with the specified icon enum type, with optional color and padding.
-     The optional padding can be really helpful when wanting to add more space to an image, specially for larger hit test area.
-     
-     - parameter icon: The icon enum type.
-     - parameter size: The size of the text, in points.
-     - parameter color: Optional color to be applied to the icon.
-     - parameter edgeInsets: Optional edge insets to be used as additional padding.
+     Creates and returns the icon font object for the specified size.
+     - parameter size: The size (in points) to which the font is scaled.
      */
-    class func image(forIcon icon: Icon, size: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage? {
-        return Iconic.image(forIndex: icon.rawValue, size: size, color: color, edgeInsets: edgeInsets)
+    @objc class func {{enumName|lowerFirstWord}}Font(ofSize size: CGFloat) -> UIFont {
+        return {{enumName}}.font(ofSize: size)
+    }
+    
+    /**
+     Returns the icon as an attributed string with the given pointSize and color.
+     
+     - parameter pointSize: The size of the font.
+     - parameter color: The tint color of the font.
+     */
+    @objc class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
+        return icon.attributedString(ofSize: pointSize, color: color)
     }
 
     /**
-     Returns a string representation of an unicode for the specified icon enum type.
-
-     - parameter icon: The icon enum type.
-     - returns An unicode string representation.
+     Returns the icon as an attributed string with the given pointSize, color and padding.
+     
+     - parameter pointSize: The size of the font.
+     - parameter color: The tint color of the font.
+     - parameter edgeInsets: The edge insets to be used as horizontal and vertical padding.
      */
-    class func unicodeString(forIcon icon: Icon) -> String? {
-        return Iconic.unicodeString(forIndex: icon.rawValue)
+    @objc class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
+        return icon.attributedString(ofSize: pointSize, color: color, edgeInsets: edgeInsets)
+    }
+    
+    /**
+     Returns the icon as an image with the given size and color.
+     
+     - parameter size: The size of the image, in points.
+     - parameter color: A tint color for the image.
+     */
+    @objc class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?) -> UIImage {
+        return icon.image(ofSize: size, color: color)
+    }
+
+    /**
+     Returns the icon as an image with the given size and color.
+     
+     - parameter size: The size of the image, in points.
+     - parameter color: The tint color of the image.
+     - parameter edgeInsets: The edge insets to be used as padding values.
+     */
+    @objc class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage {
+        return icon.image(ofSize: size, color: color, edgeInsets: edgeInsets)
+    }
+
+    /**
+     Registers the icon font with the font manager.
+     Note: an exception will be thrown if the resource (ttf/otf) font file is not found in the bundle.
+     */
+    @objc class func register{{enumName}}() {
+        {{enumName}}.register()
+    }
+    
+    /**
+     Unregisters the icon font from the font manager.
+     */
+    @objc class func unregister{{enumName}}() {
+        {{enumName}}.unregister()
     }
 }
 
+
 public extension UIBarButtonItem {
-
+    
     /**
-    Initializes a new item using the specified icon enum type and other properties.
-
-    - parameter icon: The icon enum type to be used as image.
-    - parameter size: The size of the image, in points.
-    - parameter target: The object that receives the action message.
-    - parameter action: The action to send to target when this item is selected.
-    */
-    convenience init(icon: Icon, size: CGFloat, target: AnyObject?, action: Selector) {
-        let image = Iconic.image(forIndex: icon.rawValue, size: size, color: .blackColor())
+     Initializes a new item using the specified icon and other properties.
+     
+     - parameter icon: The icon to be used as image.
+     - parameter size: The size of the image, in points.
+     - parameter target: The object that receives the action message.
+     - parameter action: The action to send to target when this item is selected.
+     */
+    convenience init(withIcon icon: {{enumName}}, size: CGSize, target: AnyObject?, action: Selector) {
+        
+        let image = icon.image(ofSize: size, color: .blackColor())
         self.init(image: image, style: .Plain, target: target, action: action)
     }
 }
 
+
 public extension UITabBarItem {
-
+    
     /**
-    Initializes a new item using the specified icon enum type and other properties.
-
-    - parameter icon: The icon enum type to be used as image.
-    - parameter size: The size of the image, in points.
-    - parameter title: The item's title. If nil, a title is not displayed.
-    - parameter tag: The receiver's tag, an integer that you can use to identify bar item objects in your application.
-    */
-    convenience init(icon: Icon, size: CGFloat, title: String?, tag: Int) {
-        let image = Iconic.image(forIndex: icon.rawValue, size: size, color: .blackColor())
-        self.init(title: title, image: image, tag: tag)
+     Initializes a new item using the specified icon and other properties.
+     The tag is automatically assigned using the icon's raw integer value.
+     
+     - parameter icon: The icon to be used as image.
+     - parameter size: The size of the image, in points.
+     - parameter title: The item's title. If nil, a title is not displayed.
+     */
+    convenience init(withIcon icon: {{enumName}}, size: CGSize, title: String?) {
+        
+        let image = icon.image(ofSize: size, color: .blackColor())
+        self.init(title: title, image: image, tag: icon.rawValue)
     }
 }
+
 
 public extension UIButton {
-
+    
     /**
-    Sets the icon to use for the specified state.
-
-    - parameter icon: The icon enum type to be used as image.
-    - parameter size: The size of the image, in points.
-    - parameter state: The state that uses the specified title. The values are described in UIControlState.
-    */
-    func setIcon(icon: Icon, size: CGFloat, forState: UIControlState) {
-        self.setIcon(forIndex: icon.rawValue, size: size, forState: state)
+     Sets the icon to use for the specified state.
+     
+     - parameter icon: The icon to be used as image.
+     - parameter size: The size of the image, in points.
+     - parameter color: The color of the image.
+     - parameter state: The state that uses the specified title. The values are described in UIControlState.
+     */
+    func setIconImage(withIcon icon: {{enumName}}, size: CGSize, color:UIColor?, forState state: UIControlState) {
+        
+        let image = icon.image(ofSize: size, color: color ?? .blackColor())
+        setImage(image, forState: state)
     }
 }
 
-/**
-A list with available glyphs detected from the icon font.
-*/
-@objc public enum Icon: Int {
+
+/** A list with available icon glyphs from the icon font. */
+@objc public enum {{enumName}}: Int {
     {% for icon in icons %}
     case {{icon.name|swiftIdentifier|snakeToCamelCase}}
     {% endfor %}
 
-    // Useful to get the total count of icons. This index doesn't have any associated unicode value.
-    case TotalCount
+    /** The icon font's total count of available icons. */
+    public static var count: Int { return {{ icons.count }} }
 }
 
-/**
-A list of unicode characters associated with each Icon case, in order.
-*/
-public let IconMap: Array<String> = [
-    {% for icon in icons %}
-    "{{icon.unicode|unicodeCase}}",
-    {% endfor %}
-]
 
-/**
-Returns the name of an icon enum type as a string.
-*/
-public func NSStringFromIcon(icon: Icon) -> String {
-    switch icon {
-    {% for icon in icons %}
-    case .{{icon.name|swiftIdentifier|snakeToCamelCase}}: return "{{icon.name|swiftIdentifier|snakeToCamelCase}}"
-    {% endfor %}
-    default: return ""
+extension {{enumName}} : IconDrawable {
+    
+    /** The icon font's family name. */
+    public static var familyName:String {
+        return "{{familyName}}"
+    }
+    
+    /**
+     Creates a new instance with the specified icon name.
+     If there is no valid name is recognised, this initializer falls back to the first available icon.
+     
+     - parameter iconName: The icon name to use for the new instance.
+     */
+    public init(named iconName: String) {
+        switch iconName.lowercaseString {
+        {% for icon in icons %}
+        case "{{icon.name|swiftIdentifier|lowercase}}": self = .{{icon.name|swiftIdentifier|snakeToCamelCase}}
+        {% endfor %}
+        default: self = {{enumName}}(rawValue: 0)!
+        }
+    }
+    
+    /** The icon's name. */
+    public var name: String {
+        switch self {
+        {% for icon in icons %}
+        case .{{icon.name|swiftIdentifier|snakeToCamelCase}}: return "{{icon.name|swiftIdentifier|snakeToCamelCase}}"
+        {% endfor %}
+        }
+    }
+    
+    /** The icon's unicode. */
+    public var unicode:String {
+        switch self {
+            {% for icon in icons %}
+        case .{{icon.name|swiftIdentifier|snakeToCamelCase}}: return "{{icon.unicode|unicodeCase}}"
+            {% endfor %}
+        }
     }
 }
+
 {% else %}
-// No icon found
+// No icons found for {{familyName}} font!
+// Visit https://github.com/dzenbot/Iconic/issues for further information.
 {% endif %}

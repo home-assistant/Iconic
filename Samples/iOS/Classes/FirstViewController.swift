@@ -11,7 +11,7 @@ import Iconic
 
 class FirstViewController: UITableViewController {
 
-    let cellIconSize:CGFloat = 22.0
+    let cellIconSize:CGSize = CGSize(width: 22, height: 22)
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -25,12 +25,12 @@ class FirstViewController: UITableViewController {
     
     func commonInit() -> Void {
         
-        let tabItem = UITabBarItem(icon: .Book, size:20, title: "Catalog", tag: 0)
+        let tabItem = UITabBarItem(withIcon: .Book, size: CGSize(width: 20, height: 20), title: "Catalog")
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
         
-        let buttonItem = UIBarButtonItem(icon: .Cog, size:24, target: self, action: NSSelectorFromString("didTapRightItem"))
+        let buttonItem = UIBarButtonItem(withIcon: .Cog, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -49,21 +49,21 @@ class FirstViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Icon.TotalCount.rawValue
+        return FontAwesomeIcon.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("Cell") {
             
-            if let icon = Icon(rawValue: indexPath.row) {
-                cell.imageView?.image = Iconic.image(forIcon: icon, size: cellIconSize, color: tableView.tintColor)
-                cell.imageView?.highlightedImage = Iconic.image(forIcon: icon, size: cellIconSize, color: .whiteColor())
+            if let icon = FontAwesomeIcon(rawValue: indexPath.row) {
                 
-                cell.textLabel?.text = NSStringFromIcon(icon)
-
-                if let unicode = Iconic.unicodeString(forIcon: icon),
-                    let unicodedData = unicode.dataUsingEncoding(NSNonLossyASCIIStringEncoding),
+                cell.imageView?.image = icon.image(ofSize: cellIconSize, color: tableView.tintColor)
+                cell.imageView?.highlightedImage = icon.image(ofSize: cellIconSize, color: UIColor.whiteColor())
+                
+                cell.textLabel?.text = icon.name
+                
+                if let unicodedData = icon.unicode.dataUsingEncoding(NSNonLossyASCIIStringEncoding),
                     let unicodeString = String(data: unicodedData, encoding: NSUTF8StringEncoding) {
                     cell.detailTextLabel?.text = unicodeString
                 }
@@ -81,7 +81,8 @@ class FirstViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return cellIconSize + cellIconSize*1.2
+        let height = cellIconSize.height
+        return height + height*1.2
     }
     
     override func tableView(tableView: UITableView, shouldShowMenuForRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -89,7 +90,7 @@ class FirstViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, canPerformAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        if action == #selector(NSObject.copy(_:)) {
+        if action == #selector(self.copy(_:)) {
             return true
         }
         return false
@@ -97,12 +98,11 @@ class FirstViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, performAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
         // Copy
-        if let icon = Icon(rawValue: indexPath.row) {
+        if let icon = FontAwesomeIcon(rawValue: indexPath.row) {
             let pasteboard = UIPasteboard.generalPasteboard()
-            let string = NSStringFromIcon(icon)
             
-            pasteboard.string = string
-            print("Copied '\(string)' to paste board!")
+            pasteboard.string = icon.name
+            print("Copied '\(icon.name)' to paste board!")
         }
     }
 }
@@ -115,23 +115,22 @@ extension UIViewController {
             return
         }
         
-        let icon = Icon(rawValue: self.tabBarItem.tag)
-        let color = self.view.tintColor
+        let icon = FontAwesomeIcon(rawValue: self.tabBarItem.tag)!
+        let color = self.view.tintColor ?? UIColor.blueColor()
         let titleSize = CGFloat(20)
         let edgeInsets = UIEdgeInsetsMake(0, 0, 0, titleSize/2)
         
         
         let attributes = [NSForegroundColorAttributeName: color,
-                          NSFontAttributeName: UIFont.systemFontOfSize(titleSize)]
+                          NSFontAttributeName: UIFont.systemFontOfSize(titleSize)] as [String : AnyObject]
         
-        let labelString = NSMutableAttributedString(string: title, attributes: attributes)
+        let mString = NSMutableAttributedString(string: title, attributes: attributes)
         
-        if let iconString = Iconic.attributedString(forIcon: icon!, size: titleSize, color: color, edgeInsets: edgeInsets) {
-            labelString.insertAttributedString(iconString, atIndex: 0)
-        }
+        let iconString = icon.attributedString(ofSize: titleSize, color: color, edgeInsets: edgeInsets)
+        mString.insertAttributedString(iconString, atIndex: 0)
         
         let label = UILabel()
-        label.attributedText = labelString
+        label.attributedText = mString
         label.sizeToFit()
         
         self.navigationItem.titleView = label

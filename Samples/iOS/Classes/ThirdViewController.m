@@ -7,6 +7,7 @@
 //
 
 #import "ThirdViewController.h"
+#import "NSAttributedString+IconMapping.h"
 
 #import "iOS-Swift.h"
 
@@ -39,11 +40,12 @@
 }
 
 - (void)commonInit
-{    
-    self.tabBarItem = [[UITabBarItem alloc] initWithIcon:Icon_546 size:20.0 title:@"As Text" tag:0];
+{
+    self.tabBarItem = [[UITabBarItem alloc] initWithIcon:FontAwesomeIconOl size:CGSizeMake(20.0, 20.0) title:@"As Text"];
     self.title = self.tabBarItem.title;
-
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithIcon:IconCog size:24.0 target:self action:@selector(didTapRightButtonItem:)];
+    
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithIcon:FontAwesomeIconCog size:CGSizeMake(24.0, 24.0) target:self action:@selector(didTapRightButtonItem:)];
+    self.navigationItem.rightBarButtonItem = buttonItem;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willShowKeyboard:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willHideKeyboard:) name:UIKeyboardWillHideNotification object:nil];
@@ -61,28 +63,7 @@
     [super viewWillAppear:animated];
     
     UIColor *color = self.tabBarController.tabBar.tintColor;
-
-    NSMutableAttributedString *attributedText = [NSMutableAttributedString new];
-    
-    for (int i = 0; i < IconTotalCount; i++) {
-        
-        NSMutableAttributedString *fontString = [[Iconic attributedStringForIcon:i size:24.0 color:color] mutableCopy];
-        
-        if (fontString) {
-            [fontString addAttribute:NSKernAttributeName value:@(5) range:NSMakeRange(0, fontString.length)];
-            [attributedText appendAttributedString:fontString];
-        }
-    }
-    
-    CGFloat space = 5.0;
-    
-    NSMutableParagraphStyle *paragrahStyle = [NSMutableParagraphStyle new];
-    paragrahStyle.firstLineHeadIndent = space;
-    paragrahStyle.headIndent = space;
-    paragrahStyle.tailIndent = -space;
-    paragrahStyle.lineSpacing = space;
-    
-    [attributedText addAttribute:NSParagraphStyleAttributeName value:paragrahStyle range:NSMakeRange(0, attributedText.length)];
+    NSAttributedString *attributedText = [NSAttributedString iconMapWithSize:24.0 spacing:10.0 andColor:color];
     
     self.textView.attributedText = attributedText;
 }
@@ -101,8 +82,8 @@
 
 - (void)willShowKeyboard:(NSNotification *)note
 {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithIcon:IconAngleDown size:30.0 target:self action:@selector(didTapLeftButtonItem:)];
-    [self.navigationItem setLeftBarButtonItem:item animated:YES];
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithIcon:FontAwesomeIconAngleDown size:CGSizeMake(30.0, 30.0) target:self action:@selector(didTapLeftButtonItem:)];
+    [self.navigationItem setLeftBarButtonItem:buttonItem animated:YES];
     
     CGRect keyboardFrame = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     

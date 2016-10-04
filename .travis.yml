@@ -1,7 +1,14 @@
+osx_image: xcode8
 language: objective-c
-osx_image: xcode7.3
+
+cache:
+    - bundler
+    - cocoapods
 
 before_install:
+    - bundle install
+    - bundle exec danger
+    - sh Installer.sh 'Fonts/FontAwesome-4.6.3/FontAwesome.otf'
     - cd Samples && pod deintegrate && pod install
 
 env:
@@ -10,13 +17,13 @@ env:
 
     - WORKSPACE="Samples.xcworkspace"
     - IOS_SCHEME="iOS-Sample"
-    - IOS_SDK="iphonesimulator9.3"
+    - IOS_SDK="iphonesimulator10.0"
 
     matrix:
-    - DESTINATION="OS=9.3,name=iPhone 6s" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME"
+    - DESTINATION="OS=10.0,name=iPhone 6s" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME"
 
 script:
-    - xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug  GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES;
+    - xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug  GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)

@@ -11,7 +11,7 @@ import Iconic
 
 class SecondViewController: UIViewController {
     
-    @IBOutlet weak var iconView: IconView!
+    @IBOutlet weak var iconImageView: IconImageView!
     @IBOutlet weak var iconWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var iconHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var slider: UISlider!
@@ -22,12 +22,13 @@ class SecondViewController: UIViewController {
     }
     
     func commonInit() -> Void {
-        let tabItem = UITabBarItem(icon: .Picture, size:20, title: "As Image", tag: 0)
+        
+        let tabItem = UITabBarItem(withIcon: .Picture, size: CGSize(width: 20, height: 20), title: "As Image")
         
         self.title = tabItem.title;
         self.tabBarItem = tabItem;
         
-        let buttonItem = UIBarButtonItem(icon: .Cog, size:24, target: self, action: NSSelectorFromString("didTapRightItem"))
+        let buttonItem = UIBarButtonItem(withIcon: .Cog, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -57,7 +58,7 @@ class SecondViewController: UIViewController {
         
         let size = CGFloat(ceil(scale))
         
-        // Need to figure out a better way to update both axis with 1 single constraint.
+        // TODO: Need to figure out a better way to update both axis with 1 single constraint.
         // Maybe with aspect ratio 1:1 ?
         iconWidthConstraint.constant = size
         iconHeightConstraint.constant = size
@@ -79,7 +80,7 @@ class StepSlider: UISlider {
         let location = gesture.locationInView(gesture.view)
         
         let maxValue = CGFloat(self.maximumValue)
-        let newValue = location.x * maxValue / CGRectGetWidth(self.frame)
+        let newValue = location.x * maxValue / self.frame.width
         
         self.value = Float(newValue)
         
