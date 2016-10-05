@@ -79,8 +79,8 @@ Import the Iconic module:
 ```swift
 import Iconic
 ```
-<details>
 </details>
+<details>
 <summary>Objective-C</summary>
 ```objc
 @import Iconic;
