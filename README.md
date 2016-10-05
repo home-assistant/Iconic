@@ -8,7 +8,7 @@
 
 **Iconic** will help making icon fonts integration effortless on iOS. Its main component is in charge of auto-generating strongly typed Swift code, fully compatible with Objective-C.
 
-You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of the `Iconic.swift` class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
+You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of the `IconDrawable.swift` class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
 
 Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and pick the `Samples.xcworkspace`.
 
@@ -17,7 +17,7 @@ Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and 
 </p>
 
 
-## Why Icon Fonts?
+## But, why Icon Fonts?
 
 #### Many advantages:
 - Resolution independent: scale and tint without quality loss.
@@ -31,23 +31,23 @@ Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and 
 #### Where can I find awesome icon fonts?
 - Check out the [icon fonts available in this repo](./Fonts)!
 - There are many [open sourced icon fonts](http://fontello.com/) out there (most are available under the [SIL Open Font License](http://scripts.sil.org/OFL)). They are designed for the web but they are still very useful for iOS.
-- You can ask your nearest friendly designer! Making an icon font isn't that hard, specially if you already have the assets.
+- You can ask your nearest friendly designer! Making an icon font isn't that hard, specially if you already have the vecfor assets.
 - You can [read this article](http://rafaltomal.com/how-to-create-and-use-your-own-icon-fonts/) and give [fontastic.me](http://fontastic.me/) a shot.
 
 
 ## Key Features
-- [Very easy to install with CocoaPods](#installation).
+- [Easy installation over CocoaPods](#installation).
 - Compatible with Swift 2.3 and Objective-C.
 - Supports TTF and OTF font files.
-- Auto-generates enums and unicodes mapping, out of the font's [PUA range](https://en.wikipedia.org/wiki/Private_Use_Areas).
+- Auto-generated enums and unicodes mapping, out of the font's [PUA range](https://en.wikipedia.org/wiki/Private_Use_Areas).
 - `NSAttributedString` and `UIImage` outputs.
-- Fonts are registered dynamically, effortless. No need to import the file to your project.
-- [UIKit extensions](#uikit-extensions) (`UIBarButtonItem` and `UITabBarItem`).
+- Fonts are registered dynamically, effortless. No need to import the file to your project or register in the info.plist.
+- [UIKit extensions](#uikit-extensions) for `UIBarButtonItem`, `UITabBarItem` and `UIButton`.
 - Auto-generated [icon font html catalog](#icon-font-catalog).
-- Interface Builder support (prototype).
+- Interface Builder support (prototype in the sample project).
 - iOS 8, and tvOS 9 or later.
 
-_Note: Some open sourced icon fonts don't include the names of each of their glyphs. This could result in a non-descriptive enum, which can make things less intuitive for you when using Iconic. If you create your own icon font, make sure to properly name each glyph._
+_Note: Some open sourced icon fonts don't include the names of each of their glyphs. This could result in a non-descriptive enums, which can make things less intuitive for you when using Iconic. If you create your own icon font, make sure to properly name each glyph._
 
 
 ## Installation
@@ -65,7 +65,7 @@ FONT_PATH='path_to_your_icon_font.otf' pod update Iconic
 ```
 When using the `FONT_PATH` environment variable, Iconic will be installed with a custom icon font and the auto-generated files and APIs will adopt the font's name.
 
-After the installation, you should see a similar setup like this:
+After the installation, you should see a similar setup to this one:
 ![Pod Setup](Screenshots/screenshot_pod_setup.png)
 
 
@@ -74,14 +74,18 @@ For complete documentation, visit [CocoaPods' auto-generated docs](http://cocoad
 
 ### Import
 Import the Iconic module:
+<details open>
+<summary>Swift</summary>
 ```swift
-// Swift
 import Iconic
 ```
+<details>
+</details>
+<summary>Objective-C</summary>
 ```objc
-// Objc
 @import Iconic;
 ```
+</details>
 
 
 ### Registering the icon font
