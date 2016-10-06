@@ -31,7 +31,7 @@ Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and 
 #### Where can I find awesome icon fonts?
 - Check out the [icon fonts available in this repo](./Fonts)!
 - There are many [open sourced icon fonts](http://fontello.com/) out there (most are available under the [SIL Open Font License](http://scripts.sil.org/OFL)). They are designed for the web but they are still very useful for iOS.
-- You can ask your nearest friendly designer! Making an icon font isn't that hard, specially if you already have the vecfor assets.
+- You can ask your nearest friendly designer! Making an icon font isn't that hard, specially if you already have the vector assets.
 - You can [read this article](http://rafaltomal.com/how-to-create-and-use-your-own-icon-fonts/) and give [fontastic.me](http://fontastic.me/) a shot.
 
 
@@ -93,73 +93,86 @@ Registration is required to activate Iconic. You shall do this once, when launch
 
 Iconic provides a convenient way to register the icon font:
 Note: the method name may change depending of your icon font's name:
+<details open>
+<summary>Swift</summary>
 ```swift
-// Swift
 FontAwesomeIcon.register()
 ```
+</details>
+<details>
+<summary>Objective-C</summary>
 ```objc
-// Objc
 [Iconic registerFontAwesomeIcon];
 ```
-
+</details>
 
 ## Use as images
 You can construct an `UIImage` instance out of a font's icon and tint it. This may be very convenient for integrating with existing UIKit controls which expect `UIImage` objects already.
 
 Images are created using NSStringDraw APIs to render a `UIImage` out of an `NSAttributedString`.
+<details open>
+<summary>Swift</summary>
 ```swift
-// Swift
 let size = CGSize(width: 20, height: 20)
 
 let icon = FontAwesomeIcon.Home
 let image = icon.image(ofSize: size, color: .blueColor())
 ```
+</details>
+<details>
+<summary>Objective-C</summary>
 ```objc
-// Objc
 [Iconic imageWithIcon:FontAwesomeIconHome size:CGSizeMake(20, 20) color:[UIColor blueColor]];
 ```
+</details>
 
 ### Use as attributed strings
 You may need to icons as text too, and simplify your layout work.
 For example, instead of having an image and a label, you can combined it all in one single label:
+<details open>
+<summary>Swift</summary>
 ```swift
-// Swift
 let icon = FontAwesomeIcon.Home 
 let iconString = icon.attributedString(ofSize: 20, color: .blueColor())
 ```
+</details>
+<details>
+<summary>Objective-C</summary>
 ```objc
-// Objc
 [Iconic attributedStringWithIcon:FontAwesomeIconHome pointSize:20.0 color:[UIColor blueColor]];
 ```
-
+</details>
 
 ### Use as unicode string
 Ultimately, you may need to retrieve the unicode string representation on an icon to do more advanced things:
+<details open>
+<summary>Swift</summary>
 ```swift
-// Swift
 let unicode = FontAwesomeIcon.Home.unicode
 ```
-```objc
-// Not available in Objc
-```
+</details>
 
 ### Use as font
 For further customization, you may need to use the UIFont object instead:
+<details open>
+<summary>Swift</summary>
 ```swift
-// Swift
 let font = FontAwesomeIcon.font(ofSize: 20)
 ```
+</details>
+<details>
+<summary>Objective-C</summary>
 ```objc
-// Objc
 UIFont *font = [Iconic fontAwesomeIconFontOfSize:20.0];
 ```
+</details>
 
 
 ### UIKit Extensions
 UIKit extensions are also included, just to make your code look simpler:
+<details open>
+<summary>Swift</summary>
 ```swift
-// Swift
-
 // UITarbBarItem
 UITabBarItem(withIcon: .Book, size: CGSize(width: 20, height: 20), title: "Catalog")
 
@@ -170,9 +183,10 @@ UIBarButtonItem(withIcon: .Book, size: CGSize(width: 24, height: 24), target: se
 let button = UIButton(type: .System)
 button.setIconImage(withIcon: .Heart, size: CGSize(width: 44, height: 44), color: nil, forState: .Normal)
 ```
+</details>
+<details>
+<summary>Objective-C</summary>
 ```objc
-// Objc
-
 // UITarbBarItem
 [[UITabBarItem alloc] initWithIcon:FontAwesomeIconBook size:CGSizeMake(20.0, 20.0) title:@"Catalog"];
 
@@ -183,6 +197,8 @@ button.setIconImage(withIcon: .Heart, size: CGSize(width: 44, height: 44), color
 UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
 [button setIconImageWithIcon:FontAwesomeIconHeart size:CGSizeMake(44.0, 44.0) color:nil forState:UIControlStateNormal];
 ```
+</details>
+
 
 ## Sample Project
 Check out the sample project, everything is demo'd there.
@@ -198,7 +214,7 @@ Besides the auto-generated Swift code, an icon font catalog will be added in `Po
 
 ![Icon Font Catalog](Screenshots/screenshot_icon_catalog.png)
 
-_Note: if you are using Chrome as your default browser, you will need to restart it using the `open -a 'Google Chrome' --args -allow-file-access-from-files` in the command line to be able to open view the catalog. This is because the html's javascript loads a local json file and Chrome has built-in security features to disable it._
+_Note: if you are using Chrome as your default browser, you will need to restart it using the `open -a 'Google Chrome' --args -allow-file-access-from-files` in the command line to be able to open view the catalog. This is because the html's javascript loads a local json file and Chrome has built-in security features to disable it. You can also use any other web browser like Safari or Firefox to open the catalog html._
 
 
 ## Icon Font Samples
