@@ -11,9 +11,6 @@
          location = "group:../Iconic.podspec">
       </FileRef>
       <FileRef
-         location = "group:../Installer.sh">
-      </FileRef>
-      <FileRef
          location = "group:../Source/Iconizer.sh">
       </FileRef>
       <FileRef
