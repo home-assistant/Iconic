@@ -21,12 +21,11 @@ class UIExtensionSnapshotTests: BaseSnapshotTestCase {
     func testUIBarButtonItem() {
         
         let buttonItem = UIBarButtonItem(withIcon: .Spinner, size: size, target: nil, action: #selector(tearDown))
+        let navbar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         
         let navItem = UINavigationItem()
         navItem.leftBarButtonItem = buttonItem
-        
-        let navbar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        
+
         navbar.setItems([navItem], animated: false)
         
         self.verifyView(navbar, withIdentifier: "")

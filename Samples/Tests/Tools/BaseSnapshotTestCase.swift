@@ -13,13 +13,16 @@ class BaseSnapshotTestCase: FBSnapshotTestCase {
 
     override class func setUp() {
         super.setUp()
-        
-        FontAwesomeIcon.register()
     }
     
     override func setUp() {
         super.setUp()
-        
+        FontAwesomeIcon.register()
         self.recordMode = false
+    }
+    
+    override func tearDown() {
+        FontAwesomeIcon.unregister()
+        super.tearDown()
     }
 }

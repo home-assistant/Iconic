@@ -14,8 +14,4 @@
     FBSnapshotVerifyView(view, identifier);
 }
 
-- (void)verifyLayer:(CALayer *)layer withIdentifier:(NSString *)identifier {
-    FBSnapshotVerifyLayer(layer, identifier);
-}
-
 @end
