@@ -60,10 +60,16 @@ extension TestIcon : IconDrawable {
 class IconDrawableTests: XCTestCase {
     
     override func setUp() {
+        
         super.setUp()
+        
+        FontAwesomeIcon.register()
     }
     
     override func tearDown() {
+        
+        FontAwesomeIcon.unregister()
+        
         super.tearDown()
     }
     
@@ -85,62 +91,74 @@ class IconDrawableTests: XCTestCase {
     
     func testUnicodeConstructor() {
         
-        let str = TestIcon.icon1.unicode
+        measureBlock() {
+            let str = TestIcon.icon1.unicode
         
-        XCTAssertNotNil(str)
-        XCTAssertEqual(str, "\u{F129}")
+            XCTAssertNotNil(str)
+            XCTAssertEqual(str, "\u{F129}")
+        }
     }
     
     func testFontConstructor() {
         
-        let font = TestIcon.font(ofSize: 20)
+        measureBlock() {
+            let font = TestIcon.font(ofSize: 20)
         
-        XCTAssertNotNil(font)
-        XCTAssertEqual(font.familyName, TestIcon.familyName)
+            XCTAssertNotNil(font)
+            XCTAssertEqual(font.familyName, TestIcon.familyName)
+        }
     }
     
     func testFontSizeZero() {
+
+        measureBlock() {
+            // Fonts with zero point size, default to 10, to avoid returning a system font.
+            let font = TestIcon.font(ofSize: 0)
         
-        // Fonts with zero point size, default to 10, to avoid returning a system font.
-        let font = TestIcon.font(ofSize: 0)
-        
-        XCTAssertNotNil(font)
-        XCTAssertEqual(font.pointSize, 10.0)
-        XCTAssertEqual(font.familyName, TestIcon.familyName)
+            XCTAssertNotNil(font)
+            XCTAssertEqual(font.pointSize, 10.0)
+            XCTAssertEqual(font.familyName, TestIcon.familyName)
+        }
     }
     
     func testAttributedStringConstructor() {
         
-        let string = TestIcon.icon1.attributedString(ofSize: 20, color: nil)
-        let range = NSMakeRange(0, string.length)
+        measureBlock() {
+            let string = TestIcon.icon1.attributedString(ofSize: 20, color: nil)
+            let range = NSMakeRange(0, string.length)
         
-        XCTAssertNotNil(string)
+            XCTAssertNotNil(string)
         
-        string.enumerateAttribute(NSFontAttributeName, inRange: range, options: NSAttributedStringEnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
-            if let font = value as? UIFont {
-                XCTAssertEqual(font.familyName, TestIcon.familyName)
+            string.enumerateAttribute(NSFontAttributeName, inRange: range, options: NSAttributedStringEnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
+                if let font = value as? UIFont {
+                    XCTAssertEqual(font.familyName, TestIcon.familyName)
+                }
             }
         }
     }
     
     func testImageConstructor() {
+
+        measureBlock() {
+            let size = CGSize(width: 20, height: 20)
         
-        let size = CGSize(width: 20, height: 20)
+            let image = TestIcon.icon1.image(ofSize: size, color: nil)
         
-        let image = TestIcon.icon1.image(ofSize: size, color: nil)
-        
-        XCTAssertNotNil(image)
-        XCTAssertEqual(image.size, size)
+            XCTAssertNotNil(image)
+            XCTAssertEqual(image.size, size)
+        }
     }
 
     func testImageInsetsConstructor() {
         
-        let insets = UIEdgeInsetsMake(-5, -5, -5, -5)
-        let size = CGSize(width: 20, height: 20)
+        measureBlock() {
+            let insets = UIEdgeInsetsMake(-5, -5, -5, -5)
+            let size = CGSize(width: 20, height: 20)
 
-        let image = TestIcon.icon1.image(ofSize: size, color: nil, edgeInsets: insets)
+            let image = TestIcon.icon1.image(ofSize: size, color: nil, edgeInsets: insets)
         
-        XCTAssertNotNil(image)
-        XCTAssertEqual(image.size, CGSize(width: 30, height: 30))
+            XCTAssertNotNil(image)
+            XCTAssertEqual(image.size, CGSize(width: 30, height: 30))
+        }
     }
 }

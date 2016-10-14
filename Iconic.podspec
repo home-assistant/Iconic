@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   
   s.source = {
       :git => 'https://github.com/dzenbot/Iconic.git',
-      :tag => @version,
+      :tag => @version
   }
   
   s.source_files    = 'Source/*.{swift}'
@@ -33,6 +33,6 @@ Pod::Spec.new do |s|
   font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Fonts/FontAwesome-4.6.3/FontAwesome.otf'
   
   s.prepare_command = <<-CMD
-                      sh Installer.sh #{font_path}
+                      sh Source/Iconizer.sh #{font_path}
                       CMD
 end

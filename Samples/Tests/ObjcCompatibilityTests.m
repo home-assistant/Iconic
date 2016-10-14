@@ -14,12 +14,18 @@
 
 @implementation ObjcCompatibilityTests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
+    
+    [Iconic registerFontAwesomeIcon];
 }
 
-- (void)tearDown {
+- (void)tearDown
+{
     [super tearDown];
+    
+    [Iconic unregisterFontAwesomeIcon];
 }
 
 - (void)testFundamentals
