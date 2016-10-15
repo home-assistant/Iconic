@@ -30,9 +30,9 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   
   # If the font path is not specified, FontAwesome is used as the default font.
-  font_path = ENV['FONT_PATH']
+  font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Fonts/FontAwesome-4.6.3/FontAwesome.otf'
   
   s.prepare_command = <<-CMD
-                      sh Source/Iconizer.sh #{font_path}
+                      sh Source/Installer.sh #{font_path}
                       CMD
 end
