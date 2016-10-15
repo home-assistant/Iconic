@@ -9,7 +9,6 @@
 # Script in charge of executing SwitfGen, passing the icon font file path, the enum name and the custom stencil as arguments.
 #
 
-
 # Font file path
 INPUT_PATH=$1
 
@@ -17,7 +16,7 @@ INPUT_PATH=$1
 EXEC_PATH=Vendor/SwiftGen/build/swiftgen/bin/swiftgen
 STENCIL_PATH=Source/iconic-default.stencil
 CATALOG_PATH=Source/Catalog
-OUTPUT_PATH=Source/
+OUTPUT_PATH=Source
 
 
 function getFileTitle()
@@ -69,32 +68,21 @@ function iconize()
     echo "Iconizer: Moving catalog's font to '${CATALOG_PATH}/${FONT_NAME}'"
 }
 
-function prepare()
-{
-    # Input variables
-    FONT_PATH=$1
-
-    echo "Iconizer: Initializing with path ${FONT_PATH}"
+# Handle missing file path
+if [ -z ${INPUT_PATH} ]; then
+    echo "Iconizer: Missing font file at path ${INPUT_PATH}. Please provide a TTF or OTF file path."
+else
+    echo "Iconizer: Initializing with path ${INPUT_PATH}"
 
     # Input's file name and extension
-    FONT_NAME=$(basename "${FONT_PATH}")
+    FONT_NAME=$(basename "${INPUT_PATH}")
     INPUT_EXTENSION="${FONT_NAME##*.}"
     echo "Iconizer: Processing file '${FONT_NAME}' with extension '${INPUT_EXTENSION}'"
 
     # Only TTF and OTF are supported font files
     if [ ${INPUT_EXTENSION} = 'ttf' ] || [ ${INPUT_EXTENSION} = 'otf' ]; then
-        iconize ${FONT_PATH} ${FONT_NAME}
+        iconize ${INPUT_PATH} ${FONT_NAME}
     else
         echo "Iconizer: Unsupported ${INPUT_EXTENSION} file. Please provide a TTF or OTF file path."
     fi
-}
-
-# If the font path is not specified, FontAwesome is used as the default font.
-if [ -z ${INPUT_PATH} ]; then
-
-    echo "Iconizer: No custom font path provided. Using FontAwesome as default font..."
-
-    prepare "Fonts/FontAwesome-4.6.3/FontAwesome.otf"
-else
-    prepare ${INPUT_PATH}
 fi
