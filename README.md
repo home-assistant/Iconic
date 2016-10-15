@@ -54,16 +54,20 @@ _Note: Some open sourced icon fonts don't include the names of each of their gly
 
 #### Via CocoaPods
 ```ruby
-pod install Iconic
+pod 'Iconic'
 ```
-will install Iconic with its default font, [FontAwesome](https://github.com/FortAwesome/Font-Awesome).
 
+With an old and standard install, Iconic will use its default font, [FontAwesome](https://github.com/FortAwesome/Font-Awesome).
 ```ruby
-FONT_PATH='path_to_your_icon_font.otf' pod install
-
-FONT_PATH='path_to_your_icon_font.otf' pod update Iconic
+pod install
 ```
+
 When using the `FONT_PATH` environment variable, Iconic will be installed with a custom icon font and the auto-generated files and APIs will adopt the font's name.
+```ruby
+env FONT_PATH='/Users/WillFerrell/Desktop/super-duper-font.otf' pod install
+
+env FONT_PATH='/Users/WillFerrell/Desktop/super-duper-font.otf' pod update Iconic
+```
 
 After the installation, you should see a similar setup to this one:
 ![Pod Setup](Screenshots/screenshot_pod_setup.png)
