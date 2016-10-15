@@ -9,6 +9,10 @@
 # Script in charge of executing SwitfGen, passing the icon font file path, the enum name and the custom stencil as arguments.
 #
 
+
+# Font file path
+INPUT_PATH=$1
+
 # Source file paths
 EXEC_PATH=Vendor/SwiftGen/build/swiftgen/bin/swiftgen
 STENCIL_PATH=Source/iconic-default.stencil
@@ -77,6 +81,7 @@ function prepare()
     INPUT_EXTENSION="${FONT_NAME##*.}"
     echo "Iconizer: Processing file '${FONT_NAME}' with extension '${INPUT_EXTENSION}'"
 
+    # Only TTF and OTF are supported font files
     if [ ${INPUT_EXTENSION} = 'ttf' ] || [ ${INPUT_EXTENSION} = 'otf' ]; then
         iconize ${FONT_PATH} ${FONT_NAME}
     else
@@ -85,11 +90,11 @@ function prepare()
 }
 
 # If the font path is not specified, FontAwesome is used as the default font.
-if [ -z $1 ]; then
+if [ -z ${INPUT_PATH} ]; then
 
     echo "Iconizer: No custom font path provided. Using FontAwesome as default font..."
 
     prepare "Fonts/FontAwesome-4.6.3/FontAwesome.otf"
 else
-    prepare $1
+    prepare ${INPUT_PATH}
 fi
