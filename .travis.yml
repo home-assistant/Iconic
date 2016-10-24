@@ -8,7 +8,7 @@ cache:
 before_install:
     - bundle install
     - bundle exec danger
-    - cd Samples && pod deintegrate && pod install
+    - cd Samples && pod deintegrate && pod install --verbose
 
 env:
     global:

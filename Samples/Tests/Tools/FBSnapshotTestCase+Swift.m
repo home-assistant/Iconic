@@ -11,7 +11,7 @@
 @implementation FBSnapshotTestCase (SwiftAdditions)
 
 - (void)verifyView:(UIView *)view withIdentifier:(NSString *)identifier {
-    FBSnapshotVerifyView(view, identifier);
+    FBSnapshotVerifyViewWithOptions(view, identifier, FBSnapshotTestCaseDefaultSuffixes(), 0.1)
 }
 
 @end
