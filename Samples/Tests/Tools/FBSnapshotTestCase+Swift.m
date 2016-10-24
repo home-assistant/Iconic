@@ -10,8 +10,11 @@
 
 @implementation FBSnapshotTestCase (SwiftAdditions)
 
-- (void)verifyView:(UIView *)view withIdentifier:(NSString *)identifier {
-    FBSnapshotVerifyViewWithOptions(view, identifier, FBSnapshotTestCaseDefaultSuffixes(), 0.1)
+- (void)verifyView:(UIView *)view withIdentifier:(NSString *)identifier
+{
+    // Allows 15% difference tolerance, specially to avoid errors
+    // due to screen space and profile incompatibilities.
+    FBSnapshotVerifyViewWithOptions(view, identifier, FBSnapshotTestCaseDefaultSuffixes(), 0.15)
 }
 
 @end
