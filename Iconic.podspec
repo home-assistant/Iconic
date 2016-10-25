@@ -29,10 +29,13 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
   
+  s.pod_target_xcconfig = {
+      'ENABLE_BITCODE' => 'NO',
+      'SWIFT_VERSION' => '2.3',
+  }
+  
   # If the font path is not specified, FontAwesome is used as the default font.
   font_path = ENV['FONT_PATH'] ? ENV['FONT_PATH'] : 'Fonts/FontAwesome-4.6.3/FontAwesome.ttf'
   
-  s.prepare_command = <<-CMD
-                      sh Source/Iconizer.sh #{font_path} --verbose
-                      CMD
+  s.prepare_command = "sh Source/Iconizer.sh '#{font_path}' --verbose"
 end
