@@ -78,7 +78,11 @@ class IconDrawableTests: XCTestCase {
         let iconA = TestIcon(rawValue: 4)
         let iconB = TestIcon(named: "icon5")
         let iconC = TestIcon(named: "")
-
+        
+        XCTAssertNotNil(iconA?.name)
+        XCTAssertNotNil(iconA?.unicode)
+        XCTAssertNotNil(TestIcon.familyName)
+        
         XCTAssertEqual(iconA, iconB)
         XCTAssertEqual(iconA?.name, "icon5")
         XCTAssertEqual(iconA?.unicode, "\u{F152}")
