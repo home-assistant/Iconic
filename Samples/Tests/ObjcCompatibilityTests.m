@@ -46,19 +46,32 @@
 
 - (void)testAttributedStringConstructor
 {
-    NSAttributedString *attributedText = [Iconic attributedStringWithIcon:FontAwesomeIconOk pointSize:20 color:nil];
+    CGFloat pointSize = 20.0;
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(-10.0, -10.0, -10.0, -10.0);
     
-    XCTAssertNotNil(attributedText);
-    XCTAssertEqual(attributedText.length, 1);
+    NSAttributedString *attributedText1 = [Iconic attributedStringWithIcon:FontAwesomeIconOk pointSize:pointSize color:nil];
+    NSAttributedString *attributedText2 = [Iconic attributedStringWithIcon:FontAwesomeIconBug pointSize:pointSize color:nil edgeInsets:edgeInsets];
+    
+    XCTAssertNotNil(attributedText1);
+    XCTAssertNotNil(attributedText2);
+    
+    XCTAssertEqual(attributedText1.length, 1);
+    XCTAssertEqual(attributedText2.length, 3); // Contains 2 whitespaces for the separation
 }
 
 - (void)testImageConstructor
 {
     CGSize size = CGSizeMake(20.0, 20.0);
-    UIImage *image = [Iconic imageWithIcon:FontAwesomeIconOk size:size color:nil];
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(-10.0, -10.0, -10.0, -10.0);
     
-    XCTAssertNotNil(image);
-    XCTAssertTrue(CGSizeEqualToSize(image.size, size));
+    UIImage *image1 = [Iconic imageWithIcon:FontAwesomeIconOk size:size color:nil];
+    UIImage *image2 = [Iconic imageWithIcon:FontAwesomeIconBug size:size color:nil edgeInsets:edgeInsets];
+    
+    XCTAssertNotNil(image1);
+    XCTAssertNotNil(image2);
+    
+    XCTAssertTrue(CGSizeEqualToSize(image1.size, size));
+    XCTAssertTrue(CGSizeEqualToSize(image2.size, CGSizeMake(40.0, 40.0)));
 }
 
 - (void)testUIConstructor
