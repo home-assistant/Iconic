@@ -1,0 +1,19 @@
+PODS:
+  - FBSnapshotTestCase/Core (2.1.4)
+  - Iconic (1.0.4)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase/Core
+  - Iconic (from `../Iconic.podspec`)
+
+EXTERNAL SOURCES:
+  Iconic:
+    :path: "../Iconic.podspec"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  Iconic: 93f24ecc1d575577254ab3c92fe5e848088e215e
+
+PODFILE CHECKSUM: 9344ef4d164e2c5045be551edc71d52f20dbf3c3
+
+COCOAPODS: 1.0.0
