@@ -29,9 +29,6 @@
          location = "group:../Dangerfile">
       </FileRef>
       <FileRef
-         location = "group:../Config/enumerable_stats.rb">
-      </FileRef>
-      <FileRef
          location = "group:../Gemfile">
       </FileRef>
       <FileRef
