@@ -17,10 +17,6 @@ DerivedData
 *.hmap
 .gutter.json
 
-# CocoaPods
-*/Pods/*
-*/Podfile.lock
-
 # Iconic
 */Catalog/*.ttf
 */Catalog/*.otf

@@ -1,0 +1,6 @@
+framework module Iconic {
+  umbrella header "Iconic-tvOS9.0-umbrella.h"
+
+  export *
+  module * { export * }
+}
