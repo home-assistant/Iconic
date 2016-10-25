@@ -27,5 +27,9 @@
     "ios": "8.0",
     "tvos": "9.0"
   },
-  "prepare_command": "sh Source/Iconizer.sh Fonts/FontAwesome-4.6.3/FontAwesome.ttf --verbose"
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO",
+    "SWIFT_VERSION": "2.3"
+  },
+  "prepare_command": "sh Source/Iconizer.sh 'Fonts/FontAwesome-4.6.3/FontAwesome.ttf' --verbose"
 }
