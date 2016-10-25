@@ -7,59 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		060CE514672F37FE209E42D1B55A8883 /* IconDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99056DF1ABD42520DECC071A213093 /* IconDrawable.swift */; };
-		0C76AAA215413815E5B951D7E288FF53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF134893023E6B97097A1C09B176801 /* Foundation.framework */; };
+		0379CAD11C10F6B8B816B1E3524E3A90 /* Iconic-iOS8.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B8996DCB0E77C91653C07CCF013537 /* Iconic-iOS8.0-dummy.m */; };
+		0618710EDA20495C5B4477F4BB55052D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF134893023E6B97097A1C09B176801 /* Foundation.framework */; };
+		0B59A6BE49D6B4C72C5DDE04DA2B2B57 /* Iconic-tvOS9.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8661A52E9EE18C6DCEC9209EB46388EB /* Iconic-tvOS9.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CF135AA31CFBCD4C34343958AAA136C /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DA4DE16018123134553F57186B4C54D /* FBSnapshotTestController.m */; };
-		0E5D9D6E134617914F0BA5FBE7BB6F82 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CD1365401C1034D66B03D42BFDEACB /* UIKit.framework */; };
 		15C8522A1F520C25EDCF94A970F15732 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678685960FC6604F4A7AD5A537AEF7C3 /* XCTest.framework */; };
-		1A53A17F982385EE6E07CC899B5933B7 /* Iconic-iOS8.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B8996DCB0E77C91653C07CCF013537 /* Iconic-iOS8.0-dummy.m */; };
 		1AA77119D7D29BCB497127D0D08F8FFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41CD486EC71125EFA98448AA9648F1A /* Foundation.framework */; };
 		1CF3E9A9D8FC6F3BC9FD767883392C64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF134893023E6B97097A1C09B176801 /* Foundation.framework */; };
-		20D6EA67253172CB08531CD8C4D278C8 /* Iconic-tvOS9.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 864509B2DAD17FE57314FC77A9C60E73 /* Iconic-tvOS9.0-dummy.m */; };
-		2189D6D12F5611EACEBFF04A2B9D6710 /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FC9C11B714C82CD4946B9D50A836C61 /* Linearicons-Free.ttf */; };
 		22C5D35D1C45BE9155C1A51FE9DCA4CC /* Pods-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC9D77DFD96BD1A26E95521F3BD6D9F9 /* Pods-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2AE5BB1C452F7E9D72DD4DB4EB0FFDB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D19A4E954D9FDAF671453175341BE27 /* UIKit.framework */; };
-		2C10C8E7ED452C0B9F59D853C2B9D6D9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0F87965433F406E106AB95027F19A3 /* CoreText.framework */; };
-		2E036EA698F025A1A487127F6F2F571B /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FC9C11B714C82CD4946B9D50A836C61 /* Linearicons-Free.ttf */; };
+		2360390D918BE891A7F2DDA59C0B7030 /* Iconic-iOS9.3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B77ADA157BE1EE7B65728ED8FD12D8 /* Iconic-iOS9.3-dummy.m */; };
+		359377C12B07E98D0D1F16BD4CB28A85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF134893023E6B97097A1C09B176801 /* Foundation.framework */; };
 		360AFF24B4EDD8EC781D432A78B49991 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B39EA34B8C2B45169A601C50109DB85 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C7367379D8CE718FBA939F3CAA2D4B9 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = A81493CA19BA088E1E28DF9D10556C86 /* FBSnapshotTestCasePlatform.m */; };
-		4FC8ACBF29480D49CD5752DD1EC8BB83 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25FB112D51FE1B0020BB0AED17E1090 /* CoreText.framework */; };
+		41610EAE2D76DB564747034D0F896FA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CD1365401C1034D66B03D42BFDEACB /* UIKit.framework */; };
+		43D8E86C5FDAE9F93B9DF095B55F06C2 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBCEE8253564B14633B1358CD3F34BCA /* FontAwesome.ttf */; };
+		57B9F32075DD3318566C60D66C15BE16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41CD486EC71125EFA98448AA9648F1A /* Foundation.framework */; };
 		57F245358DBCBD4097ACF60F0EE7FB40 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = FAEC0372ECD644FF1A3A8281B9E395F1 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A25C7F9E008BAE5F6CCEB7DE8E21687 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CD1365401C1034D66B03D42BFDEACB /* UIKit.framework */; };
-		60FED9F2E53DAF5C60ED1B1D0FA94533 /* Iconic-tvOS9.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8661A52E9EE18C6DCEC9209EB46388EB /* Iconic-tvOS9.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		669F4B3143FA628865A5A7FC903401B6 /* FontAwesomeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DED6479A21CF94C4F7E0F8E3C5DEB9 /* FontAwesomeIcon.swift */; };
-		67D7547FB1980B7BCC8E97E0EEB4FE19 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6291680D9A793B202F9DECE71A301F07 /* FontAwesome.ttf */; };
+		5B4985040ADD4D4793DEBFAE72C203AB /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBCEE8253564B14633B1358CD3F34BCA /* FontAwesome.ttf */; };
+		609B15A52EDF5845A354C4C03021F1D9 /* Iconic-iOS8.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7EC22D740AC6BE4F1EE423358C91FD /* Iconic-iOS8.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60CBD6A72D26CF67BA86BF102AEABE3F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25FB112D51FE1B0020BB0AED17E1090 /* CoreText.framework */; };
+		619FB025AF235005C08CA3D2B2B5FB11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D19A4E954D9FDAF671453175341BE27 /* UIKit.framework */; };
+		62A20DF4AEE1F1F7C44C6830CEDFA67E /* IconDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99056DF1ABD42520DECC071A213093 /* IconDrawable.swift */; };
+		6CD5766B9B0C074E2D241C3CDFDB0D96 /* FontAwesomeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DED6479A21CF94C4F7E0F8E3C5DEB9 /* FontAwesomeIcon.swift */; };
 		721CAE2E14B2D41308FCFD7784117202 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 788A894A999423039D7B5085AE419502 /* Pods-Tests-dummy.m */; };
-		747B7CE6300706593A839D349693753C /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6291680D9A793B202F9DECE71A301F07 /* FontAwesome.ttf */; };
 		79BE4B7A1273CA2259424A1E80BACBAC /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 12380B77B02FEC68DCC142B61204E7F5 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		7C8E40E8C95C0C4C34F79178F108EAA7 /* FontAwesomeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DED6479A21CF94C4F7E0F8E3C5DEB9 /* FontAwesomeIcon.swift */; };
+		806E2F33F5EFE09A4A8ACBB72811A715 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0F87965433F406E106AB95027F19A3 /* CoreText.framework */; };
 		81FA758F048E96C55381556FD0C9653E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF134893023E6B97097A1C09B176801 /* Foundation.framework */; };
 		82491DF8BC64E64D66ECA6F8F17E0102 /* Pods-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DAA4AC69D8161C8AD129E1352A956C /* Pods-iOS-dummy.m */; };
+		8BF74B1F51C2D55C33081645357FF575 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CD1365401C1034D66B03D42BFDEACB /* UIKit.framework */; };
+		95D1FA5D461EB8576224599C3D563E98 /* FontAwesomeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DED6479A21CF94C4F7E0F8E3C5DEB9 /* FontAwesomeIcon.swift */; };
 		981D09685FEAD20DC3A5DC31418EB95A /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FD3773B25A4F18450338432EE34253 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BBB0A2EC8C49408FDC93EA3372E9136 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25FB112D51FE1B0020BB0AED17E1090 /* CoreText.framework */; };
 		A52522C2E89322DCB2941029B25753B0 /* Pods-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 409059C6C26F76EB4193ED0CAFC80A9F /* Pods-tvOS-dummy.m */; };
-		A9D8AE86DFDC8B4CC0B6CC3B53DB301C /* FontAwesomeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DED6479A21CF94C4F7E0F8E3C5DEB9 /* FontAwesomeIcon.swift */; };
+		ABA61D754D71CF037AEDF3583032F970 /* Iconic-iOS9.3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 525CF9F45FC0F9C93F1B1D7D3E32806F /* Iconic-iOS9.3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0A3F1D670C1A13CEAE34F0B5AA64F76 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F94148D713B3B766065E54D1BB9924 /* UIImage+Diff.m */; };
-		B87406CDC99BC14F7752438F18716425 /* Linearicons-Free.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FC9C11B714C82CD4946B9D50A836C61 /* Linearicons-Free.ttf */; };
-		BEB4BA953AB68AC51C9BF65420DFD13E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41CD486EC71125EFA98448AA9648F1A /* Foundation.framework */; };
-		C621070001120D2DDCED11C2C9817C6A /* Iconic-iOS9.3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 525CF9F45FC0F9C93F1B1D7D3E32806F /* Iconic-iOS9.3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B413AEBBB666782B3659A99637AC9671 /* IconDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99056DF1ABD42520DECC071A213093 /* IconDrawable.swift */; };
+		B86D86E270FF9A7005E4F054BACA0C0B /* Iconic-tvOS9.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 864509B2DAD17FE57314FC77A9C60E73 /* Iconic-tvOS9.0-dummy.m */; };
+		BA4F5B890C9BAEF7A229951592E46231 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBCEE8253564B14633B1358CD3F34BCA /* FontAwesome.ttf */; };
 		C674D8D1669B46E4AE3FFE6760625F7A /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = AD8A2DF1DA328708FB73077F0201D3F6 /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C90B94E6E4C73DF096076B40C27F6041 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF134893023E6B97097A1C09B176801 /* Foundation.framework */; };
-		C95CAF94B7939A011F241CFA20E27B4A /* IconDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99056DF1ABD42520DECC071A213093 /* IconDrawable.swift */; };
-		CD683DF583A530445AD041CC1257F521 /* Iconic-iOS9.3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B77ADA157BE1EE7B65728ED8FD12D8 /* Iconic-iOS9.3-dummy.m */; };
 		CE75EC8A206C7476B9D1FB297D14A1EE /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B95FD41BAC5C2861E88CCB432F3FAF1 /* FBSnapshotTestCase.m */; };
 		CE898F45199B353057C82EFB35ACB06A /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C603B8D7A2009018CF261064D642D3 /* UIImage+Compare.m */; };
 		CF766800C251C6001477D6B20F0AB863 /* Pods-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 627D2AEB8D2AF1ED3452DDD95D1E92D6 /* Pods-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1B61D3B3DEC5503CF2D266D1F2600D2 /* IconDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99056DF1ABD42520DECC071A213093 /* IconDrawable.swift */; };
+		D0713602C91EF7FA416185EFD1FD93F3 /* IconDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99056DF1ABD42520DECC071A213093 /* IconDrawable.swift */; };
+		D4F020CEB03217216F9F7719A7F9A4E8 /* FontAwesomeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DED6479A21CF94C4F7E0F8E3C5DEB9 /* FontAwesomeIcon.swift */; };
 		D9DCE1DD3F6116B1B009D5C7B3CB9F02 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81ED319194B6A274591778E34234232 /* QuartzCore.framework */; };
 		DBC80E4AF000842E477B91E372D127AB /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FDD781252F39EF8DB60C2042049141 /* FBSnapshotTestCase-dummy.m */; };
 		DFB6641E514F1958BA86CCB47C15E1F8 /* Pods-Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47D719BAE0E29C2256C921FE9E814A11 /* Pods-Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFE6F90D91F8982A19DDACE97F221B96 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2A6379B3AB4395796D216D26CA535C /* UIImage+Snapshot.m */; };
-		E09444C3DAE89F31353238A0F4457696 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF134893023E6B97097A1C09B176801 /* Foundation.framework */; };
+		E735D29CC4104737A3EBE682DD84E6F2 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25FB112D51FE1B0020BB0AED17E1090 /* CoreText.framework */; };
 		E7570BA58D9A6A124BEF397EFE1DF5A4 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C42457C8763214E944FC1021450F1C94 /* UIApplication+StrictKeyWindow.m */; };
-		EED5279FA36CA5E624A747D5916ACF0B /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6291680D9A793B202F9DECE71A301F07 /* FontAwesome.ttf */; };
-		F1512329AE11F81AEC53E1F3FDE88C47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CD1365401C1034D66B03D42BFDEACB /* UIKit.framework */; };
-		F489D4D95DB7794F03F055635728026D /* Iconic-iOS8.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7EC22D740AC6BE4F1EE423358C91FD /* Iconic-iOS8.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F65570C05FB4B1725AD3252A36AF62A0 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 5546697EB31ED71B65A3D85A57B86909 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEB42DDDA54B48306DFF905C8E8C68EA /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE1EB12EACC54ED5054A415BF29FA86 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		FF766AAA48BB9B7DCCBD10479E99D80F /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C418618743836FFB18EBAA4AEF5EA48 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -70,21 +67,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 23817144897720CF9C630613DAFDFE4F;
+			remoteGlobalIDString = EB0828CB04FCF7615CA603B2B12C034A;
 			remoteInfo = "Iconic-iOS8.0";
 		};
 		10C6CED41FA6E3567A2E93CF5D35B46D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 16CCD268618ADFC3B16F1599BF250FF4;
+			remoteGlobalIDString = DB2510DB1CFE1B333C6A6EDC3E2A0360;
 			remoteInfo = "Iconic-tvOS9.0";
 		};
 		13E34C1910E6AB9EC2623753D0BCE07E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 093D9538DEF8867929F8E7B09CEDDD7C;
+			remoteGlobalIDString = 38F28864C030C829B5F3644BCD04C6B4;
 			remoteInfo = "Iconic-iOS9.3";
 		};
 		FE667CEDD73569C036200FC11E97B6D8 /* PBXContainerItemProxy */ = {
@@ -102,7 +99,6 @@
 		01B8996DCB0E77C91653C07CCF013537 /* Iconic-iOS8.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Iconic-iOS8.0-dummy.m"; sourceTree = "<group>"; };
 		01F0CA52FC48FB3DF5847C3333220A3B /* Pods-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		06C1451E4DE1921DF544D2E0B54B31D9 /* Pods-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-tvOS-frameworks.sh"; sourceTree = "<group>"; };
-		0FC9C11B714C82CD4946B9D50A836C61 /* Linearicons-Free.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = "Linearicons-Free.ttf"; sourceTree = "<group>"; };
 		11822E0A4BA78DE267A32723CC2CCBFF /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12380B77B02FEC68DCC142B61204E7F5 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		16CD1365401C1034D66B03D42BFDEACB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -135,7 +131,6 @@
 		5D19A4E954D9FDAF671453175341BE27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		5FDB52D1ED170492FCB0AFA84F0DF5C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		627D2AEB8D2AF1ED3452DDD95D1E92D6 /* Pods-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-tvOS-umbrella.h"; sourceTree = "<group>"; };
-		6291680D9A793B202F9DECE71A301F07 /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		65DED6479A21CF94C4F7E0F8E3C5DEB9 /* FontAwesomeIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FontAwesomeIcon.swift; sourceTree = "<group>"; };
 		678685960FC6604F4A7AD5A537AEF7C3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		69B77ADA157BE1EE7B65728ED8FD12D8 /* Iconic-iOS9.3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Iconic-iOS9.3-dummy.m"; path = "../Iconic-iOS9.3/Iconic-iOS9.3-dummy.m"; sourceTree = "<group>"; };
@@ -172,6 +167,7 @@
 		C4F94148D713B3B766065E54D1BB9924 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		C7CABCB37CBAEB244FAE36F0AC8D6B3B /* Iconic-tvOS9.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Iconic-tvOS9.0.modulemap"; path = "../Iconic-tvOS9.0/Iconic-tvOS9.0.modulemap"; sourceTree = "<group>"; };
 		CAD4A22F953341EED77B407BFACAD579 /* Iconic-iOS8.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Iconic-iOS8.0.modulemap"; sourceTree = "<group>"; };
+		CBCEE8253564B14633B1358CD3F34BCA /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		CEF134893023E6B97097A1C09B176801 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D25FB112D51FE1B0020BB0AED17E1090 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		D32508118D73438A51C3378718923878 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +192,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38EB225765867732BD1BF49F118E1C5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CBD6A72D26CF67BA86BF102AEABE3F /* CoreText.framework in Frameworks */,
+				0618710EDA20495C5B4477F4BB55052D /* Foundation.framework in Frameworks */,
+				8BF74B1F51C2D55C33081645357FF575 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		60C4B8E25AACF9C35B79A874015B6787 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,16 +221,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7790D759A9D05E2E585E187148F85020 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C10C8E7ED452C0B9F59D853C2B9D6D9 /* CoreText.framework in Frameworks */,
-				BEB4BA953AB68AC51C9BF65420DFD13E /* Foundation.framework in Frameworks */,
-				2AE5BB1C452F7E9D72DD4DB4EB0FFDB3 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8F65605B65A1E14F7480FC83D4BA2C88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,23 +229,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CDA4653B3F2B0905199F7B21968E4AF3 /* Frameworks */ = {
+		D9E87BD1D8E618E63B86FBD827AFB9D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FC8ACBF29480D49CD5752DD1EC8BB83 /* CoreText.framework in Frameworks */,
-				0C76AAA215413815E5B951D7E288FF53 /* Foundation.framework in Frameworks */,
-				F1512329AE11F81AEC53E1F3FDE88C47 /* UIKit.framework in Frameworks */,
+				E735D29CC4104737A3EBE682DD84E6F2 /* CoreText.framework in Frameworks */,
+				359377C12B07E98D0D1F16BD4CB28A85 /* Foundation.framework in Frameworks */,
+				41610EAE2D76DB564747034D0F896FA1 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E5CE207F1BB14A37C91D1BCF7CF8147A /* Frameworks */ = {
+		DA20B45A9E4903A5B50EDA380AEF99E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BBB0A2EC8C49408FDC93EA3372E9136 /* CoreText.framework in Frameworks */,
-				E09444C3DAE89F31353238A0F4457696 /* Foundation.framework in Frameworks */,
-				0E5D9D6E134617914F0BA5FBE7BB6F82 /* UIKit.framework in Frameworks */,
+				806E2F33F5EFE09A4A8ACBB72811A715 /* CoreText.framework in Frameworks */,
+				57B9F32075DD3318566C60D66C15BE16 /* Foundation.framework in Frameworks */,
+				619FB025AF235005C08CA3D2B2B5FB11 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +270,14 @@
 				3849990C5C697AD7B6F12DBF0F6ABDCA /* Support Files */,
 			);
 			path = FBSnapshotTestCase;
+			sourceTree = "<group>";
+		};
+		14720E042FF4F239A7BAFBC046E3FAED /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7DFE19EF4EBB309030886EE7D712C4C0 /* Catalog */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		3849990C5C697AD7B6F12DBF0F6ABDCA /* Support Files */ = {
@@ -377,21 +381,20 @@
 			name = tvOS;
 			sourceTree = "<group>";
 		};
+		7DFE19EF4EBB309030886EE7D712C4C0 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				CBCEE8253564B14633B1358CD3F34BCA /* FontAwesome.ttf */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
 		85EC79B030F06BFCE5E28ABF1AB0C079 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F8AB2C97AC1945E5BDE9BDCBFE48EA3C /* Source */,
+				14720E042FF4F239A7BAFBC046E3FAED /* Source */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		A6E82B6D41ADC1CB5564A0AE78B8DF9D /* Catalog */ = {
-			isa = PBXGroup;
-			children = (
-				6291680D9A793B202F9DECE71A301F07 /* FontAwesome.ttf */,
-				0FC9C11B714C82CD4946B9D50A836C61 /* Linearicons-Free.ttf */,
-			);
-			path = Catalog;
 			sourceTree = "<group>";
 		};
 		A98912018138906676B4BEF90802B1A9 /* Support Files */ = {
@@ -500,14 +503,6 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		F8AB2C97AC1945E5BDE9BDCBFE48EA3C /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				A6E82B6D41ADC1CB5564A0AE78B8DF9D /* Catalog */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -516,6 +511,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFB6641E514F1958BA86CCB47C15E1F8 /* Pods-Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B3426692E6E78830D110DF8CA3AF3D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABA61D754D71CF037AEDF3583032F970 /* Iconic-iOS9.3-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F615413007D98476527C3D2C3BB5523 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				609B15A52EDF5845A354C4C03021F1D9 /* Iconic-iOS8.0-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DAD9BCC4722A8EC15444A61B655A284 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B59A6BE49D6B4C72C5DDE04DA2B2B57 /* Iconic-tvOS9.0-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,22 +550,6 @@
 				FF766AAA48BB9B7DCCBD10479E99D80F /* UIImage+Compare.h in Headers */,
 				79BE4B7A1273CA2259424A1E80BACBAC /* UIImage+Diff.h in Headers */,
 				FEB42DDDA54B48306DFF905C8E8C68EA /* UIImage+Snapshot.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A30BF53C645F7A9CBA35DB6D26A44E76 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60FED9F2E53DAF5C60ED1B1D0FA94533 /* Iconic-tvOS9.0-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A9EBABEA1CE64365FE8F289475195211 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F489D4D95DB7794F03F055635728026D /* Iconic-iOS8.0-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,25 +569,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCC8E5419B7FB27E397C9856012DF7C2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C621070001120D2DDCED11C2C9817C6A /* Iconic-iOS9.3-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		093D9538DEF8867929F8E7B09CEDDD7C /* Iconic-iOS9.3 */ = {
+		38F28864C030C829B5F3644BCD04C6B4 /* Iconic-iOS9.3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8CA6F1C39C9E5F49888353DB81AAE0E2 /* Build configuration list for PBXNativeTarget "Iconic-iOS9.3" */;
+			buildConfigurationList = 8032F5AC1C6F043201F888FF1201860B /* Build configuration list for PBXNativeTarget "Iconic-iOS9.3" */;
 			buildPhases = (
-				727FEE00AE00121BE4B3C6CBF12298BE /* Sources */,
-				CDA4653B3F2B0905199F7B21968E4AF3 /* Frameworks */,
-				68B01C0BCCF6D9F1D151B14A80EEAEBF /* Resources */,
-				DCC8E5419B7FB27E397C9856012DF7C2 /* Headers */,
+				20848713CBE018D8C4F4F908F31ACF24 /* Sources */,
+				38EB225765867732BD1BF49F118E1C5E /* Frameworks */,
+				F8A98DA9AC04E4C40BE817AC1BD91902 /* Resources */,
+				6B3426692E6E78830D110DF8CA3AF3D2 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -593,42 +588,6 @@
 			name = "Iconic-iOS9.3";
 			productName = "Iconic-iOS9.3";
 			productReference = BFA69F23B380742CACDDBD0647F6F7B7 /* Iconic.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		16CCD268618ADFC3B16F1599BF250FF4 /* Iconic-tvOS9.0 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 71694400D1A3AE7A4E3D4398A11D358F /* Build configuration list for PBXNativeTarget "Iconic-tvOS9.0" */;
-			buildPhases = (
-				09CA1E8457D59FB515A8630259A37F58 /* Sources */,
-				7790D759A9D05E2E585E187148F85020 /* Frameworks */,
-				1CB4EAC2DA47886032486E5EBC245A55 /* Resources */,
-				A30BF53C645F7A9CBA35DB6D26A44E76 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Iconic-tvOS9.0";
-			productName = "Iconic-tvOS9.0";
-			productReference = 79914B724F16C35928CEC12DD67A2658 /* Iconic.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		23817144897720CF9C630613DAFDFE4F /* Iconic-iOS8.0 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8263F074530E25EE79418D148121C2F /* Build configuration list for PBXNativeTarget "Iconic-iOS8.0" */;
-			buildPhases = (
-				FE7F2CA46A11F74E849E2F7867583CD2 /* Sources */,
-				E5CE207F1BB14A37C91D1BCF7CF8147A /* Frameworks */,
-				E742908AFB329AAE38CCB5697C5C5E33 /* Resources */,
-				A9EBABEA1CE64365FE8F289475195211 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Iconic-iOS8.0";
-			productName = "Iconic-iOS8.0";
-			productReference = 1C9F847169384934A4823B57D59C9DE0 /* Iconic.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		53E188A5D366D948CD485C5ECEBEB4F4 /* Pods-tvOS */ = {
@@ -703,6 +662,42 @@
 			productReference = 3625450AC9658A1E9D8177FC1D7AAABA /* FBSnapshotTestCase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		DB2510DB1CFE1B333C6A6EDC3E2A0360 /* Iconic-tvOS9.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844554A5FFAC11AEA498A7E62E48B8D5 /* Build configuration list for PBXNativeTarget "Iconic-tvOS9.0" */;
+			buildPhases = (
+				849FE5FE41497B7299E55B72CF330728 /* Sources */,
+				DA20B45A9E4903A5B50EDA380AEF99E9 /* Frameworks */,
+				2C63E11397B9DF5AF1E5E0C3F1F37398 /* Resources */,
+				7DAD9BCC4722A8EC15444A61B655A284 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Iconic-tvOS9.0";
+			productName = "Iconic-tvOS9.0";
+			productReference = 79914B724F16C35928CEC12DD67A2658 /* Iconic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EB0828CB04FCF7615CA603B2B12C034A /* Iconic-iOS8.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EA51A3D8E803D19D33229C92069940 /* Build configuration list for PBXNativeTarget "Iconic-iOS8.0" */;
+			buildPhases = (
+				D1EB718B14F57B10BB1594D4D8C57639 /* Sources */,
+				D9E87BD1D8E618E63B86FBD827AFB9D3 /* Frameworks */,
+				8F37E30DEA6B823B8F32018500E8D442 /* Resources */,
+				6F615413007D98476527C3D2C3BB5523 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Iconic-iOS8.0";
+			productName = "Iconic-iOS8.0";
+			productReference = 1C9F847169384934A4823B57D59C9DE0 /* Iconic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -725,9 +720,9 @@
 			projectRoot = "";
 			targets = (
 				A51E627CBBB64792C364BB299C74B87C /* FBSnapshotTestCase */,
-				23817144897720CF9C630613DAFDFE4F /* Iconic-iOS8.0 */,
-				093D9538DEF8867929F8E7B09CEDDD7C /* Iconic-iOS9.3 */,
-				16CCD268618ADFC3B16F1599BF250FF4 /* Iconic-tvOS9.0 */,
+				EB0828CB04FCF7615CA603B2B12C034A /* Iconic-iOS8.0 */,
+				38F28864C030C829B5F3644BCD04C6B4 /* Iconic-iOS9.3 */,
+				DB2510DB1CFE1B333C6A6EDC3E2A0360 /* Iconic-tvOS9.0 */,
 				832999D1D8AD3817DE08804A7304C8E7 /* Pods-iOS */,
 				A51D507ACFD4AEA853752E77F75DE1C0 /* Pods-Tests */,
 				53E188A5D366D948CD485C5ECEBEB4F4 /* Pods-tvOS */,
@@ -736,43 +731,40 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1CB4EAC2DA47886032486E5EBC245A55 /* Resources */ = {
+		2C63E11397B9DF5AF1E5E0C3F1F37398 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EED5279FA36CA5E624A747D5916ACF0B /* FontAwesome.ttf in Resources */,
-				2E036EA698F025A1A487127F6F2F571B /* Linearicons-Free.ttf in Resources */,
+				43D8E86C5FDAE9F93B9DF095B55F06C2 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68B01C0BCCF6D9F1D151B14A80EEAEBF /* Resources */ = {
+		8F37E30DEA6B823B8F32018500E8D442 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67D7547FB1980B7BCC8E97E0EEB4FE19 /* FontAwesome.ttf in Resources */,
-				B87406CDC99BC14F7752438F18716425 /* Linearicons-Free.ttf in Resources */,
+				BA4F5B890C9BAEF7A229951592E46231 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E742908AFB329AAE38CCB5697C5C5E33 /* Resources */ = {
+		F8A98DA9AC04E4C40BE817AC1BD91902 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				747B7CE6300706593A839D349693753C /* FontAwesome.ttf in Resources */,
-				2189D6D12F5611EACEBFF04A2B9D6710 /* Linearicons-Free.ttf in Resources */,
+				5B4985040ADD4D4793DEBFAE72C203AB /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		09CA1E8457D59FB515A8630259A37F58 /* Sources */ = {
+		20848713CBE018D8C4F4F908F31ACF24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9D8AE86DFDC8B4CC0B6CC3B53DB301C /* FontAwesomeIcon.swift in Sources */,
-				C95CAF94B7939A011F241CFA20E27B4A /* IconDrawable.swift in Sources */,
-				20D6EA67253172CB08531CD8C4D278C8 /* Iconic-tvOS9.0-dummy.m in Sources */,
+				D4F020CEB03217216F9F7719A7F9A4E8 /* FontAwesomeIcon.swift in Sources */,
+				B413AEBBB666782B3659A99637AC9671 /* IconDrawable.swift in Sources */,
+				2360390D918BE891A7F2DDA59C0B7030 /* Iconic-iOS9.3-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,13 +784,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		727FEE00AE00121BE4B3C6CBF12298BE /* Sources */ = {
+		849FE5FE41497B7299E55B72CF330728 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C8E40E8C95C0C4C34F79178F108EAA7 /* FontAwesomeIcon.swift in Sources */,
-				060CE514672F37FE209E42D1B55A8883 /* IconDrawable.swift in Sources */,
-				CD683DF583A530445AD041CC1257F521 /* Iconic-iOS9.3-dummy.m in Sources */,
+				95D1FA5D461EB8576224599C3D563E98 /* FontAwesomeIcon.swift in Sources */,
+				D0713602C91EF7FA416185EFD1FD93F3 /* IconDrawable.swift in Sources */,
+				B86D86E270FF9A7005E4F054BACA0C0B /* Iconic-tvOS9.0-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,21 +809,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D1EB718B14F57B10BB1594D4D8C57639 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CD5766B9B0C074E2D241C3CDFDB0D96 /* FontAwesomeIcon.swift in Sources */,
+				62A20DF4AEE1F1F7C44C6830CEDFA67E /* IconDrawable.swift in Sources */,
+				0379CAD11C10F6B8B816B1E3524E3A90 /* Iconic-iOS8.0-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF1ECC7DB8291A1438DCA7AB62357D54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				721CAE2E14B2D41308FCFD7784117202 /* Pods-Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE7F2CA46A11F74E849E2F7867583CD2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				669F4B3143FA628865A5A7FC903401B6 /* FontAwesomeIcon.swift in Sources */,
-				D1B61D3B3DEC5503CF2D266D1F2600D2 /* IconDrawable.swift in Sources */,
-				1A53A17F982385EE6E07CC899B5933B7 /* Iconic-iOS8.0-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,31 +839,90 @@
 		3A51ACFA9DC1CF68FBBE319001D4E688 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Iconic-iOS9.3";
-			target = 093D9538DEF8867929F8E7B09CEDDD7C /* Iconic-iOS9.3 */;
+			target = 38F28864C030C829B5F3644BCD04C6B4 /* Iconic-iOS9.3 */;
 			targetProxy = 13E34C1910E6AB9EC2623753D0BCE07E /* PBXContainerItemProxy */;
 		};
 		B3C8065717221AA7585DE098D1697E56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Iconic-tvOS9.0";
-			target = 16CCD268618ADFC3B16F1599BF250FF4 /* Iconic-tvOS9.0 */;
+			target = DB2510DB1CFE1B333C6A6EDC3E2A0360 /* Iconic-tvOS9.0 */;
 			targetProxy = 10C6CED41FA6E3567A2E93CF5D35B46D /* PBXContainerItemProxy */;
 		};
 		C6D8C068A44592398CD88E68964AB196 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Iconic-iOS8.0";
-			target = 23817144897720CF9C630613DAFDFE4F /* Iconic-iOS8.0 */;
+			target = EB0828CB04FCF7615CA603B2B12C034A /* Iconic-iOS8.0 */;
 			targetProxy = 107FF78287917DCD3E1A6FEFA04D083C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3981E603E99CF6E12E94FAEBCC7CAB30 /* Release */ = {
+		16C640F07CA0929290D4E0AC4822283F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0A83641C1BB8F0FB5ED1B49492C91C /* Iconic-iOS8.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Iconic-iOS8.0/Iconic-iOS8.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Iconic-iOS8.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Iconic-iOS8.0/Iconic-iOS8.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Iconic;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1869B4B358EF467AA1DE87D850F8426C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0A83641C1BB8F0FB5ED1B49492C91C /* Iconic-iOS8.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Iconic-iOS8.0/Iconic-iOS8.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Iconic-iOS8.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Iconic-iOS8.0/Iconic-iOS8.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Iconic;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		390F4A8A72ECF414414F59DAF87605F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9112EE7A685687B49EDAA8A3235A214E /* Iconic-iOS9.3.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -884,15 +935,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Iconic-iOS9.3/Iconic-iOS9.3.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Iconic;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		4BDDD2DA7ADE1A8702B6DAC94AADD608 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -926,65 +978,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		5A03A442D3EFDBC9FAF6099E71081D8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE79754F0F8A6590827CDAE0AC0B4BA1 /* Iconic-tvOS9.0.xcconfig */;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Iconic-tvOS9.0/Iconic-tvOS9.0-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Iconic-tvOS9.0/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Iconic-tvOS9.0/Iconic-tvOS9.0.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Iconic;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		63D57E99CA2F0F1091C55C49D28FE9D2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9112EE7A685687B49EDAA8A3235A214E /* Iconic-iOS9.3.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Iconic-iOS9.3/Iconic-iOS9.3-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Iconic-iOS9.3/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Iconic-iOS9.3/Iconic-iOS9.3.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Iconic;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		684644FC2764240F2DD0CB9208EA404D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1049,34 +1042,34 @@
 			};
 			name = Release;
 		};
-		87666F8B3D211CB2A405FA326800DF02 /* Release */ = {
+		88A3C94B0B580B0AF2F995BE0168906C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE0A83641C1BB8F0FB5ED1B49492C91C /* Iconic-iOS8.0.xcconfig */;
+			baseConfigurationReference = AE79754F0F8A6590827CDAE0AC0B4BA1 /* Iconic-tvOS9.0.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Iconic-iOS8.0/Iconic-iOS8.0-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Iconic-iOS8.0/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Iconic-tvOS9.0/Iconic-tvOS9.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Iconic-tvOS9.0/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Iconic-iOS8.0/Iconic-iOS8.0.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MODULEMAP_FILE = "Target Support Files/Iconic-tvOS9.0/Iconic-tvOS9.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Iconic;
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		903A874861000C25C63E2588AD0E88B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1106,34 +1099,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		966D06380B45AC10F46B3CEE9FC3BCF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE79754F0F8A6590827CDAE0AC0B4BA1 /* Iconic-tvOS9.0.xcconfig */;
-			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Iconic-tvOS9.0/Iconic-tvOS9.0-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Iconic-tvOS9.0/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Iconic-tvOS9.0/Iconic-tvOS9.0.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Iconic;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		B21AA7C853EB33A67CAB289878494245 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1239,6 +1204,35 @@
 			};
 			name = Release;
 		};
+		C3149C2A8241908B21C95697E972FED4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9112EE7A685687B49EDAA8A3235A214E /* Iconic-iOS9.3.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Iconic-iOS9.3/Iconic-iOS9.3-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Iconic-iOS9.3/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Iconic-iOS9.3/Iconic-iOS9.3.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Iconic;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C4F82721F30584AC0F2E5B342243CECC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1281,6 +1275,34 @@
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
+		};
+		C91BF12AE8BCD2CE5090D37733EC8567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE79754F0F8A6590827CDAE0AC0B4BA1 /* Iconic-tvOS9.0.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Iconic-tvOS9.0/Iconic-tvOS9.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Iconic-tvOS9.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Iconic-tvOS9.0/Iconic-tvOS9.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Iconic;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		DF0AB1092BBFF94759D548DCDC03DF8D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1349,36 +1371,6 @@
 			};
 			name = Release;
 		};
-		FCA5598A5237C97E76485555A7E2AF26 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE0A83641C1BB8F0FB5ED1B49492C91C /* Iconic-iOS8.0.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Iconic-iOS8.0/Iconic-iOS8.0-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Iconic-iOS8.0/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Iconic-iOS8.0/Iconic-iOS8.0.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Iconic;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1387,6 +1379,15 @@
 			buildConfigurations = (
 				C4F82721F30584AC0F2E5B342243CECC /* Debug */,
 				B21AA7C853EB33A67CAB289878494245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46EA51A3D8E803D19D33229C92069940 /* Build configuration list for PBXNativeTarget "Iconic-iOS8.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1869B4B358EF467AA1DE87D850F8426C /* Debug */,
+				16C640F07CA0929290D4E0AC4822283F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1400,20 +1401,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71694400D1A3AE7A4E3D4398A11D358F /* Build configuration list for PBXNativeTarget "Iconic-tvOS9.0" */ = {
+		8032F5AC1C6F043201F888FF1201860B /* Build configuration list for PBXNativeTarget "Iconic-iOS9.3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5A03A442D3EFDBC9FAF6099E71081D8F /* Debug */,
-				966D06380B45AC10F46B3CEE9FC3BCF7 /* Release */,
+				390F4A8A72ECF414414F59DAF87605F7 /* Debug */,
+				C3149C2A8241908B21C95697E972FED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8CA6F1C39C9E5F49888353DB81AAE0E2 /* Build configuration list for PBXNativeTarget "Iconic-iOS9.3" */ = {
+		844554A5FFAC11AEA498A7E62E48B8D5 /* Build configuration list for PBXNativeTarget "Iconic-tvOS9.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				63D57E99CA2F0F1091C55C49D28FE9D2 /* Debug */,
-				3981E603E99CF6E12E94FAEBCC7CAB30 /* Release */,
+				88A3C94B0B580B0AF2F995BE0168906C /* Debug */,
+				C91BF12AE8BCD2CE5090D37733EC8567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1441,15 +1442,6 @@
 			buildConfigurations = (
 				684644FC2764240F2DD0CB9208EA404D /* Debug */,
 				ECFF753581AD8650DD9675DCBA8B7B43 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F8263F074530E25EE79418D148121C2F /* Build configuration list for PBXNativeTarget "Iconic-iOS8.0" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FCA5598A5237C97E76485555A7E2AF26 /* Debug */,
-				87666F8B3D211CB2A405FA326800DF02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

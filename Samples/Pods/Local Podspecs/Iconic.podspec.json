@@ -31,5 +31,5 @@
     "ENABLE_BITCODE": "NO",
     "SWIFT_VERSION": "2.3"
   },
-  "prepare_command": "sh Source/Iconizer.sh 'Fonts/FontAwesome-4.6.3/FontAwesome.ttf' --verbose"
+  "prepare_command": "sh Source/Iconizer.sh '' --verbose"
 }
