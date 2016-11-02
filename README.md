@@ -61,9 +61,9 @@ pod 'Iconic', :git => 'https://github.com/dzenbot/Iconic.git', :tag => '1.0.5'
 
 To install **Iconic** with a custom icon font, you need to use the `FONT_PATH` environment variable:
 ```ruby
-env FONT_PATH='/Users/WillFerrell/Desktop/super-duper-font.otf' pod install
+FONT_PATH='/Users/WillFerrell/Desktop/super-duper-font.otf' pod install
 
-env FONT_PATH='/Users/WillFerrell/Desktop/super-duper-font.otf' pod update Iconic
+FONT_PATH='/Users/WillFerrell/Desktop/super-duper-font.otf' pod update Iconic
 ```
 
 If you simply call `pod install`, **Iconic** will be installed using its default font, [FontAwesome](https://github.com/FortAwesome/Font-Awesome).
