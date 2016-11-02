@@ -1,24 +1,30 @@
 
-source "https://github.com/CocoaPods/Specs.git"
+source 'https://github.com/CocoaPods/Specs.git'
 
+# useful for Playground interoperability
 abstract_target 'Playground'
 use_frameworks!
 
-def common_pods
+def iconic
     pod 'Iconic', :path => '../Iconic.podspec'
 end
 
 target 'iOS' do
     platform :ios, '8.0'
-    common_pods
+    iconic
 end
 
 target 'tvOS' do
     platform :tvos, '9.0'
-    common_pods
+    iconic
+end
+
+target 'watchOS Extension' do
+    platform :watchos, '2.0'
+    iconic
 end
 
 target 'Tests' do
-    common_pods
+    iconic
     pod 'FBSnapshotTestCase/Core'
 end
