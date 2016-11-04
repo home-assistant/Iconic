@@ -8,14 +8,30 @@
 
 import WatchKit
 import Foundation
-
+import Iconic
 
 class InterfaceController: WKInterfaceController {
-
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
+    
+    @IBOutlet var imageView: WKInterfaceImage!
+    
+    override class func initialize() {
         
-        // Configure interface objects here.
+        // It is important to register the icon font as soon as possible,
+        // and make the resources available right after launching the app.
+        //
+        // This example uses Awesome Font
+        // http://fontawesome.io/cheatsheet/
+        
+        FontAwesomeIcon.register()
+    }
+    
+    override func awakeWithContext(context: AnyObject?) {
+        super.awakeWithContext(context)
+        
+        let icon = FontAwesomeIcon.Github
+        let image = icon.image(ofSize: CGSizeMake(88, 88), color: .whiteColor())
+        
+        imageView.setImage(image)
     }
     
     override func willActivate() {
