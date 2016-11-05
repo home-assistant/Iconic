@@ -24,11 +24,6 @@ CoreText_WatchSimulator_Headers_Path=$( headersPath "WatchSimulator" "CoreText" 
 if [ ! -d ${CoreText_WatchSimulator_Headers_Path} ]; then
     echo "Patch:$(tput setaf 1) Missing CoreText headers for watchOS simulator at path '${CoreText_WatchSimulator_Headers_Path}'.$(tput sgr0)"
 
-    # Needs sudo since this is a secured path
-    if (( $EUID == 0 )); then
-        echo "Patch: Do you want to copy CoreText headers from iPhoneSimulator.sdk to WatchSimulator.sdk simulator?"
-    fi
-
     # Copies the header files
     sudo cp -R ${CoreText_iPhoneSimulator_Headers_Path} ${CoreText_WatchSimulator_Headers_Path}
 
