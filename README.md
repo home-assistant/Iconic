@@ -45,7 +45,9 @@ Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and 
 - [UIKit extensions](#uikit-extensions) for `UIBarButtonItem`, `UITabBarItem` and `UIButton`.
 - Auto-generated [icon font html catalog](#icon-font-catalog).
 - Interface Builder support (prototype in the sample project).
-- iOS 8, and tvOS 9 or later.
+- iOS 8 or later.
+- watchOS or later.
+- tvOS 9 or later.
 
 _Note: Some open sourced icon fonts don't include the names of each of their glyphs. This could result in a non-descriptive enums, which can make things less intuitive for you when using Iconic. If you create your own icon font, make sure to properly name each glyph._
 
@@ -211,6 +213,7 @@ Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and 
 
 On the sample project, Iconic is installed as a development pod. Because of this, pod files are not versioned. Therefore, if you clone the repo manually, you will to install the pods yourself.
 
+Note: When running the watchOS example, you might get a "No such module CoreText" error. This is because the CoreText.framework is missing for the watchOS Simulator. Please run the 'WatchSimulator-CoreText-Patch.sh' located in this repository, to copy the CoreText header files from the iOS simulator. You will then be able to run the watchOS sample with no issues.
 
 ## Icon Font Catalog
 Besides the auto-generated Swift code, an icon font catalog will be added in `Pods/Iconic/Source/Catalog`. Use this as a visual reference about the icons and their names.
