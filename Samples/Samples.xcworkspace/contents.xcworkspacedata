@@ -45,7 +45,7 @@
       </Group>
       <Group
          location = "container:"
-         name = "CI">
+         name = "Integration">
          <FileRef
             location = "group:../Dangerfile">
          </FileRef>
@@ -57,6 +57,9 @@
          </FileRef>
          <FileRef
             location = "group:../.codecov.yml">
+         </FileRef>
+         <FileRef
+            location = "group:watchOS/WatchSimulator-CoreText-Patch.sh">
          </FileRef>
       </Group>
    </Group>
