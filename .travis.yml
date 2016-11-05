@@ -9,8 +9,8 @@ cache:
 before_install:
     - bundle install
     - bundle exec danger
+    - sh Samples/watchOS/WatchSimulator-CoreText-Patch.sh
     - cd Samples && pod deintegrate && pod install --verbose
-    - sh /watchOS/WatchSimulator-CoreText-Patch.sh
 
 env:
     global:
