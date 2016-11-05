@@ -12,7 +12,18 @@ import Iconic
 
 class InterfaceController: WKInterfaceController {
     
-    @IBOutlet var imageView: WKInterfaceImage!
+    @IBOutlet weak var imageView: WKInterfaceImage!
+    @IBOutlet weak var upButtonImageView: WKInterfaceImage!
+    @IBOutlet weak var downButtonImageView: WKInterfaceImage!
+    
+    var scale:UInt = 10
+    let maxScale:UInt = 30
+    let imageSize:CGSize = CGSize(width: 88, height: 88)
+    let buttonSize:CGSize = CGSize(width: 30, height: 30)
+    
+    let githubIcon = FontAwesomeIcon.Github
+    let upArrowIcon = FontAwesomeIcon.AngleUp
+    let downArrowIcon = FontAwesomeIcon.AngleDown
     
     override class func initialize() {
         
@@ -28,20 +39,41 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        let icon = FontAwesomeIcon.Github
-        let image = icon.image(ofSize: CGSizeMake(88, 88), color: .whiteColor())
+        updateImage(scale)
+        
+        let upArrowImage = upArrowIcon.image(ofSize: buttonSize, color: .whiteColor())
+        upButtonImageView.setImage(upArrowImage)
+        
+        let downArrowImage = downArrowIcon.image(ofSize: buttonSize, color: .whiteColor())
+        downButtonImageView.setImage(downArrowImage)
+    }
+    
+    @IBAction func didPressUp() {
+        
+        if scale > maxScale {
+            return
+        }
+        
+        scale += 1
+        updateImage(scale)
+    }
+    
+    @IBAction func didPressDown() {
+        
+        if scale <= 2 {
+            return
+        }
+        
+        scale -= 1
+        updateImage(scale)
+    }
+    
+    func updateImage(scale: UInt) {
+        
+        let width = CGFloat(4 * scale)
+        let imgSize = CGSize(width: width, height: width)
+        let image = githubIcon.image(ofSize: imgSize, color: .whiteColor())
         
         imageView.setImage(image)
     }
-    
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
 }

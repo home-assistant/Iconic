@@ -14,10 +14,36 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchOS" customModuleProvider="target">
                     <items>
-                        <imageView height="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="bzs-ke-jgo"/>
+                        <imageView width="1" height="105" alignment="center" contentMode="center" id="51w-eX-Qe8"/>
+                        <group width="136" height="40" alignment="center" id="kLm-v7-rQA">
+                            <items>
+                                <button alignment="center" verticalAlignment="center" id="cBv-6l-mU6">
+                                    <group key="contentGroup" width="66" height="1" alignment="left" id="cK6-gm-9gI">
+                                        <items>
+                                            <imageView width="1" height="1" alignment="center" verticalAlignment="center" contentMode="center" id="gnb-Jq-q4E"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="didPressDown" destination="AgC-eL-Hgc" id="FME-CL-x38"/>
+                                    </connections>
+                                </button>
+                                <button alignment="center" verticalAlignment="center" id="Q04-Rl-AgZ">
+                                    <group key="contentGroup" width="66" height="1" alignment="left" id="w0Y-ts-Mb0">
+                                        <items>
+                                            <imageView width="1" height="1" alignment="center" verticalAlignment="center" contentMode="center" id="fAi-jh-5g4"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="didPressUp" destination="AgC-eL-Hgc" id="OEY-tW-uwK"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                     <connections>
-                        <outlet property="imageView" destination="bzs-ke-jgo" id="bgG-DH-OGL"/>
+                        <outlet property="downButtonImageView" destination="gnb-Jq-q4E" id="thp-Uv-odm"/>
+                        <outlet property="imageView" destination="51w-eX-Qe8" id="pA4-0r-q6j"/>
+                        <outlet property="upButtonImageView" destination="fAi-jh-5g4" id="EPX-uF-dnz"/>
                     </connections>
                 </controller>
             </objects>

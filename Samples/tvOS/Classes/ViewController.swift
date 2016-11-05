@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         
         let width = CGFloat(20 * scale)
         let imgSize = CGSize(width: width, height: width)
-        let image = FontAwesomeIcon.GithubAlt.image(ofSize: imgSize, color: UIColor.blackColor())
+        let image = FontAwesomeIcon.GithubAlt.image(ofSize: imgSize, color: .blackColor())
         
         imageView.image = image
         
