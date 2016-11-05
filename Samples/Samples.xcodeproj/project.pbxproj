@@ -1094,6 +1094,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AB6175BA79D7BBB880C1DFE /* Pods-watchOS Extension.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
@@ -1114,6 +1115,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6A7A0FC06BFD06C7758F37B7 /* Pods-watchOS Extension.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
