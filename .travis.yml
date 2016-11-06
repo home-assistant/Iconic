@@ -11,7 +11,7 @@ before_install:
     - bundle exec danger
     - sh Samples/watchOS/WatchSimulator-CoreText-Patch.sh
     - cd Samples && pod deintegrate && pod install --verbose
-    - cat Source/FontAwesomeIcon.swift
+
 env:
     global:
     - LANG=en_US.UTF-8

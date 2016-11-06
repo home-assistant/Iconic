@@ -19,12 +19,17 @@ target 'tvOS' do
     iconic
 end
 
+target 'watchOS' do
+    platform :watchos, '2.0'
+    iconic
+end
+
 target 'watchOS Extension' do
     platform :watchos, '2.0'
     iconic
 end
 
 target 'Tests' do
-    iconic
     pod 'FBSnapshotTestCase/Core'
+    iconic
 end
