@@ -84,6 +84,8 @@ public extension Iconic {
 }
 
 
+#if os(iOS) || os(tvOS)
+
 public extension UIBarButtonItem {
     
     /**
@@ -137,6 +139,8 @@ public extension UIButton {
     }
 }
 
+#endif
+
 
 /** A list with available icon glyphs from the icon font. */
 @objc public enum {{enumName}}: Int {
@@ -147,7 +151,6 @@ public extension UIButton {
     /** The icon font's total count of available icons. */
     public static var count: Int { return {{ icons.count }} }
 }
-
 
 extension {{enumName}} : IconDrawable {
     
