@@ -4,7 +4,7 @@
 # https://openradar.appspot.com/27844864
 #
 # This script is a quick patch to solve this issue, so we are all capable of running CoreText APIs on the Watch simulator too,
-# by copying the iPhone simulator's CoreText header files into the Watch's. This works great, although since editing the SDK files
+# by copying the WatchOS's CoreText header files into the Watch's. This works great, although since editing the SDK files
 # is protected, it needs to be run with sudo.
 
 
@@ -17,15 +17,15 @@ function headersPath() {
     echo "${XCODE_PATH}/Platforms/${1}.platform/Developer/SDKs/${1}.sdk/System/Library/Frameworks/${2}.framework/Headers/"
 }
 
-CoreText_iPhoneSimulator_Headers_Path=$( headersPath "iPhoneSimulator" "CoreText" )
+CoreText_watchOS_Headers_Path=$( headersPath "WatchOS" "CoreText" )
 CoreText_WatchSimulator_Headers_Path=$( headersPath "WatchSimulator" "CoreText" )
 
 # Only perform if the CoreText framework headers are missing in the WatchSimulator
 if [ ! -d ${CoreText_WatchSimulator_Headers_Path} ]; then
-    echo "Patch:$(tput setaf 1) Missing CoreText headers for watchOS simulator at path '${CoreText_WatchSimulator_Headers_Path}'.$(tput sgr0)"
+    echo "Patch:$(tput setaf 1) Missing CoreText headers for WatchSimulator at path '${CoreText_WatchSimulator_Headers_Path}'.$(tput sgr0)"
 
     # Copies the header files
-    sudo cp -R ${CoreText_iPhoneSimulator_Headers_Path} ${CoreText_WatchSimulator_Headers_Path}
+    sudo cp -R ${CoreText_watchOS_Headers_Path} ${CoreText_WatchSimulator_Headers_Path}
 
     echo "Patch:$(tput setaf 2) CoreText headers copied! You can now run your WatchOS apps using CoreText on the simulator.$(tput sgr0)"
 else
