@@ -1,3 +1,5 @@
+# To be used for CI
+
 disabled_rules:
     - line_length
     - file_length
@@ -7,23 +9,10 @@ disabled_rules:
     - cyclomatic_complexity
 
 included:
-    # When called from Xcode Project
-    - iOS
-    - tvOS
-    - Tests
-    - watchOS
-    - watchOS Extension
-    - ../Source
-
-    # When called by Danger
     - Samples
     - Source
 
 excluded:
-    # When called from Xcode Project
-    - ../Vendor
-
-    # When called by Danger
-    - */SwiftGen/*
+    - Vendor
 
 reporter: "xcode"

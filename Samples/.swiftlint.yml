@@ -1,3 +1,5 @@
+# To be used from within Xcode
+
 disabled_rules:
     - line_length
     - file_length
@@ -12,18 +14,10 @@ included:
     - tvOS
     - Tests
     - watchOS
-    - watchOS Extension
+    - watchOS\ Extension
     - ../Source
 
-    # When called by Danger
-    - Samples
-    - Source
-
 excluded:
-    # When called from Xcode Project
     - ../Vendor
-
-    # When called by Danger
-    - */SwiftGen/*
 
 reporter: "xcode"
