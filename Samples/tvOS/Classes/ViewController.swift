@@ -15,16 +15,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var upButton: UIButton!
     @IBOutlet weak var downButton: UIButton!
     
-    var scale:UInt = 10
-    let maxScale:UInt = 50
-    let buttonSize:CGSize = CGSize(width: 60, height: 60)
+    var scale: UInt = 10
+    let maxScale: UInt = 50
+    let buttonSize = CGSize(width: 60, height: 60)
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        upButton.setIconImage(withIcon: .angleUp, size: buttonSize, color: nil, forState: .normal)
-        downButton.setIconImage(withIcon: .angleDown, size: buttonSize, color: nil, forState: .normal)
+        upButton.setIconImage(withIcon: .angleUpIcon, size: buttonSize, color: nil, forState: .normal)
+        downButton.setIconImage(withIcon: .angleDownIcon, size: buttonSize, color: nil, forState: .normal)
         
         updateImage(scale)
     }
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         
         let width = CGFloat(20 * scale)
         let imgSize = CGSize(width: width, height: width)
-        let image = FontAwesomeIcon.githubAlt.image(ofSize: imgSize, color: .black)
+        let image = FontAwesomeIcon.githubAltIcon.image(ofSize: imgSize, color: .black)
         
         imageView.image = image
         
@@ -65,4 +65,3 @@ class ViewController: UIViewController {
         imageView.layer.add(transition, forKey: nil)
     }
 }
-

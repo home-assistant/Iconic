@@ -49,8 +49,8 @@
     CGFloat pointSize = 20.0;
     UIEdgeInsets edgeInsets = UIEdgeInsetsMake(-10.0, -10.0, -10.0, -10.0);
     
-    NSAttributedString *attributedText1 = [Iconic attributedStringWithIcon:FontAwesomeIconOk pointSize:pointSize color:nil];
-    NSAttributedString *attributedText2 = [Iconic attributedStringWithIcon:FontAwesomeIconBug pointSize:pointSize color:nil edgeInsets:edgeInsets];
+    NSAttributedString *attributedText1 = [Iconic attributedStringWithIcon:FontAwesomeIconOkIcon pointSize:pointSize color:nil];
+    NSAttributedString *attributedText2 = [Iconic attributedStringWithIcon:FontAwesomeIconBugIcon pointSize:pointSize color:nil edgeInsets:edgeInsets];
     
     XCTAssertNotNil(attributedText1);
     XCTAssertNotNil(attributedText2);
@@ -64,8 +64,8 @@
     CGSize size = CGSizeMake(20.0, 20.0);
     UIEdgeInsets edgeInsets = UIEdgeInsetsMake(-10.0, -10.0, -10.0, -10.0);
     
-    UIImage *image1 = [Iconic imageWithIcon:FontAwesomeIconOk size:size color:nil];
-    UIImage *image2 = [Iconic imageWithIcon:FontAwesomeIconBug size:size color:nil edgeInsets:edgeInsets];
+    UIImage *image1 = [Iconic imageWithIcon:FontAwesomeIconOkIcon size:size color:nil];
+    UIImage *image2 = [Iconic imageWithIcon:FontAwesomeIconBugIcon size:size color:nil edgeInsets:edgeInsets];
     
     XCTAssertNotNil(image1);
     XCTAssertNotNil(image2);
@@ -78,11 +78,11 @@
 {
     CGSize size = CGSizeMake(24.0, 24.0);
     
-    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithIcon:FontAwesomeIconOk size:size title:@"Title"];
-    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithIcon:FontAwesomeIconOk size:size target:nil action:@selector(tearDown)];
+    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithIcon:FontAwesomeIconOkIcon size:size title:@"Title"];
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithIcon:FontAwesomeIconOkIcon size:size target:nil action:@selector(tearDown)];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [button setIconImageWithIcon:FontAwesomeIconOk size:size color:nil forState:UIControlStateNormal];
+    [button setIconImageWithIcon:FontAwesomeIconOkIcon size:size color:nil forState:UIControlStateNormal];
     
     XCTAssertNotNil(tabBarItem);
     XCTAssertNotNil(buttonItem);

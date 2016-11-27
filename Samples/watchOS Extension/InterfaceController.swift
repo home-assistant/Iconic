@@ -16,14 +16,14 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var upButtonImageView: WKInterfaceImage!
     @IBOutlet weak var downButtonImageView: WKInterfaceImage!
     
-    var scale:UInt = 10
-    let maxScale:UInt = 30
-    let imageSize:CGSize = CGSize(width: 88, height: 88)
-    let buttonSize:CGSize = CGSize(width: 30, height: 30)
+    var scale: UInt = 10
+    let maxScale: UInt = 30
+    let imageSize = CGSize(width: 88, height: 88)
+    let buttonSize = CGSize(width: 30, height: 30)
     
-    let githubIcon = FontAwesomeIcon.github
-    let upArrowIcon = FontAwesomeIcon.angleUp
-    let downArrowIcon = FontAwesomeIcon.angleDown
+    let githubIcon = FontAwesomeIcon.githubIcon
+    let upArrowIcon = FontAwesomeIcon.angleUpIcon
+    let downArrowIcon = FontAwesomeIcon.angleDownIcon
     
     override class func initialize() {
         

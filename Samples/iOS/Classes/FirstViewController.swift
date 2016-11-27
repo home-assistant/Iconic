@@ -11,7 +11,7 @@ import Iconic
 
 class FirstViewController: UITableViewController {
 
-    let cellIconSize:CGSize = CGSize(width: 22, height: 22)
+    let cellIconSize = CGSize(width: 22, height: 22)
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -25,12 +25,12 @@ class FirstViewController: UITableViewController {
     
     func commonInit() -> Void {
         
-        let tabItem = UITabBarItem(withIcon: .book, size: CGSize(width: 20, height: 20), title: "Catalog")
+        let tabItem = UITabBarItem(withIcon: .bookIcon, size: CGSize(width: 20, height: 20), title: "Catalog")
         
-        self.title = tabItem.title;
-        self.tabBarItem = tabItem;
+        self.title = tabItem.title
+        self.tabBarItem = tabItem
         
-        let buttonItem = UIBarButtonItem(withIcon: .cog, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
+        let buttonItem = UIBarButtonItem(withIcon: .cogIcon, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -115,11 +115,13 @@ extension UIViewController {
             return
         }
         
-        let icon = FontAwesomeIcon(rawValue: self.tabBarItem.tag)!
+        guard let icon = FontAwesomeIcon(rawValue: self.tabBarItem.tag) else {
+            return
+        }
+        
         let color = self.view.tintColor ?? UIColor.blue
         let titleSize = CGFloat(20)
-        let edgeInsets = UIEdgeInsetsMake(0, 0, 0, titleSize/2)
-        
+        let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: titleSize/2)
         
         let attributes = [NSForegroundColorAttributeName: color,
                           NSFontAttributeName: UIFont.systemFont(ofSize: titleSize)] as [String : AnyObject]

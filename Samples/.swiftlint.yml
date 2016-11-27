@@ -1,0 +1,23 @@
+# To be used from within Xcode
+
+disabled_rules:
+    - line_length
+    - file_length
+    - function_body_length
+    - type_body_length
+    - trailing_whitespace
+    - cyclomatic_complexity
+
+included:
+    # When called from Xcode Project
+    - iOS
+    - tvOS
+    - Tests
+    - watchOS
+    - watchOS\ Extension
+    - ../Source
+
+excluded:
+    - ../Vendor
+
+reporter: "xcode"

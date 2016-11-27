@@ -7,6 +7,7 @@
 //
 
 import FBSnapshotTestCase
+import Iconic
 
 class ImageIconSnapshotTests: BaseSnapshotTestCase {
     
@@ -20,7 +21,7 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
         
         let size = CGSize(width: 60, height: 60)
 
-        let image = FontAwesomeIcon.save.image(ofSize: size, color: nil)
+        let image = FontAwesomeIcon.saveIcon.image(ofSize: size, color: nil)
         let imageView = UIImageView(image: image)
         
         self.verifyView(imageView, withIdentifier: "")
@@ -29,14 +30,16 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
     func testImagePatternColor() {
         
         let bundle = Bundle(for: type(of: self))
-        let pattern = UIImage(named: "pattern", in: bundle, compatibleWith: nil)
-        let color = UIColor(patternImage: pattern!)
         let size = CGSize(width: 60, height: 60)
-
-        let image = FontAwesomeIcon.warningSign.image(ofSize: size, color: color)
-        let imageView = UIImageView(image: image)
         
-        self.verifyView(imageView, withIdentifier: "")
+        if let pattern = UIImage(named: "pattern", in: bundle, compatibleWith: nil) {
+            
+            let color = UIColor(patternImage: pattern)
+            let image = FontAwesomeIcon.warningSignIcon.image(ofSize: size, color: color)
+            let imageView = UIImageView(image: image)
+            
+            self.verifyView(imageView, withIdentifier: "")
+        }
     }
     
     func testImageSizes() {
@@ -47,7 +50,7 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
             
             let size = CGSize(width: pointSize, height: pointSize)
 
-            let image = FontAwesomeIcon.githubAlt.image(ofSize: size, color: UIColor.red)
+            let image = FontAwesomeIcon.githubAltIcon.image(ofSize: size, color: UIColor.red)
             let imageView = UIImageView(image: image)
             
             XCTAssertEqual(image.size, size)
@@ -58,11 +61,11 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
     
     func testImagePadding() {
         
-        let padding = UIEdgeInsetsMake(-5, -5, -5, -5)
         let size = CGSize(width: 88, height: 88)
         let expectedSize = CGSize(width: 98, height: 98)
+        let padding = UIEdgeInsets(top: -5, left: -5, bottom: -5, right: -5)
 
-        let image = FontAwesomeIcon.github.image(ofSize: size, color: nil, edgeInsets: padding)
+        let image = FontAwesomeIcon.githubIcon.image(ofSize: size, color: nil, edgeInsets: padding)
         let imageView = UIImageView(image: image)
         
         XCTAssertEqual(image.size, expectedSize)
@@ -74,7 +77,7 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
         
         let size = CGSize(width: 88, height: 88)
 
-        let image = FontAwesomeIcon.github.image(ofSize: size, color: nil, edgeInsets: UIEdgeInsets.zero)
+        let image = FontAwesomeIcon.githubIcon.image(ofSize: size, color: nil, edgeInsets: UIEdgeInsets.zero)
         let imageView = UIImageView(image: image)
         
         XCTAssertEqual(image.size, size)
