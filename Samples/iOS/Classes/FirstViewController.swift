@@ -27,8 +27,8 @@ class FirstViewController: UITableViewController {
         
         let tabItem = UITabBarItem(withIcon: .Book, size: CGSize(width: 20, height: 20), title: "Catalog")
         
-        self.title = tabItem.title;
-        self.tabBarItem = tabItem;
+        self.title = tabItem.title
+        self.tabBarItem = tabItem
         
         let buttonItem = UIBarButtonItem(withIcon: .Cog, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
         self.navigationItem.rightBarButtonItem = buttonItem
@@ -115,11 +115,13 @@ extension UIViewController {
             return
         }
         
-        let icon = FontAwesomeIcon(rawValue: self.tabBarItem.tag)!
+        guard let icon = FontAwesomeIcon(rawValue: self.tabBarItem.tag) else {
+            return
+        }
+        
         let color = self.view.tintColor ?? UIColor.blueColor()
         let titleSize = CGFloat(20)
-        let edgeInsets = UIEdgeInsetsMake(0, 0, 0, titleSize/2)
-        
+        let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: titleSize/2)
         
         let attributes = [NSForegroundColorAttributeName: color,
                           NSFontAttributeName: UIFont.systemFontOfSize(titleSize)] as [String : AnyObject]

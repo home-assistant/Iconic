@@ -32,7 +32,7 @@ extension TestIcon : IconDrawable {
         case "icon3": self = .icon3
         case "icon4": self = .icon4
         case "icon5": self = .icon5
-        default: self = TestIcon(rawValue: 0)!
+        default: self = .icon1
         }
     }
     
@@ -129,7 +129,7 @@ class IconDrawableTests: XCTestCase {
         
         measureBlock() {
             let string = TestIcon.icon1.attributedString(ofSize: 20, color: nil)
-            let range = NSMakeRange(0, string.length)
+            let range = NSRange(location: 0, length: string.length)
         
             XCTAssertNotNil(string)
         
@@ -156,7 +156,7 @@ class IconDrawableTests: XCTestCase {
     func testImageInsetsConstructor() {
         
         measureBlock() {
-            let insets = UIEdgeInsetsMake(-5, -5, -5, -5)
+            let insets = UIEdgeInsets(top: -5, left: -5, bottom: -5, right: -5)
             let size = CGSize(width: 20, height: 20)
 
             let image = TestIcon.icon1.image(ofSize: size, color: nil, edgeInsets: insets)

@@ -28,12 +28,11 @@ class IconImageView: UIImageView {
         }
     }
     
-    var drawable: IconDrawable?{
+    var drawable: IconDrawable? {
         didSet {
             updateIconImage()
         }
     }
-    
     
     // MARK: - Initializers
     
@@ -56,7 +55,6 @@ class IconImageView: UIImageView {
     private func commonInit() {
         self.backgroundColor = UIColor.clearColor()
     }
-    
     
     // MARK: - Overrides
 
@@ -85,21 +83,19 @@ class IconImageView: UIImageView {
         FontAwesomeIcon.register()
     }
     
-    
     // MARK: - Image Constructor
     
     func updateIconImage() {
         
         // No need to update if the sizing is empty or too small
-        if frame.isEmpty || frame.isNull || min(frame.width,frame.height) < 5 {
+        if frame.isEmpty || frame.isNull || min(frame.width, frame.height) < 5 {
             return
         }
 
         if drawable != nil {
             let image = drawable?.image(ofSize: frame.size, color: tintColor)
             super.image = image
-        }
-        else {
+        } else {
             super.image = nil
         }
     }

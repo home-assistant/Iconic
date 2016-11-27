@@ -59,6 +59,9 @@
             location = "group:../.codecov.yml">
          </FileRef>
          <FileRef
+            location = "group:.swiftlint.yml">
+         </FileRef>
+         <FileRef
             location = "group:watchOS/WatchSimulator-CoreText-Patch.sh">
          </FileRef>
       </Group>

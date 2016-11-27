@@ -29,14 +29,17 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
     func testImagePatternColor() {
         
         let bundle = NSBundle(forClass: self.dynamicType)
-        let pattern = UIImage(named: "pattern", inBundle: bundle, compatibleWithTraitCollection: nil)
-        let color = UIColor(patternImage: pattern!)
+        
         let size = CGSize(width: 60, height: 60)
 
-        let image = FontAwesomeIcon.WarningSign.image(ofSize: size, color: color)
-        let imageView = UIImageView(image: image)
+        if let pattern = UIImage(named: "pattern", inBundle: bundle, compatibleWithTraitCollection: nil) {
+            
+            let color = UIColor(patternImage: pattern)
+            let image = FontAwesomeIcon.WarningSign.image(ofSize: size, color: color)
+            let imageView = UIImageView(image: image)
         
-        self.verifyView(imageView, withIdentifier: "")
+            self.verifyView(imageView, withIdentifier: "")
+        }
     }
     
     func testImageSizes() {
@@ -58,7 +61,7 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
     
     func testImagePadding() {
         
-        let padding = UIEdgeInsetsMake(-5, -5, -5, -5)
+        let padding = UIEdgeInsets(top: -5, left: -5, bottom: -5, right: -5)
         let size = CGSize(width: 88, height: 88)
         let expectedSize = CGSize(width: 98, height: 98)
 

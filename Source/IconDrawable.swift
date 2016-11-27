@@ -27,7 +27,6 @@ public protocol IconDrawable {
     /** The icon's unicode. */
     var unicode: String { get }
     
-    
     /**
      Creates a new instance with the specified icon name.
      If there is no valid name is recognised, this initializer falls back to the first available icon.
@@ -89,7 +88,6 @@ public protocol IconDrawable {
     static func unregister()
 }
 
-
 /** This extension adds the required default implementation for Iconic to work. */
 extension IconDrawable {
     
@@ -110,7 +108,9 @@ extension IconDrawable {
         let aString = attributedString(ofSize: pointSize, color: color)
         let mString = NSMutableAttributedString(attributedString: aString)
         
-        mString.addAttribute(NSBaselineOffsetAttributeName, value: edgeInsets.bottom-edgeInsets.top, range: NSMakeRange(0, mString.length))
+        let range = NSRange(location: 0, length: mString.length)
+
+        mString.addAttribute(NSBaselineOffsetAttributeName, value: edgeInsets.bottom-edgeInsets.top, range: range)
         
         let leftSpace = NSAttributedString(string: " ", attributes: [NSKernAttributeName: edgeInsets.left])
         let rightSpace = NSAttributedString(string: " ", attributes: [NSKernAttributeName: edgeInsets.right])
@@ -140,7 +140,9 @@ extension IconDrawable {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .Center
         
-        mString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, mString.length))
+        let range = NSRange(location: 0, length: mString.length)
+        
+        mString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: range)
         
         // Renders the attributed string as image using Text Kit
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)

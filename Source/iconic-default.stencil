@@ -3,7 +3,6 @@
 import UIKit
 
 {% if icons %}
-
 /** A wrapper class for Objective-C compatibility. */
 public extension Iconic {
 
@@ -18,16 +17,18 @@ public extension Iconic {
     }
     
     /**
-     Creates and returns the icon font object for the specified size.
+     Returns the icon font object for the specified size.
+
      - parameter size: The size (in points) to which the font is scaled.
      */
     @objc class func {{enumName|lowerFirstWord}}Font(ofSize size: CGFloat) -> UIFont {
         return {{enumName}}.font(ofSize: size)
     }
-    
+
     /**
      Returns the icon as an attributed string with the given pointSize and color.
-     
+
+     - parameter icon: The icon type.
      - parameter pointSize: The size of the font.
      - parameter color: The tint color of the font.
      */
@@ -37,7 +38,8 @@ public extension Iconic {
 
     /**
      Returns the icon as an attributed string with the given pointSize, color and padding.
-     
+
+     - parameter icon: The icon type.
      - parameter pointSize: The size of the font.
      - parameter color: The tint color of the font.
      - parameter edgeInsets: The edge insets to be used as horizontal and vertical padding.
@@ -48,7 +50,8 @@ public extension Iconic {
     
     /**
      Returns the icon as an image with the given size and color.
-     
+
+     - parameter icon: The icon type.
      - parameter size: The size of the image, in points.
      - parameter color: A tint color for the image.
      */
@@ -58,7 +61,8 @@ public extension Iconic {
 
     /**
      Returns the icon as an image with the given size and color.
-     
+
+     - parameter icon: The icon type.
      - parameter size: The size of the image, in points.
      - parameter color: The tint color of the image.
      - parameter edgeInsets: The edge insets to be used as padding values.
@@ -83,7 +87,6 @@ public extension Iconic {
     }
 }
 
-
 #if os(iOS) || os(tvOS)
 
 public extension UIBarButtonItem {
@@ -103,7 +106,6 @@ public extension UIBarButtonItem {
     }
 }
 
-
 public extension UITabBarItem {
     
     /**
@@ -120,7 +122,6 @@ public extension UITabBarItem {
         self.init(title: title, image: image, tag: icon.rawValue)
     }
 }
-
 
 public extension UIButton {
     
@@ -140,7 +141,6 @@ public extension UIButton {
 }
 
 #endif
-
 
 /** A list with available icon glyphs from the icon font. */
 @objc public enum {{enumName}}: Int {
@@ -192,7 +192,6 @@ extension {{enumName}} : IconDrawable {
         }
     }
 }
-
 {% else %}
 // No icons found for {{familyName}} font!
 // Visit https://github.com/dzenbot/Iconic/issues for further information.

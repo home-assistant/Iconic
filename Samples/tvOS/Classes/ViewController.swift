@@ -65,4 +65,3 @@ class ViewController: UIViewController {
         imageView.layer.addAnimation(transition, forKey: nil)
     }
 }
-
