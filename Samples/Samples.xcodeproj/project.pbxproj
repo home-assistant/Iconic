@@ -379,6 +379,7 @@
 				F50ADBFA1D112CDA004A5A4C /* Sources */,
 				F50ADBFB1D112CDA004A5A4C /* Frameworks */,
 				F50ADBFC1D112CDA004A5A4C /* Resources */,
+				F51590B21DEAE9D500C23C25 /* SwiftLint */,
 				0F6315F0303073C08B5AC842 /* 📦 Embed Pods Frameworks */,
 				0A751719F390BF440400FA2F /* 📦 Copy Pods Resources */,
 			);
@@ -463,6 +464,7 @@
 				F56977671DC9CAE3005EDE73 /* Sources */,
 				F56977681DC9CAE3005EDE73 /* Frameworks */,
 				F56977691DC9CAE3005EDE73 /* Resources */,
+				F51590B31DEAEA1400C23C25 /* SwiftLint */,
 				2622CD9EF797B0B4C587896F /* 📦 Embed Pods Frameworks */,
 				C80A4729D651F5DB89FF303B /* 📦 Copy Pods Resources */,
 			);
@@ -774,6 +776,34 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F51590B21DEAE9D500C23C25 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		F51590B31DEAEA1400C23C25 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		F5D2E1051DEAD78100F069F4 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
