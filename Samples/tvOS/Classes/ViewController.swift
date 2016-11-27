@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var upButton: UIButton!
     @IBOutlet weak var downButton: UIButton!
     
-    var scale:UInt = 10
-    let maxScale:UInt = 50
-    let buttonSize:CGSize = CGSize(width: 60, height: 60)
+    var scale = 10
+    let maxScale = 50
+    let buttonSize = CGSize(width: 60, height: 60)
     
     override func viewDidLoad() {
         

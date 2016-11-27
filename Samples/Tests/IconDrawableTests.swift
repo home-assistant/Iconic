@@ -9,7 +9,7 @@
 import XCTest
 import Iconic
 
-enum TestIcon : Int {
+enum TestIcon: Int {
     case icon1
     case icon2
     case icon3
@@ -21,7 +21,7 @@ extension TestIcon : IconDrawable {
     
     static var count: Int { return 5 }
     
-    static var familyName:String {
+    static var familyName: String {
         return "FontAwesome"
     }
     
@@ -46,7 +46,7 @@ extension TestIcon : IconDrawable {
         }
     }
     
-    var unicode:String {
+    var unicode: String {
         switch self {
         case .icon1: return "\u{F129}"
         case .icon2: return "\u{F12D}"

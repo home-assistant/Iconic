@@ -1,16 +1,11 @@
 disabled_rules: # rule identifiers to exclude from running
-  - colon
-  - line_length
-  - file_length
-  - type_body_length
-  - function_body_length
-  - trailing_whitespace
-  - cyclomatic_complexity
-  - todo
+    - line_length
+    - trailing_whitespace
+    - cyclomatic_complexity
+    - todo
 
 opt_in_rules: # some rules are only opt-in
-  - force_unwrapping
-  - missing_docs
-  - empty_count
+    - force_unwrapping
+    - missing_docs
 
 reporter: "xcode"

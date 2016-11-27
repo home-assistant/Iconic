@@ -10,7 +10,7 @@ FontAwesomeIcon.register()
 
 // Global variables
 let icon = FontAwesomeIcon.Dribble
-let iconSize:CGFloat = 23
+let iconSize: CGFloat = 23
 let edgeInsets = UIEdgeInsets(top: 0, right: 0, bottom: 0, left: 15)
 let color = UIColor.orangeColor()
 var attributedText = NSMutableAttributedString()
@@ -20,7 +20,7 @@ var attributedText = NSMutableAttributedString()
 
 // Icon as unicode
 let unicode = icon.unicode
-let font:UIFont = FontAwesomeIcon.font(ofSize: iconSize)
+let font: UIFont = FontAwesomeIcon.font(ofSize: iconSize)
 
 let iconAttributes = [NSFontAttributeName: font,
                       NSForegroundColorAttributeName: color,

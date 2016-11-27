@@ -11,7 +11,7 @@ import Iconic
 
 class FirstViewController: UITableViewController {
 
-    let cellIconSize:CGSize = CGSize(width: 22, height: 22)
+    let cellIconSize = CGSize(width: 22, height: 22)
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
