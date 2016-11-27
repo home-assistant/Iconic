@@ -133,7 +133,7 @@ public extension UIButton {
      - parameter color: The color of the image.
      - parameter state: The state that uses the specified title. The values are described in UIControlState.
      */
-    func setIconImage(withIcon icon: {{enumName}}, size: CGSize, color:UIColor?, forState state: UIControlState) {
+    func setIconImage(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, forState state: UIControlState) {
         
         let image = icon.image(ofSize: size, color: color ?? .blackColor())
         setImage(image, forState: state)
@@ -155,7 +155,7 @@ public extension UIButton {
 extension {{enumName}} : IconDrawable {
     
     /** The icon font's family name. */
-    public static var familyName:String {
+    public static var familyName: String {
         return "{{familyName}}"
     }
     
@@ -184,7 +184,7 @@ extension {{enumName}} : IconDrawable {
     }
     
     /** The icon's unicode. */
-    public var unicode:String {
+    public var unicode: String {
         switch self {
             {% for icon in icons %}
         case .{{icon.name|swiftIdentifier|snakeToCamelCase}}: return "{{icon.unicode|unicodeCase}}"
