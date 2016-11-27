@@ -21,9 +21,9 @@ class InterfaceController: WKInterfaceController {
     let imageSize:CGSize = CGSize(width: 88, height: 88)
     let buttonSize:CGSize = CGSize(width: 30, height: 30)
     
-    let githubIcon = FontAwesomeIcon.Github
-    let upArrowIcon = FontAwesomeIcon.AngleUp
-    let downArrowIcon = FontAwesomeIcon.AngleDown
+    let githubIcon = FontAwesomeIcon.github
+    let upArrowIcon = FontAwesomeIcon.angleUp
+    let downArrowIcon = FontAwesomeIcon.angleDown
     
     override class func initialize() {
         
@@ -36,15 +36,15 @@ class InterfaceController: WKInterfaceController {
         FontAwesomeIcon.register()
     }
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         updateImage(scale)
         
-        let upArrowImage = upArrowIcon.image(ofSize: buttonSize, color: .whiteColor())
+        let upArrowImage = upArrowIcon.image(ofSize: buttonSize, color: .white)
         upButtonImageView.setImage(upArrowImage)
         
-        let downArrowImage = downArrowIcon.image(ofSize: buttonSize, color: .whiteColor())
+        let downArrowImage = downArrowIcon.image(ofSize: buttonSize, color: .white)
         downButtonImageView.setImage(downArrowImage)
     }
     
@@ -68,11 +68,11 @@ class InterfaceController: WKInterfaceController {
         updateImage(scale)
     }
     
-    func updateImage(scale: UInt) {
+    func updateImage(_ scale: UInt) {
         
         let width = CGFloat(4 * scale)
         let imgSize = CGSize(width: width, height: width)
-        let image = githubIcon.image(ofSize: imgSize, color: .whiteColor())
+        let image = githubIcon.image(ofSize: imgSize, color: .white)
         
         imageView.setImage(image)
     }

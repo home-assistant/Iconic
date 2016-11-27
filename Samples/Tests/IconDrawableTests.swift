@@ -26,7 +26,7 @@ extension TestIcon : IconDrawable {
     }
     
     init(named iconName: String) {
-        switch iconName.lowercaseString {
+        switch iconName.lowercased() {
         case "icon1": self = .icon1
         case "icon2": self = .icon2
         case "icon3": self = .icon3
@@ -95,7 +95,7 @@ class IconDrawableTests: XCTestCase {
     
     func testUnicodeConstructor() {
         
-        measureBlock() {
+        measure() {
             let str = TestIcon.icon1.unicode
         
             XCTAssertNotNil(str)
@@ -105,7 +105,7 @@ class IconDrawableTests: XCTestCase {
     
     func testFontConstructor() {
         
-        measureBlock() {
+        measure() {
             let font = TestIcon.font(ofSize: 20)
         
             XCTAssertNotNil(font)
@@ -115,7 +115,7 @@ class IconDrawableTests: XCTestCase {
     
     func testFontSizeZero() {
 
-        measureBlock() {
+        measure() {
             // Fonts with zero point size, default to 10, to avoid returning a system font.
             let font = TestIcon.font(ofSize: 0)
         
@@ -127,13 +127,13 @@ class IconDrawableTests: XCTestCase {
     
     func testAttributedStringConstructor() {
         
-        measureBlock() {
+        measure() {
             let string = TestIcon.icon1.attributedString(ofSize: 20, color: nil)
             let range = NSMakeRange(0, string.length)
         
             XCTAssertNotNil(string)
         
-            string.enumerateAttribute(NSFontAttributeName, inRange: range, options: NSAttributedStringEnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
+            string.enumerateAttribute(NSFontAttributeName, in: range, options: NSAttributedString.EnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
                 if let font = value as? UIFont {
                     XCTAssertEqual(font.familyName, TestIcon.familyName)
                 }
@@ -143,7 +143,7 @@ class IconDrawableTests: XCTestCase {
     
     func testImageConstructor() {
 
-        measureBlock() {
+        measure() {
             let size = CGSize(width: 20, height: 20)
         
             let image = TestIcon.icon1.image(ofSize: size, color: nil)
@@ -155,7 +155,7 @@ class IconDrawableTests: XCTestCase {
 
     func testImageInsetsConstructor() {
         
-        measureBlock() {
+        measure() {
             let insets = UIEdgeInsetsMake(-5, -5, -5, -5)
             let size = CGSize(width: 20, height: 20)
 

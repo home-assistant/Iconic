@@ -10,7 +10,7 @@ import UIKit
 import CoreText
 
 /** A wrapper class for Objective-C compatibility. */
-public class Iconic: NSObject { }
+open class Iconic: NSObject { }
 
 /** */
 public protocol IconDrawable {
@@ -115,15 +115,15 @@ extension IconDrawable {
         let leftSpace = NSAttributedString(string: " ", attributes: [NSKernAttributeName: edgeInsets.left])
         let rightSpace = NSAttributedString(string: " ", attributes: [NSKernAttributeName: edgeInsets.right])
         
-        mString.insertAttributedString(rightSpace, atIndex: mString.length)
-        mString.insertAttributedString(leftSpace, atIndex: 0)
+        mString.insert(rightSpace, at: mString.length)
+        mString.insert(leftSpace, at: 0)
         
         return mString
     }
     
     public func image(ofSize size: CGSize, color: UIColor?) -> UIImage {
         
-        return image(ofSize: size, color: color, edgeInsets: UIEdgeInsetsZero)
+        return image(ofSize: size, color: color, edgeInsets: .zero)
     }
     
     public func image(ofSize size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage {
@@ -138,13 +138,13 @@ extension IconDrawable {
         rect.size.height -= edgeInsets.top + edgeInsets.bottom
         
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .Center
+        paragraphStyle.alignment = .center
         
         mString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, mString.length))
         
         // Renders the attributed string as image using Text Kit
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
-        mString.drawInRect(rect)
+        mString.draw(in: rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -162,7 +162,7 @@ extension IconDrawable {
     public static func register() {
         
         // No need to register the font more than once
-        if UIFont.familyNames().contains(familyName) {
+        if UIFont.familyNames.contains(familyName) {
             return
         }
         
@@ -175,11 +175,11 @@ extension IconDrawable {
             return
         }
         
-        let font = CTFontCreateWithFontDescriptorAndOptions(descriptor, 0.0, nil, [.PreventAutoActivation])
+        let font = CTFontCreateWithFontDescriptorAndOptions(descriptor, 0.0, nil, [.preventAutoActivation])
         let fontName = CTFontCopyPostScriptName(font) as String
         
         // Registers font dynamically
-        if CTFontManagerRegisterFontsForURL(url, .None, &error) == false || error != nil {
+        if CTFontManagerRegisterFontsForURL(url, .none, &error) == false || error != nil {
             assertionFailure("Failed registering font with the postscript name '\(fontName)' at path '\(url)' with error: \(error).")
         }
         
@@ -189,26 +189,26 @@ extension IconDrawable {
     public static func unregister() {
         
         // No need to unregister if the font isn't registered
-        if UIFont.familyNames().contains(familyName) == false {
+        if UIFont.familyNames.contains(familyName) == false {
             return
         }
         
         let url = resourceUrl()
         var error: Unmanaged<CFError>? = nil
         
-        if CTFontManagerUnregisterFontsForURL(url, .None, &error) == false || error != nil {
+        if CTFontManagerUnregisterFontsForURL(url, .none, &error) == false || error != nil {
             assertionFailure("Failed unregistering font with name '\(familyName)' at path '\(url)' with error: \(error).")
         }
         
         print("Font '\(familyName)' unregistered successfully!")
     }
     
-    private static func resourceUrl() -> CFURL {
+    fileprivate static func resourceUrl() -> CFURL {
         
         let extensions = ["otf", "ttf"]
-        let bundle = NSBundle(forClass: Iconic.self)
+        let bundle = Bundle(for: Iconic.self)
         
-        let url = extensions.flatMap { bundle.URLForResource(familyName, withExtension: $0) }.first
+        let url = extensions.flatMap { bundle.url(forResource: familyName, withExtension: $0) }.first
         
         return url as CFURL!
     }
