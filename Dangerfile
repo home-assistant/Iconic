@@ -9,3 +9,7 @@ warn("Please add a detailed summary in the description.") if github.pr_body.leng
 
 # Warn about large PR!
 warn("This PR is too big! Consider breaking it down into smaller PRs.") if git.lines_of_code > 500
+
+# Run SwiftLint
+swiftlint.config_file = 'Samples/.swiftlint.yml'
+swiftlint.lint_files
