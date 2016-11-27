@@ -1,0 +1,18 @@
+# To be used for CI
+
+disabled_rules:
+    - line_length
+    - file_length
+    - function_body_length
+    - type_body_length
+    - trailing_whitespace
+    - cyclomatic_complexity
+
+included:
+    - Samples
+    - Source
+
+excluded:
+    - Vendor
+
+reporter: "xcode"

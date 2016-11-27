@@ -2,4 +2,7 @@
 source "https://rubygems.org"
 
 gem 'xcpretty'
-gem 'danger'
+gem 'cocoapods'
+
+gem 'danger', '~> 4.0'
+gem 'danger-swiftlint'

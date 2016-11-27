@@ -25,8 +25,8 @@ class SecondViewController: UIViewController {
         
         let tabItem = UITabBarItem(withIcon: .Picture, size: CGSize(width: 20, height: 20), title: "As Image")
         
-        self.title = tabItem.title;
-        self.tabBarItem = tabItem;
+        self.title = tabItem.title
+        self.tabBarItem = tabItem
         
         let buttonItem = UIBarButtonItem(withIcon: .Cog, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
         self.navigationItem.rightBarButtonItem = buttonItem
@@ -58,8 +58,6 @@ class SecondViewController: UIViewController {
         
         let size = CGFloat(ceil(scale))
         
-        // TODO: Need to figure out a better way to update both axis with 1 single constraint.
-        // Maybe with aspect ratio 1:1 ?
         iconWidthConstraint.constant = size
         iconHeightConstraint.constant = size
     }
@@ -87,4 +85,3 @@ class StepSlider: UISlider {
         self.sendActionsForControlEvents(.ValueChanged)
     }
 }
-

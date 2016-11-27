@@ -45,10 +45,10 @@ class StringIconSnapshotTests: BaseSnapshotTestCase {
         
         let icon = FontAwesomeIcon.Dribble
         
-        let edgeInsets = ["left": UIEdgeInsetsMake(0, 0, 0, 15),
-                          "bottom": UIEdgeInsetsMake(15, 0, 0, 0),
-                          "right": UIEdgeInsetsMake(0, 15, 0, 0),
-                          "top": UIEdgeInsetsMake(0, 0, 15, 0)]
+        let edgeInsets = ["left": UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 15),
+                          "bottom": UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0),
+                          "right": UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0),
+                          "top": UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)]
         
         for (kind, edgeInset) in edgeInsets {
             
