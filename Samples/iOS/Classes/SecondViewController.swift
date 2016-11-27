@@ -58,8 +58,6 @@ class SecondViewController: UIViewController {
         
         let size = CGFloat(ceil(scale))
         
-        // TODO: Need to figure out a better way to update both axis with 1 single constraint.
-        // Maybe with aspect ratio 1:1 ?
         iconWidthConstraint.constant = size
         iconHeightConstraint.constant = size
     }
