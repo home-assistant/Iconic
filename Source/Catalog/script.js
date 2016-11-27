@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    $.getJSON( "data.json", function(data) {
+    $.getJSON("data.json", function(data) {
         importFont(data);
         buildHeader(data);
         buildList(data);
@@ -41,13 +41,19 @@ function buildList(data){
         var newLi = $('<li/>');
         newLi.addClass('icon');
         newLi.append('<div class=icon style=font-family:'+font_name+'>' + icon + '</div>');
-        newLi.append('<i>' + key + '</i>');
+        newLi.append('<i>' + camelize(key + "Icon") + '</i>');
         newLi.append('<code>' + unicode + '</code>');
 
         newUl.append(newLi);
     }
     
     $("body").append(newUl);
+}
+
+function camelize(str) {
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(letter, index) {
+        return index == 0 ? letter.toLowerCase() : letter.toUpperCase();
+    }).replace(/\s+/g, '');
 }
 
 function sortObject(obj) {
