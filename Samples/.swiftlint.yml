@@ -2,7 +2,6 @@ disabled_rules: # rule identifiers to exclude from running
     - line_length
     - trailing_whitespace
     - cyclomatic_complexity
-    - todo
 
 opt_in_rules: # some rules are only opt-in
     - force_unwrapping
