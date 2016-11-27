@@ -3,6 +3,8 @@
 [![Travis](https://travis-ci.org/dzenbot/Iconic.svg?branch=master)](https://travis-ci.org/dzenbot/Iconic/builds)
 [![codecov](https://codecov.io/gh/dzenbot/Iconic/badge.svg)](https://codecov.io/gh/dzenbot/Iconic)
 [![Pod Version](http://img.shields.io/cocoapods/v/Iconic.svg)](http://cocoadocs.org/docsets/Iconic/)
+[![Pod Platforms](https://img.shields.io/cocoapods/p/Iconic.svg)](https://cocoapods.org/pods/Iconic)
+[![Swift Version](https://img.shields.io/badge/swift3-compatible-brightgreen.svg)]()
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 
@@ -37,7 +39,7 @@ Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and 
 
 ## Key Features
 - [Easy installation over CocoaPods](#installation).
-- Compatible with Swift 2.3 and Objective-C.
+- Compatible with Swift 3.0 and Objective-C.
 - Supports TTF and OTF font files.
 - Auto-generated enums and unicodes mapping, out of the font's [PUA range](https://en.wikipedia.org/wiki/Private_Use_Areas).
 - `NSAttributedString` and `UIImage` outputs.
