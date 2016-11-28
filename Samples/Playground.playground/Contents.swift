@@ -9,10 +9,10 @@ print(IconicVersionNumber)
 FontAwesomeIcon.register()
 
 // Global variables
-let icon = FontAwesomeIcon.Dribble
+let icon = FontAwesomeIcon.dribbleIcon
 let iconSize: CGFloat = 23
-let edgeInsets = UIEdgeInsets(top: 0, right: 0, bottom: 0, left: 15)
-let color = UIColor.orangeColor()
+let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 15)
+let color = UIColor.orange
 var attributedText = NSMutableAttributedString()
 
 //////////////////////////////
@@ -24,7 +24,7 @@ let font: UIFont = FontAwesomeIcon.font(ofSize: iconSize)
 
 let iconAttributes = [NSFontAttributeName: font,
                       NSForegroundColorAttributeName: color,
-                      NSBaselineOffsetAttributeName: edgeInsets.bottom-edgeInsets.top]
+                      NSBaselineOffsetAttributeName: edgeInsets.bottom-edgeInsets.top] as [String : Any]
 
 let iconString = " " + unicode + " "
 
@@ -43,8 +43,8 @@ let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 25),
 
 let titleAttrString = NSAttributedString(string: icon.name, attributes: titleAttributes)
 
-attributedText.appendAttributedString(mString)
-attributedText.appendAttributedString(titleAttrString)
+attributedText.append(mString)
+attributedText.append(titleAttrString)
 
 //////////////////////////////
 // USING ICONIC APIs
@@ -52,5 +52,5 @@ attributedText.appendAttributedString(titleAttrString)
 attributedText = NSMutableAttributedString()
 aString = icon.attributedString(ofSize: iconSize, color: color, edgeInsets: edgeInsets)
 
-attributedText.appendAttributedString(aString)
-attributedText.appendAttributedString(titleAttrString)
+attributedText.append(aString)
+attributedText.append(titleAttrString)
