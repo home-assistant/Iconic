@@ -25,7 +25,7 @@ class IconicHeaderView : UIView {
     
     init() {
         let frame = CGRect(x: 0, y: 0, width: 1777, height: 350)
-        let layout = IconCollectionViewLayout(columns: 32, width: frame.width)
+        let layout = IconCollectionViewLayout(columns: 36, width: frame.width)
         
         let viewFrame = CGRect(x: -50, y: -frame.height/2 - 50, width: frame.width + 100, height: (frame.height * 2) + 100)
         collectionView = IconCollectionView(frame: viewFrame, collectionViewLayout: layout)
@@ -50,7 +50,7 @@ class IconicHeaderView : UIView {
         let title = "Iconic"
         let subtitle = "Render vector icons, natively."
         
-        let titleAttributes = [NSFontAttributeName: UIFont(name: "OpenSans-Bold", size: 150),
+        let titleAttributes = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 150),
                                NSForegroundColorAttributeName: UIColor.white]
         
         
@@ -69,7 +69,7 @@ class IconicHeaderView : UIView {
         addSubview(collectionView)
         addSubview(titleLabel)
         
-        let angle = CGFloat(-15*(M_PI/180))
+        let angle = CGFloat(-12v*(M_PI/180))
         collectionView.transform = CGAffineTransform(rotationAngle: angle)
     }
 }
