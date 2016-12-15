@@ -23,7 +23,7 @@ let fontNames = [openSansBold, openSansSemibold].flatMap {
 
 // MARK: - Configuration
 
-let frame = CGRect(x: 0, y: 0, width: 1800v, height: 350)
+let frame = CGRect(x: 0, y: 0, width: 1800, height: 350)
 
 let c = IconicHeaderConfig(columns: 36,
                            angle: -12.0,
@@ -33,7 +33,7 @@ let c = IconicHeaderConfig(columns: 36,
                            subtitleColor: .white,
                            titleFont: UIFont(name: openSansBold, size: 150)!,
                            subtitleFont: UIFont(name: openSansSemibold, size: 50)!,
-                           title: "Iconic".uppercased(),
+                           title: String(describing: Iconic.self),
                            subtitle: "Render vector icons, natively.")
 
 
