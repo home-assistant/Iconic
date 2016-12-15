@@ -1,11 +1,11 @@
 
-import PlaygroundSupport
 import Iconic
 
 /**
  This playground was initially created for prototyping a new feature: adding the ability to output an icon attributed string with vertical and horizontal padding, either for text or image usage.
  
  Iconic provides 2 APIs to allow padding:
+ 
  -attributedStringOfSize:color:edgeInsets:
  -imageOfSize:color:edgeInsets:
  

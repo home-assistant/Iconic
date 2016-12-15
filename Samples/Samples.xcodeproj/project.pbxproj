@@ -484,7 +484,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = DZN;
 				TargetAttributes = {
 					F50ADBFD1D112CDA004A5A4C = {
@@ -948,7 +948,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAB0D2C6EAF6F7BB6AD88F66 /* Pods-tvOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = B29AGZ557Z;
@@ -967,7 +967,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD7764D616A1810A1DFC5905 /* Pods-tvOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = B29AGZ557Z;
@@ -986,7 +986,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D4B1EE0D254503D993F8CBE6 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B29AGZ557Z;
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
@@ -1004,7 +1004,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5654068EA6F3ADB1CC2CB451 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B29AGZ557Z;
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
@@ -1109,7 +1109,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3AA558A5D11A468FD84CAD54 /* Pods-iOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B29AGZ557Z;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -1127,7 +1127,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93B8D754A61650F700D999A4 /* Pods-iOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B29AGZ557Z;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -1144,7 +1144,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5F7240D5E946D2AF81A56D7 /* Pods-watchOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
@@ -1166,7 +1166,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C66F91C6DA29BE78BA91687C /* Pods-watchOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
@@ -1187,7 +1187,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A95B76C2AB3BA7834C7CADC4 /* Pods-watchOS Extension.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
@@ -1209,7 +1209,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4224BC2E139C807A70A7F70D /* Pods-watchOS Extension.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
