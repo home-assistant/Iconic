@@ -1,7 +1,6 @@
-
 import UIKit
 
-public class IconCollectionViewCell : UICollectionViewCell {
+public class IconCollectionViewCell: UICollectionViewCell {
     
     public var imageView = UIImageView()
     
@@ -22,4 +21,3 @@ public class IconCollectionViewCell : UICollectionViewCell {
         imageView.frame = self.bounds
     }
 }
-

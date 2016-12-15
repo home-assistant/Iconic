@@ -1,4 +1,5 @@
-
+import PlaygroundSupport
+import Foundation
 import Iconic
 
 /**
@@ -12,14 +13,13 @@ import Iconic
  Both of these APIs may help you reduce a lot of code. Compare its use with plain and old TextKit's.
  */
 
-
 // First of all, we must registering the icon font
 FontAwesomeIcon.register()
 
 // Variables
 let icon = FontAwesomeIcon.githubIcon
 let size: CGFloat = 30
-let color = UIColor(red: 1, green: 1, blue: 0.49, alpha: 1)
+let color = UIColor(red: 0.5, green: 1, blue: 0.2, alpha: 1)
 let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 15)
 
 let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 32),
@@ -27,7 +27,6 @@ let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 32),
 
 let titleAttrString = NSAttributedString(string: icon.name.capitalized,
                                          attributes: titleAttributes)
-
 
 // Attributed String constructed with Iconic's API
 // Notice how simple it is to insert an icon to an existing attributed string tile
@@ -37,7 +36,7 @@ let iconicAttrString = titleAttrString.insertIconic(icon: icon, size: size, colo
 // Much more verbose, same result.
 let textKitAttrString = titleAttrString.insertTextKit(icon: icon, size: size, color: color, edgeInsets: edgeInsets)
 
-
+// Convenience APIs
 extension NSAttributedString {
     
     // Inserts an icon at the first begining of an attributed string, with size, color and padding

@@ -1,7 +1,5 @@
-
 import Foundation
 import UIKit
-
 import Iconic
 
 public struct IconicHeaderConfig {
@@ -34,7 +32,7 @@ public struct IconicHeaderConfig {
     }
 }
 
-public class IconicHeaderView : UIView {
+public class IconicHeaderView: UIView {
     
     var collectionView: IconCollectionView
     var titleLabel: UILabel
@@ -65,11 +63,11 @@ public class IconicHeaderView : UIView {
     
     func configureLayout() {
         
-        let titleAttributes:[String:Any] = [NSFontAttributeName: config.titleFont,
-                                            NSForegroundColorAttributeName: UIColor.white]
+        let titleAttributes: [String:Any] = [NSFontAttributeName: config.titleFont,
+                                             NSForegroundColorAttributeName: UIColor.white]
         
-        let subtitleAttributes:[String:Any] = [NSFontAttributeName: config.subtitleFont,
-                                               NSForegroundColorAttributeName: UIColor.white]
+        let subtitleAttributes: [String:Any] = [NSFontAttributeName: config.subtitleFont,
+                                                NSForegroundColorAttributeName: UIColor.white]
         
         let titleString = NSAttributedString(string: config.title + "\n", attributes: titleAttributes)
         let subtitleString = NSAttributedString(string: config.subtitle, attributes: subtitleAttributes)
@@ -95,7 +93,7 @@ public class IconicHeaderView : UIView {
     }
 }
 
-class IconCollectionView : UICollectionView, UICollectionViewDataSource {
+class IconCollectionView: UICollectionView, UICollectionViewDataSource {
     
     var iconColor: UIColor? {
         didSet {

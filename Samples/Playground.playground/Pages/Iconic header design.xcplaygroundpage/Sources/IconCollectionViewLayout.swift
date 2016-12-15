@@ -1,13 +1,12 @@
-
 import UIKit
 
-public class IconCollectionViewLayout : UICollectionViewFlowLayout {
+public class IconCollectionViewLayout: UICollectionViewFlowLayout {
     
     public init(columns: Int, width: CGFloat) {
         super.init()
         
         let spacing: CGFloat = 20
-        let insets = UIEdgeInsetsMake(-spacing, -spacing, -spacing, -spacing)
+        let insets = UIEdgeInsets(top: -spacing, left: -spacing, bottom: -spacing, right: -spacing)
         
         let viewGaps = (CGFloat(columns-1) * spacing) + insets.left + insets.right
         let itemWidth = (width - viewGaps) / CGFloat(columns)
