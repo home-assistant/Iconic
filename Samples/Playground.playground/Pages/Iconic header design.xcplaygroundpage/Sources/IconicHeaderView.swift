@@ -7,7 +7,7 @@ import Iconic
 public struct IconicHeaderConfig {
     
     var columns: Int
-    var angle: CGFloat
+    var angle: Double
     
     var foregroundColor: UIColor
     var backgroundColor: UIColor
@@ -20,7 +20,7 @@ public struct IconicHeaderConfig {
     var title: String
     var subtitle: String
     
-    public init(columns: Int, angle: CGFloat, foregroundColor: UIColor, backgroundColor: UIColor, titleColor: UIColor, subtitleColor: UIColor, titleFont: UIFont, subtitleFont: UIFont, title: String, subtitle: String) {
+    public init(columns: Int, angle: Double, foregroundColor: UIColor, backgroundColor: UIColor, titleColor: UIColor, subtitleColor: UIColor, titleFont: UIFont, subtitleFont: UIFont, title: String, subtitle: String) {
         self.columns = columns
         self.angle = angle
         self.foregroundColor = foregroundColor
@@ -83,10 +83,13 @@ public class IconicHeaderView : UIView {
         addSubview(collectionView)
         addSubview(titleLabel)
         
-        if config.angle != 0.0 {
-            collectionView.transform = CGAffineTransform(rotationAngle: config.angle)
+        if config.angle != 0 {
+            let radian = CGFloat(config.angle*(M_PI/180))
+            collectionView.transform = CGAffineTransform(rotationAngle: radian)
             
-            let viewFrame = CGRect(x: -50, y: -frame.height/2 - 50, width: frame.width + 100, height: (frame.height * 2) + 100)
+            let gap = CGFloat(200.0)
+            
+            let viewFrame = CGRect(x: -gap/4, y: 0.0, width: frame.width + gap, height: (frame.height * 2) + gap)
             collectionView.frame = viewFrame
         }
     }
