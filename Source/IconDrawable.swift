@@ -12,7 +12,7 @@ import CoreText
 /** A wrapper class for Objective-C compatibility. */
 open class Iconic: NSObject { }
 
-/** */
+/** The IconDrawable protocol defines the complete interface of an Iconic icon's capabilities. */
 public protocol IconDrawable {
     
     /** The icon font's family name. */
@@ -61,7 +61,7 @@ public protocol IconDrawable {
     func image(ofSize size: CGSize, color: UIColor?) -> UIImage
     
     /**
-     Returns the icon as an image with the given size and color.
+     Returns the icon as an image with the given size, color and padding.
      
      - parameter size: The size of the image, in points.
      - parameter color: The tint color of the image.

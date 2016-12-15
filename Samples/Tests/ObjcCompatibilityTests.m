@@ -41,7 +41,7 @@
     XCTAssertTrue([familyName isEqualToString:@"FontAwesome"]);
     
     NSInteger count = [Iconic fontAwesomeIconCount];
-    XCTAssertEqual(count, 649);
+    XCTAssertEqual(count, 694);
 }
 
 - (void)testAttributedStringConstructor

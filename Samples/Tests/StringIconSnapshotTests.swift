@@ -28,7 +28,7 @@ class StringIconSnapshotTests: BaseSnapshotTestCase {
     }
     
     func testFullIconMap() {
-        
+                
         var rect = CGRect(x: 0, y: 0, width: 500, height: 0)
         let attributedString = NSAttributedString.iconMap(withSize: 20, spacing: 5, andColor: nil)
         

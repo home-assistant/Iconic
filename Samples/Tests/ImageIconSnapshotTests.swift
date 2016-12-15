@@ -43,7 +43,7 @@ class ImageIconSnapshotTests: BaseSnapshotTestCase {
     }
     
     func testImageSizes() {
-        
+                
         let pointSizes = [16, 32, 64, 128, 512]
         
         for pointSize in pointSizes {
