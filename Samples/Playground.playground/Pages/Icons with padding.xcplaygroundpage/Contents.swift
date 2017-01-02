@@ -19,7 +19,7 @@ FontAwesomeIcon.register()
 // Variables
 let icon = FontAwesomeIcon.githubIcon
 let size: CGFloat = 30
-let color = UIColor(red: 0.5, green: 1, blue: 0.2, alpha: 1)
+let color = UIColor(red: 0.1, green: 0.8, blue: 0.9, alpha: 1)
 let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 15)
 
 let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 32),

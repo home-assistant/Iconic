@@ -8,27 +8,19 @@ import Iconic
 // First, register Font Awesome icons with Iconic
 FontAwesomeIcon.register()
 
-let openSansBold = "OpenSans-Bold"
-let openSansSemibold = "OpenSans-Semibold"
-
-// Register OpenSans font for the titles
-let fontNames = [openSansBold, openSansSemibold].flatMap {
-    let url = Bundle.main.url(forResource: $0, withExtension: "ttf") as CFURL!
-    CTFontManagerRegisterFontsForURL(url!, .none, nil)
-}
 
 // MARK: - Configuration
 
-let frame = CGRect(x: 0, y: 0, width: 1800, height: 350)
+let frame = CGRect(x: 0, y: 0, width: 1900, height: 350)
 
 let config = IconicHeaderConfig(columns: 36,
                                 angle: -12.0,
-                                foregroundColor: UIColor(red: 90/255, green: 236/255, blue: 189/255, alpha: 1),
-                                backgroundColor: UIColor(red: 81/255, green: 212/255, blue: 170/255, alpha: 1),
+                                foregroundColor: UIColor(red: 241/255, green: 110/255, blue: 85/255, alpha: 0.8),
+                                backgroundColor: UIColor(red: 216/255, green: 98/255, blue: 77/255, alpha: 1),
                                 titleColor: .white,
                                 subtitleColor: .white,
-                                titleFont: UIFont(name: openSansBold, size: 150)!,
-                                subtitleFont: UIFont(name: openSansSemibold, size: 50)!,
+                                titleFont: .monospacedDigitSystemFont(ofSize: 130, weight: 0.2),
+                                subtitleFont: .systemFont(ofSize: 50),
                                 title: String(describing: Iconic.self),
                                 subtitle: "Render vector icons, natively.")
 
