@@ -15,8 +15,8 @@ let frame = CGRect(x: 0, y: 0, width: 1900, height: 350)
 
 let config = IconicHeaderConfig(columns: 36,
                                 angle: -12.0,
-                                foregroundColor: UIColor(red: 241/255, green: 110/255, blue: 85/255, alpha: 0.8),
-                                backgroundColor: UIColor(red: 216/255, green: 98/255, blue: 77/255, alpha: 1),
+                                foregroundColor: UIColor(red: 237/255, green: 85/255, blue: 96/255, alpha: 0.8),
+                                backgroundColor: UIColor(red: 217/255, green: 78/255, blue: 90/255, alpha: 1),
                                 titleColor: .white,
                                 subtitleColor: .white,
                                 titleFont: .monospacedDigitSystemFont(ofSize: 130, weight: 0.2),
