@@ -14,5 +14,6 @@ included:
 
 excluded:
     - Vendor
+    - Samples/Playground.playground
 
 reporter: "xcode"
