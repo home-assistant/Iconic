@@ -101,8 +101,8 @@ public extension UIBarButtonItem {
      */
     convenience init(withIcon icon: {{enumName}}, size: CGSize, target: AnyObject?, action: Selector) {
         
-        let image = icon.image(ofSize: size, color: .blackColor())
-        self.init(image: image, style: .Plain, target: target, action: action)
+        let image = icon.image(ofSize: size, color: .black)
+        self.init(image: image, style: .plain, target: target, action: action)
     }
 }
 
@@ -118,7 +118,7 @@ public extension UITabBarItem {
      */
     convenience init(withIcon icon: {{enumName}}, size: CGSize, title: String?) {
         
-        let image = icon.image(ofSize: size, color: .blackColor())
+        let image = icon.image(ofSize: size, color: .black)
         self.init(title: title, image: image, tag: icon.rawValue)
     }
 }
@@ -135,8 +135,8 @@ public extension UIButton {
      */
     func setIconImage(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, forState state: UIControlState) {
         
-        let image = icon.image(ofSize: size, color: color ?? .blackColor())
-        setImage(image, forState: state)
+        let image = icon.image(ofSize: size, color: color ?? .black)
+        setImage(image, for: state)
     }
 }
 
@@ -145,7 +145,7 @@ public extension UIButton {
 /** A list with available icon glyphs from the icon font. */
 @objc public enum {{enumName}}: Int {
     {% for icon in icons %}
-    case {{icon.name|swiftIdentifier|snakeToCamelCase}}
+    case {{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon
     {% endfor %}
 
     /** The icon font's total count of available icons. */
@@ -166,9 +166,9 @@ extension {{enumName}} : IconDrawable {
      - parameter iconName: The icon name to use for the new instance.
      */
     public init(named iconName: String) {
-        switch iconName.lowercaseString {
+        switch iconName.lowercased() {
         {% for icon in icons %}
-        case "{{icon.name|swiftIdentifier|lowercase}}": self = .{{icon.name|swiftIdentifier|snakeToCamelCase}}
+        case "{{icon.name|swiftIdentifier|lowercase}}": self = .{{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon
         {% endfor %}
         default: self = {{enumName}}(rawValue: 0)!
         }
@@ -178,7 +178,7 @@ extension {{enumName}} : IconDrawable {
     public var name: String {
         switch self {
         {% for icon in icons %}
-        case .{{icon.name|swiftIdentifier|snakeToCamelCase}}: return "{{icon.name|swiftIdentifier|snakeToCamelCase}}"
+        case .{{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon: return "{{icon.name|swiftIdentifier|lowercase}}"
         {% endfor %}
         }
     }
@@ -187,7 +187,7 @@ extension {{enumName}} : IconDrawable {
     public var unicode: String {
         switch self {
             {% for icon in icons %}
-        case .{{icon.name|swiftIdentifier|snakeToCamelCase}}: return "{{icon.unicode|unicodeCase}}"
+        case .{{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon: return "{{icon.unicode|unicodeCase}}"
             {% endfor %}
         }
     }

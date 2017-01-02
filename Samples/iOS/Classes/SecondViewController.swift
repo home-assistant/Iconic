@@ -23,12 +23,12 @@ class SecondViewController: UIViewController {
     
     func commonInit() -> Void {
         
-        let tabItem = UITabBarItem(withIcon: .Picture, size: CGSize(width: 20, height: 20), title: "As Image")
+        let tabItem = UITabBarItem(withIcon: .pictureIcon, size: CGSize(width: 20, height: 20), title: "As Image")
         
         self.title = tabItem.title
         self.tabBarItem = tabItem
         
-        let buttonItem = UIBarButtonItem(withIcon: .Cog, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
+        let buttonItem = UIBarButtonItem(withIcon: .cogIcon, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapRightItem))
         self.navigationItem.rightBarButtonItem = buttonItem
     }
     
@@ -39,22 +39,22 @@ class SecondViewController: UIViewController {
         updateIcon(200)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
     func didTapRightItem() {
-        navigationController?.navigationBar.hidden = true
-        tabBarController?.tabBar.hidden = true
+        navigationController?.navigationBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
     }
     
-    @IBAction func didChangeScale(sender: UISlider) {
+    @IBAction func didChangeScale(_ sender: UISlider) {
         print("did change scale to '\(sender.value)'")
         
         updateIcon(sender.value)
     }
     
-    func updateIcon(scale: Float) {
+    func updateIcon(_ scale: Float) {
         
         let size = CGFloat(ceil(scale))
         
@@ -73,15 +73,15 @@ class StepSlider: UISlider {
         self.addGestureRecognizer(tapGesture)
     }
     
-    func didTapSlider(gesture: UIGestureRecognizer) {
+    func didTapSlider(_ gesture: UIGestureRecognizer) {
         
-        let location = gesture.locationInView(gesture.view)
+        let location = gesture.location(in: gesture.view)
         
         let maxValue = CGFloat(self.maximumValue)
         let newValue = location.x * maxValue / self.frame.width
         
         self.value = Float(newValue)
         
-        self.sendActionsForControlEvents(.ValueChanged)
+        self.sendActions(for: .valueChanged)
     }
 }

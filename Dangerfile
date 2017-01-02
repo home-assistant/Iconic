@@ -8,7 +8,7 @@ warn("Please add a more descriptive title.") if github.pr_title.length < 10
 warn("Please add a detailed summary in the description.") if github.pr_body.length < 10
 
 # Warn about large PR!
-warn("This PR is too big! Consider breaking it down into smaller PRs.") if git.lines_of_code > 500
+warn("This PR is too big! Consider breaking it down into smaller PRs.") if git.lines_of_code > 2000
 
 # Run SwiftLint
 swiftlint.config_file = '.swiftlint.yml'

@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.pod_target_xcconfig = {
       'ENABLE_BITCODE' => 'NO',
-      'SWIFT_VERSION' => '2.3',
+      'SWIFT_VERSION' => '3.0',
   }
   
   s.prepare_command = "sh Source/Iconizer.sh '#{ENV['FONT_PATH']}' --verbose"

@@ -15,21 +15,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var upButton: UIButton!
     @IBOutlet weak var downButton: UIButton!
     
-    var scale = 10
-    let maxScale = 50
+    var scale: UInt = 10
+    let maxScale: UInt = 50
     let buttonSize = CGSize(width: 60, height: 60)
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        upButton.setIconImage(withIcon: .AngleUp, size: buttonSize, color: nil, forState: .Normal)
-        downButton.setIconImage(withIcon: .AngleDown, size: buttonSize, color: nil, forState: .Normal)
+        upButton.setIconImage(withIcon: .angleUpIcon, size: buttonSize, color: nil, forState: .normal)
+        downButton.setIconImage(withIcon: .angleDownIcon, size: buttonSize, color: nil, forState: .normal)
         
         updateImage(scale)
     }
     
-    @IBAction func didPressUp(sender: UIButton) {
+    @IBAction func didPress(up sender: UIButton) {
         
         if scale > maxScale {
             return
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         updateImage(scale)
     }
     
-    @IBAction func didPressDown(sender: UIButton) {
+    @IBAction func didPress(down sender: UIButton) {
         
         if scale <= 2 {
             return
@@ -49,11 +49,11 @@ class ViewController: UIViewController {
         updateImage(scale)
     }
     
-    func updateImage(scale: UInt) {
+    func updateImage(_ scale: UInt) {
         
         let width = CGFloat(20 * scale)
         let imgSize = CGSize(width: width, height: width)
-        let image = FontAwesomeIcon.GithubAlt.image(ofSize: imgSize, color: .blackColor())
+        let image = FontAwesomeIcon.githubAltIcon.image(ofSize: imgSize, color: .black)
         
         imageView.image = image
         
@@ -62,6 +62,6 @@ class ViewController: UIViewController {
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         transition.type = kCATransitionFade
         
-        imageView.layer.addAnimation(transition, forKey: nil)
+        imageView.layer.add(transition, forKey: nil)
     }
 }

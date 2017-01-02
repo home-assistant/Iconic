@@ -18,7 +18,7 @@ class StringIconSnapshotTests: BaseSnapshotTestCase {
     
     func testSimpleString() {
         
-        let string = FontAwesomeIcon.CameraRetro.attributedString(ofSize: 50, color: nil)
+        let string = FontAwesomeIcon.cameraRetroIcon.attributedString(ofSize: 50, color: nil)
         let textView = UITextView()
         
         textView.attributedText = string
@@ -28,9 +28,9 @@ class StringIconSnapshotTests: BaseSnapshotTestCase {
     }
     
     func testFullIconMap() {
-        
+                
         var rect = CGRect(x: 0, y: 0, width: 500, height: 0)
-        let attributedString = NSAttributedString.iconMapWithSize(20, spacing: 5, andColor: nil)
+        let attributedString = NSAttributedString.iconMap(withSize: 20, spacing: 5, andColor: nil)
         
         let textView = UITextView(frame: rect)
         textView.attributedText = attributedString
@@ -42,8 +42,8 @@ class StringIconSnapshotTests: BaseSnapshotTestCase {
     }
     
     func testComposeString() {
-        
-        let icon = FontAwesomeIcon.Dribble
+                
+        let icon = FontAwesomeIcon.dribbleIcon
         
         let edgeInsets = ["left": UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 15),
                           "bottom": UIEdgeInsets(top: 15, left: 0, bottom: 0, right: 0),
@@ -55,13 +55,13 @@ class StringIconSnapshotTests: BaseSnapshotTestCase {
             let attributedText = NSMutableAttributedString()
             let iconString = icon.attributedString(ofSize: 25, color: nil, edgeInsets: edgeInset)
             
-            let titleAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(25),
-                                   NSForegroundColorAttributeName: UIColor.blackColor()] as [String : AnyObject]
+            let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 25),
+                                   NSForegroundColorAttributeName: UIColor.black] as [String : AnyObject]
             
             let titleAttrString = NSAttributedString(string: icon.name, attributes: titleAttributes)
             
-            attributedText.appendAttributedString(iconString)
-            attributedText.appendAttributedString(titleAttrString)
+            attributedText.append(iconString)
+            attributedText.append(titleAttrString)
             
             let textView = UITextView()
             
