@@ -13,16 +13,23 @@ FontAwesomeIcon.register()
 
 let frame = CGRect(x: 0, y: 0, width: 1900, height: 350)
 
+let foregroundColor = UIColor(withHex: "388988", alpha: 0.5)
+let backgroundColor = UIColor(withHex: "217c7a", alpha: 1)
+let textColor = UIColor.white
+
+let title = String(describing: Iconic.self)
+let subtitle = "Render vector icons, natively."
+
 let config = IconicHeaderConfig(columns: 36,
                                 angle: -12.0,
-                                foregroundColor: UIColor(red: 237/255, green: 85/255, blue: 96/255, alpha: 0.5),
-                                backgroundColor: UIColor(red: 217/255, green: 78/255, blue: 90/255, alpha: 1),
-                                titleColor: .white,
-                                subtitleColor: .white,
+                                foregroundColor: foregroundColor, alpha: 0.5),
+                                backgroundColor: backgroundColor,
+                                titleColor: textColor,
+                                subtitleColor: textColor,
                                 titleFont: .boldSystemFont(ofSize: 150),
                                 subtitleFont: .systemFont(ofSize: 50),
-                                title: String(describing: Iconic.self),
-                                subtitle: "Render vector icons, natively.")
+                                title: title,
+                                subtitle: subtitle
 
 let view = IconicHeaderView(frame: frame, config: config)
 
