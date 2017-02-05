@@ -10,12 +10,12 @@ public extension Iconic {
     @objc class var {{enumName|lowerFirstWord}}FamilyName: NSString {
         return {{enumName}}.familyName as NSString
     }
-    
+
     /** The icon font's total count of available icons. */
     @objc class var {{enumName|lowerFirstWord}}Count: Int {
         return {{enumName}}.count
     }
-    
+
     /**
      Returns the icon font object for the specified size.
 
@@ -47,7 +47,7 @@ public extension Iconic {
     @objc class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
         return icon.attributedString(ofSize: pointSize, color: color, edgeInsets: edgeInsets)
     }
-    
+
     /**
      Returns the icon as an image with the given size and color.
 
@@ -78,7 +78,7 @@ public extension Iconic {
     @objc class func register{{enumName}}() {
         {{enumName}}.register()
     }
-    
+
     /**
      Unregisters the icon font from the font manager.
      */
@@ -89,8 +89,38 @@ public extension Iconic {
 
 #if os(iOS) || os(tvOS)
 
+/** A Image View subclass, compatible with Interface Builder,. */
+@IBDesignable
+open class FontAwesomeIconView: IconImageView {
+
+    /** The icon string name, to be used with for Interface Builder. */
+    @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'icon' instead.")
+    @IBInspectable
+    dynamic public var iconName: String? {
+        willSet {
+            icon = {{enumName}}(named: newValue ?? "")
+        }
+    }
+
+    /** The icon color, to be used with for Interface Builder. */
+    @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'tintColor' instead.")
+    @IBInspectable
+    dynamic public var iconColor: UIColor! {
+        willSet {
+            tintColor = newValue ?? UIColor.black
+        }
+    }
+
+    @available(*, unavailable, message : "This property is reserved for when designable objects are created in Interface Builder.")
+    override open func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        // The icon font needs to be registered first.
+        {{enumName}}.register()
+    }
+}
+
 public extension UIBarButtonItem {
-    
+
     /**
      Initializes a new item using the specified icon and other properties.
      
@@ -107,7 +137,7 @@ public extension UIBarButtonItem {
 }
 
 public extension UITabBarItem {
-    
+
     /**
      Initializes a new item using the specified icon and other properties.
      The tag is automatically assigned using the icon's raw integer value.
@@ -124,7 +154,7 @@ public extension UITabBarItem {
 }
 
 public extension UIButton {
-    
+
     /**
      Sets the icon to use for the specified state.
      
@@ -153,12 +183,12 @@ public extension UIButton {
 }
 
 extension {{enumName}} : IconDrawable {
-    
+
     /** The icon font's family name. */
     public static var familyName: String {
         return "{{familyName}}"
     }
-    
+
     /**
      Creates a new instance with the specified icon name.
      If there is no valid name is recognised, this initializer falls back to the first available icon.
@@ -173,7 +203,7 @@ extension {{enumName}} : IconDrawable {
         default: self = {{enumName}}(rawValue: 0)!
         }
     }
-    
+
     /** The icon's name. */
     public var name: String {
         switch self {
@@ -182,7 +212,7 @@ extension {{enumName}} : IconDrawable {
         {% endfor %}
         }
     }
-    
+
     /** The icon's unicode. */
     public var unicode: String {
         switch self {

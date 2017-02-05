@@ -3,7 +3,7 @@
 //  watchOS Extension
 //
 //  Created by Ignacio Romero on 11/2/16.
-//  Copyright © 2016 DZN. All rights reserved.
+//  Copyright © 2017 DZN. All rights reserved.
 //
 
 import WatchKit
@@ -15,7 +15,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var imageView: WKInterfaceImage!
     @IBOutlet weak var upButtonImageView: WKInterfaceImage!
     @IBOutlet weak var downButtonImageView: WKInterfaceImage!
-    
+        
     var scale: UInt = 10
     let maxScale: UInt = 30
     let imageSize = CGSize(width: 88, height: 88)

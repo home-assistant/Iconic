@@ -3,7 +3,7 @@
 //  https://github.com/dzenbot/Iconic
 //
 //  Created by Ignacio Romero on 5/22/16.
-//  Copyright © 2016 DZN Labs All rights reserved.
+//  Copyright © 2017 DZN. All rights reserved.
 //
 
 import UIKit

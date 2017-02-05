@@ -17,7 +17,7 @@ env:
     - LANG=en_US.UTF-8
 
     - WORKSPACE="Samples.xcworkspace"
-    - IOS_SCHEME="iOS-Sample"
+    - IOS_SCHEME="iOS Sample"
     - IOS_SDK="iphonesimulator10.0"
 
     matrix:

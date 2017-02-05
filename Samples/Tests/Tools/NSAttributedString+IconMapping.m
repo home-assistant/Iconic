@@ -3,7 +3,7 @@
 //  Samples
 //
 //  Created by Ignacio Romero on 9/25/16.
-//  Copyright © 2016 DZN. All rights reserved.
+//  Copyright © 2017 DZN. All rights reserved.
 //
 
 #import "NSAttributedString+IconMapping.h"
