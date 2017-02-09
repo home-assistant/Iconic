@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Iconic
+@testable import Iconic
 
 enum TestIcon: Int {
     case icon1
