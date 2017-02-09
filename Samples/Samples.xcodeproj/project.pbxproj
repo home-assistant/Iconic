@@ -35,7 +35,6 @@
 		F56977751DC9CAE3005EDE73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F56977741DC9CAE3005EDE73 /* Assets.xcassets */; };
 		F56977791DC9CAE3005EDE73 /* watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F569775F1DC9CAE3005EDE73 /* watchOS.app */; };
 		F56977831DCA5D66005EDE73 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56977821DCA5D66005EDE73 /* CoreText.framework */; };
-		F5845BC01E4D0525006B3AD9 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5845BBF1E4D0525006B3AD9 /* View.xib */; };
 		F5A3423B1D96616700E7029B /* BaseSnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A3423A1D96616700E7029B /* BaseSnapshotTestCase.swift */; };
 		F5C165251D83CAF7003D76E0 /* ImageIconSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C165241D83CAF7003D76E0 /* ImageIconSnapshotTests.swift */; };
 		F5C1652D1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C1652B1D83CB80003D76E0 /* FBSnapshotTestCase+Swift.m */; };
@@ -142,7 +141,6 @@
 		F56977741DC9CAE3005EDE73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F56977761DC9CAE3005EDE73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F56977821DCA5D66005EDE73 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
-		F5845BBF1E4D0525006B3AD9 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		F5A3423A1D96616700E7029B /* BaseSnapshotTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSnapshotTestCase.swift; sourceTree = "<group>"; };
 		F5C165241D83CAF7003D76E0 /* ImageIconSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageIconSnapshotTests.swift; sourceTree = "<group>"; };
 		F5C165271D83CB80003D76E0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 			children = (
 				F54BAFBF1D0A609F004757C9 /* Classes */,
 				F54BAFBD1D0A609F004757C9 /* Main.storyboard */,
-				F5845BBF1E4D0525006B3AD9 /* View.xib */,
 				F54BAFBB1D0A609F004757C9 /* LaunchScreen.storyboard */,
 				F54BAFC61D0A609F004757C9 /* Info.plist */,
 			);
@@ -563,7 +560,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54BAFC81D0A609F004757C9 /* Main.storyboard in Resources */,
-				F5845BC01E4D0525006B3AD9 /* View.xib in Resources */,
 				F54BAFC71D0A609F004757C9 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
