@@ -89,20 +89,20 @@ public extension Iconic {
 
 #if os(iOS) || os(tvOS)
 
-/** A Image View subclass, compatible with Interface Builder,. */
 @IBDesignable
+/** An Image View subclass, compatible with Interface Builder, capable of rendering icons. Only supported for iOS and tvOS. */
 open class FontAwesomeIconView: IconImageView {
 
-    /** The icon string name, to be used with for Interface Builder. */
+    /** The icon string name (Interface Builder only). */
     @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'icon' instead.")
     @IBInspectable
     dynamic public var iconName: String? {
         willSet {
-            icon = {{enumName}}(named: newValue ?? "")
+            iconDrawable = {{enumName}}(named: newValue ?? "")
         }
     }
 
-    /** The icon color, to be used with for Interface Builder. */
+    /** The icon tint color (Interface Builder only). */
     @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'tintColor' instead.")
     @IBInspectable
     dynamic public var iconColor: UIColor! {
@@ -114,6 +114,7 @@ open class FontAwesomeIconView: IconImageView {
     @available(*, unavailable, message : "This property is reserved for when designable objects are created in Interface Builder.")
     override open func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
+
         // The icon font needs to be registered first.
         {{enumName}}.register()
     }
@@ -123,7 +124,7 @@ public extension UIBarButtonItem {
 
     /**
      Initializes a new item using the specified icon and other properties.
-     
+
      - parameter icon: The icon to be used as image.
      - parameter size: The size of the image, in points.
      - parameter target: The object that receives the action message.
@@ -141,7 +142,7 @@ public extension UITabBarItem {
     /**
      Initializes a new item using the specified icon and other properties.
      The tag is automatically assigned using the icon's raw integer value.
-     
+
      - parameter icon: The icon to be used as image.
      - parameter size: The size of the image, in points.
      - parameter title: The item's title. If nil, a title is not displayed.
@@ -157,7 +158,7 @@ public extension UIButton {
 
     /**
      Sets the icon to use for the specified state.
-     
+
      - parameter icon: The icon to be used as image.
      - parameter size: The size of the image, in points.
      - parameter color: The color of the image.
@@ -192,7 +193,7 @@ extension {{enumName}} : IconDrawable {
     /**
      Creates a new instance with the specified icon name.
      If there is no valid name is recognised, this initializer falls back to the first available icon.
-     
+
      - parameter iconName: The icon name to use for the new instance.
      */
     public init(named iconName: String) {

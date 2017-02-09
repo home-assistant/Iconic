@@ -10,11 +10,13 @@ import UIKit
 
 #if os(iOS) || os(tvOS)
 
+/** An Image View subclass, capable of rendering icons. Only supported for iOS and tvOS. */
 open class IconImageView: UIImageView {
     
-    // MARK: - Public
-        
-    var icon: IconDrawable? {
+    // MARK: - Public Variables
+    
+    /** The icon drawable to be used as image. */
+    public var iconDrawable: IconDrawable? {
         didSet {
             updateIconImage()
         }
@@ -22,35 +24,50 @@ open class IconImageView: UIImageView {
     
     // MARK: - Initializers
     
-    public init(icon: IconDrawable) {
-        super.init(image: nil)
-        commonInit()
-        self.icon = icon
+    /**
+     Returns an image view initialized with the specified icon.
+     The icon you specified is used to configure the initial size of the image view itself, of 40 pts as default.
+     
+     - parameter icon: The initial icon to display in the image view.
+     */
+    convenience public init(iconDrawable: IconDrawable) {
+        self.init(iconDrawable: iconDrawable, size: CGSize())
     }
     
-    required override public init(frame: CGRect) {
+    /**
+     Returns an image view initialized with the specified icon and size.
+     
+     - parameter icon: The initial icon to display in the image view.
+     - parameter size: The size of the image, in points.
+     */
+    public required init(iconDrawable: IconDrawable, size: CGSize) {
+        super.init(frame: CGRect(x:0, y:0, width: size.width, height: size.height))
+        self.iconDrawable = iconDrawable
+    }
+
+    public override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    fileprivate func commonInit() {
-        self.backgroundColor = UIColor.clear
     }
     
     // MARK: - Overrides
     
-    override open var tintColor: UIColor! {
+    open override var tintColor: UIColor! {
         didSet {
             updateIconImage()
         }
     }
     
-    override open func layoutSubviews() {
+    open override var frame: CGRect {
+        didSet {
+            updateIconImage()
+        }
+    }
+    
+    open override func layoutSubviews() {
         super.layoutSubviews()
         
         updateIconImage()
@@ -58,18 +75,21 @@ open class IconImageView: UIImageView {
     
     // MARK: - Image Constructor
     
-    func updateIconImage() {
+    /**
+     Updates the icon image, only when the frame is not empty.
+     */
+    fileprivate func updateIconImage() {
         
-        // No need to update if the sizing is empty or too small
-        if frame.isEmpty || frame.isNull || min(frame.width, frame.height) < 5 {
+        // No need to update the icon with empty frame
+        if frame.isEmpty {
             return
         }
         
-        if icon != nil {
-            let image = icon?.image(ofSize: frame.size, color: tintColor)
-            super.image = image
+        if iconDrawable != nil {
+            let image = iconDrawable?.image(ofSize: frame.size, color: tintColor)
+            self.image = image
         } else {
-            super.image = nil
+            self.image = nil
         }
     }
 }
