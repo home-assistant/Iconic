@@ -39,14 +39,14 @@ Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and 
 
 ## Key Features
 - [Easy installation over CocoaPods](#installation).
-- Compatible with Swift 3.0 and Objective-C.
 - Supports TTF and OTF font files.
 - Auto-generated enums and unicodes mapping, out of the font's [PUA range](https://en.wikipedia.org/wiki/Private_Use_Areas).
 - `NSAttributedString` and `UIImage` outputs.
-- Fonts are registered dynamically, effortless. No need to import the file to your project or register in the info.plist.
-- [UIKit extensions](#uikit-extensions) for `UIBarButtonItem`, `UITabBarItem` and `UIButton`.
+- Fonts are included and registered dynamically, effortless. No need to import the file to your project or register in the info.plist.
+- [Interface Builder support](#interface-builder-support) (iOS & tvOS only).
+- [UIKit extensions](#uikit-extensions) for `UIBarButtonItem`, `UITabBarItem` and `UIButton` (iOS & tvOS only).
 - Auto-generated [icon font html catalog](#icon-font-catalog).
-- Interface Builder support (prototype in the sample project).
+- Compatible with Swift 3.0 and Objective-C.
 - iOS 8 or later.
 - watchOS or later.
 - tvOS 9 or later.
@@ -122,7 +122,7 @@ Images are created using NSStringDraw APIs to render a `UIImage` out of an `NSAt
 ```swift
 let size = CGSize(width: 20, height: 20)
 
-let icon = FontAwesomeIcon.Home
+let icon = FontAwesomeIcon.HomeIcon
 let image = icon.image(ofSize: size, color: .blueColor())
 ```
 </details>
@@ -139,7 +139,7 @@ For example, instead of having an image and a label, you can combined it all in 
 <details open>
 <summary>Swift</summary>
 ```swift
-let icon = FontAwesomeIcon.Home 
+let icon = FontAwesomeIcon.HomeIcon
 let iconString = icon.attributedString(ofSize: 20, color: .blueColor())
 ```
 </details>
@@ -155,7 +155,7 @@ Ultimately, you may need to retrieve the unicode string representation on an ico
 <details open>
 <summary>Swift</summary>
 ```swift
-let unicode = FontAwesomeIcon.Home.unicode
+let unicode = FontAwesomeIcon.HomeIcon.unicode
 ```
 </details>
 
@@ -175,6 +175,14 @@ UIFont *font = [Iconic fontAwesomeIconFontOfSize:20.0];
 </details>
 
 
+### Interface Builder Support
+![Interface Builder](Screenshots/screenshot_interface_builder.gif)
+
+Iconic includes a `UIImageView` subclass under the name of `{FontName}IconView.swift`, conforming to `@IBInspectable`. This class is only available for Interface Builder.
+Use the `iconName` and `iconColor` attributes for see live changes on Interface Builder.
+Adjust the bounds of the view to see it dynamically adjust the icon size.
+
+
 ### UIKit Extensions
 UIKit extensions are also included, just to make your code look simpler:
 <details open>
@@ -188,7 +196,7 @@ UIBarButtonItem(withIcon: .Book, size: CGSize(width: 24, height: 24), target: se
 
 // UIButton
 let button = UIButton(type: .System)
-button.setIconImage(withIcon: .Heart, size: CGSize(width: 44, height: 44), color: nil, forState: .Normal)
+button.setIconImage(icon: .Heart, size: CGSize(width: 44, height: 44), color: nil, forState: .Normal)
 ```
 </details>
 <details>

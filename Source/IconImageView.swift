@@ -11,7 +11,7 @@ import UIKit
 #if os(iOS) || os(tvOS)
 
 /** An Image View subclass, capable of rendering icons. Only supported for iOS and tvOS. */
-open class IconImageView: UIImageView {
+public class IconImageView: UIImageView {
     
     // MARK: - Public Variables
     
@@ -40,34 +40,34 @@ open class IconImageView: UIImageView {
      - parameter icon: The initial icon to display in the image view.
      - parameter size: The size of the image, in points.
      */
-    public required init(iconDrawable: IconDrawable, size: CGSize) {
+    public init(iconDrawable: IconDrawable, size: CGSize) {
         super.init(frame: CGRect(x:0, y:0, width: size.width, height: size.height))
         self.iconDrawable = iconDrawable
     }
 
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     // MARK: - Overrides
     
-    open override var tintColor: UIColor! {
+    public override var tintColor: UIColor! {
         didSet {
             updateIconImage()
         }
     }
     
-    open override var frame: CGRect {
+    public override var frame: CGRect {
         didSet {
             updateIconImage()
         }
     }
     
-    open override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         updateIconImage()
@@ -85,9 +85,8 @@ open class IconImageView: UIImageView {
             return
         }
         
-        if iconDrawable != nil {
-            let image = iconDrawable?.image(ofSize: frame.size, color: tintColor)
-            self.image = image
+        if let icon = iconDrawable {
+            self.image = icon.image(ofSize: frame.size, color: tintColor)
         } else {
             self.image = nil
         }

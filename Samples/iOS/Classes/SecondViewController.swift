@@ -11,7 +11,7 @@ import Iconic
 
 class SecondViewController: UIViewController {
     
-    @IBOutlet weak var iconImageView: FontAwesomeIconView!
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var iconWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var iconHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var scaleSlider: UISlider!

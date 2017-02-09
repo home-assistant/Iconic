@@ -91,28 +91,26 @@ public extension Iconic {
 
 @IBDesignable
 /** An Image View subclass, compatible with Interface Builder, capable of rendering icons. Only supported for iOS and tvOS. */
-open class FontAwesomeIconView: IconImageView {
+@available(*, unavailable, message : "This class is restricted for Interface Builder only.")
+public class {{enumName}}View: IconImageView {
 
     /** The icon string name (Interface Builder only). */
-    @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'icon' instead.")
     @IBInspectable
-    dynamic public var iconName: String? {
+    dynamic public var iconName: String = "" {
         willSet {
-            iconDrawable = {{enumName}}(named: newValue ?? "")
+            iconDrawable = {{enumName}}(named: newValue)
         }
     }
 
     /** The icon tint color (Interface Builder only). */
-    @available(*, unavailable, message : "This property is reserved for Interface Builder. Use 'tintColor' instead.")
     @IBInspectable
-    dynamic public var iconColor: UIColor! {
+    dynamic public var iconColor: UIColor = UIColor.black {
         willSet {
-            tintColor = newValue ?? UIColor.black
+            tintColor = newValue
         }
     }
 
-    @available(*, unavailable, message : "This property is reserved for when designable objects are created in Interface Builder.")
-    override open func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
 
         // The icon font needs to be registered first.

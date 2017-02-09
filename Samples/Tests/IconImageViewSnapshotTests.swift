@@ -29,7 +29,7 @@ class IconImageViewTests: BaseSnapshotTestCase {
     
     func testImageViewIconUpdate() {
         
-        let imageView = FontAwesomeIconView(iconDrawable: defaultIcon, size: defaultSize)
+        let imageView = IconImageView(iconDrawable: defaultIcon, size: defaultSize)
         imageView.iconDrawable = FontAwesomeIcon.paperClipIcon
         
         self.verifyView(imageView, withIdentifier: "")
@@ -37,7 +37,7 @@ class IconImageViewTests: BaseSnapshotTestCase {
     
     func testImageViewColorUpdate() {
         
-        let imageView = FontAwesomeIconView(iconDrawable: defaultIcon, size: defaultSize)
+        let imageView = IconImageView(iconDrawable: defaultIcon, size: defaultSize)
         imageView.tintColor = .orange
         
         self.verifyView(imageView, withIdentifier: "")
@@ -45,28 +45,15 @@ class IconImageViewTests: BaseSnapshotTestCase {
     
     func testImageViewSizeUpdate() {
         
-        let imageView = FontAwesomeIconView(iconDrawable: defaultIcon)
+        let imageView = IconImageView(iconDrawable: defaultIcon)
         imageView.frame = defaultFrame
-        
-        self.verifyView(imageView, withIdentifier: "")
-    }
-    
-    func testImageViewWithName() {
-        
-        let imageView = FontAwesomeIconView(frame: defaultFrame)
-        imageView.iconName = "Dribble"
-        imageView.iconColor = .red
-
-        XCTAssertNotNil(imageView.iconDrawable)
-        XCTAssertNotNil(imageView.iconName)
-        XCTAssertNotNil(imageView.image)
         
         self.verifyView(imageView, withIdentifier: "")
     }
     
     func testImageViewNoIcon() {
         
-        let imageView = FontAwesomeIconView(frame: defaultFrame)
+        let imageView = IconImageView(frame: defaultFrame)
         
         XCTAssertNil(imageView.iconDrawable)
         XCTAssertNil(imageView.image)
@@ -74,7 +61,7 @@ class IconImageViewTests: BaseSnapshotTestCase {
     
     func testImageViewEmtpyFrame() {
         
-        let imageView = FontAwesomeIconView(iconDrawable: defaultIcon)
+        let imageView = IconImageView(iconDrawable: defaultIcon)
         imageView.frame = emptyFrame
         
         XCTAssertTrue(imageView.frame.isEmpty)
