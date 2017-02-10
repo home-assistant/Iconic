@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26CBE434EE2926E71FF25096 /* Pods_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D116722A6D553416042230F /* Pods_watchOS.framework */; };
-		3BEB9D60F522A27A0C7AAFFB /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455752D47A80650536DDF1D0 /* Pods_iOS.framework */; };
-		41B7807C7699451E4BBFAED8 /* Pods_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153600E4BA8634555A110B0B /* Pods_tvOS.framework */; };
-		AA845CDD64EC7212F04DC137 /* Pods_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623479832C7098798F925727 /* Pods_watchOS_Extension.framework */; };
-		E9C553090F2766D2173AFA6E /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAF6B9D53E8B66D1EB8A2BA /* Pods_Tests.framework */; };
+		56B19C8E23181737823312D8 /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9B61A871A1DB168C343663 /* Pods_iOS.framework */; };
+		7056E980092FEB34A72644E3 /* Pods_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B22EC4BD9ADB77FA39B1804 /* Pods_watchOS_Extension.framework */; };
+		EA9E552B77C1EBE1A4BD2211 /* Pods_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D5955CEBD390113C782845 /* Pods_watchOS.framework */; };
+		F1EE3620645FDC00C164F252 /* Pods_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AF104A43384FD3AEEAADE0 /* Pods_tvOS.framework */; };
 		F50ADC061D112CDA004A5A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50ADC041D112CDA004A5A4C /* Main.storyboard */; };
 		F50ADC081D112CDA004A5A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50ADC071D112CDA004A5A4C /* Assets.xcassets */; };
 		F50ADC111D112D0B004A5A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50ADC0F1D112D0B004A5A4C /* AppDelegate.swift */; };
@@ -43,6 +42,7 @@
 		F5C165341D83D2C2003D76E0 /* UIExtensionSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C165331D83D2C2003D76E0 /* UIExtensionSnapshotTests.swift */; };
 		F5CA374B1D990FBE00F85AC0 /* IconDrawableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CA374A1D990FBE00F85AC0 /* IconDrawableTests.swift */; };
 		F5CA374E1D9912A000F85AC0 /* ObjcCompatibilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CA374D1D9912A000F85AC0 /* ObjcCompatibilityTests.m */; };
+		F8B371A35D4DB8E9238B87EF /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F0A87F10DF95D5D7C875CA /* Pods_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,21 +95,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		01D5C725995BBDAECC541022 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		0D116722A6D553416042230F /* Pods_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		153600E4BA8634555A110B0B /* Pods_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AB333FEDC1AF1CFE70B3803 /* Pods-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS/Pods-watchOS.release.xcconfig"; sourceTree = "<group>"; };
-		3CAF6B9D53E8B66D1EB8A2BA /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		455752D47A80650536DDF1D0 /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		623479832C7098798F925727 /* Pods_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8900BFD28DDE338FBB1487A4 /* Pods-watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
-		973E407BEF100D3B6802BE62 /* Pods-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-tvOS/Pods-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		A1165F964253BE93DFF7029A /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		AF011D809C521348BCDB6231 /* Pods-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS/Pods-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		B1235F3ECB03198EEBD343C2 /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		D379C8CB19D17CF24E5A1349 /* Pods-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tvOS/Pods-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		E27E36629C8F97B7B3ABFBEE /* Pods-watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		E5631D71A7AB992F05CD801F /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		00AF104A43384FD3AEEAADE0 /* Pods_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25F0A87F10DF95D5D7C875CA /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D5955CEBD390113C782845 /* Pods_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		408C08AAF7A8BECA3B5391D0 /* Pods-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tvOS/Pods-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5B22EC4BD9ADB77FA39B1804 /* Pods_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E9B61A871A1DB168C343663 /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97AD5F61C5A3CB19F8BECD91 /* Pods-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS/Pods-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9E0CEC1B7BD446676F0C36AA /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B7A759E23333F8223A76706C /* Pods-watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		C3A3C5369188DA6F8AA47967 /* Pods-watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
+		D216686A90D8DB7DF48235A9 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D62EE106BB8B6E21EFDFB1BF /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7C5D6ED0D6B2C48D58C4401 /* Pods-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS/Pods-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		DC3A8CD05407ED9721707763 /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		EEC0E3D48827164962E015E2 /* Pods-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-tvOS/Pods-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F50ADBFE1D112CDA004A5A4C /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50ADC051D112CDA004A5A4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50ADC071D112CDA004A5A4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26CBE434EE2926E71FF25096 /* Pods_watchOS.framework in Frameworks */,
+				EA9E552B77C1EBE1A4BD2211 /* Pods_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41B7807C7699451E4BBFAED8 /* Pods_tvOS.framework in Frameworks */,
+				F1EE3620645FDC00C164F252 /* Pods_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F529154B1D83B6E5006305E4 /* Iconic.framework in Frameworks */,
-				E9C553090F2766D2173AFA6E /* Pods_Tests.framework in Frameworks */,
+				F8B371A35D4DB8E9238B87EF /* Pods_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BEB9D60F522A27A0C7AAFFB /* Pods_iOS.framework in Frameworks */,
+				56B19C8E23181737823312D8 /* Pods_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F56977831DCA5D66005EDE73 /* CoreText.framework in Frameworks */,
-				AA845CDD64EC7212F04DC137 /* Pods_watchOS_Extension.framework in Frameworks */,
+				7056E980092FEB34A72644E3 /* Pods_watchOS_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,28 +205,28 @@
 			children = (
 				F56977821DCA5D66005EDE73 /* CoreText.framework */,
 				F529154A1D83B6E5006305E4 /* Iconic.framework */,
-				3CAF6B9D53E8B66D1EB8A2BA /* Pods_Tests.framework */,
-				455752D47A80650536DDF1D0 /* Pods_iOS.framework */,
-				153600E4BA8634555A110B0B /* Pods_tvOS.framework */,
-				0D116722A6D553416042230F /* Pods_watchOS.framework */,
-				623479832C7098798F925727 /* Pods_watchOS_Extension.framework */,
+				25F0A87F10DF95D5D7C875CA /* Pods_Tests.framework */,
+				7E9B61A871A1DB168C343663 /* Pods_iOS.framework */,
+				00AF104A43384FD3AEEAADE0 /* Pods_tvOS.framework */,
+				29D5955CEBD390113C782845 /* Pods_watchOS.framework */,
+				5B22EC4BD9ADB77FA39B1804 /* Pods_watchOS_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		99F4771AE43985B25F62CCD7 /* Pods */ = {
+		B35787D765B803B485EF955D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E5631D71A7AB992F05CD801F /* Pods-Tests.debug.xcconfig */,
-				A1165F964253BE93DFF7029A /* Pods-Tests.release.xcconfig */,
-				01D5C725995BBDAECC541022 /* Pods-iOS.debug.xcconfig */,
-				B1235F3ECB03198EEBD343C2 /* Pods-iOS.release.xcconfig */,
-				D379C8CB19D17CF24E5A1349 /* Pods-tvOS.debug.xcconfig */,
-				973E407BEF100D3B6802BE62 /* Pods-tvOS.release.xcconfig */,
-				AF011D809C521348BCDB6231 /* Pods-watchOS.debug.xcconfig */,
-				1AB333FEDC1AF1CFE70B3803 /* Pods-watchOS.release.xcconfig */,
-				E27E36629C8F97B7B3ABFBEE /* Pods-watchOS Extension.debug.xcconfig */,
-				8900BFD28DDE338FBB1487A4 /* Pods-watchOS Extension.release.xcconfig */,
+				D62EE106BB8B6E21EFDFB1BF /* Pods-Tests.debug.xcconfig */,
+				9E0CEC1B7BD446676F0C36AA /* Pods-Tests.release.xcconfig */,
+				D216686A90D8DB7DF48235A9 /* Pods-iOS.debug.xcconfig */,
+				DC3A8CD05407ED9721707763 /* Pods-iOS.release.xcconfig */,
+				408C08AAF7A8BECA3B5391D0 /* Pods-tvOS.debug.xcconfig */,
+				EEC0E3D48827164962E015E2 /* Pods-tvOS.release.xcconfig */,
+				97AD5F61C5A3CB19F8BECD91 /* Pods-watchOS.debug.xcconfig */,
+				D7C5D6ED0D6B2C48D58C4401 /* Pods-watchOS.release.xcconfig */,
+				B7A759E23333F8223A76706C /* Pods-watchOS Extension.debug.xcconfig */,
+				C3A3C5369188DA6F8AA47967 /* Pods-watchOS Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 				F529152C1D83B08E006305E4 /* Tests */,
 				F558DA081CF1AF1A0014717C /* Products */,
 				68D522055EA6FBFFD535217D /* Frameworks */,
-				99F4771AE43985B25F62CCD7 /* Pods */,
+				B35787D765B803B485EF955D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -374,13 +374,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F50ADC0A1D112CDA004A5A4C /* Build configuration list for PBXNativeTarget "tvOS" */;
 			buildPhases = (
-				C45A3F180FF41A8FF4D821D7 /* [CP] Check Pods Manifest.lock */,
+				059FCE7C85AC8496667A0251 /* [CP] Check Pods Manifest.lock */,
 				F50ADBFA1D112CDA004A5A4C /* Sources */,
 				F50ADBFB1D112CDA004A5A4C /* Frameworks */,
 				F50ADBFC1D112CDA004A5A4C /* Resources */,
 				F51590BA1DEB811500C23C25 /* SwiftLint */,
-				F80F6A6A0A14016EDD120302 /* [CP] Embed Pods Frameworks */,
-				D2E218706730B5B7D2F5CD8C /* [CP] Copy Pods Resources */,
+				AB032790C28D33ADEAB50F25 /* [CP] Embed Pods Frameworks */,
+				1F122E4AF2DE1B427A83CE99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -395,12 +395,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F52915341D83B08E006305E4 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
-				5009C6A23953ADCB8189FF08 /* [CP] Check Pods Manifest.lock */,
+				0EC5D3472038407E3B2938AA /* [CP] Check Pods Manifest.lock */,
 				F52915271D83B08E006305E4 /* Sources */,
 				F52915291D83B08E006305E4 /* Resources */,
 				F52915281D83B08E006305E4 /* Frameworks */,
-				1D5A031C45D8CEDF5CB4D755 /* [CP] Embed Pods Frameworks */,
-				6183472CCDBF250454054236 /* [CP] Copy Pods Resources */,
+				D610C0819B60F12DF20F8DA1 /* [CP] Embed Pods Frameworks */,
+				9D3A4F80D1711458B78B3957 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -416,14 +416,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F558DA1B1CF1AF1A0014717C /* Build configuration list for PBXNativeTarget "iOS" */;
 			buildPhases = (
-				278DEA0ACED5F98E870A9F37 /* [CP] Check Pods Manifest.lock */,
+				3D0826ABE98C5D8114354085 /* [CP] Check Pods Manifest.lock */,
 				F558DA031CF1AF1A0014717C /* Sources */,
 				F558DA041CF1AF1A0014717C /* Frameworks */,
 				F558DA051CF1AF1A0014717C /* Resources */,
 				F56977811DC9CAE3005EDE73 /* Embed Watch Content */,
 				F51590B91DEB80E200C23C25 /* SwiftLint */,
-				866677652644D3BC876DCDBF /* [CP] Embed Pods Frameworks */,
-				01E396EB97C0C3AE8D608DFF /* [CP] Copy Pods Resources */,
+				1D976299922125C91F3DB09A /* [CP] Embed Pods Frameworks */,
+				2FBB70C8CF34F47E51770DDE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -439,11 +439,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F56977801DC9CAE3005EDE73 /* Build configuration list for PBXNativeTarget "watchOS" */;
 			buildPhases = (
-				58E07599790C75CA93539D3E /* [CP] Check Pods Manifest.lock */,
+				CD6D2646F856F52898A9071E /* [CP] Check Pods Manifest.lock */,
 				F569775D1DC9CAE3005EDE73 /* Resources */,
 				F569777F1DC9CAE3005EDE73 /* Embed App Extensions */,
 				4227694CE5B908A8E2312F7C /* Frameworks */,
-				260CBF5D3BBB0B20FAB491BB /* [CP] Copy Pods Resources */,
+				5ED6B4CE7A604B149D4224E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -459,13 +459,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F569777E1DC9CAE3005EDE73 /* Build configuration list for PBXNativeTarget "watchOS Extension" */;
 			buildPhases = (
-				86176975EDBF057DE4922B4B /* [CP] Check Pods Manifest.lock */,
+				D457DC26783EC4D8E8FA782F /* [CP] Check Pods Manifest.lock */,
 				F56977671DC9CAE3005EDE73 /* Sources */,
 				F56977681DC9CAE3005EDE73 /* Frameworks */,
 				F56977691DC9CAE3005EDE73 /* Resources */,
 				F51590BB1DEB812700C23C25 /* SwiftLint */,
-				0B09E2D62B4B0203C9788AB6 /* [CP] Embed Pods Frameworks */,
-				EFE6347FF380E29B6FBBCA5C /* [CP] Copy Pods Resources */,
+				961A8620674BD3FA93F6BC32 /* [CP] Embed Pods Frameworks */,
+				633C33E22CFCD49FFC4CB4FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -584,67 +584,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01E396EB97C0C3AE8D608DFF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS/Pods-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0B09E2D62B4B0203C9788AB6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1D5A031C45D8CEDF5CB4D755 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		260CBF5D3BBB0B20FAB491BB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchOS/Pods-watchOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		278DEA0ACED5F98E870A9F37 /* [CP] Check Pods Manifest.lock */ = {
+		059FCE7C85AC8496667A0251 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -659,7 +599,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5009C6A23953ADCB8189FF08 /* [CP] Check Pods Manifest.lock */ = {
+		0EC5D3472038407E3B2938AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -674,52 +614,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		58E07599790C75CA93539D3E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6183472CCDBF250454054236 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		86176975EDBF057DE4922B4B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		866677652644D3BC876DCDBF /* [CP] Embed Pods Frameworks */ = {
+		1D976299922125C91F3DB09A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -734,22 +629,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS/Pods-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C45A3F180FF41A8FF4D821D7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D2E218706730B5B7D2F5CD8C /* [CP] Copy Pods Resources */ = {
+		1F122E4AF2DE1B427A83CE99 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -764,7 +644,52 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tvOS/Pods-tvOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EFE6347FF380E29B6FBBCA5C /* [CP] Copy Pods Resources */ = {
+		2FBB70C8CF34F47E51770DDE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS/Pods-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D0826ABE98C5D8114354085 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5ED6B4CE7A604B149D4224E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchOS/Pods-watchOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		633C33E22CFCD49FFC4CB4FF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -777,6 +702,96 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		961A8620674BD3FA93F6BC32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D3A4F80D1711458B78B3957 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB032790C28D33ADEAB50F25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tvOS/Pods-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD6D2646F856F52898A9071E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D457DC26783EC4D8E8FA782F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D610C0819B60F12DF20F8DA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F51590B91DEB80E200C23C25 /* SwiftLint */ = {
@@ -820,21 +835,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		F80F6A6A0A14016EDD120302 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tvOS/Pods-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -944,7 +944,7 @@
 /* Begin XCBuildConfiguration section */
 		F50ADC0B1D112CDA004A5A4C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D379C8CB19D17CF24E5A1349 /* Pods-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 408C08AAF7A8BECA3B5391D0 /* Pods-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
@@ -963,7 +963,7 @@
 		};
 		F50ADC0C1D112CDA004A5A4C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 973E407BEF100D3B6802BE62 /* Pods-tvOS.release.xcconfig */;
+			baseConfigurationReference = EEC0E3D48827164962E015E2 /* Pods-tvOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
@@ -982,7 +982,7 @@
 		};
 		F52915321D83B08E006305E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5631D71A7AB992F05CD801F /* Pods-Tests.debug.xcconfig */;
+			baseConfigurationReference = D62EE106BB8B6E21EFDFB1BF /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1000,7 +1000,7 @@
 		};
 		F52915331D83B08E006305E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1165F964253BE93DFF7029A /* Pods-Tests.release.xcconfig */;
+			baseConfigurationReference = 9E0CEC1B7BD446676F0C36AA /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1105,7 +1105,7 @@
 		};
 		F558DA1C1CF1AF1A0014717C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01D5C725995BBDAECC541022 /* Pods-iOS.debug.xcconfig */;
+			baseConfigurationReference = D216686A90D8DB7DF48235A9 /* Pods-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1123,7 +1123,7 @@
 		};
 		F558DA1D1CF1AF1A0014717C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1235F3ECB03198EEBD343C2 /* Pods-iOS.release.xcconfig */;
+			baseConfigurationReference = DC3A8CD05407ED9721707763 /* Pods-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1140,7 +1140,7 @@
 		};
 		F569777A1DC9CAE3005EDE73 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF011D809C521348BCDB6231 /* Pods-watchOS.debug.xcconfig */;
+			baseConfigurationReference = 97AD5F61C5A3CB19F8BECD91 /* Pods-watchOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1162,7 +1162,7 @@
 		};
 		F569777B1DC9CAE3005EDE73 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AB333FEDC1AF1CFE70B3803 /* Pods-watchOS.release.xcconfig */;
+			baseConfigurationReference = D7C5D6ED0D6B2C48D58C4401 /* Pods-watchOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1183,7 +1183,7 @@
 		};
 		F569777C1DC9CAE3005EDE73 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E27E36629C8F97B7B3ABFBEE /* Pods-watchOS Extension.debug.xcconfig */;
+			baseConfigurationReference = B7A759E23333F8223A76706C /* Pods-watchOS Extension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
@@ -1205,7 +1205,7 @@
 		};
 		F569777D1DC9CAE3005EDE73 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8900BFD28DDE338FBB1487A4 /* Pods-watchOS Extension.release.xcconfig */;
+			baseConfigurationReference = C3A3C5369188DA6F8AA47967 /* Pods-watchOS Extension.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;

@@ -8,7 +8,7 @@
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 
-**Iconic** will help making icon fonts integration effortless on iOS. Its main component is in charge of auto-generating strongly typed Swift code, fully compatible with Objective-C.
+**Iconic** will help making icon fonts integration effortless on iOS, tvOS and watchOS. Its main component is in charge of auto-generating strongly typed Swift code, fully compatible with Objective-C.
 
 You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of the `IconDrawable.swift` class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
 
@@ -60,7 +60,7 @@ _Note: Some open sourced icon fonts don't include the names of each of their gly
 
 Start by defining **Iconic** on your Podfile. Because we use an environment variable on a non-traditional setup, you will need to do it the following way:
 ```ruby
-pod 'Iconic', :git => 'https://github.com/dzenbot/Iconic.git', :tag => '1.0.5'
+pod 'Iconic', :git => 'https://github.com/dzenbot/Iconic.git', :tag => '1.3'
 ```
 
 To install **Iconic** with a custom icon font, you need to use the `FONT_PATH` environment variable:
@@ -77,7 +77,7 @@ After the installation is complete, you should see 3 files: `IconDrawable.swift`
 
 
 ## How to use
-For complete documentation, visit [CocoaPods' auto-generated docs](http://cocoadocs.org/docsets/Iconic/).
+For complete documentation, [visit Iconic's docs](http://cocoadocs.org/docsets/Iconic/).
 
 ### Import
 Import the Iconic module:
@@ -123,7 +123,7 @@ Images are created using NSStringDraw APIs to render a `UIImage` out of an `NSAt
 let size = CGSize(width: 20, height: 20)
 
 let icon = FontAwesomeIcon.HomeIcon
-let image = icon.image(ofSize: size, color: .blueColor())
+let image = icon.image(ofSize: size, color: .blue)
 ```
 </details>
 <details>
@@ -140,7 +140,7 @@ For example, instead of having an image and a label, you can combined it all in 
 <summary>Swift</summary>
 ```swift
 let icon = FontAwesomeIcon.HomeIcon
-let iconString = icon.attributedString(ofSize: 20, color: .blueColor())
+let iconString = icon.attributedString(ofSize: 20, color: .blue)
 ```
 </details>
 <details>
@@ -179,8 +179,8 @@ UIFont *font = [Iconic fontAwesomeIconFontOfSize:20.0];
 ![Interface Builder](Screenshots/screenshot_interface_builder.gif)
 
 Iconic includes a `UIImageView` subclass under the name of `{FontName}IconView.swift`, conforming to `@IBInspectable`. This class is only available for Interface Builder.
-Use the `iconName` and `iconColor` attributes for see live changes on Interface Builder.
-Adjust the bounds of the view to see it dynamically adjust the icon size.
+- Use the `iconName` attribute to swap icons on Interface Builder (use the [icon font html catalog](#icon-font-catalog) as reference for icon names).
+- Adjust the bounds of the view to see it dynamically adjust the icon size.
 
 
 ### UIKit Extensions

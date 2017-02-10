@@ -88,6 +88,7 @@
                             </slider>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zL9-Fl-E3t" customClass="FontAwesomeIconView" customModule="Iconic">
                                 <rect key="frame" x="88" y="234" width="200" height="200"/>
+                                <color key="tintColor" red="0.19445324859999999" green="1" blue="0.2067793631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="D5X-ag-TMz"/>
                                     <constraint firstAttribute="height" constant="200" id="fn3-2h-sdi"/>
@@ -95,7 +96,7 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="iconName" value="Dribble"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                        <color key="value" red="1" green="0.18285786230000001" blue="0.33207977999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.1944532486238405" green="1" blue="0.20677936308600764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>

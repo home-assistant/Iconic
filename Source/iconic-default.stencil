@@ -91,7 +91,7 @@ public extension Iconic {
 
 @IBDesignable
 /** An Image View subclass, compatible with Interface Builder, capable of rendering icons. Only supported for iOS and tvOS. */
-@available(*, unavailable, message : "This class is restricted for Interface Builder only.")
+@available(*, unavailable, message : "This class is restricted for Interface Builder only. Use the -imageWithIcon:size:color: method instead.")
 public class {{enumName}}View: IconImageView {
 
     /** The icon string name (Interface Builder only). */
@@ -99,14 +99,6 @@ public class {{enumName}}View: IconImageView {
     dynamic public var iconName: String = "" {
         willSet {
             iconDrawable = {{enumName}}(named: newValue)
-        }
-    }
-
-    /** The icon tint color (Interface Builder only). */
-    @IBInspectable
-    dynamic public var iconColor: UIColor = UIColor.black {
-        willSet {
-            tintColor = newValue
         }
     }
 

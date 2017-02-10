@@ -22,44 +22,7 @@ public class IconImageView: UIImageView {
         }
     }
     
-    // MARK: - Initializers
-    
-    /**
-     Returns an image view initialized with the specified icon.
-     The icon you specified is used to configure the initial size of the image view itself, of 40 pts as default.
-     
-     - parameter icon: The initial icon to display in the image view.
-     */
-    convenience public init(iconDrawable: IconDrawable) {
-        self.init(iconDrawable: iconDrawable, size: CGSize())
-    }
-    
-    /**
-     Returns an image view initialized with the specified icon and size.
-     
-     - parameter icon: The initial icon to display in the image view.
-     - parameter size: The size of the image, in points.
-     */
-    public init(iconDrawable: IconDrawable, size: CGSize) {
-        super.init(frame: CGRect(x:0, y:0, width: size.width, height: size.height))
-        self.iconDrawable = iconDrawable
-    }
-
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
     // MARK: - Overrides
-    
-    public override var tintColor: UIColor! {
-        didSet {
-            updateIconImage()
-        }
-    }
     
     public override var frame: CGRect {
         didSet {
@@ -86,7 +49,8 @@ public class IconImageView: UIImageView {
         }
         
         if let icon = iconDrawable {
-            self.image = icon.image(ofSize: frame.size, color: tintColor)
+            let image = icon.image(ofSize: frame.size, color: nil)
+            self.image = image.withRenderingMode(.alwaysTemplate)
         } else {
             self.image = nil
         }

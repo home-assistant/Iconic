@@ -9,12 +9,7 @@
 class IconImageViewTests: BaseSnapshotTestCase {
     
     let defaultIcon = FontAwesomeIcon.refreshIcon
-    
-    let defaultSize = CGSize(width: 30, height: 30)
-    let emptySize = CGSize()
-    
     let defaultFrame = CGRect(x: 0, y: 0, width: 30, height: 30)
-    let emptyFrame = CGRect()
 
     override func setUp() {
         super.setUp()
@@ -29,7 +24,7 @@ class IconImageViewTests: BaseSnapshotTestCase {
     
     func testImageViewIconUpdate() {
         
-        let imageView = IconImageView(iconDrawable: defaultIcon, size: defaultSize)
+        let imageView = IconImageView(frame: defaultFrame)
         imageView.iconDrawable = FontAwesomeIcon.paperClipIcon
         
         self.verifyView(imageView, withIdentifier: "")
@@ -37,7 +32,8 @@ class IconImageViewTests: BaseSnapshotTestCase {
     
     func testImageViewColorUpdate() {
         
-        let imageView = IconImageView(iconDrawable: defaultIcon, size: defaultSize)
+        let imageView = IconImageView(frame: defaultFrame)
+        imageView.iconDrawable = defaultIcon
         imageView.tintColor = .orange
         
         self.verifyView(imageView, withIdentifier: "")
@@ -45,7 +41,10 @@ class IconImageViewTests: BaseSnapshotTestCase {
     
     func testImageViewSizeUpdate() {
         
-        let imageView = IconImageView(iconDrawable: defaultIcon)
+        let rect = CGRect(x: 0, y: 0, width: 60, height: 60)
+        
+        let imageView = IconImageView(frame: rect)
+        imageView.iconDrawable = defaultIcon
         imageView.frame = defaultFrame
         
         self.verifyView(imageView, withIdentifier: "")
@@ -61,9 +60,9 @@ class IconImageViewTests: BaseSnapshotTestCase {
     
     func testImageViewEmtpyFrame() {
         
-        let imageView = IconImageView(iconDrawable: defaultIcon)
-        imageView.frame = emptyFrame
-        
+        let imageView = IconImageView()
+        imageView.iconDrawable = defaultIcon
+
         XCTAssertTrue(imageView.frame.isEmpty)
         
         // No image update when the frame is empty
