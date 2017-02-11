@@ -7,9 +7,10 @@ cache:
     - cocoapods
 
 before_install:
+    - sh Scripts/Install_SwiftLint.sh
     - bundle install
     - bundle exec danger
-    - sh Samples/watchOS/WatchSimulator-CoreText-Patch.sh
+    - sh Scripts/WatchSimulator-CoreText-Patch.sh
     - cd Samples && pod deintegrate && pod install --verbose
 
 env:

@@ -223,7 +223,7 @@ Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and 
 
 On the sample project, Iconic is installed as a development pod. Because of this, pod files are not versioned. Therefore, if you clone the repo manually, you will to install the pods yourself.
 
-Note: When running the watchOS example, you might get a "No such module CoreText" error. This is because the CoreText.framework is missing for the watchOS Simulator. Please run the 'WatchSimulator-CoreText-Patch.sh' located in this repository, to copy the CoreText header files from the WatchOS SDK. You will then be able to run the watchOS sample with no issues as well as running Iconic on your Watch apps in the simulator.
+Note: When running the watchOS example, you might get a "No such module CoreText" error. This is because the CoreText.framework is missing for the watchOS Simulator. Run the 'WatchSimulator-CoreText-Patch.sh' script located in this repository, to copy the CoreText header files from the WatchOS SDK. You will then be able to run the watchOS sample with no issues as well as running Iconic on your Watch apps in the simulator.
 
 ## Icon Font Catalog
 Besides the auto-generated Swift code, an icon font catalog will be added in `Pods/Iconic/Source/Catalog`. Use this as a visual reference about the icons and their names.

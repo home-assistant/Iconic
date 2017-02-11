@@ -378,7 +378,7 @@
 				F50ADBFA1D112CDA004A5A4C /* Sources */,
 				F50ADBFB1D112CDA004A5A4C /* Frameworks */,
 				F50ADBFC1D112CDA004A5A4C /* Resources */,
-				F51590BA1DEB811500C23C25 /* SwiftLint */,
+				F51590BA1DEB811500C23C25 /* Run SwiftLint */,
 				AB032790C28D33ADEAB50F25 /* [CP] Embed Pods Frameworks */,
 				1F122E4AF2DE1B427A83CE99 /* [CP] Copy Pods Resources */,
 			);
@@ -421,7 +421,7 @@
 				F558DA041CF1AF1A0014717C /* Frameworks */,
 				F558DA051CF1AF1A0014717C /* Resources */,
 				F56977811DC9CAE3005EDE73 /* Embed Watch Content */,
-				F51590B91DEB80E200C23C25 /* SwiftLint */,
+				F51590B91DEB80E200C23C25 /* Run SwiftLint */,
 				1D976299922125C91F3DB09A /* [CP] Embed Pods Frameworks */,
 				2FBB70C8CF34F47E51770DDE /* [CP] Copy Pods Resources */,
 			);
@@ -463,7 +463,7 @@
 				F56977671DC9CAE3005EDE73 /* Sources */,
 				F56977681DC9CAE3005EDE73 /* Frameworks */,
 				F56977691DC9CAE3005EDE73 /* Resources */,
-				F51590BB1DEB812700C23C25 /* SwiftLint */,
+				F51590BB1DEB812700C23C25 /* Run SwiftLint */,
 				961A8620674BD3FA93F6BC32 /* [CP] Embed Pods Frameworks */,
 				633C33E22CFCD49FFC4CB4FF /* [CP] Copy Pods Resources */,
 			);
@@ -794,47 +794,47 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F51590B91DEB80E200C23C25 /* SwiftLint */ = {
+		F51590B91DEB80E200C23C25 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = SwiftLint;
+			name = "Run SwiftLint";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "sh ../Scripts/Run_SwiftLint.sh";
 		};
-		F51590BA1DEB811500C23C25 /* SwiftLint */ = {
+		F51590BA1DEB811500C23C25 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = SwiftLint;
+			name = "Run SwiftLint";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "sh ../Scripts/Run_SwiftLint.sh";
 		};
-		F51590BB1DEB812700C23C25 /* SwiftLint */ = {
+		F51590BB1DEB812700C23C25 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = SwiftLint;
+			name = "Run SwiftLint";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "sh ../Scripts/Run_SwiftLint.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
