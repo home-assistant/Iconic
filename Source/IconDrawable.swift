@@ -10,7 +10,7 @@ import UIKit
 import CoreText
 
 /** A wrapper class for Objective-C compatibility. */
-public class Iconic: NSObject { }
+public final class Iconic: NSObject { }
 
 /** The IconDrawable protocol defines the complete interface of an Iconic icon's capabilities. */
 public protocol IconDrawable {
