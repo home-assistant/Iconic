@@ -25,7 +25,7 @@ env:
     - DESTINATION="OS=10.1,name=iPhone 7" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME"
 
 script:
-    - xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" SDK="$IOS_SDK" -destination "$DESTINATION" -configuration Debug  GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+    - xcodebuild clean build test -scheme "$SCHEME" -workspace "$WORKSPACE" -sdk "$IOS_SDK" -destination "$DESTINATION" -configuration Debug GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
 after_success:
-    - bash <(curl -s https://codecov.io/bash)
+    - bash <(curl -s https://codecov.io/bash) -J 'iOS'
