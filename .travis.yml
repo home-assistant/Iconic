@@ -19,7 +19,7 @@ env:
 
     - WORKSPACE="Samples.xcworkspace"
     - IOS_SCHEME="iOS Sample"
-    - IOS_SDK="iphonesimulator10.0"
+    - IOS_SDK="iphonesimulator10.1"
 
     matrix:
     - DESTINATION="OS=10.1,name=iPhone 7" SDK="$IOS_SDK" SCHEME="$IOS_SCHEME"
