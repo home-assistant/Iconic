@@ -1,19 +1,18 @@
 codecov:
-    strict_yaml_branch: master
     token: 26948af5-4e6a-4fb3-9b6d-abc51cb8c2ad
 
 coverage:
   precision: 2
   round: nearest
-  range: 70...100
+  range: 80...100
   ignore:
-    - "Vendor/"
-    - "Samples/"
+    - Samples/
+    - Vendor/
 
   status:
     project: true
     patch: true
-    changes: false
+    changes: true
 
 comment:
   layout: "header, diff, tree, changes"
