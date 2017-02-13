@@ -178,7 +178,7 @@ UIFont *font = [Iconic fontAwesomeIconFontOfSize:20.0];
 ### Interface Builder Support
 ![Interface Builder](Screenshots/screenshot_interface_builder.gif)
 
-Iconic includes a `UIImageView` subclass under the name of `{FontName}IconView.swift`, conforming to `@IBInspectable`. This class is only available for Interface Builder.
+Iconic includes a `UIImageView` subclass under the name of `{FontName}IconView.swift`, conforming to `@IBInspectable`. This class allows IB integration with little effort:
 - Use the `iconName` attribute to set the icon on Interface Builder (use the [icon font html catalog](#icon-font-catalog) as reference for icon names).
 - Adjust the bounds of the view to see it dynamically adjust the icon size.
 
