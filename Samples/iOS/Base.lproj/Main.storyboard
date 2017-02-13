@@ -88,16 +88,13 @@
                             </slider>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zL9-Fl-E3t" customClass="FontAwesomeIconView" customModule="Iconic">
                                 <rect key="frame" x="88" y="234" width="200" height="200"/>
-                                <color key="tintColor" red="0.19445324859999999" green="1" blue="0.2067793631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.80584115932642486" green="0.48472052589831882" blue="0.49270596673313782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="D5X-ag-TMz"/>
                                     <constraint firstAttribute="height" constant="200" id="fn3-2h-sdi"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="iconName" value="Dribble"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                        <color key="value" red="0.1944532486238405" green="1" blue="0.20677936308600764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="T4A-k0-sCn" userLabel="Color Slider" customClass="StepSlider" customModule="iOS" customModuleProvider="target">
