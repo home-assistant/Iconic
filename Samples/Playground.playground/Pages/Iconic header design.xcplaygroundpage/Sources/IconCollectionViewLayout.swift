@@ -2,10 +2,9 @@ import UIKit
 
 class IconCollectionViewLayout: UICollectionViewFlowLayout {
     
-    init(columns: Int, width: CGFloat) {
+    init(columns: Int = 30, spacing: CGFloat = 20.0, width: CGFloat = 44.0) {
         super.init()
         
-        let spacing: CGFloat = 20
         let insets = UIEdgeInsets(top: -spacing, left: -spacing, bottom: -spacing, right: -spacing)
         
         let viewGaps = (CGFloat(columns-1) * spacing) + insets.left + insets.right

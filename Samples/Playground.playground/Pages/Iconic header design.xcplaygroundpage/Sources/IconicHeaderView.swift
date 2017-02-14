@@ -5,6 +5,7 @@ import Iconic
 public struct IconicHeaderConfig {
     
     var columns: Int
+    var spacing: CGFloat
     var angle: Double
     
     var foregroundColor: UIColor
@@ -18,8 +19,9 @@ public struct IconicHeaderConfig {
     var title: String
     var subtitle: String
     
-    public init(columns: Int, angle: Double, foregroundColor: UIColor, backgroundColor: UIColor, titleColor: UIColor, subtitleColor: UIColor, titleFont: UIFont, subtitleFont: UIFont, title: String, subtitle: String) {
+    public init(columns: Int, spacing: CGFloat, angle: Double, foregroundColor: UIColor, backgroundColor: UIColor, titleColor: UIColor, subtitleColor: UIColor, titleFont: UIFont, subtitleFont: UIFont, title: String, subtitle: String) {
         self.columns = columns
+        self.spacing = spacing
         self.angle = angle
         self.foregroundColor = foregroundColor
         self.backgroundColor = backgroundColor
@@ -42,7 +44,7 @@ public class IconicHeaderView: UIView {
         
         self.config = config
         
-        let layout = IconCollectionViewLayout(columns: config.columns, width: frame.size.width)
+        let layout = IconCollectionViewLayout(columns: config.columns, spacing: config.spacing, width: frame.size.width)
         
         collectionView = IconCollectionView(frame: frame, collectionViewLayout: layout)
         collectionView.iconColor = config.foregroundColor
@@ -62,6 +64,9 @@ public class IconicHeaderView: UIView {
     }
     
     func configureLayout() {
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.paragraphSpacing = 40
         
         let titleAttributes: [String:Any] = [NSFontAttributeName: config.titleFont,
                                              NSForegroundColorAttributeName: UIColor.white]
