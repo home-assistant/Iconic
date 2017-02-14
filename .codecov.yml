@@ -1,18 +1,20 @@
 codecov:
+    strict_yaml_branch: master
     token: 26948af5-4e6a-4fb3-9b6d-abc51cb8c2ad
 
 coverage:
   precision: 2
   round: nearest
-  range: 80...100
+  range: 70...100
   ignore:
-    - Samples/
-    - Vendor/
+    - Samples/.*
+    - Vendor/.*
+    - .*/Pods/.*
 
   status:
     project: true
     patch: true
-    changes: true
+    changes: false
 
 comment:
   layout: "header, diff, tree, changes"
