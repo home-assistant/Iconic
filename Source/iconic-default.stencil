@@ -10,12 +10,12 @@ public extension Iconic {
     @objc class var {{enumName|lowerFirstWord}}FamilyName: NSString {
         return {{enumName}}.familyName as NSString
     }
-    
+
     /** The icon font's total count of available icons. */
     @objc class var {{enumName|lowerFirstWord}}Count: Int {
         return {{enumName}}.count
     }
-    
+
     /**
      Returns the icon font object for the specified size.
 
@@ -47,7 +47,7 @@ public extension Iconic {
     @objc class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
         return icon.attributedString(ofSize: pointSize, color: color, edgeInsets: edgeInsets)
     }
-    
+
     /**
      Returns the icon as an image with the given size and color.
 
@@ -78,7 +78,7 @@ public extension Iconic {
     @objc class func register{{enumName}}() {
         {{enumName}}.register()
     }
-    
+
     /**
      Unregisters the icon font from the font manager.
      */
@@ -89,11 +89,33 @@ public extension Iconic {
 
 #if os(iOS) || os(tvOS)
 
+/** An IconImageView subclass capable of rendering icons, compatible with Interface Builder. iOS and tvOS only. */
+@IBDesignable
+public final class {{enumName}}View: IconImageView {
+
+    /** The icon string name (Interface Builder only). */
+    @IBInspectable
+    @available(*, unavailable, message : "This attribute is restricted to be used in Interface Builder.")
+    dynamic public var iconName: String = "" {
+        willSet {
+            iconDrawable = {{enumName}}(named: newValue)
+        }
+    }
+
+    @available(*, unavailable, message : "This function is restricted to be used in Interface Builder.")
+    override public func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+
+        // The icon font needs to be registered first.
+        {{enumName}}.register()
+    }
+}
+
 public extension UIBarButtonItem {
-    
+
     /**
      Initializes a new item using the specified icon and other properties.
-     
+
      - parameter icon: The icon to be used as image.
      - parameter size: The size of the image, in points.
      - parameter target: The object that receives the action message.
@@ -107,11 +129,11 @@ public extension UIBarButtonItem {
 }
 
 public extension UITabBarItem {
-    
+
     /**
      Initializes a new item using the specified icon and other properties.
      The tag is automatically assigned using the icon's raw integer value.
-     
+
      - parameter icon: The icon to be used as image.
      - parameter size: The size of the image, in points.
      - parameter title: The item's title. If nil, a title is not displayed.
@@ -124,10 +146,10 @@ public extension UITabBarItem {
 }
 
 public extension UIButton {
-    
+
     /**
      Sets the icon to use for the specified state.
-     
+
      - parameter icon: The icon to be used as image.
      - parameter size: The size of the image, in points.
      - parameter color: The color of the image.
@@ -153,16 +175,16 @@ public extension UIButton {
 }
 
 extension {{enumName}} : IconDrawable {
-    
+
     /** The icon font's family name. */
     public static var familyName: String {
         return "{{familyName}}"
     }
-    
+
     /**
      Creates a new instance with the specified icon name.
      If there is no valid name is recognised, this initializer falls back to the first available icon.
-     
+
      - parameter iconName: The icon name to use for the new instance.
      */
     public init(named iconName: String) {
@@ -173,7 +195,7 @@ extension {{enumName}} : IconDrawable {
         default: self = {{enumName}}(rawValue: 0)!
         }
     }
-    
+
     /** The icon's name. */
     public var name: String {
         switch self {
@@ -182,7 +204,7 @@ extension {{enumName}} : IconDrawable {
         {% endfor %}
         }
     }
-    
+
     /** The icon's unicode. */
     public var unicode: String {
         switch self {

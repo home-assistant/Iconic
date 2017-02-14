@@ -3,17 +3,16 @@
 //  Iconic
 //
 //  Created by Ignacio Romero on 9/10/16.
-//  Copyright © 2016 DZN. All rights reserved.
+//  Copyright © 2017 DZN. All rights reserved.
 //
-
-import FBSnapshotTestCase
 
 class StringIconSnapshotTests: BaseSnapshotTestCase {
     
     override func setUp() {
         super.setUp()
         
-//        self.recordMode = false
+        // Toggle on for recording a new snapshot. Remember to turn it back off to validate the test.
+        self.recordMode = false
     }
     
     func testSimpleString() {
