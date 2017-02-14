@@ -1,5 +1,4 @@
-import Foundation
-import UIKit
+
 import Iconic
 
 public struct IconicHeaderConfig {
@@ -36,24 +35,27 @@ public struct IconicHeaderConfig {
 
 public class IconicHeaderView: UIView {
     
+    weak var importer: IconImportable?
+    
     var collectionView: IconCollectionView
     var titleLabel: UILabel
     var config: IconicHeaderConfig
     
-    public init(frame: CGRect, config: IconicHeaderConfig) {
+    public init(frame: CGRect, config: IconicHeaderConfig, importer: IconImportable?) {
         
+        self.importer = importer
         self.config = config
         
         let layout = IconCollectionViewLayout(columns: config.columns, spacing: config.spacing, width: frame.size.width)
         
-        collectionView = IconCollectionView(frame: frame, collectionViewLayout: layout)
+        collectionView = IconCollectionView(frame: frame, collectionViewLayout: layout, importer: importer)
         collectionView.iconColor = config.foregroundColor
         collectionView.backgroundColor = config.backgroundColor
         
         titleLabel = UILabel(frame: frame)
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
-        
+            
         super.init(frame: frame)
         
         configureLayout()
@@ -100,6 +102,8 @@ public class IconicHeaderView: UIView {
 
 class IconCollectionView: UICollectionView, UICollectionViewDataSource {
     
+    weak var importer: IconImportable?
+    
     var iconColor: UIColor? {
         didSet {
             self.reloadData() // reloads all icons
@@ -108,12 +112,13 @@ class IconCollectionView: UICollectionView, UICollectionViewDataSource {
     
     let kIdentifier = "identifier"
     
-    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+    init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout, importer: IconImportable?) {
         super.init(frame: frame, collectionViewLayout: layout)
         
         iconColor = UIColor.gray
         backgroundColor = UIColor.darkGray
         
+        self.importer = importer
         self.dataSource = self
         self.register(IconCollectionViewCell.self, forCellWithReuseIdentifier: kIdentifier)
     }
@@ -123,7 +128,12 @@ class IconCollectionView: UICollectionView, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return FontAwesomeIcon.count
+        
+        if let importer = importer {
+            return importer.numberOfIcons()
+        }
+        
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -131,8 +141,9 @@ class IconCollectionView: UICollectionView, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kIdentifier, for: indexPath) as! IconCollectionViewCell
         let layout = collectionView.collectionViewLayout as! IconCollectionViewLayout
         
-        if let icon = FontAwesomeIcon(rawValue: indexPath.row) {
-            cell.imageView.image = icon.image(ofSize: layout.estimatedItemSize, color: iconColor)
+        if let importer = importer {
+            let image = importer.iconImage(forRow: indexPath.row, size: layout.estimatedItemSize, color: iconColor ?? .black)
+            cell.imageView.image = image
         }
         
         return cell

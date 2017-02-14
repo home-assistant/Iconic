@@ -2,13 +2,9 @@
 import Iconic
 import PlaygroundSupport
 
-// MARK: - Font Registration
-
-// First, register Font Awesome icons with Iconic
-FontAwesomeIcon.register()
-
-
 // MARK: - Configuration
+
+let importer = IconImporter()
 
 let frame = CGRect(x: 0, y: 0, width: 1776, height: 420)
 
@@ -19,11 +15,11 @@ let textColor = UIColor.white
 let titleFont = UIFont.boldSystemFont(ofSize: 150)
 let subtitleFont = UIFont.systemFont(ofSize: 50)
 
-let title = "iconic"
+let title = "\(Iconic.self)"
 let subtitle = "Render vector icons, natively."
 
-let config = IconicHeaderConfig(columns: 32,
-                                spacing: 34,
+let config = IconicHeaderConfig(columns: 24,
+                                spacing: 50,
                                 angle: 0,
                                 foregroundColor: foregroundColor,
                                 backgroundColor: backgroundColor,
@@ -34,7 +30,7 @@ let config = IconicHeaderConfig(columns: 32,
                                 title: title,
                                 subtitle: subtitle)
 
-let view = IconicHeaderView(frame: frame, config: config)
+let view = IconicHeaderView(frame: frame, config: config, importer: importer)
 let rect = view.frame
 
 // MARK: - Display
@@ -42,3 +38,4 @@ let rect = view.frame
 // To see the render, open the Assisstant Editor
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = view
+
