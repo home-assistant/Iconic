@@ -17,23 +17,26 @@ let foregroundColor = UIColor(withHex: "388988", alpha: 0.5)
 let backgroundColor = UIColor(withHex: "217c7a", alpha: 1)
 let textColor = UIColor.white
 
+let titleFont = UIFont.boldSystemFont(ofSize: 150)
+let subtitleFont = UIFont.systemFont(ofSize: 50)
+
 let title = String(describing: Iconic.self)
 let subtitle = "Render vector icons, natively."
 
 let config = IconicHeaderConfig(columns: 36,
-                                angle: -12.0,
-                                foregroundColor: foregroundColor, alpha: 0.5),
+                                angle: -12,
+                                foregroundColor: foregroundColor,
                                 backgroundColor: backgroundColor,
                                 titleColor: textColor,
                                 subtitleColor: textColor,
-                                titleFont: .boldSystemFont(ofSize: 150),
-                                subtitleFont: .systemFont(ofSize: 50),
+                                titleFont: titleFont,
+                                subtitleFont: subtitleFont,
                                 title: title,
-                                subtitle: subtitle
+                                subtitle: subtitle)
 
 let view = IconicHeaderView(frame: frame, config: config)
 
 // MARK: - Display
 
-// Shows the render in the Assisstant Editor
+// To see the render, open the Assisstant Editor
 PlaygroundPage.current.liveView = view

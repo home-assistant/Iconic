@@ -1,8 +1,8 @@
 import UIKit
 
-public class IconCollectionViewCell: UICollectionViewCell {
+class IconCollectionViewCell: UICollectionViewCell {
     
-    public var imageView = UIImageView()
+    var imageView = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -11,11 +11,11 @@ public class IconCollectionViewCell: UICollectionViewCell {
         self.contentView.addSubview(imageView)
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func layoutSubviews() {
+    override func layoutSubviews() {
         super.layoutSubviews()
         
         imageView.frame = self.bounds
