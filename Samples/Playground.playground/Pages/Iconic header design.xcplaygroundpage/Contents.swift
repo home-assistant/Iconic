@@ -4,7 +4,7 @@ import PlaygroundSupport
 
 // MARK: - Configuration
 
-let importer = IconImporter()
+let iconProvider = IconProvider()
 
 let frame = CGRect(x: 0, y: 0, width: 1776, height: 420)
 
@@ -30,7 +30,7 @@ let config = IconicHeaderConfig(columns: 24,
                                 title: title,
                                 subtitle: subtitle)
 
-let view = IconicHeaderView(frame: frame, config: config, importer: importer)
+let view = IconicHeaderView(frame: frame, config: config, iconProvider: iconProvider)
 let rect = view.frame
 
 // MARK: - Display
