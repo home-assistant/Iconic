@@ -3,7 +3,7 @@
 //  Example
 //
 //  Created by Ignacio Romero on 5/22/16.
-//  Copyright © 2016 DZN Labs All rights reserved.
+//  Copyright © 2017 DZN. All rights reserved.
 //
 
 import UIKit
@@ -11,11 +11,12 @@ import Iconic
 
 class SecondViewController: UIViewController {
     
-    @IBOutlet weak var iconImageView: IconImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var iconWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var iconHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var slider: UISlider!
-    
+    @IBOutlet weak var scaleSlider: UISlider!
+    @IBOutlet weak var colorSlider: UISlider!
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -36,7 +37,9 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         updateTitleView()
-        updateIcon(200)
+        
+        updateIconScale(150)
+        updateIconColor(150)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,15 +54,28 @@ class SecondViewController: UIViewController {
     @IBAction func didChangeScale(_ sender: UISlider) {
         print("did change scale to '\(sender.value)'")
         
-        updateIcon(sender.value)
+        if sender == scaleSlider {
+            updateIconScale(sender.value)
+        }
+        if sender == colorSlider {
+            updateIconColor(sender.value)
+        }
     }
     
-    func updateIcon(_ scale: Float) {
+    func updateIconScale(_ scale: Float) {
         
         let size = CGFloat(ceil(scale))
         
         iconWidthConstraint.constant = size
         iconHeightConstraint.constant = size
+    }
+    
+    func updateIconColor(_ scale: Float) {
+        
+        let hue = CGFloat(ceil(scale))
+        let color = UIColor(hue: hue/255, saturation: 0.9, brightness: 0.9, alpha: 1.0)
+        
+        iconImageView.tintColor = color
     }
 }
 

@@ -3,14 +3,14 @@
 //  https://github.com/dzenbot/Iconic
 //
 //  Created by Ignacio Romero on 5/22/16.
-//  Copyright © 2016 DZN Labs All rights reserved.
+//  Copyright © 2017 DZN. All rights reserved.
 //
 
 import UIKit
 import CoreText
 
 /** A wrapper class for Objective-C compatibility. */
-open class Iconic: NSObject { }
+public final class Iconic: NSObject { }
 
 /** The IconDrawable protocol defines the complete interface of an Iconic icon's capabilities. */
 public protocol IconDrawable {

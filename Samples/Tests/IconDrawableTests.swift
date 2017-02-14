@@ -3,11 +3,11 @@
 //  Iconic
 //
 //  Created by Ignacio Romero on 6/9/16.
-//  Copyright © 2016 DZN. All rights reserved.
+//  Copyright © 2017 DZN. All rights reserved.
 //
 
 import XCTest
-import Iconic
+@testable import Iconic
 
 enum TestIcon: Int {
     case icon1
