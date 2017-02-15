@@ -8,27 +8,25 @@
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 
-**Iconic** will help making icon fonts integration effortless on iOS, tvOS and watchOS. Its main component is in charge of auto-generating strongly typed Swift code, fully compatible with Objective-C.
+**Iconic** helps making icon fonts integration effortless on iOS, tvOS and watchOS. Its main component is in charge of auto-generating strongly typed Swift code with [SwiftGen](https://github.com/SwiftGen/SwiftGen), compatible with Objective-C.
 
-You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of the `IconDrawable.swift` class. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
+You will interact with an auto-generated class under the name of `{FontName}Icon.swift`, which is a light abstraction of the `IconDrawable.swift` protocol. For more information, have a look at [how to install](#installation) and [how to use](#how-to-use).
 
-Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and pick the `Samples.xcworkspace`.
+Give **Iconic** a test drive by simply doing `pod try Iconic` in your terminal, and pick the `Samples.xcworkspace`.
 
 <p align="center">
 <img src="https://github.com/dzenbot/Iconic/blob/master/Screenshots/screenshot_scale.gif?raw=true" alt="Scale Example"/>
 </p>
 
 
-## But, why Icon Fonts?
-
-#### Many advantages:
-- Resolution independent: scale and tint without quality loss.
-- Automatically scaled for different screen densities.
-- Work with (way) less image files.
-- Improve visual consistency.
-- Platform agnostic. 
-- Add better UI accessibility.
-- Simple to work with.
+## Why Icon Fonts?
+- Resolution independent: scale and tint without quality loss
+- Automatically scaled for different screen densities
+- Work with (way) less image files
+- Improve visual consistency
+- Platform agnostic
+- Add better UI accessibility
+- Simple to work with
 
 #### Where can I find awesome icon fonts?
 - Check out the [icon fonts available in this repo](./Fonts)!
@@ -38,18 +36,18 @@ Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and 
 
 
 ## Key Features
-- [Easy installation over CocoaPods](#installation).
-- Supports TTF and OTF font files.
-- Auto-generated enums and unicodes mapping, out of the font's [PUA range](https://en.wikipedia.org/wiki/Private_Use_Areas).
-- `NSAttributedString` and `UIImage` outputs.
-- Fonts are included and registered dynamically, effortless. No need to import the file to your project or register in the info.plist.
-- [Interface Builder support](#interface-builder-support) (iOS & tvOS only).
-- [UIKit extensions](#uikit-extensions) for `UIBarButtonItem`, `UITabBarItem` and `UIButton` (iOS & tvOS only).
-- Auto-generated [icon font html catalog](#icon-font-catalog).
-- Compatible with Swift 3.0 and Objective-C.
-- iOS 8 or later.
-- watchOS or later.
-- tvOS 9 or later.
+- [Easy installation over CocoaPods](#installation)
+- Auto-generated enums and unicodes mapping, out of the font's [PUA range](https://en.wikipedia.org/wiki/Private_Use_Areas)
+- `NSAttributedString` and `UIImage` outputs
+- Supports TTF and OTF font files
+- Fonts are included and registered dynamically
+- [Interface Builder support](#interface-builder-support) (iOS & tvOS only)
+- [UIKit extensions](#uikit-extensions) for `UIBarButtonItem`, `UITabBarItem` and `UIButton` (iOS & tvOS only)
+- Auto-generated [icon font html catalog](#icon-font-catalog)
+- Compatible with Swift 3.0 and Objective-C
+- iOS 8 or later
+- tvOS 9 or later
+- [watchOS 2 or later](#about-watchos-support)
 
 _Note: Some open sourced icon fonts don't include the names of each of their glyphs. This could result in a non-descriptive enums, which can make things less intuitive for you when using Iconic. If you create your own icon font, make sure to properly name each glyph._
 
@@ -129,7 +127,7 @@ let image = icon.image(ofSize: size, color: .blue)
 <details>
 <summary>Objective-C</summary>
 ```objc
-[Iconic imageWithIcon:FontAwesomeIconHome size:CGSizeMake(20, 20) color:[UIColor blueColor]];
+[Iconic imageWithIcon:FontAwesomeIconHomeIcon size:CGSizeMake(20, 20) color:[UIColor blueColor]];
 ```
 </details>
 
@@ -146,7 +144,7 @@ let iconString = icon.attributedString(ofSize: 20, color: .blue)
 <details>
 <summary>Objective-C</summary>
 ```objc
-[Iconic attributedStringWithIcon:FontAwesomeIconHome pointSize:20.0 color:[UIColor blueColor]];
+[Iconic attributedStringWithIcon:FontAwesomeIconHomeIcon pointSize:20.0 color:[UIColor blueColor]];
 ```
 </details>
 
@@ -189,28 +187,28 @@ UIKit extensions are also included, just to make your code look simpler:
 <summary>Swift</summary>
 ```swift
 // UITarbBarItem
-UITabBarItem(withIcon: .Book, size: CGSize(width: 20, height: 20), title: "Catalog")
+UITabBarItem(withIcon: .BookIcon, size: CGSize(width: 20, height: 20), title: "Catalog")
 
 // UIBarButtonItem
-UIBarButtonItem(withIcon: .Book, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapButton))
+UIBarButtonItem(withIcon: .BookIcon, size: CGSize(width: 24, height: 24), target: self, action: #selector(didTapButton))
 
 // UIButton
 let button = UIButton(type: .System)
-button.setIconImage(icon: .Heart, size: CGSize(width: 44, height: 44), color: nil, forState: .Normal)
+button.setIconImage(icon: .HeartIcon, size: CGSize(width: 44, height: 44), color: nil, forState: .Normal)
 ```
 </details>
 <details>
 <summary>Objective-C</summary>
 ```objc
 // UITarbBarItem
-[[UITabBarItem alloc] initWithIcon:FontAwesomeIconBook size:CGSizeMake(20.0, 20.0) title:@"Catalog"];
+[[UITabBarItem alloc] initWithIcon:FontAwesomeIconBookIcon size:CGSizeMake(20.0, 20.0) title:@"Catalog"];
 
 // UIBarButtonItem
-[[UIBarButtonItem alloc] initWithIcon:FontAwesomeIconCog size:CGSizeMake(24.0, 24.0) target:self action:@selector(didTapButton)];
+[[UIBarButtonItem alloc] initWithIcon:FontAwesomeIconCogIcon size:CGSizeMake(24.0, 24.0) target:self action:@selector(didTapButton)];
 
 // UIButton
 UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-[button setIconImageWithIcon:FontAwesomeIconHeart size:CGSizeMake(44.0, 44.0) color:nil forState:UIControlStateNormal];
+[button setIconImageWithIcon:FontAwesomeIconHeartIcon size:CGSizeMake(44.0, 44.0) color:nil forState:UIControlStateNormal];
 ```
 </details>
 
@@ -223,7 +221,8 @@ Give Iconic a test drive by simply doing `pod try Iconic` in your terminal, and 
 
 On the sample project, Iconic is installed as a development pod. Because of this, pod files are not versioned. Therefore, if you clone the repo manually, you will to install the pods yourself.
 
-Note: When running the watchOS example, you might get a "No such module CoreText" error. This is because the CoreText.framework is missing for the watchOS Simulator. Run the 'WatchSimulator-CoreText-Patch.sh' script located in this repository, to copy the CoreText header files from the WatchOS SDK. You will then be able to run the watchOS sample with no issues as well as running Iconic on your Watch apps in the simulator.
+#### About watchOS support:
+When running the watchOS example, you might get a "No such module CoreText" error. This is because the CoreText.framework is missing for the watchOS Simulator. Run the 'WatchSimulator-CoreText-Patch.sh' script located in this repository, to copy the CoreText header files from the WatchOS SDK. You will then be able to run the watchOS sample with no issues as well as running Iconic on your Watch apps in the simulator.
 
 ## Icon Font Catalog
 Besides the auto-generated Swift code, an icon font catalog will be added in `Pods/Iconic/Source/Catalog`. Use this as a visual reference about the icons and their names.
