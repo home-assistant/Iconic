@@ -7,12 +7,12 @@ import UIKit
 public extension Iconic {
 
     /** The icon font's family name. */
-    @objc class var {{enumName|lowerFirstWord}}FamilyName: NSString {
+    class var {{enumName|lowerFirstWord}}FamilyName: NSString {
         return {{enumName}}.familyName as NSString
     }
 
     /** The icon font's total count of available icons. */
-    @objc class var {{enumName|lowerFirstWord}}Count: Int {
+    class var {{enumName|lowerFirstWord}}Count: Int {
         return {{enumName}}.count
     }
 
@@ -21,7 +21,7 @@ public extension Iconic {
 
      - parameter size: The size (in points) to which the font is scaled.
      */
-    @objc class func {{enumName|lowerFirstWord}}Font(ofSize size: CGFloat) -> UIFont {
+    class func {{enumName|lowerFirstWord}}Font(ofSize size: CGFloat) -> UIFont {
         return {{enumName}}.font(ofSize: size)
     }
 
@@ -32,7 +32,7 @@ public extension Iconic {
      - parameter pointSize: The size of the font.
      - parameter color: The tint color of the font.
      */
-    @objc class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
+    class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
         return icon.attributedString(ofSize: pointSize, color: color)
     }
 
@@ -44,7 +44,7 @@ public extension Iconic {
      - parameter color: The tint color of the font.
      - parameter edgeInsets: The edge insets to be used as horizontal and vertical padding.
      */
-    @objc class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
+    class func attributedString(withIcon icon: {{enumName}}, pointSize: CGFloat, color: UIColor?, edgeInsets: UIEdgeInsets) -> NSAttributedString {
         return icon.attributedString(ofSize: pointSize, color: color, edgeInsets: edgeInsets)
     }
 
@@ -55,7 +55,7 @@ public extension Iconic {
      - parameter size: The size of the image, in points.
      - parameter color: A tint color for the image.
      */
-    @objc class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?) -> UIImage {
+    class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?) -> UIImage {
         return icon.image(ofSize: size, color: color)
     }
 
@@ -67,7 +67,7 @@ public extension Iconic {
      - parameter color: The tint color of the image.
      - parameter edgeInsets: The edge insets to be used as padding values.
      */
-    @objc class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage {
+    class func image(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage {
         return icon.image(ofSize: size, color: color, edgeInsets: edgeInsets)
     }
 
@@ -75,14 +75,14 @@ public extension Iconic {
      Registers the icon font with the font manager.
      Note: an exception will be thrown if the resource (ttf/otf) font file is not found in the bundle.
      */
-    @objc class func register{{enumName}}() {
+    class func register{{enumName}}() {
         {{enumName}}.register()
     }
 
     /**
      Unregisters the icon font from the font manager.
      */
-    @objc class func unregister{{enumName}}() {
+    class func unregister{{enumName}}() {
         {{enumName}}.unregister()
     }
 }
