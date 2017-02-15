@@ -1,32 +1,41 @@
-import PlaygroundSupport
-import Foundation
-import UIKit
+
 import Iconic
-
-// MARK: - Font Registration
-
-// First, register Font Awesome icons with Iconic
-FontAwesomeIcon.register()
-
+import PlaygroundSupport
 
 // MARK: - Configuration
 
-let frame = CGRect(x: 0, y: 0, width: 1900, height: 350)
+let iconProvider = IconProvider()
 
-let config = IconicHeaderConfig(columns: 36,
-                                angle: -12.0,
-                                foregroundColor: UIColor(red: 237/255, green: 85/255, blue: 96/255, alpha: 0.5),
-                                backgroundColor: UIColor(red: 217/255, green: 78/255, blue: 90/255, alpha: 1),
-                                titleColor: .white,
-                                subtitleColor: .white,
-                                titleFont: .boldSystemFont(ofSize: 150),
-                                subtitleFont: .systemFont(ofSize: 50),
-                                title: String(describing: Iconic.self),
-                                subtitle: "Render vector icons, natively.")
+let frame = CGRect(x: 0, y: 0, width: 1776, height: 420)
 
-let view = IconicHeaderView(frame: frame, config: config)
+let foregroundColor = UIColor(withHex: "a2e2fb", alpha: 1)
+let backgroundColor = UIColor(withHex: "1dbaf7", alpha: 1)
+let textColor = UIColor.white
+
+let titleFont = UIFont.boldSystemFont(ofSize: 150)
+let subtitleFont = UIFont.systemFont(ofSize: 50)
+
+let title = "\(Iconic.self)"
+let subtitle = "Render vector icons, natively."
+
+let config = IconicHeaderConfig(columns: 24,
+                                spacing: 50,
+                                angle: 0,
+                                foregroundColor: foregroundColor,
+                                backgroundColor: backgroundColor,
+                                titleColor: textColor,
+                                subtitleColor: textColor,
+                                titleFont: titleFont,
+                                subtitleFont: subtitleFont,
+                                title: title,
+                                subtitle: subtitle)
+
+let view = IconicHeaderView(frame: frame, config: config, iconProvider: iconProvider)
+let rect = view.frame
 
 // MARK: - Display
 
-// Shows the render in the Assisstant Editor
+// To see the render, open the Assisstant Editor
+PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = view
+

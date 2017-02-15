@@ -1,10 +1,10 @@
-import Foundation
-import UIKit
+
 import Iconic
 
 public struct IconicHeaderConfig {
     
     var columns: Int
+    var spacing: CGFloat
     var angle: Double
     
     var foregroundColor: UIColor
@@ -18,8 +18,9 @@ public struct IconicHeaderConfig {
     var title: String
     var subtitle: String
     
-    public init(columns: Int, angle: Double, foregroundColor: UIColor, backgroundColor: UIColor, titleColor: UIColor, subtitleColor: UIColor, titleFont: UIFont, subtitleFont: UIFont, title: String, subtitle: String) {
+    public init(columns: Int, spacing: CGFloat, angle: Double, foregroundColor: UIColor, backgroundColor: UIColor, titleColor: UIColor, subtitleColor: UIColor, titleFont: UIFont, subtitleFont: UIFont, title: String, subtitle: String) {
         self.columns = columns
+        self.spacing = spacing
         self.angle = angle
         self.foregroundColor = foregroundColor
         self.backgroundColor = backgroundColor
@@ -34,24 +35,27 @@ public struct IconicHeaderConfig {
 
 public class IconicHeaderView: UIView {
     
+    weak var iconProvider: IconProviderDelegate?
+    
     var collectionView: IconCollectionView
     var titleLabel: UILabel
     var config: IconicHeaderConfig
     
-    public init(frame: CGRect, config: IconicHeaderConfig) {
+    public init(frame: CGRect, config: IconicHeaderConfig, iconProvider: IconProviderDelegate?) {
         
+        self.iconProvider = iconProvider
         self.config = config
         
-        let layout = IconCollectionViewLayout(columns: config.columns, width: frame.size.width)
+        let layout = IconCollectionViewLayout(columns: config.columns, spacing: config.spacing, width: frame.size.width)
         
-        collectionView = IconCollectionView(frame: frame, collectionViewLayout: layout)
+        collectionView = IconCollectionView(frame: frame, collectionViewLayout: layout, iconProvider: iconProvider)
         collectionView.iconColor = config.foregroundColor
         collectionView.backgroundColor = config.backgroundColor
         
         titleLabel = UILabel(frame: frame)
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
-        
+            
         super.init(frame: frame)
         
         configureLayout()
@@ -62,6 +66,9 @@ public class IconicHeaderView: UIView {
     }
     
     func configureLayout() {
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.paragraphSpacing = 40
         
         let titleAttributes: [String:Any] = [NSFontAttributeName: config.titleFont,
                                              NSForegroundColorAttributeName: UIColor.white]
@@ -95,6 +102,8 @@ public class IconicHeaderView: UIView {
 
 class IconCollectionView: UICollectionView, UICollectionViewDataSource {
     
+    weak var iconProvider: IconProviderDelegate?
+    
     var iconColor: UIColor? {
         didSet {
             self.reloadData() // reloads all icons
@@ -103,12 +112,13 @@ class IconCollectionView: UICollectionView, UICollectionViewDataSource {
     
     let kIdentifier = "identifier"
     
-    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+    init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout, iconProvider: IconProviderDelegate?) {
         super.init(frame: frame, collectionViewLayout: layout)
         
         iconColor = UIColor.gray
         backgroundColor = UIColor.darkGray
         
+        self.iconProvider = iconProvider
         self.dataSource = self
         self.register(IconCollectionViewCell.self, forCellWithReuseIdentifier: kIdentifier)
     }
@@ -118,7 +128,12 @@ class IconCollectionView: UICollectionView, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return FontAwesomeIcon.count
+        
+        if let iconProvider = iconProvider {
+            return iconProvider.numberOfIcons()
+        }
+        
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -126,8 +141,9 @@ class IconCollectionView: UICollectionView, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kIdentifier, for: indexPath) as! IconCollectionViewCell
         let layout = collectionView.collectionViewLayout as! IconCollectionViewLayout
         
-        if let icon = FontAwesomeIcon(rawValue: indexPath.row) {
-            cell.imageView.image = icon.image(ofSize: layout.estimatedItemSize, color: iconColor)
+        if let iconProvider = iconProvider {
+            let image = iconProvider.iconImage(forRow: indexPath.row, size: layout.estimatedItemSize, color: iconColor ?? .black)
+            cell.imageView.image = image
         }
         
         return cell
