@@ -126,7 +126,14 @@ extension IconDrawable {
         return image(ofSize: size, color: color, edgeInsets: .zero)
     }
     
-    public func image(ofSize size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets) -> UIImage {
+    public func image(ofSize size: CGSize, color: UIColor?, edgeInsets: UIEdgeInsets = .zero) -> UIImage {
+        
+        let cacheItem = IconItem(icon: self, size: size, color: color, edgeInsets: edgeInsets)
+        
+        // Returns from cache
+        if let image = getImage(forItem: cacheItem) {
+            return image
+        }
         
         let pointSize = min(size.width, size.height)
         let aString = attributedString(ofSize: pointSize, color: color)
@@ -149,6 +156,11 @@ extension IconDrawable {
         mString.draw(in: rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
+        
+        // Saves for later
+        if let image = image {
+            setImage(image, forItem: cacheItem)
+        }
         
         return image!
     }
