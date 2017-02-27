@@ -8,20 +8,27 @@
 
 import UIKit
 
+/** Adds internal image caching implementation. */
 extension IconDrawable {
     
-    func getImage(forItem item: IconItem) -> UIImage? {
+    func getCacheImage(forItem item: IconItem) -> UIImage? {
         
         let key = item.hashString
-        print("Getting \(item.icon.name) for key: \(key)")
-
-        return IconCache.image(forKey: key)
+        let cache = IconCache.shared
+        
+        guard let image = cache.object(forKey: key as AnyObject) as? UIImage else {
+            return nil
+        }
+        
+        return image
     }
     
-    func setImage(_ image: UIImage, forItem item: IconItem) {
+    func setCacheImage(_ image: UIImage, forItem item: IconItem) {
         
         let key = item.hashString
-        IconCache.setImage(image, forKey: key)
+        let cache = IconCache.shared
+        
+        cache.setObject(image, forKey: key as AnyObject)
     }
 }
 
@@ -46,11 +53,13 @@ extension IconItem: Hashable {
     }
     
     var hashValue: Int {
-        return icon.unicode.hashValue ^ size.width.hashValue ^ size.height.hashValue ^ color.hashValue ^ Int(edgeInsets.left) ^ Int(edgeInsets.right) ^ Int(edgeInsets.top) ^ Int(edgeInsets.bottom)
+       return "\(icon.unicode),\(size),\(color.hashValue),\(edgeInsets)".hashValue
     }
     
     static func == (lhs: IconItem, rhs: IconItem) -> Bool {
-        return lhs.icon.unicode == rhs.icon.unicode
+        return lhs.icon.unicode == rhs.icon.unicode &&
+               lhs.size.width == rhs.size.width &&
+               lhs.size.height == rhs.size.height
     }
 }
 
@@ -61,14 +70,6 @@ fileprivate class IconCache: NSCache<AnyObject, AnyObject> {
     private override init() {
         super.init()
         countLimit = 100 // items in memory
-        totalCostLimit = 1*1024*1024 // memory space
-    }
-    
-    class func image(forKey key: String) -> UIImage? {
-        return shared.object(forKey: key as AnyObject) as? UIImage
-    }
-    
-    class func setImage(_ img: UIImage, forKey key: String) {
-        shared.setObject(img, forKey: key as AnyObject)
+        totalCostLimit = 1 * 1024 * 1024 // memory space
     }
 }

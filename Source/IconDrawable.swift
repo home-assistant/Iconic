@@ -130,8 +130,8 @@ extension IconDrawable {
         
         let cacheItem = IconItem(icon: self, size: size, color: color, edgeInsets: edgeInsets)
         
-        // Returns from cache
-        if let image = getImage(forItem: cacheItem) {
+        // Returns early from cache
+        if let image = getCacheImage(forItem: cacheItem) {
             return image
         }
         
@@ -157,10 +157,8 @@ extension IconDrawable {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        // Saves for later
-        if let image = image {
-            setImage(image, forItem: cacheItem)
-        }
+        // Saves the image result for later reuse
+        setCacheImage(image!, forItem: cacheItem)
         
         return image!
     }
