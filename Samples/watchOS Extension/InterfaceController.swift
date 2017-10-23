@@ -25,8 +25,7 @@ class InterfaceController: WKInterfaceController {
     let upArrowIcon = FontAwesomeIcon.angleUpIcon
     let downArrowIcon = FontAwesomeIcon.angleDownIcon
     
-    override class func initialize() {
-        
+    func initialize(){
         // It is important to register the icon font as soon as possible,
         // and make the resources available right after launching the app.
         //
@@ -35,6 +34,11 @@ class InterfaceController: WKInterfaceController {
         
         FontAwesomeIcon.register()
     }
+    
+    static let shared : InterfaceController = {
+        $0.initialize()
+        return $0
+    }(InterfaceController())
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
