@@ -22,7 +22,7 @@ CATALOG_PATH=Source/Catalog
 STENCIL_PATH=Source/iconic-default.stencil
 
 # The path of SwiftGen exec
-EXEC_PATH=/usr/local/bin/swiftgen
+EXEC_PATH=Vendor/SwiftGen/build/swiftgen/bin/swiftgen
 
 
 function getFileTitle()
