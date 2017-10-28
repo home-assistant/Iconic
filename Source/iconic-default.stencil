@@ -4,7 +4,7 @@ import UIKit
 
 {% if icons %}
 /** A wrapper class for Objective-C compatibility. */
-public extension Iconic {
+@objc public extension Iconic {
 
     /** The icon font's family name. */
     class var {{enumName|lowerFirstWord}}FamilyName: NSString {
