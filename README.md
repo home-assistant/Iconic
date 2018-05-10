@@ -81,12 +81,14 @@ For complete documentation, [visit Iconic's docs](http://cocoadocs.org/docsets/I
 Import the Iconic module:
 <details open>
 <summary>Swift</summary>
+
 ```swift
 import Iconic
 ```
 </details>
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 @import Iconic;
 ```
@@ -100,12 +102,14 @@ Iconic provides a convenient way to register the icon font:
 Note: the method name may change depending of your icon font's name:
 <details open>
 <summary>Swift</summary>
+
 ```swift
 FontAwesomeIcon.register()
 ```
 </details>
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 [Iconic registerFontAwesomeIcon];
 ```
@@ -117,6 +121,7 @@ You can construct an `UIImage` instance out of a font's icon and tint it. This m
 Images are created using NSStringDraw APIs to render a `UIImage` out of an `NSAttributedString`.
 <details open>
 <summary>Swift</summary>
+
 ```swift
 let size = CGSize(width: 20, height: 20)
 
@@ -126,6 +131,7 @@ let image = icon.image(ofSize: size, color: .blue)
 </details>
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 [Iconic imageWithIcon:FontAwesomeIconHomeIcon size:CGSizeMake(20, 20) color:[UIColor blueColor]];
 ```
@@ -136,6 +142,7 @@ You may need to icons as text too, and simplify your layout work.
 For example, instead of having an image and a label, you can combined it all in one single label:
 <details open>
 <summary>Swift</summary>
+
 ```swift
 let icon = FontAwesomeIcon.HomeIcon
 let iconString = icon.attributedString(ofSize: 20, color: .blue)
@@ -143,6 +150,7 @@ let iconString = icon.attributedString(ofSize: 20, color: .blue)
 </details>
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 [Iconic attributedStringWithIcon:FontAwesomeIconHomeIcon pointSize:20.0 color:[UIColor blueColor]];
 ```
@@ -152,6 +160,7 @@ let iconString = icon.attributedString(ofSize: 20, color: .blue)
 Ultimately, you may need to retrieve the unicode string representation on an icon to do more advanced things:
 <details open>
 <summary>Swift</summary>
+
 ```swift
 let unicode = FontAwesomeIcon.HomeIcon.unicode
 ```
@@ -161,12 +170,14 @@ let unicode = FontAwesomeIcon.HomeIcon.unicode
 For further customization, you may need to use the UIFont object instead:
 <details open>
 <summary>Swift</summary>
+
 ```swift
 let font = FontAwesomeIcon.font(ofSize: 20)
 ```
 </details>
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 UIFont *font = [Iconic fontAwesomeIconFontOfSize:20.0];
 ```
@@ -185,6 +196,7 @@ Iconic includes a `UIImageView` subclass under the name of `{FontName}IconView.s
 UIKit extensions are also included, just to make your code look simpler:
 <details open>
 <summary>Swift</summary>
+
 ```swift
 // UITarbBarItem
 UITabBarItem(withIcon: .BookIcon, size: CGSize(width: 20, height: 20), title: "Catalog")
@@ -199,6 +211,7 @@ button.setIconImage(icon: .HeartIcon, size: CGSize(width: 44, height: 44), color
 </details>
 <details>
 <summary>Objective-C</summary>
+
 ```objc
 // UITarbBarItem
 [[UITabBarItem alloc] initWithIcon:FontAwesomeIconBookIcon size:CGSizeMake(20.0, 20.0) title:@"Catalog"];
