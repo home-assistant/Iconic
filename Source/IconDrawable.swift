@@ -94,11 +94,11 @@ extension IconDrawable {
     public func attributedString(ofSize pointSize: CGFloat, color: UIColor?) -> NSAttributedString {
         
         let font = Self.font(ofSize: pointSize)
-        var attributes = [NSAttributedStringKey : Any]()
-        attributes[.font] = font
+
+        var attributes = [NSAttributedStringKey.font : font] as [NSAttributedStringKey : Any]
         
         if let color = color {
-            attributes[.foregroundColor] = color
+            attributes[NSAttributedStringKey.foregroundColor] = color
         }
         
         return NSAttributedString(string: unicode, attributes: attributes)
@@ -111,10 +111,10 @@ extension IconDrawable {
         
         let range = NSRange(location: 0, length: mString.length)
 
-        mString.addAttribute(.baselineOffset, value: edgeInsets.bottom-edgeInsets.top, range: range)
+        mString.addAttribute(NSAttributedStringKey.baselineOffset, value: edgeInsets.bottom-edgeInsets.top, range: range)
         
-        let leftSpace = NSAttributedString(string: " ", attributes: [.kern: edgeInsets.left])
-        let rightSpace = NSAttributedString(string: " ", attributes: [.kern: edgeInsets.right])
+        let leftSpace = NSAttributedString(string: " ", attributes: [NSAttributedStringKey.kern: edgeInsets.left])
+        let rightSpace = NSAttributedString(string: " ", attributes: [NSAttributedStringKey.kern: edgeInsets.right])
         
         mString.insert(rightSpace, at: mString.length)
         mString.insert(leftSpace, at: 0)
@@ -143,7 +143,7 @@ extension IconDrawable {
         
         let range = NSRange(location: 0, length: mString.length)
         
-        mString.addAttribute(.paragraphStyle, value: paragraphStyle, range: range)
+        mString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: range)
         
         // Renders the attributed string as image using Text Kit
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
