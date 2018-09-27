@@ -165,7 +165,7 @@ public extension UIButton {
 #endif
 
 /** A list with available icon glyphs from the icon font. */
-@objc public enum {{enumName}}: Int {
+@objc public enum {{enumName}}: Int, CaseIterable {
     {% for icon in icons %}
     case {{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon
     {% endfor %}
