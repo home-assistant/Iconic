@@ -6,11 +6,14 @@
 #  Created by Ignacio Romero on 5/28/16.
 #  Copyright © 2016 DZN Labs All rights reserved.
 #
-# Script in charge of executing SwitfGen, passing the icon font file path, the enum name and the custom stencil as arguments.
+# Script in charge of executing SwiftGen, passing the icon font file path, the enum name and the custom stencil as arguments.
 #
 
 # The optional font file path passed as arg
 INPUT_PATH=$1
+
+# The optional custom name to use instead of deriving one via file name
+CUSTOM_NAME=$2
 
 # The root path for the generated files
 OUTPUT_PATH=Source
@@ -53,10 +56,8 @@ function iconize()
     # Input variables
     FONT_PATH=$1
     FONT_NAME=$2
+    OUTPUT_NAME=$3
 
-    # Capitalized first word of the file name, with the 'Icon' suffix.
-    # ie: FontAwesomeIcon out of a string like 'FontAwesome'
-    OUTPUT_NAME=$( getFileTitle "${FONT_NAME}" )
     echo "Iconizer: Generating API name '${OUTPUT_NAME}'"
 
 	# Creates the output folder (no error if existing)
@@ -78,17 +79,25 @@ function init()
 {
     # Input variables
     FONT_PATH=$1
+    CUSTOM_NAME=$2
 
     echo "Iconizer: Initializing with font at path '${FONT_PATH}'"
 
     # Input's file name and extension
     FONT_NAME=$(basename "${FONT_PATH}")
     INPUT_EXTENSION="${FONT_NAME##*.}"
+
+    if [ -z "$CUSTOM_NAME" ]; then
+      # Capitalized first word of the file name, with the 'Icon' suffix.
+      # ie: FontAwesomeIcon out of a string like 'FontAwesome'
+      CUSTOM_NAME=$( getFileTitle "${FONT_NAME}" )
+    fi
+
     echo "Iconizer: Processing file '${FONT_NAME}' with extension '${INPUT_EXTENSION}'"
 
     # Only TTF and OTF are supported font files
     if [ ${INPUT_EXTENSION} = 'ttf' ] || [ ${INPUT_EXTENSION} = 'otf' ]; then
-        iconize ${FONT_PATH} ${FONT_NAME}
+        iconize ${FONT_PATH} ${FONT_NAME} ${CUSTOM_NAME}
     else
         echo "Iconizer: Unsupported '${INPUT_EXTENSION}' file. Please provide a TTF or OTF file path."
     fi
@@ -102,5 +111,5 @@ if [ -z ${INPUT_PATH} ]; then
     # Uses FontAwesome as default
     init 'Fonts/FontAwesome/FontAwesome.otf'
 else
-    init ${INPUT_PATH}
+    init ${INPUT_PATH} ${CUSTOM_NAME}
 fi
