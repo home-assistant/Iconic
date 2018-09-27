@@ -95,10 +95,10 @@ extension IconDrawable {
 
         let font = Self.font(ofSize: pointSize)
 
-        var attributes: [NSAttributedStringKey: Any] = [NSAttributedStringKey.font : font]
+        var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font : font]
 
         if let color = color {
-            attributes[NSAttributedStringKey.foregroundColor] = color
+            attributes[NSAttributedString.Key.foregroundColor] = color
         }
 
         return NSAttributedString(string: unicode, attributes: attributes)
@@ -111,10 +111,10 @@ extension IconDrawable {
 
         let range = NSRange(location: 0, length: mString.length)
 
-        mString.addAttribute(NSAttributedStringKey.baselineOffset, value: edgeInsets.bottom-edgeInsets.top, range: range)
+        mString.addAttribute(NSAttributedString.Key.baselineOffset, value: edgeInsets.bottom-edgeInsets.top, range: range)
 
-        let leftSpace = NSAttributedString(string: " ", attributes: [NSAttributedStringKey.kern: edgeInsets.left])
-        let rightSpace = NSAttributedString(string: " ", attributes: [NSAttributedStringKey.kern: edgeInsets.right])
+        let leftSpace = NSAttributedString(string: " ", attributes: [NSAttributedString.Key.kern: edgeInsets.left])
+        let rightSpace = NSAttributedString(string: " ", attributes: [NSAttributedString.Key.kern: edgeInsets.right])
 
         mString.insert(rightSpace, at: mString.length)
         mString.insert(leftSpace, at: 0)
@@ -143,7 +143,7 @@ extension IconDrawable {
 
         let range = NSRange(location: 0, length: mString.length)
 
-        mString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: range)
+        mString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
 
         // Renders the attributed string as image using Text Kit
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
@@ -169,9 +169,12 @@ extension IconDrawable {
             return
         }
 
-        let url = resourceUrl()
+        guard let url = resourceUrl() else {
+            print("Unable to register font '\(familyName)' beacuse URL was nil!")
+            return
+        }
         var error: Unmanaged<CFError>? = nil
-        let descriptors = CTFontManagerCreateFontDescriptorsFromURL(url) as NSArray?
+        let descriptors = CTFontManagerCreateFontDescriptorsFromURL(url as CFURL) as NSArray?
 
         guard let descriptor = (descriptors as? [CTFontDescriptor])?.first else {
             assertionFailure("Could not retrieve font descriptors of font at path '\(url)',")
@@ -182,8 +185,8 @@ extension IconDrawable {
         let fontName = CTFontCopyPostScriptName(font) as String
 
         // Registers font dynamically
-        if CTFontManagerRegisterFontsForURL(url, .none, &error) == false || error != nil {
-            assertionFailure("Failed registering font with the postscript name '\(fontName)' at path '\(url)' with error: \(error).")
+        if CTFontManagerRegisterFontsForURL(url as CFURL, .none, &error) == false || error != nil {
+            assertionFailure("Failed registering font with the postscript name '\(fontName)' at path '\(url)' with error: \(String(describing: error)).")
         }
 
         print("Font '\(familyName)' registered successfully!")
@@ -196,24 +199,24 @@ extension IconDrawable {
             return
         }
 
-        let url = resourceUrl()
+        guard let url = resourceUrl() else {
+            print("Unable to unregister font '\(familyName)' beacuse URL was nil!")
+            return
+        }
         var error: Unmanaged<CFError>? = nil
 
-        if CTFontManagerUnregisterFontsForURL(url, .none, &error) == false || error != nil {
-            assertionFailure("Failed unregistering font with name '\(familyName)' at path '\(url)' with error: \(error).")
+        if CTFontManagerUnregisterFontsForURL(url as CFURL, .none, &error) == false || error != nil {
+            assertionFailure("Failed unregistering font with name '\(familyName)' at path '\(url)' with error: \(String(describing: error)).")
         }
 
         print("Font '\(familyName)' unregistered successfully!")
     }
 
-    fileprivate static func resourceUrl() -> CFURL {
-
+    fileprivate static func resourceUrl() -> URL? {
         let extensions = ["otf", "ttf"]
         let bundle = Bundle(for: Iconic.self)
 
-        let url = extensions.flatMap { bundle.url(forResource: familyName, withExtension: $0) }.first
-
-        return url as CFURL!
+        return extensions.compactMap { bundle.url(forResource: familyName, withExtension: $0) }.first
     }
 }
 

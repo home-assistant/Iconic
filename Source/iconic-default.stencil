@@ -122,7 +122,7 @@ public extension UIBarButtonItem {
      - parameter action: The action to send to target when this item is selected.
      */
     convenience init(withIcon icon: {{enumName}}, size: CGSize, target: AnyObject?, action: Selector) {
-        
+
         let image = icon.image(ofSize: size, color: .black)
         self.init(image: image, style: .plain, target: target, action: action)
     }
@@ -139,7 +139,7 @@ public extension UITabBarItem {
      - parameter title: The item's title. If nil, a title is not displayed.
      */
     convenience init(withIcon icon: {{enumName}}, size: CGSize, title: String?) {
-        
+
         let image = icon.image(ofSize: size, color: .black)
         self.init(title: title, image: image, tag: icon.rawValue)
     }
@@ -153,10 +153,10 @@ public extension UIButton {
      - parameter icon: The icon to be used as image.
      - parameter size: The size of the image, in points.
      - parameter color: The color of the image.
-     - parameter state: The state that uses the specified title. The values are described in UIControlState.
+     - parameter state: The state that uses the specified title. The values are described in UIControl.State.
      */
-    func setIconImage(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, forState state: UIControlState) {
-        
+    func setIconImage(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, forState state: UIControl.State) {
+
         let image = icon.image(ofSize: size, color: color ?? .black)
         setImage(image, for: state)
     }
