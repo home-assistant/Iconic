@@ -183,7 +183,7 @@ extension {{enumName}} : IconDrawable {
 
     /**
      Creates a new instance with the specified icon name.
-     If there is no valid name is recognised, this initializer falls back to the first available icon.
+     If there is no valid name recognised, this initializer falls back to the first available icon.
 
      - parameter iconName: The icon name to use for the new instance.
      */
@@ -193,6 +193,23 @@ extension {{enumName}} : IconDrawable {
         case "{{icon.name|swiftIdentifier|lowercase}}": self = .{{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon
         {% endfor %}
         default: self = {{enumName}}(rawValue: 0)!
+        }
+    }
+
+    /**
+     Creates a new instance with the specified icon name.
+     If there is no valid name recognised, the given fallback value will be used.
+     If the fallback value is not recognised, this initializer falls back to the first available icon.
+
+     - parameter iconName: The icon name to use for the new instance.
+     - parameter fallbackIconName: The fallback icon name to use for the new instance if the iconName doesn't exist.
+     */
+    public init(named iconName: String, fallbackIconName: String) {
+        switch iconName.lowercased() {
+        {% for icon in icons %}
+        case "{{icon.name|swiftIdentifier|lowercase}}": self = .{{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon
+        {% endfor %}
+        default: self = {{enumName}}(named: fallbackIconName)
         }
     }
 
