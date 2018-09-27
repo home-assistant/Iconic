@@ -110,6 +110,8 @@ if [ -z ${INPUT_PATH} ]; then
 
     # Uses FontAwesome as default
     init 'Fonts/FontAwesome/FontAwesome.otf'
+elif [ -z ${CUSTOM_NAME} ]; then
+    init ${INPUT_PATH}
 else
     init ${INPUT_PATH} ${CUSTOM_NAME}
 fi
