@@ -1,4 +1,4 @@
-@version = '1.5'
+@version = '1.5.1'
 
 Pod::Spec.new do |s|
 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   }
 
   s.source = {
-      :git => 'https://github.com/jkyin/Iconic.git',
+      :git => 'https://github.com/dzenbot/Iconic.git',
       :tag => @version
   }
 

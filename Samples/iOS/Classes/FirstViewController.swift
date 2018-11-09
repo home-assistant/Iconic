@@ -44,7 +44,7 @@ class FirstViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
     
-    func didTapRightItem() {
+    @objc func didTapRightItem() {
         // Do something
     }
     
@@ -122,8 +122,8 @@ extension UIViewController {
         let titleSize = CGFloat(20)
         let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: titleSize/2)
         
-        let attributes = [NSAttributedStringKey.foregroundColor: color,
-                          NSAttributedStringKey.font: UIFont.systemFont(ofSize: titleSize)] as [NSAttributedStringKey: Any]
+        let attributes = [NSAttributedString.Key.foregroundColor: color,
+                          NSAttributedString.Key.font: UIFont.systemFont(ofSize: titleSize)] as [NSAttributedString.Key: Any]
         
         let mString = NSMutableAttributedString(string: title, attributes: attributes)
         
