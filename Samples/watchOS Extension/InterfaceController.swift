@@ -35,10 +35,7 @@ class InterfaceController: WKInterfaceController {
         FontAwesomeIcon.register()
     }()
     
-    static let shared : InterfaceController = {
-        $0.initialize()
-        return $0
-    }(InterfaceController())
+    static let shared = InterfaceController()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)

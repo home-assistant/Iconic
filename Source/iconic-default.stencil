@@ -111,7 +111,7 @@ public final class {{enumName}}View: IconImageView {
     }
 }
 
-public extension UIBarButtonItem {
+@objc public extension UIBarButtonItem {
 
     /**
      Initializes a new item using the specified icon and other properties.
@@ -128,7 +128,7 @@ public extension UIBarButtonItem {
     }
 }
 
-public extension UITabBarItem {
+@objc public extension UITabBarItem {
 
     /**
      Initializes a new item using the specified icon and other properties.
@@ -145,7 +145,7 @@ public extension UITabBarItem {
     }
 }
 
-public extension UIButton {
+@objc public extension UIButton {
 
     /**
      Sets the icon to use for the specified state.

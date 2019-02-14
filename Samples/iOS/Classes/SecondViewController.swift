@@ -46,7 +46,7 @@ class SecondViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    func didTapRightItem() {
+    @objc func didTapRightItem() {
         navigationController?.navigationBar.isHidden = true
         tabBarController?.tabBar.isHidden = true
     }
@@ -89,7 +89,7 @@ class StepSlider: UISlider {
         self.addGestureRecognizer(tapGesture)
     }
     
-    func didTapSlider(_ gesture: UIGestureRecognizer) {
+    @objc func didTapSlider(_ gesture: UIGestureRecognizer) {
         
         let location = gesture.location(in: gesture.view)
         
