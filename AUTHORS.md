@@ -4,7 +4,7 @@
 - [Ignacio Romero Zurbuchen](https://github.com/dzenbot)
 
 ## Maintainer
-- [Robbie Trencheny](https://github.com/dzenbot)
+- [Robbie Trencheny](https://github.com/robbiet480)
 
 ## Contributors
 - [Haroen Viaene](https://github.com/Haroenv)
