@@ -3,8 +3,10 @@
 ## Creator
 - [Ignacio Romero Zurbuchen](https://github.com/dzenbot)
 
-## Contributors
+## Maintainer
 - [Robbie Trencheny](https://github.com/dzenbot)
+
+## Contributors
 - [Haroen Viaene](https://github.com/Haroenv)
 - [jkyin](https://github.com/jkyin)
 - [Joel Fischer](https://github.com/joeljfischer)
