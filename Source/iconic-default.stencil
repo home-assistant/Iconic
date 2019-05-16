@@ -4,16 +4,11 @@ import UIKit
 
 {% if icons %}
 /** A wrapper class for Objective-C compatibility. */
-public extension Iconic {
+@objc public extension Iconic {
 
     /** The icon font's family name. */
     class var {{enumName|lowerFirstWord}}FamilyName: NSString {
         return {{enumName}}.familyName as NSString
-    }
-
-    /** The icon font's total count of available icons. */
-    class var {{enumName|lowerFirstWord}}Count: Int {
-        return {{enumName}}.count
     }
 
     /**
@@ -111,7 +106,7 @@ public final class {{enumName}}View: IconImageView {
     }
 }
 
-public extension UIBarButtonItem {
+@objc public extension UIBarButtonItem {
 
     /**
      Initializes a new item using the specified icon and other properties.
@@ -122,13 +117,13 @@ public extension UIBarButtonItem {
      - parameter action: The action to send to target when this item is selected.
      */
     convenience init(withIcon icon: {{enumName}}, size: CGSize, target: AnyObject?, action: Selector) {
-        
+
         let image = icon.image(ofSize: size, color: .black)
         self.init(image: image, style: .plain, target: target, action: action)
     }
 }
 
-public extension UITabBarItem {
+@objc public extension UITabBarItem {
 
     /**
      Initializes a new item using the specified icon and other properties.
@@ -139,13 +134,13 @@ public extension UITabBarItem {
      - parameter title: The item's title. If nil, a title is not displayed.
      */
     convenience init(withIcon icon: {{enumName}}, size: CGSize, title: String?) {
-        
+
         let image = icon.image(ofSize: size, color: .black)
         self.init(title: title, image: image, tag: icon.rawValue)
     }
 }
 
-public extension UIButton {
+@objc public extension UIButton {
 
     /**
      Sets the icon to use for the specified state.
@@ -153,10 +148,10 @@ public extension UIButton {
      - parameter icon: The icon to be used as image.
      - parameter size: The size of the image, in points.
      - parameter color: The color of the image.
-     - parameter state: The state that uses the specified title. The values are described in UIControlState.
+     - parameter state: The state that uses the specified title. The values are described in UIControl.State.
      */
-    func setIconImage(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, forState state: UIControlState) {
-        
+    func setIconImage(withIcon icon: {{enumName}}, size: CGSize, color: UIColor?, forState state: UIControl.State) {
+
         let image = icon.image(ofSize: size, color: color ?? .black)
         setImage(image, for: state)
     }
@@ -165,13 +160,10 @@ public extension UIButton {
 #endif
 
 /** A list with available icon glyphs from the icon font. */
-@objc public enum {{enumName}}: Int {
+@objc public enum {{enumName}}: Int, CaseIterable {
     {% for icon in icons %}
     case {{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon
     {% endfor %}
-
-    /** The icon font's total count of available icons. */
-    public static var count: Int { return {{ icons.count }} }
 }
 
 extension {{enumName}} : IconDrawable {
@@ -183,7 +175,7 @@ extension {{enumName}} : IconDrawable {
 
     /**
      Creates a new instance with the specified icon name.
-     If there is no valid name is recognised, this initializer falls back to the first available icon.
+     If there is no valid name recognised, this initializer falls back to the first available icon.
 
      - parameter iconName: The icon name to use for the new instance.
      */
@@ -193,6 +185,23 @@ extension {{enumName}} : IconDrawable {
         case "{{icon.name|swiftIdentifier|lowercase}}": self = .{{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon
         {% endfor %}
         default: self = {{enumName}}(rawValue: 0)!
+        }
+    }
+
+    /**
+     Creates a new instance with the specified icon name.
+     If there is no valid name recognised, the given fallback value will be used.
+     If the fallback value is not recognised, this initializer falls back to the first available icon.
+
+     - parameter iconName: The icon name to use for the new instance.
+     - parameter fallbackIconName: The fallback icon name to use for the new instance if the iconName doesn't exist.
+     */
+    public init(named iconName: String, fallbackIconName: String) {
+        switch iconName.lowercased() {
+        {% for icon in icons %}
+        case "{{icon.name|swiftIdentifier|lowercase}}": self = .{{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon
+        {% endfor %}
+        default: self = {{enumName}}(named: fallbackIconName)
         }
     }
 

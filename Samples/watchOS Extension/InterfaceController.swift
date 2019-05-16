@@ -24,17 +24,18 @@ class InterfaceController: WKInterfaceController {
     let githubIcon = FontAwesomeIcon.githubIcon
     let upArrowIcon = FontAwesomeIcon.angleUpIcon
     let downArrowIcon = FontAwesomeIcon.angleDownIcon
-    
-    override class func initialize() {
-        
+
+    private static let runOnce: Void = {
         // It is important to register the icon font as soon as possible,
         // and make the resources available right after launching the app.
         //
         // This example uses Awesome Font
         // http://fontawesome.io/cheatsheet/
-        
+
         FontAwesomeIcon.register()
-    }
+    }()
+    
+    static let shared = InterfaceController()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
