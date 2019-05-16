@@ -46,7 +46,7 @@ function buildList(data){
 
         newUl.append(newLi);
     }
-    
+
     $("body").append(newUl);
 }
 
@@ -65,5 +65,5 @@ function sortObject(obj) {
 
 function buildFooter(){
     // Footer
-    $("body").append($('<div class=footer>Generated using Iconic, by Ignacio Romero Z. — <a href="https://github.com/dzenbot/Iconic">https://github.com/dzenbot/Iconic</a></div>'));
+    $("body").append($('<div class=footer>Generated using Iconic, by The Home Assistant Authors. — <a href="https://github.com/home-assistant/Iconic">https://github.com/home-assistant/Iconic</a></div>'));
 }

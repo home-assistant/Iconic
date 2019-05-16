@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.dzn.iconic-ios</string>
+	<string>io.home-assistant.iconic-ios</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

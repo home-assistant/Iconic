@@ -1,7 +1,5 @@
 # SwiftGen
 
-[![CI Status](http://img.shields.io/travis/DZNLabs/SwiftGen.svg?style=flat)](https://travis-ci.org/DZNLabs/SwiftGen)
-
 SwiftGen is a suite of tools written in Swift 2 to auto-generate Swift 2 code for various assets of your project:
 
 * [`enums` for your Assets Catalogs](#uiimage)
@@ -11,8 +9,8 @@ SwiftGen is a suite of tools written in Swift 2 to auto-generate Swift 2 code fo
 
 ## Installation
 
-> Note: The tools are written in Swift 2.0 and need to be compiled with the latest Xcode 7.  
-> 
+> Note: The tools are written in Swift 2.0 and need to be compiled with the latest Xcode 7.
+>
 > For a list of recent changes, see the [CHANGELOG](CHANGELOG.md).
 
 ### Via CocoaPods
@@ -33,7 +31,7 @@ $ brew install swiftgen
 
 ### Compile from source
 
-Alternatively, you can clone the repository and use `rake install` to build the tool.  
+Alternatively, you can clone the repository and use `rake install` to build the tool.
 _With this solution you're sure to build and install the latest version from `master`._
 
 You can install to the default locations (no parameter) or to custom locations:
@@ -63,7 +61,7 @@ Each subcommand has its own option and syntax, but some options are common to al
 
 You can use `--help` on `swiftgen` or one of its subcommand to see the detailed usage.
 
-You can also see in the [wiki](https://github.com/AliSoftware/SwiftGen/wiki) some additional doc about how to [integrate SwiftGen in your Continuous Integration](https://github.com/AliSoftware/SwiftGen/wiki/Continuous-Integration) (Travis-CI, CircleCI, Jenkins, …) and how to [integrate in your Xcode project](https://github.com/AliSoftware/SwiftGen/wiki/Integrate-SwiftGen-in-an-xcodeproj) so it rebuild the constants every time you build.
+You can also see in the [wiki](https://github.com/SwiftGen/SwiftGen/wiki) some additional doc about how to [integrate SwiftGen in your Continuous Integration](https://github.com/SwiftGen/SwiftGen/wiki/Continuous-Integration) (Travis-CI, CircleCI, Jenkins, …) and how to [integrate in your Xcode project](https://github.com/SwiftGen/SwiftGen/wiki/Integrate-SwiftGen-in-an-xcodeproj) so it rebuild the constants every time you build.
 
 ## Templates
 

@@ -1,4 +1,4 @@
-// Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
 import UIKit
 
@@ -225,5 +225,5 @@ extension {{enumName}} : IconDrawable {
 }
 {% else %}
 // No icons found for {{familyName}} font!
-// Visit https://github.com/dzenbot/Iconic/issues for further information.
+// Visit https://github.com/home-assistant/Iconic/issues for further information.
 {% endif %}
