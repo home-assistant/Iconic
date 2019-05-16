@@ -14,14 +14,14 @@ Pod::Spec.new do |s|
                    This framework is used by the swiftgen Command Line tool
                    DESC
 
-  s.homepage     = "https://github.com/AliSoftware/SwiftGen"
+  s.homepage     = "https://github.com/SwiftGen/SwiftGen"
   s.license      = "MIT"
   s.author       = { "Olivier Halligon" => "olivier@halligon.net" }
   s.social_media_url = "https://twitter.com/aligatr"
 
   s.platform = :osx, '10.9'
 
-  s.source       = { :git => "https://github.com/AliSoftware/SwiftGen.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/SwiftGen/SwiftGen.git", :tag => s.version.to_s }
 
   s.source_files = "**/*.swift"
 

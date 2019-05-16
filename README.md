@@ -1,11 +1,11 @@
 ![Iconic Header](Screenshots/screenshot_iconic_header.png)
 
-[![Travis](https://travis-ci.org/dzenbot/Iconic.svg?branch=master)](https://travis-ci.org/dzenbot/Iconic/builds)
-[![codecov](https://codecov.io/gh/dzenbot/Iconic/badge.svg)](https://codecov.io/gh/dzenbot/Iconic)
+[![Travis](https://travis-ci.org/home-assistant/Iconic.svg?branch=master)](https://travis-ci.org/home-assistant/Iconic/builds)
+[![codecov](https://codecov.io/gh/home-assistant/Iconic/badge.svg)](https://codecov.io/gh/home-assistant/Iconic)
 [![Pod Version](http://img.shields.io/cocoapods/v/Iconic.svg)](http://cocoadocs.org/docsets/Iconic/)
 [![Pod Platforms](https://img.shields.io/cocoapods/p/Iconic.svg)](https://cocoapods.org/pods/Iconic)
-[![Swift Version](https://img.shields.io/badge/swift3-compatible-brightgreen.svg)]()
-[![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+[![Swift Version](https://img.shields.io/badge/swift4.2-compatible-brightgreen.svg)]()
+[![License](https://img.shields.io/cocoapods/l/Iconic.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
 **Iconic** helps making icon fonts integration effortless on iOS, tvOS and watchOS. Its main component is in charge of auto-generating strongly typed Swift code with [SwiftGen](https://github.com/SwiftGen/SwiftGen), compatible with Objective-C.
@@ -15,7 +15,7 @@ You will interact with an auto-generated class under the name of `{FontName}Icon
 Give **Iconic** a test drive by simply doing `pod try Iconic` in your terminal, and pick the `Samples.xcworkspace`.
 
 <p align="center">
-<img src="https://github.com/dzenbot/Iconic/blob/master/Screenshots/screenshot_scale.gif?raw=true" alt="Scale Example"/>
+<img src="https://github.com/home-assistant/Iconic/blob/master/Screenshots/screenshot_scale.gif?raw=true" alt="Scale Example"/>
 </p>
 
 
@@ -58,7 +58,7 @@ _Note: Some open sourced icon fonts don't include the names of each of their gly
 
 Start by defining **Iconic** on your Podfile. Because we use an environment variable on a non-traditional setup, you will need to do it the following way:
 ```ruby
-pod 'Iconic', :git => 'https://github.com/dzenbot/Iconic.git', :tag => '1.3'
+pod 'Iconic', :git => 'https://github.com/home-assistant/Iconic.git', :tag => '1.3'
 ```
 
 To install **Iconic** with a custom icon font, you need to use the `FONT_PATH` environment variable:
@@ -255,8 +255,8 @@ This repository also [includes a few open source and free icon fonts](./Fonts) f
 
 
 ## License
-This library is licensed under the [MIT License](LICENSE).
+This library is licensed under the [Apache 2.0](LICENSE.md).
 
-SwiftGen is licensed under the [MIT License](https://github.com/AliSoftware/SwiftGen/blob/master/LICENSE).
+SwiftGen is licensed under the [MIT License](https://github.com/SwiftGen/SwiftGen/blob/master/LICENCE).
 
-The Font Awesome font is licensed under the [SIL Open Font License](http://scripts.sil.org/OFL)
+The Font Awesome font is licensed under the [SIL OFL 1.1 License](http://scripts.sil.org/OFL)

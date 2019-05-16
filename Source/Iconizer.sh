@@ -1,12 +1,9 @@
 #!/bin/sh
 
 #  Iconizer.sh
-#  https://github.com/dzenbot/Iconic
+#  https://github.com/home-assistant/Iconic
 #
-#  Created by Ignacio Romero on 5/28/16.
-#  Copyright © 2016 DZN Labs All rights reserved.
-#
-# Script in charge of executing SwiftGen, passing the icon font file path, the enum name and the custom stencil as arguments.
+#  Script in charge of executing SwiftGen, passing the icon font file path, the enum name and the custom stencil as arguments.
 #
 
 # The optional font file path passed as arg

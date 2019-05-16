@@ -479,7 +479,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = DZN;
+				ORGANIZATIONNAME = "Home Assistant";
 				TargetAttributes = {
 					F50ADBFD1D112CDA004A5A4C = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -900,7 +900,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-tvos";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.home-assistant.iconic-tvos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.2;
@@ -920,7 +920,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-tvos";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.home-assistant.iconic-tvos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.2;
@@ -940,7 +940,7 @@
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.Iconic-Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.home-assistant.Iconic-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Supporting Files/Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -959,7 +959,7 @@
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.Iconic-Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.home-assistant.Iconic-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Supporting Files/Tests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -1066,7 +1066,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.home-assistant.iconic-ios";
 				PRODUCT_NAME = iOS;
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS/Classes/iOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1085,7 +1085,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.home-assistant.iconic-ios";
 				PRODUCT_NAME = iOS;
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS/Classes/iOS-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -1105,7 +1105,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				IBSC_MODULE = watchOS_Extension;
 				INFOPLIST_FILE = watchOS/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-ios.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.home-assistant.iconic-ios.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1128,7 +1128,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				IBSC_MODULE = watchOS_Extension;
 				INFOPLIST_FILE = watchOS/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-ios.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.home-assistant.iconic-ios.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1150,7 +1150,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "watchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-ios.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.home-assistant.iconic-ios.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1173,7 +1173,7 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "watchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dzn.iconic-ios.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.home-assistant.iconic-ios.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

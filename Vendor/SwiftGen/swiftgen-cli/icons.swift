@@ -1,8 +1,9 @@
 //
 // SwiftGen
-// Created by Ignacio Romero on 5/23/16.
-// Copyright (c) 2015 Olivier Halligon
-// MIT Licence
+//
+//  Copyright © 2019 The Home Assistant Authors
+//  Licensed under the Apache 2.0 license
+//  For more information see https://github.com/home-assistant/Iconic
 //
 
 import Commander
@@ -16,9 +17,9 @@ let iconsCommand = command(
     Option<String>("enumName", "Icon", flag: "e", description: "The name of the enum to generate"),
     Argument<Path>("FILE", description: "Icons.ttf|otf|json file to parse.", validator: fileExists)
 ) { output, templateName, templatePath, enumName, path in
-    
+
     let filePath = String(path)
-    
+
     let parser: IconsFileParser
     switch path.`extension` {
     case "ttf"?:
@@ -36,14 +37,14 @@ let iconsCommand = command(
     default:
         throw ArgumentError.InvalidType(value: filePath, type: "TTF, OTF or JSON file", argument: nil)
     }
-    
+
     do {
         let templateRealPath = try findTemplate("icons", templateShortName: templateName, templateFullPath: templatePath)
         let template = try GenumTemplate(path: templateRealPath)
         let context = parser.stencilContext(enumName: enumName, familyName: parser.familyName)
         let rendered = try template.render(context)
         output.write(rendered, onlyIfChanged: true)
-        
+
         func writeJSONData(data: NSData) {
             if let jsonString = String(data: data, encoding: NSASCIIStringEncoding) {
                 switch output {
@@ -62,21 +63,21 @@ let iconsCommand = command(
                 }
             }
         }
-        
+
         var unicodes = [String: String]()
-        
+
         for key in Array(parser.icons.keys) {
             let name = try! StringFilters.snakeToCamelCase(key) as? String
-            
+
             if let name = name {
                 unicodes[name] = parser.icons[key]
             }
         }
-        
+
         let dict:[String: AnyObject] = ["filename": path.lastComponent,
                                         "name": path.lastComponentWithoutExtension,
                                         "unicodes": unicodes]
-        
+
         let jsonData = try NSJSONSerialization.dataWithJSONObject(dict, options: .PrettyPrinted)
         writeJSONData(jsonData)
     }

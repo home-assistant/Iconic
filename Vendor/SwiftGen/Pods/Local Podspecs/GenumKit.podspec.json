@@ -3,7 +3,7 @@
   "version": "0.8.0",
   "summary": "A tool to build constants using enums for your UIImage, Storyboards, Assets, Colors, and more",
   "description": "GenumKit is a framework to build constants using enums for:\n - UIImages from your Assets Catalogs\n - Storyboards, to instantiate scenes and identify segues using constants\n - UIColors, to have named colors using an enums\n - Localizable.strings so that you can format your localized text way easier!\n\nThis framework is used by the swiftgen Command Line tool",
-  "homepage": "https://github.com/AliSoftware/SwiftGen",
+  "homepage": "https://github.com/SwiftGen/SwiftGen",
   "license": "MIT",
   "authors": {
     "Olivier Halligon": "olivier@halligon.net"
@@ -13,7 +13,7 @@
     "osx": "10.9"
   },
   "source": {
-    "git": "https://github.com/AliSoftware/SwiftGen.git",
+    "git": "https://github.com/SwiftGen/SwiftGen.git",
     "tag": "0.8.0"
   },
   "source_files": "**/*.swift",

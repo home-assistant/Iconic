@@ -1,9 +1,10 @@
 //
 //  IconImageView.swift
-//  https://github.com/dzenbot/Iconic
+//  https://github.com/home-assistant/Iconic
 //
-//  Created by Ignacio Romero on 7/28/16.
-//  Copyright © 2017 DZN. All rights reserved.
+//  Copyright © 2019 The Home Assistant Authors
+//  Licensed under the Apache 2.0 license
+//  For more information see https://github.com/home-assistant/Iconic
 //
 
 import UIKit
