@@ -254,8 +254,12 @@ This repository also [includes a few open source and free icon fonts](./Fonts) f
 * [Linearicons](https://linearicons.com/) by *Perxis*
 
 
+## Acknowledgements
+
+Iconic was originally developed by [Ignacio Romero Zurbuchen](https://github.com/dzenbot). For more credits, please see [AUTHORS.md](AUTHORS.md).
+
 ## License
-This library is licensed under the [Apache 2.0](LICENSE.md).
+This library is licensed under the [Apache 2.0](LICENSE.md) license.
 
 SwiftGen is licensed under the [MIT License](https://github.com/SwiftGen/SwiftGen/blob/master/LICENCE).
 
