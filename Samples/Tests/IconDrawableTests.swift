@@ -132,8 +132,8 @@ class IconDrawableTests: XCTestCase {
             let range = NSRange(location: 0, length: string.length)
 
             XCTAssertNotNil(string)
-
-            string.enumerateAttribute(NSFontAttributeName, in: range, options: NSAttributedString.EnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
+            
+            string.enumerateAttribute(NSAttributedString.Key.font, in: range, options: NSAttributedString.EnumerationOptions(rawValue: 0)) { (value, range, stop) -> Void in
                 if let font = value as? UIFont {
                     XCTAssertEqual(font.familyName, TestIcon.familyName)
                 }

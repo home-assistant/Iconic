@@ -55,8 +55,8 @@ class StringIconSnapshotTests: BaseSnapshotTestCase {
             let attributedText = NSMutableAttributedString()
             let iconString = icon.attributedString(ofSize: 25, color: nil, edgeInsets: edgeInset)
 
-            let titleAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 25),
-                                   NSForegroundColorAttributeName: UIColor.black] as [String : AnyObject]
+            let titleAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 25),
+                                   NSAttributedString.Key.foregroundColor: UIColor.black]
 
             let titleAttrString = NSAttributedString(string: icon.name, attributes: titleAttributes)
 
