@@ -11,6 +11,11 @@ import UIKit
         return {{enumName}}.familyName as NSString
     }
 
+    /** The icon font's total count of available icons. */
+    class var {{enumName|lowerFirstWord}}Count: NSInteger {
+        return {{enumName}}.count
+    }
+
     /**
      Returns the icon font object for the specified size.
 
@@ -171,6 +176,11 @@ extension {{enumName}} : IconDrawable {
     /** The icon font's family name. */
     public static var familyName: String {
         return "{{familyName}}"
+    }
+
+    /** The icon font's total count of available icons. */
+    public static var count: Int { 
+        return {{ icons.count }}
     }
 
     /**

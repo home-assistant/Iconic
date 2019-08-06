@@ -44,7 +44,7 @@ class UIExtensionSnapshotTests: BaseSnapshotTestCase {
     func testUIButton() {
 
         let button = UIButton(type: .system)
-        button.setIconImage(withIcon: .downloadIcon, size: defaultSize, color: nil, forState: UIControlState())
+        button.setIconImage(withIcon: .downloadIcon, size: defaultSize, color: nil, forState: UIControl.State())
         button.sizeToFit()
 
         self.verifyView(button, withIdentifier: "")
