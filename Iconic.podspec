@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target    = '9.0'
   s.watchos.deployment_target = '2.0'
 
-  s.swift_version             = '4.2'
+  s.swift_version             = '5.0'
 
   s.prepare_command           = "sh Source/Iconizer.sh '#{ENV['FONT_PATH']}' '#{ENV['CUSTOM_FONT_NAME']}'"
 end
