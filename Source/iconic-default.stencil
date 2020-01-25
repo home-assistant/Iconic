@@ -221,6 +221,7 @@ extension {{enumName}} : IconDrawable {
         {% for icon in icons %}
         case .{{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon: return "{{icon.name|swiftIdentifier|lowercase}}"
         {% endfor %}
+        default: fatalError("Iconic: .name not exhaustive")
         }
     }
 
@@ -230,6 +231,7 @@ extension {{enumName}} : IconDrawable {
             {% for icon in icons %}
         case .{{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon: return "{{icon.unicode|unicodeCase}}"
             {% endfor %}
+            default: fatalError("Iconic: .unicode not exhaustive")
         }
     }
 }
