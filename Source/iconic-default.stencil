@@ -215,6 +215,21 @@ extension {{enumName}} : IconDrawable {
         }
     }
 
+    /**
+     Creates a new instance with the specified unicode.
+     If there is no valid unicode recognised, this initializer falls back to the first available icon.
+
+     - parameter unicode: The icon unicode to use for the new instance.
+     */
+    public init(unicode: String) {
+        switch unicode {
+        {% for icon in icons %}
+        case  "{{icon.unicode|unicodeCase}}": self = .{{icon.name|swiftIdentifier|snakeToCamelCase|lowerFirstWord}}Icon
+        {% endfor %}
+        default: self = {{enumName}}(rawValue: 0)!
+        }
+    }
+
     /** The icon's name. */
     public var name: String {
         switch self {
