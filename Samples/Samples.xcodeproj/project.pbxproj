@@ -619,7 +619,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Iconic-watchOS2.0/Iconic.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -628,7 +628,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-watchOS Extension/Pods-watchOS Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		66899069AA8DB41CAA16348F /* [CP] Embed Pods Frameworks */ = {
@@ -637,7 +637,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-tvOS/Pods-tvOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-tvOS/Pods-tvOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Iconic-tvOS9.0/Iconic.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -646,7 +646,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tvOS/Pods-tvOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tvOS/Pods-tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		66EF12CCF24C41A99ED12DFB /* [CP] Embed Pods Frameworks */ = {
@@ -655,8 +655,8 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOS/Pods-iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Iconic-iOS8.0/Iconic.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS/Pods-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Iconic-iOS12.0/Iconic.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -664,7 +664,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS/Pods-iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS/Pods-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		787A8AF75319FD4DFB50BC0D /* [CP] Check Pods Manifest.lock */ = {
@@ -709,8 +709,8 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Iconic-iOS9.3/Iconic.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Iconic-iOS11.0/Iconic.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -720,7 +720,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F51590B91DEB80E200C23C25 /* Run SwiftLint */ = {

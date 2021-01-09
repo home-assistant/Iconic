@@ -42,8 +42,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
-      <Testables>
-      </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -53,8 +51,8 @@
             ReferencedContainer = "container:Samples.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -68,7 +66,7 @@
       allowLocationSimulation = "YES">
       <RemoteRunnable
          runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.carousel"
+         BundleIdentifier = "com.apple.Carousel"
          RemotePath = "/Iconic">
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -78,17 +76,6 @@
             ReferencedContainer = "container:Samples.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F569775E1DC9CAE3005EDE73"
-            BuildableName = "watchOS.app"
-            BlueprintName = "watchOS"
-            ReferencedContainer = "container:Samples.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -98,7 +85,7 @@
       debugDocumentVersioning = "YES">
       <RemoteRunnable
          runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.carousel"
+         BundleIdentifier = "com.apple.Carousel"
          RemotePath = "/Iconic">
          <BuildableReference
             BuildableIdentifier = "primary"

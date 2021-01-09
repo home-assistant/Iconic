@@ -1,16 +1,16 @@
 
-source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '11.0'
+use_frameworks!
 
 # useful for Playground interoperability
 abstract_target 'Playground'
-use_frameworks!
 
 def iconic
     pod 'Iconic', :path => '../Iconic.podspec'
 end
 
 target 'iOS' do
-    platform :ios, '8.0'
+    platform :ios, '12.0'
     iconic
 end
 
