@@ -1,3 +1,7 @@
+**This library is no longer maintained due to [underlying issues](https://github.com/SwiftGen/SwiftGen/pull/638).**
+
+---
+
 ![Iconic Header](Screenshots/screenshot_iconic_header.png)
 
 [![Travis](https://travis-ci.org/home-assistant/Iconic.svg?branch=master)](https://travis-ci.org/home-assistant/Iconic/builds)
